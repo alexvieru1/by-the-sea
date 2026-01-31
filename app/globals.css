@@ -3,24 +3,58 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Design System Colors */
+  --color-primary: #4a9ead;
+  --color-primary-dark: #3d8a98;
+  --color-hero-bg: #c5d5d8;
+  --color-scan-box: #d8e4e6;
+  --color-text-dark: #1a1a1a;
+  --color-text-light: #6b7280;
+  --color-text-muted: #9ca3af;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--color-primary);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-hero-bg: var(--color-hero-bg);
+  --color-scan-box: var(--color-scan-box);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-serif: var(--font-playfair);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll snap container */
+main {
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  height: 100vh;
+  height: 100dvh;
+}
+
+/* Snap section base styles */
+.snap-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+/* Hero section full height - with fallback for older browsers */
+.hero-section {
+  height: 100vh;
+  height: 100dvh;
+  min-height: 600px;
 }

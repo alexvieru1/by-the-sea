@@ -1,0 +1,82 @@
+{
+  "common": {
+    "bookScan": "Book a Stay",
+    "bookScanHover": "Reserve Now",
+    "learnMore": "Learn More",
+    "getDirections": "Get Directions"
+  },
+  "nav": {
+    "bodyScan": "Neko Body Scan",
+    "support": "Support",
+    "about": "About",
+    "login": "Log In",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title1": "A better health check.",
+    "title2": "Finally.",
+    "description": "Get a thorough health check, like you've never experienced before. Receive all your results instantly."
+  },
+  "dataPoints": {
+    "title1": "Track millions of data points.",
+    "title2": "In just a few minutes.",
+    "labels": {
+      "bloodVessels": "BLOOD VESSELS",
+      "heartRhythm": "HEART RHYTHM",
+      "skinMapping": "SKIN MAPPING",
+      "diabetesFactors": "DIABETES FACTORS",
+      "metabolism": "METABOLISM",
+      "immuneSystem": "IMMUNE SYSTEM",
+      "peripheralArteries": "PERIPHERAL ARTERIES",
+      "oxygenation": "OXYGENATION",
+      "bodyMeasurements": "BODY MEASUREMENTS"
+    }
+  },
+  "yourBody": {
+    "title": "Your body",
+    "description": "Regular inspections are mandatory for cars on our roads, but in our healthcare system, we often wait until our bodies break down before taking action. So why not prioritise our health the same way?"
+  },
+  "yourFuture": {
+    "title": "Your future",
+    "description": "By equipping our doctors with the best tools to take care of tracking your health, our doctor led model of care provides a better experience for everyone."
+  },
+  "buildData": {
+    "title1": "Build upon your data.",
+    "title2": "Every Year.",
+    "prevention": {
+      "label": "Prevention",
+      "title": "Stay ahead of your health"
+    },
+    "benchmark": {
+      "label": "Benchmark",
+      "title": "Compare with your peers"
+    },
+    "trackChange": {
+      "label": "Track Change",
+      "title": "Improve your values over time"
+    }
+  },
+  "locations": {
+    "label": "Our Locations",
+    "title": "Neko Health Centres",
+    "description": "Neko Health Centres are conveniently located in the heart of London, Manchester, Birmingham and Stockholm."
+  },
+  "testimonials": {
+    "label": "Our Members"
+  },
+  "media": {
+    "title": "Featured media"
+  },
+  "footer": {
+    "cta": "Take the first step in getting ahead of your health",
+    "company": "Company",
+    "members": "Members",
+    "follow": "Follow",
+    "healthCentres": "Health Centres",
+    "careers": "Careers",
+    "pressRoom": "Press Room",
+    "cookieNotice": "Cookie Notice",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "common": {
+    "bookScan": "Programeaza Sejur",
+    "bookScanHover": "Rezerva Acum",
+    "learnMore": "Afla Mai Multe",
+    "getDirections": "Indicatii"
+  },
+  "nav": {
+    "bodyScan": "Scanare Corporală Neko",
+    "support": "Suport",
+    "about": "Despre Noi",
+    "login": "Autentificare",
+    "faq": "Intrebari Frecvente"
+  },
+  "hero": {
+    "title1": "Un control medical mai bun.",
+    "title2": "În sfârșit.",
+    "description": "Beneficiază de un control medical complet, cum nu ai mai experimentat până acum. Primește toate rezultatele instantaneu."
+  },
+  "dataPoints": {
+    "title1": "Urmărește milioane de puncte de date.",
+    "title2": "În doar câteva minute.",
+    "labels": {
+      "bloodVessels": "VASE DE SANGE",
+      "heartRhythm": "RITM CARDIAC",
+      "skinMapping": "CARTOGRAFIERE PIELE",
+      "diabetesFactors": "FACTORI DIABET",
+      "metabolism": "METABOLISM",
+      "immuneSystem": "SISTEM IMUNITAR",
+      "peripheralArteries": "ARTERE PERIFERICE",
+      "oxygenation": "OXIGENARE",
+      "bodyMeasurements": "MASURATORI CORPORALE"
+    }
+  },
+  "yourBody": {
+    "title": "Corpul tau",
+    "description": "Inspectiile regulate sunt obligatorii pentru masinile de pe drumurile noastre, dar in sistemul nostru de sanatate, asteptam adesea pana cand corpul nostru cedeaza inainte de a lua masuri. De ce sa nu prioritizam sanatatea in acelasi mod?"
+  },
+  "yourFuture": {
+    "title": "Viitorul tau",
+    "description": "Echipand medicii nostri cu cele mai bune instrumente pentru a avea grija de monitorizarea sanatatii tale, modelul nostru de ingrijire condus de medici ofera o experienta mai buna pentru toti."
+  },
+  "buildData": {
+    "title1": "Construieste pe baza datelor tale.",
+    "title2": "In fiecare an.",
+    "prevention": {
+      "label": "Preventie",
+      "title": "Fii cu un pas inaintea sanatatii tale"
+    },
+    "benchmark": {
+      "label": "Comparatie",
+      "title": "Compara-te cu semenii tai"
+    },
+    "trackChange": {
+      "label": "Urmareste Schimbarea",
+      "title": "Imbunatateste-ti valorile in timp"
+    }
+  },
+  "locations": {
+    "label": "Locatiile Noastre",
+    "title": "Centre Neko Health",
+    "description": "Centrele Neko Health sunt situate convenabil in inima oraselor London, Manchester, Birmingham si Stockholm."
+  },
+  "testimonials": {
+    "label": "Membrii Nostri"
+  },
+  "media": {
+    "title": "Aparitii media"
+  },
+  "footer": {
+    "cta": "Fa primul pas pentru a fi cu un pas inaintea sanatatii tale",
+    "company": "Companie",
+    "members": "Membri",
+    "follow": "Urmareste-ne",
+    "healthCentres": "Centre de Sanatate",
+    "careers": "Cariere",
+    "pressRoom": "Presa",
+    "cookieNotice": "Politica Cookie",
+    "privacyPolicy": "Politica de Confidentialitate",
+    "termsOfService": "Termeni si Conditii"
+  }
+}
