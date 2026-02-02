@@ -91,14 +91,14 @@ export default function DataPointsSection() {
   return (
     <section
       ref={sectionRef}
-      className="snap-section relative flex flex-col justify-center overflow-hidden bg-white h-screen"
+      className="snap-section relative flex h-screen flex-col justify-center overflow-hidden bg-white"
     >
       {/* Headline */}
       <motion.div
-        className="mb-12 px-6 pt-24 text-center lg:mb-16 lg:px-12 lg:pt-32"
+        className="mb-8 px-6 pt-28 text-center lg:px-12 lg:pt-48"
         style={{ opacity: titleOpacity, y: titleY }}
       >
-        <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic leading-tight text-gray-900 sm:text-5xl lg:text-6xl">
+        <h2 className="font-(family-name:--font-playfair) text-3xl font-normal italic leading-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl">
           {t('title1')}
           <br />
           <span className="text-[#7eb8c4]">{t('title2')}</span>
@@ -108,12 +108,12 @@ export default function DataPointsSection() {
       {/* Point Cloud Visualization - Full Width */}
       <div className="relative w-full">
         {/* Base image - Desktop */}
-        <div className="relative hidden aspect-[21/9] w-full md:block">
+        <div className="relative hidden aspect-[21/7] w-full md:block">
           <Image
             src="/images/bg_desktop.png"
             alt="Data points visualization"
             fill
-            className="object-cover object-bottom"
+            className="object-cover object-top"
             priority
           />
         </div>
