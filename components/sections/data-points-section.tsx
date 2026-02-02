@@ -22,14 +22,14 @@ const labelPositionsDesktop = [
   { key: 'bodyMeasurements', x: 5, y: 85 },
 ];
 
-// Label positions for mobile - adjusted for vertical image
+// Label positions for mobile - adjusted for vertical image, shifted left to center
 const labelPositionsMobile = [
-  { key: 'skinMapping', x: 5, y: 35 },
-  { key: 'heartRhythm', x: -15, y: 50 },
-  { key: 'diabetesFactors', x: 10, y: 58 },
-  { key: 'immuneSystem', x: -10, y: 68 },
-  { key: 'metabolism', x: 5, y: 78 },
-  { key: 'bodyMeasurements', x: -5, y: 88 },
+  { key: 'skinMapping', x: -15, y: 35 },
+  { key: 'heartRhythm', x: -30, y: 50 },
+  { key: 'diabetesFactors', x: -10, y: 58 },
+  { key: 'immuneSystem', x: -25, y: 68 },
+  { key: 'metabolism', x: -15, y: 78 },
+  { key: 'bodyMeasurements', x: -20, y: 88 },
 ];
 
 export default function DataPointsSection() {

@@ -23,7 +23,7 @@ export default function ClaudeButton({
   const baseStyles = 'inline-flex items-center justify-center font-medium transition-colors';
 
   const variants = {
-    primary: 'bg-[#008eb5] text-white hover:bg-[#007a9e]',
+    primary: 'bg-[#C2A87A] text-white hover:bg-[#007a9e]',
     secondary: 'bg-white text-gray-900 hover:bg-gray-100 border border-gray-200',
     dark: 'bg-[#2d3436] text-white hover:bg-[#1a1a1a]',
   };

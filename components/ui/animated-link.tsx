@@ -7,6 +7,7 @@ interface AnimatedLinkProps {
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  variant?: 'light' | 'dark';
 }
 
 export default function AnimatedLink({
@@ -14,7 +15,10 @@ export default function AnimatedLink({
   children,
   className = '',
   onClick,
+  variant = 'light',
 }: AnimatedLinkProps) {
+  const isLight = variant === 'light';
+
   return (
     <Link
       href={href}
@@ -23,23 +27,23 @@ export default function AnimatedLink({
         group
         relative
         inline-flex items-center
-        text-sm text-white/70
+        text-sm
         transition-colors duration-400 ease-[cubic-bezier(0.25,0.8,0.25,1)]
-        hover:text-white
+        ${isLight ? 'text-white/70 hover:text-white' : 'text-gray-600 hover:text-gray-900'}
         ${className}
       `}
     >
       {children}
       {/* Animated underline */}
       <span
-        className="
+        className={`
           pointer-events-none
           absolute -bottom-1 left-0
           h-px w-0
-          bg-white
           transition-all duration-500 ease-[cubic-bezier(0.25,0.8,0.25,1)]
           group-hover:w-full
-        "
+          ${isLight ? 'bg-white' : 'bg-gray-900'}
+        `}
       />
     </Link>
   );

@@ -7,12 +7,14 @@ import { Link } from '@/i18n/routing';
 import LanguageSwitcher from './language-switcher';
 import AnimatedButton from '@/components/ui/animated-button';
 import AnimatedLink from '@/components/ui/animated-link';
+import SlicedText from '../ui/sliced-text';
 
 export default function Header() {
   const t = useTranslations('nav');
   const tCommon = useTranslations('common');
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isInHero, setIsInHero] = useState(true);
   const lastScrollY = useRef(0);
 
   useEffect(() => {
@@ -21,6 +23,10 @@ export default function Header() {
 
     const handleScroll = () => {
       const currentScrollY = mainElement.scrollTop;
+      const viewportHeight = window.innerHeight;
+
+      // Detect if we're in the hero section (first viewport)
+      setIsInHero(currentScrollY < viewportHeight * 0.8);
 
       if (currentScrollY < lastScrollY.current || currentScrollY < 100) {
         setIsNavVisible(true);
@@ -30,6 +36,9 @@ export default function Header() {
 
       lastScrollY.current = currentScrollY;
     };
+
+    // Initial check
+    handleScroll();
 
     mainElement.addEventListener('scroll', handleScroll, { passive: true });
     return () => mainElement.removeEventListener('scroll', handleScroll);
@@ -52,20 +61,21 @@ export default function Header() {
     { href: '/about', label: t('about') },
   ];
 
+  const colorVariant = isInHero ? 'light' : 'dark';
+  const textColor = isInHero ? 'text-white' : 'text-gray-900';
+  const hamburgerBg = isInHero ? 'bg-white' : 'bg-gray-900';
+
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-50">
         <nav className="flex items-start justify-between lg:items-center">
           {/* Logo - always visible */}
           <Link href="/" className="shrink-0 px-6 py-5 lg:px-10">
-            <motion.span
-              className="text-sm font-medium tracking-[0.3em] text-white"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-            >
-              VRAJA MARII
-            </motion.span>
+            <SlicedText
+              text="VM by the Sea"
+              className={`text-2xl transition-colors duration-300 ${textColor}`}
+              splitSpacing={3}
+            />
           </Link>
 
           {/* Right side: Nav links + CTA Button grouped together */}
@@ -82,7 +92,7 @@ export default function Header() {
               transition={{ duration: 0.3, ease: 'easeOut' }}
             >
               {navLinks.map((link) => (
-                <AnimatedLink key={link.href} href={link.href}>
+                <AnimatedLink key={link.href} href={link.href} variant={colorVariant}>
                   {link.label}
                 </AnimatedLink>
               ))}
@@ -90,17 +100,17 @@ export default function Header() {
 
             {/* Language Switcher - always visible on desktop */}
             <div className="hidden pr-6 lg:block">
-              <LanguageSwitcher />
+              <LanguageSwitcher variant={colorVariant} />
             </div>
 
             {/* CTA Button - always visible on desktop */}
             <div className="hidden lg:block">
               <AnimatedButton
                 href="/book"
-                bgColor="#00a5c9"
+                bgColor="#C6A979"
                 textColor="#ffffff"
                 hoverTextColor="#ffffff"
-                borderColor="#007A9F"
+                borderColor="#7B5F42"
                 initialText={tCommon('bookScan')}
                 hoverText={tCommon('bookScanHover')}
                 className="py-6"
@@ -110,7 +120,7 @@ export default function Header() {
             {/* Mobile: CTA + Menu Button */}
             <Link
               href="/book"
-              className="flex h-14 items-center bg-[#00a5c9] px-5 text-sm font-medium text-white lg:hidden"
+              className="flex h-14 items-center bg-[#C2A87A] px-5 text-sm font-medium text-white lg:hidden"
             >
               {tCommon('bookScan')}
             </Link>
@@ -118,22 +128,24 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="flex h-14 w-14 items-center justify-center bg-gray-800/90 lg:hidden"
+              className={`flex h-14 w-14 items-center justify-center transition-colors duration-300 lg:hidden ${
+                isInHero ? 'bg-gray-800/90' : 'bg-gray-100'
+              }`}
               aria-label="Toggle menu"
             >
               <div className="flex flex-col gap-1.5">
                 <motion.span
-                  className="block h-0.5 w-5 bg-white"
+                  className={`block h-0.5 w-5 transition-colors duration-300 ${hamburgerBg}`}
                   animate={isMobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }}
                   transition={{ duration: 0.2 }}
                 />
                 <motion.span
-                  className="block h-0.5 w-5 bg-white"
+                  className={`block h-0.5 w-5 transition-colors duration-300 ${hamburgerBg}`}
                   animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
                   transition={{ duration: 0.2 }}
                 />
                 <motion.span
-                  className="block h-0.5 w-5 bg-white"
+                  className={`block h-0.5 w-5 transition-colors duration-300 ${hamburgerBg}`}
                   animate={isMobileMenuOpen ? { rotate: -45, y: -8 } : { rotate: 0, y: 0 }}
                   transition={{ duration: 0.2 }}
                 />
@@ -196,7 +208,7 @@ export default function Header() {
                 </nav>
 
                 <div className="mt-8">
-                  <LanguageSwitcher />
+                  <LanguageSwitcher variant="dark" />
                 </div>
               </div>
             </motion.div>

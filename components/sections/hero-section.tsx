@@ -21,7 +21,6 @@ export default function HeroSection() {
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
-      // Try to play the video
       const playPromise = video.play();
       if (playPromise !== undefined) {
         playPromise.catch(() => {
@@ -58,85 +57,51 @@ export default function HeroSection() {
         >
           <source src="https://pub-df344bc27b69486fa2190081e1a1fade.r2.dev/hero.MP4" type="video/mp4" />
         </video>
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-[#c5d5d8]/20" />
+        {/* Subtle gradient overlay at bottom for text legibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
       </div>
 
-      {/* Desktop Layout */}
-      <div className="relative z-10 mx-auto hidden h-full max-w-[1600px] lg:grid lg:grid-cols-[1fr_1.2fr_1fr] lg:items-center lg:gap-8 lg:px-12 xl:px-20">
-        {/* Left: Headline */}
-        <motion.div
-          style={{ opacity: contentOpacity, y: contentY }}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-        >
-          <h1 className="font-[family-name:var(--font-playfair)] text-5xl font-normal italic leading-[1.1] tracking-tight text-white xl:text-6xl 2xl:text-7xl">
-            {t('title1')}
-            <br />
-            <span className="mt-2 block text-white/90">{t('title2')}</span>
-          </h1>
-        </motion.div>
-
-        {/* Center: Empty space for video focus */}
-        <div />
-
-        {/* Right: Description + CTA */}
-        <motion.div
-          className="max-w-sm"
-          style={{ opacity: contentOpacity, y: contentY }}
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-        >
-          <p className="text-lg leading-relaxed text-gray-300">
-            {t('description')}
-          </p>
-          <div className="mt-8">
-            <ClaudeButton href="/book" variant="primary" size="lg">
-              {tCommon('bookScan')}
-            </ClaudeButton>
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Mobile Layout */}
-      <div className="relative z-10 flex h-full flex-col px-6 pb-8 pt-24 lg:hidden">
-        {/* Headline */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h1 className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic leading-[1.15] tracking-tight text-white sm:text-5xl">
+      {/* Content - Bottom Left Grouped Layout */}
+      <motion.div
+        className="relative z-10 flex h-full flex-col justify-end px-6 pb-24 sm:pb-32 lg:px-12 lg:pb-36 xl:px-20 xl:pb-40"
+        style={{ opacity: contentOpacity, y: contentY }}
+      >
+        <div className="max-w-2xl">
+          {/* Headline */}
+          <motion.h1
+            className="font-(family-name:--font-playfair) text-4xl font-normal italic leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: 'easeOut' }}
+          >
             {t('title1')}
             <br />
             <span className="text-white/90">{t('title2')}</span>
-          </h1>
-        </motion.div>
+          </motion.h1>
 
-        {/* Description */}
-        <motion.p
-          className="mt-6 max-w-sm text-base leading-relaxed text-gray-200"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.15 }}
-        >
-          {t('description')}
-        </motion.p>
+          {/* Description */}
+          <motion.p
+            className="mt-6 max-w-md text-base leading-relaxed text-gray-200 lg:mt-8 lg:text-lg"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
+          >
+            {t('description')}
+          </motion.p>
 
-        {/* CTA */}
-        <motion.div
-          className="mt-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-        >
-          <ClaudeButton href="/book" variant="primary" size="md">
-            {tCommon('bookScan')}
-          </ClaudeButton>
-        </motion.div>
-      </div>
+          {/* CTA */}
+          <motion.div
+            className="mt-6 lg:mt-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
+          >
+            <ClaudeButton href="/book" variant="primary" size="lg">
+              {tCommon('bookScan')}
+            </ClaudeButton>
+          </motion.div>
+        </div>
+      </motion.div>
     </section>
   );
 }
