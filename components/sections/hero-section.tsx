@@ -55,7 +55,7 @@ export default function HeroSection() {
           className="h-full w-full object-cover"
           poster="/images/hero-poster.webp"
         >
-          <source src="https://pub-df344bc27b69486fa2190081e1a1fade.r2.dev/hero.MP4" type="video/mp4" />
+          <source src="https://pub-df344bc27b69486fa2190081e1a1fade.r2.dev/DJI_0035.mp4" type="video/mp4" />
         </video>
         {/* Subtle gradient overlay at bottom for text legibility */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
