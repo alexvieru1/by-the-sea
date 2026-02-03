@@ -63,7 +63,7 @@ function FacilityCard({
 
   // Small image floats upward aggressively - starts low, rises high
   const smallImgY = useTransform(scrollYProgress, [0, 1], ["30%", "-50%"]);
-  const smallImgYMove = useTransform(scrollYProgress, [0, 1], ["10%", "-100%"]);
+  const smallImgYMove = useTransform(scrollYProgress, [0, 1], ["10%", "-10%"]);
   const smallImgScale = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
@@ -81,14 +81,14 @@ function FacilityCard({
   return (
     <div
       ref={cardRef}
-      className="mb-24 lg:mb-32"
+      className="mb-24 lg:mb-40"
       style={{ perspective: "1000px" }}
     >
-      {/* Images container */}
-      <div className="relative flex items-end gap-4 lg:gap-6">
-        {/* Small image - hidden on mobile, floats upward faster on lg */}
+      {/* Images container - staggered overlap layout on lg */}
+      <div className="relative flex items-end gap-4 md:block lg:gap-0">
+        {/* Small image - hidden on mobile, positioned top-left overlapping on lg */}
         <motion.div
-          className="relative hidden aspect-3/4 w-1/4 overflow-hidden md:block lg:w-1/5"
+          className="relative z-10 hidden aspect-3/4 w-1/4 overflow-hidden md:block lg:absolute lg:-left-12 lg:-top-8 lg:w-[35%]"
           style={{
             y: smallImgYMove,
           }}
@@ -109,8 +109,8 @@ function FacilityCard({
           </motion.div>
         </motion.div>
 
-        {/* Large image */}
-        <div className="relative aspect-4/3 w-full overflow-hidden md:w-3/4 lg:w-4/5">
+        {/* Large image - stays in flow on lg, positioned to the right */}
+        <div className="relative aspect-4/3 w-full overflow-hidden md:w-3/4 lg:ml-auto lg:aspect-16/10 lg:w-[72%]">
           <motion.div
             className="absolute inset-0 h-[120%] w-full origin-center"
             style={{

@@ -117,12 +117,9 @@ body {
 /* Scroll snap container */
 main {
   scroll-snap-type: y proximity;
-  -webkit-overflow-scrolling: touch; /* Safari smooth scrolling */
-  overflow-y: auto;
-  overflow-y: scroll; /* Safari prefers explicit scroll */
+  overflow-y: scroll;
   height: 100vh;
   height: 100dvh;
-  /* Safari fix: ensure the container is a proper scrolling context */
   overscroll-behavior: contain;
 }
 
