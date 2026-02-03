@@ -10,15 +10,17 @@ import AnimatedLink from '@/components/ui/animated-link';
 import SlicedText from '../ui/sliced-text';
 
 // Sliding stairs animation variants
+const stairsEase = [0.33, 1, 0.68, 1] as const;
+
 const stairAnimation = {
   initial: { height: 0 },
   enter: (i: number) => ({
     height: '100%',
-    transition: { duration: 0.5, delay: 0.05 * i, ease: [0.33, 1, 0.68, 1] },
+    transition: { duration: 0.5, delay: 0.05 * i, ease: stairsEase },
   }),
   exit: (i: number) => ({
     height: 0,
-    transition: { duration: 0.3, delay: 0.05 * i, ease: [0.33, 1, 0.68, 1] },
+    transition: { duration: 0.3, delay: 0.05 * i, ease: stairsEase },
   }),
 };
 
@@ -26,11 +28,11 @@ const menuContentAnimation = {
   initial: { opacity: 0 },
   enter: {
     opacity: 1,
-    transition: { duration: 0.5, delay: 0.3, ease: [0.33, 1, 0.68, 1] },
+    transition: { duration: 0.5, delay: 0.3, ease: stairsEase },
   },
   exit: {
     opacity: 0,
-    transition: { duration: 0.2, ease: [0.33, 1, 0.68, 1] },
+    transition: { duration: 0.2, ease: stairsEase },
   },
 };
 
@@ -39,12 +41,12 @@ const linkAnimation = {
   enter: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: 0.4 + i * 0.1, ease: [0.33, 1, 0.68, 1] },
+    transition: { duration: 0.5, delay: 0.4 + i * 0.1, ease: stairsEase },
   }),
   exit: {
     opacity: 0,
     y: 10,
-    transition: { duration: 0.2, ease: [0.33, 1, 0.68, 1] },
+    transition: { duration: 0.2, ease: stairsEase },
   },
 };
 
@@ -203,7 +205,7 @@ export default function Header() {
               {[...Array(5)].map((_, index) => (
                 <motion.div
                   key={index}
-                  className="h-full w-[20vw] origin-top bg-[#4a9ead]"
+                  className="h-full w-[20vw] origin-top bg-[#575249]"
                   variants={stairAnimation}
                   initial="initial"
                   animate="enter"
