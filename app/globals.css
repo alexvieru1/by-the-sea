@@ -105,7 +105,7 @@ html {
 
 /* Scroll snap container */
 main {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
   overflow-y: auto;
   height: 100vh;
   height: 100dvh;
@@ -114,7 +114,6 @@ main {
 /* Snap section base styles */
 .snap-section {
   scroll-snap-align: start;
-  scroll-snap-stop: always;
   min-height: 100vh;
   min-height: 100dvh;
 }

@@ -36,8 +36,9 @@ export default function HeroSection() {
     offset: ['start start', 'end start'],
   });
 
-  const contentOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const contentY = useTransform(scrollYProgress, [0, 0.5], [0, 50]);
+  // Subtler parallax for smoother scroll feel
+  const contentOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const contentY = useTransform(scrollYProgress, [0, 0.6], [0, 30]);
 
   return (
     <section

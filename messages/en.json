@@ -61,6 +61,73 @@
     "title": "Neko Health Centres",
     "description": "Neko Health Centres are conveniently located in the heart of London, Manchester, Birmingham and Stockholm."
   },
+  "facilities": {
+    "label": "Our Facilities",
+    "title": "Vraja Marii Centres",
+    "description": "Discover our world-class facilities designed for your complete wellness journey, from relaxation to recovery.",
+    "categories": {
+      "wellness": "Wellness",
+      "recovery": "Recovery",
+      "therapy": "Therapy",
+      "dining": "Dining"
+    },
+    "wellness": {
+      "saltRoom": {
+        "name": "Salt Room",
+        "description": "Therapeutic halotherapy sessions in a pristine salt-infused environment"
+      },
+      "finnishSauna": {
+        "name": "Finnish Sauna",
+        "description": "Traditional wood-fired sauna with authentic Finnish experience"
+      },
+      "relaxationPool": {
+        "name": "Relaxation Pool",
+        "description": "Heated mineral pool with panoramic sea views"
+      }
+    },
+    "recovery": {
+      "cryotherapy": {
+        "name": "Cryotherapy Chamber",
+        "description": "Advanced whole-body cryotherapy for rapid recovery"
+      },
+      "infraredSauna": {
+        "name": "Infrared Sauna",
+        "description": "Deep-penetrating infrared heat therapy for detoxification"
+      },
+      "iceBath": {
+        "name": "Ice Bath",
+        "description": "Cold immersion therapy for inflammation reduction"
+      }
+    },
+    "therapy": {
+      "massageRoom": {
+        "name": "Massage Suite",
+        "description": "Private treatment rooms for therapeutic and relaxation massages"
+      },
+      "physiotherapy": {
+        "name": "Physiotherapy Centre",
+        "description": "Expert-led rehabilitation and movement therapy"
+      },
+      "floatationTank": {
+        "name": "Floatation Tank",
+        "description": "Sensory deprivation pods for deep meditation and recovery"
+      }
+    },
+    "dining": {
+      "restaurant": {
+        "name": "Sea View Restaurant",
+        "description": "Farm-to-table cuisine with stunning Black Sea panoramas"
+      },
+      "juiceBar": {
+        "name": "Vitality Juice Bar",
+        "description": "Fresh-pressed juices and wellness elixirs"
+      },
+      "terrace": {
+        "name": "Sunset Terrace",
+        "description": "Open-air lounge perfect for evening relaxation"
+      }
+    }
+  },
   "testimonials": {
     "label": "Our Members"
   },

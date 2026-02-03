@@ -36,8 +36,9 @@ export default function YourFutureSection() {
     offset: ['start end', 'end start'],
   });
 
-  const imageScale = useTransform(scrollYProgress, [0, 0.5], [1.1, 1]);
-  const imageY = useTransform(scrollYProgress, [0, 1], ['-5%', '5%']);
+  // Subtler parallax that works well with snap scroll
+  const imageScale = useTransform(scrollYProgress, [0.2, 0.8], [1.03, 1]);
+  const imageY = useTransform(scrollYProgress, [0.2, 0.8], ['-2%', '2%']);
 
   return (
     <section

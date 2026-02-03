@@ -61,6 +61,73 @@
     "title": "Centre Neko Health",
     "description": "Centrele Neko Health sunt situate convenabil in inima oraselor London, Manchester, Birmingham si Stockholm."
   },
+  "facilities": {
+    "label": "Facilitatile Noastre",
+    "title": "Centrele Vraja Marii",
+    "description": "Descopera facilitatile noastre de clasa mondiala, proiectate pentru calatoria ta completa de wellness, de la relaxare la recuperare.",
+    "categories": {
+      "wellness": "Wellness",
+      "recovery": "Recuperare",
+      "therapy": "Terapie",
+      "dining": "Gastronomie"
+    },
+    "wellness": {
+      "saltRoom": {
+        "name": "Camera de Sare",
+        "description": "Sedinte terapeutice de haloterapie intr-un mediu pristine infuzat cu sare"
+      },
+      "finnishSauna": {
+        "name": "Sauna Finlandeza",
+        "description": "Sauna traditionala pe lemne cu experienta autentica finlandeza"
+      },
+      "relaxationPool": {
+        "name": "Piscina de Relaxare",
+        "description": "Piscina minerala incalzita cu vedere panoramica la mare"
+      }
+    },
+    "recovery": {
+      "cryotherapy": {
+        "name": "Camera de Crioterapie",
+        "description": "Crioterapie avansata pentru intregul corp pentru recuperare rapida"
+      },
+      "infraredSauna": {
+        "name": "Sauna cu Infrarosu",
+        "description": "Terapie cu caldura infrarosie pentru detoxifiere profunda"
+      },
+      "iceBath": {
+        "name": "Baie cu Gheata",
+        "description": "Terapie de imersie la rece pentru reducerea inflamatiei"
+      }
+    },
+    "therapy": {
+      "massageRoom": {
+        "name": "Sala de Masaj",
+        "description": "Camere private de tratament pentru masaje terapeutice si de relaxare"
+      },
+      "physiotherapy": {
+        "name": "Centru de Fizioterapie",
+        "description": "Reabilitare si terapie de miscare condusa de experti"
+      },
+      "floatationTank": {
+        "name": "Capsula de Flotare",
+        "description": "Capsule de deprivare senzoriala pentru meditatie profunda si recuperare"
+      }
+    },
+    "dining": {
+      "restaurant": {
+        "name": "Restaurant cu Vedere la Mare",
+        "description": "Bucatarie de la ferma la masa cu panorame uimitoare ale Marii Negre"
+      },
+      "juiceBar": {
+        "name": "Bar de Sucuri Vitality",
+        "description": "Sucuri proaspat stoarse si elixiruri de wellness"
+      },
+      "terrace": {
+        "name": "Terasa Apusului",
+        "description": "Lounge in aer liber perfect pentru relaxare seara"
+      }
+    }
+  },
   "testimonials": {
     "label": "Membrii Nostri"
   },

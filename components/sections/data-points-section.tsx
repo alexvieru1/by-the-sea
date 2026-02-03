@@ -49,8 +49,9 @@ export default function DataPointsSection() {
     offset: ['start end', 'end start'],
   });
 
-  const titleOpacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]);
-  const titleY = useTransform(scrollYProgress, [0, 0.2], [50, 0]);
+  // Adjusted for smoother snap scroll experience
+  const titleOpacity = useTransform(scrollYProgress, [0.1, 0.25, 0.75, 0.9], [0, 1, 1, 0]);
+  const titleY = useTransform(scrollYProgress, [0.1, 0.25], [30, 0]);
 
   // GSAP ScrollTrigger for labels
   useEffect(() => {
