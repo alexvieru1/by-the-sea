@@ -9,6 +9,45 @@ import AnimatedButton from '@/components/ui/animated-button';
 import AnimatedLink from '@/components/ui/animated-link';
 import SlicedText from '../ui/sliced-text';
 
+// Sliding stairs animation variants
+const stairAnimation = {
+  initial: { height: 0 },
+  enter: (i: number) => ({
+    height: '100%',
+    transition: { duration: 0.5, delay: 0.05 * i, ease: [0.33, 1, 0.68, 1] },
+  }),
+  exit: (i: number) => ({
+    height: 0,
+    transition: { duration: 0.3, delay: 0.05 * i, ease: [0.33, 1, 0.68, 1] },
+  }),
+};
+
+const menuContentAnimation = {
+  initial: { opacity: 0 },
+  enter: {
+    opacity: 1,
+    transition: { duration: 0.5, delay: 0.3, ease: [0.33, 1, 0.68, 1] },
+  },
+  exit: {
+    opacity: 0,
+    transition: { duration: 0.2, ease: [0.33, 1, 0.68, 1] },
+  },
+};
+
+const linkAnimation = {
+  initial: { opacity: 0, y: 20 },
+  enter: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: 0.4 + i * 0.1, ease: [0.33, 1, 0.68, 1] },
+  }),
+  exit: {
+    opacity: 0,
+    y: 10,
+    transition: { duration: 0.2, ease: [0.33, 1, 0.68, 1] },
+  },
+};
+
 export default function Header() {
   const t = useTranslations('nav');
   const tCommon = useTranslations('common');
@@ -155,62 +194,67 @@ export default function Header() {
         </nav>
       </header>
 
-      {/* Mobile Menu Drawer */}
-      <AnimatePresence>
+      {/* Mobile Menu with Sliding Stairs Effect */}
+      <AnimatePresence mode="wait">
         {isMobileMenuOpen && (
           <>
-            <motion.div
-              className="fixed inset-0 z-40 bg-black/20 backdrop-blur-sm lg:hidden"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setIsMobileMenuOpen(false)}
-            />
+            {/* Sliding Stairs Background */}
+            <div className="pointer-events-none fixed inset-0 z-40 flex lg:hidden">
+              {[...Array(5)].map((_, index) => (
+                <motion.div
+                  key={index}
+                  className="h-full w-[20vw] origin-top bg-[#4a9ead]"
+                  variants={stairAnimation}
+                  initial="initial"
+                  animate="enter"
+                  exit="exit"
+                  custom={4 - index}
+                />
+              ))}
+            </div>
 
+            {/* Menu Content */}
             <motion.div
-              className="fixed top-0 right-0 z-50 h-full w-full max-w-sm bg-white shadow-xl lg:hidden"
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="fixed inset-0 z-40 flex flex-col pt-20 lg:hidden"
+              variants={menuContentAnimation}
+              initial="initial"
+              animate="enter"
+              exit="exit"
             >
-              <div className="flex h-full flex-col p-6">
-                <div className="flex justify-end">
-                  <button
-                    type="button"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    className="flex h-10 w-10 items-center justify-center"
-                    aria-label="Close menu"
+              {/* Navigation Links */}
+              <nav className="flex flex-1 flex-col justify-center px-10">
+                {navLinks.map((link, index) => (
+                  <motion.div
+                    key={link.href}
+                    variants={linkAnimation}
+                    initial="initial"
+                    animate="enter"
+                    exit="exit"
+                    custom={index}
+                    className="border-b border-white/20 py-4"
                   >
-                    <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  </button>
-                </div>
-
-                <nav className="mt-8 flex flex-col gap-6">
-                  {navLinks.map((link, index) => (
-                    <motion.div
-                      key={link.href}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.1 }}
+                    <Link
+                      href={link.href}
+                      className="font-(family-name:--font-playfair) text-3xl font-light italic text-white transition-opacity hover:opacity-70"
+                      onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      <Link
-                        href={link.href}
-                        className="text-lg text-gray-900"
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        {link.label}
-                      </Link>
-                    </motion.div>
-                  ))}
-                </nav>
+                      {link.label}
+                    </Link>
+                  </motion.div>
+                ))}
+              </nav>
 
-                <div className="mt-8">
-                  <LanguageSwitcher variant="dark" />
-                </div>
-              </div>
+              {/* Footer */}
+              <motion.div
+                className="px-10 pb-10"
+                variants={linkAnimation}
+                initial="initial"
+                animate="enter"
+                exit="exit"
+                custom={navLinks.length}
+              >
+                <LanguageSwitcher variant="light" />
+              </motion.div>
             </motion.div>
           </>
         )}
