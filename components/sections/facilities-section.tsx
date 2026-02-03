@@ -71,7 +71,7 @@ function FacilityCard({
   );
 
   // Large image moves slower - anchored, subtle movement
-  const largeImgY = useTransform(scrollYProgress, [0, 1], ["5%", "-5%"]);
+  const largeImgY = useTransform(scrollYProgress, [0, 1], ["5%", "-30%"]);
   const largeImgScale = useTransform(
     scrollYProgress,
     [0, 0.5, 1],

@@ -99,16 +99,38 @@ body {
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  overflow: hidden; /* Let main handle scrolling */
 }
 
 /* Scroll snap container */
 main {
   scroll-snap-type: y proximity;
+  -webkit-overflow-scrolling: touch; /* Safari smooth scrolling */
   overflow-y: auto;
+  overflow-y: scroll; /* Safari prefers explicit scroll */
   height: 100vh;
   height: 100dvh;
+  /* Safari fix: ensure the container is a proper scrolling context */
+  overscroll-behavior: contain;
+}
+
+/* Safari-specific scroll snap fix */
+@supports (-webkit-touch-callout: none) {
+  main {
+    scroll-snap-type: y mandatory; /* Safari handles mandatory better */
+  }
 }
 
 /* Snap section base styles */
@@ -116,6 +138,8 @@ main {
   scroll-snap-align: start;
   min-height: 100vh;
   min-height: 100dvh;
+  /* Safari fix: ensure sections are properly sized */
+  flex-shrink: 0;
 }
 
 /* Hero section full height - with fallback for older browsers */
