@@ -1,0 +1,211 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { Link } from '@/i18n/routing';
+
+export default function FooterSection() {
+  const t = useTranslations('footer');
+
+  return (
+    <footer className="bg-[#f5f5f0]">
+      <div className="mx-auto max-w-7xl px-6 lg:px-0">
+        {/* Main Footer Content - Full width flex container */}
+        <div className="flex flex-col lg:flex-row">
+          {/* Left side - Logo, Links and Bottom Bar */}
+          <div className="flex-1 pb-8 pt-24 lg:pr-12 lg:pl-12">
+            {/* Logo */}
+            <div className="mb-16">
+              <Link href="/" className="text-xl tracking-[0.2em] text-gray-900">
+                VRΛJΛ MΛRII by the Sea
+              </Link>
+            </div>
+
+            {/* Links Grid */}
+            <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:gap-16">
+              {/* Company */}
+              <div>
+                <h3 className="mb-5 text-sm font-medium text-gray-900">
+                  {t('company')}
+                </h3>
+                <ul className="space-y-3">
+                  <li>
+                    <Link
+                      href="/about"
+                      className="text-sm text-gray-500 transition-colors hover:text-gray-900"
+                    >
+                      {t('about')}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/careers"
+                      className="text-sm text-gray-500 transition-colors hover:text-gray-900"
+                    >
+                      {t('careers')}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/press"
+                      className="text-sm text-gray-500 transition-colors hover:text-gray-900"
+                    >
+                      {t('pressRoom')}
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Members */}
+              <div>
+                <h3 className="mb-5 text-sm font-medium text-gray-900">
+                  {t('members')}
+                </h3>
+                <ul className="space-y-3">
+                  <li>
+                    <Link
+                      href="/login"
+                      className="text-sm text-gray-500 transition-colors hover:text-gray-900"
+                    >
+                      {t('login')}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/faq"
+                      className="text-sm text-gray-500 transition-colors hover:text-gray-900"
+                    >
+                      {t('faq')}
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Follow */}
+              <div>
+                <h3 className="mb-5 text-sm font-medium text-gray-900">
+                  {t('follow')}
+                </h3>
+                <ul className="space-y-3">
+                  <li>
+                    <a
+                      href="https://instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-gray-500 transition-colors hover:text-gray-900"
+                    >
+                      {t('instagram')}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://facebook.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-gray-500 transition-colors hover:text-gray-900"
+                    >
+                      {t('facebook')}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Health Centres */}
+              <div>
+                <h3 className="mb-5 text-sm font-medium text-gray-900">
+                  {t('healthCentres')}
+                </h3>
+                <ul className="space-y-3">
+                  <li>
+                    <Link
+                      href="/locations/constanta"
+                      className="text-sm text-gray-500 transition-colors hover:text-gray-900"
+                    >
+                      {t('locations.constanta')}
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/locations/eforie"
+                      className="text-sm text-gray-500 transition-colors hover:text-gray-900"
+                    >
+                      {t('locations.eforie')}
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Bottom Bar */}
+            <div className="mt-20 flex flex-col items-start justify-between gap-4 border-t border-gray-300/50 pt-8 sm:flex-row sm:items-center">
+              {/* Copyright and Legal Links */}
+              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-gray-500">
+                <span>{t('copyright')}</span>
+                <Link
+                  href="/cookies"
+                  className="transition-colors hover:text-gray-900"
+                >
+                  {t('cookieNotice')}
+                </Link>
+                <Link
+                  href="/privacy"
+                  className="transition-colors hover:text-gray-900"
+                >
+                  {t('privacyPolicy')}
+                </Link>
+                <Link
+                  href="/terms"
+                  className="transition-colors hover:text-gray-900"
+                >
+                  {t('termsOfService')}
+                </Link>
+              </div>
+
+              {/* Country Selector */}
+              <div className="flex items-center gap-2 text-sm text-gray-500">
+                <svg
+                  className="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="12" r="10" strokeWidth="1.5" />
+                  <path
+                    strokeWidth="1.5"
+                    d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  />
+                </svg>
+                <span>{t('country')}</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Right side - Support Card (extends full height) */}
+          <div className="lg:w-[340px] xl:w-[380px]">
+            <div className="flex h-full min-h-[400px] flex-col bg-[#a8c5c8] p-8 lg:p-10">
+              <h3 className="font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900">
+                {t('getSupport')}
+              </h3>
+              <div className="mt-8 space-y-2">
+                <a
+                  href={`mailto:${t('email')}`}
+                  className="block text-sm font-medium text-gray-900 underline decoration-gray-900/30 underline-offset-4 transition-colors hover:decoration-gray-900"
+                >
+                  {t('email')}
+                </a>
+                <a
+                  href={`tel:${t('phone').replace(/\s/g, '')}`}
+                  className="block text-sm font-medium text-gray-900"
+                >
+                  {t('phone')}
+                </a>
+              </div>
+              <p className="mt-auto text-sm text-gray-700">
+                {t('hours')}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+}

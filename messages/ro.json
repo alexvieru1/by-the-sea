@@ -6,11 +6,11 @@
     "getDirections": "Indicatii"
   },
   "nav": {
-    "bodyScan": "Scanare Corporală Neko",
+    "bodyScan": "Scanare Corporală",
     "support": "Suport",
     "about": "Despre Noi",
     "login": "Autentificare",
-    "faq": "Intrebari Frecvente"
+    "faq": "Întrebări Frecvente"
   },
   "hero": {
     "title1": "Un control medical mai bun.",
@@ -33,38 +33,33 @@
     }
   },
   "yourBody": {
-    "title": "Corpul tau",
-    "description": "Inspectiile regulate sunt obligatorii pentru masinile de pe drumurile noastre, dar in sistemul nostru de sanatate, asteptam adesea pana cand corpul nostru cedeaza inainte de a lua masuri. De ce sa nu prioritizam sanatatea in acelasi mod?"
+    "title": "Corpul tău",
+    "description": "Inspecțiile regulate sunt obligatorii pentru mașinile de pe drumurile noastre, dar în sistemul nostru de sănătate, așteptăm adesea până când corpul nostru cedează înainte de a lua măsuri. De ce să nu prioritizăm sănătatea în același mod?"
   },
   "yourFuture": {
-    "title": "Viitorul tau",
-    "description": "Echipand medicii nostri cu cele mai bune instrumente pentru a avea grija de monitorizarea sanatatii tale, modelul nostru de ingrijire condus de medici ofera o experienta mai buna pentru toti."
+    "title": "Viitorul tău",
+    "description": "Echipând medicii noștri cu cele mai bune instrumente pentru a avea grijă de monitorizarea sănătății tale, modelul nostru de îngrijire condus de medici oferă o experiență mai bună pentru toți."
   },
   "buildData": {
-    "title1": "Construieste pe baza datelor tale.",
-    "title2": "In fiecare an.",
+    "title1": "Construiește pe baza datelor tale.",
+    "title2": "În fiecare an.",
     "prevention": {
-      "label": "Preventie",
-      "title": "Fii cu un pas inaintea sanatatii tale"
+      "label": "Prevenție",
+      "title": "Fii cu un pas înaintea sănătății tale"
     },
     "benchmark": {
-      "label": "Comparatie",
-      "title": "Compara-te cu semenii tai"
+      "label": "Comparație",
+      "title": "Compară-te cu semenii tăi"
     },
     "trackChange": {
-      "label": "Urmareste Schimbarea",
-      "title": "Imbunatateste-ti valorile in timp"
+      "label": "Urmărește Schimbarea",
+      "title": "Îmbunătățește-ți valorile în timp"
     }
   },
-  "locations": {
-    "label": "Locatiile Noastre",
-    "title": "Centre Neko Health",
-    "description": "Centrele Neko Health sunt situate convenabil in inima oraselor London, Manchester, Birmingham si Stockholm."
-  },
   "facilities": {
-    "label": "Facilitatile Noastre",
-    "title": "Centrele Vraja Marii",
-    "description": "Descopera facilitatile noastre de clasa mondiala, proiectate pentru calatoria ta completa de wellness, de la relaxare la recuperare.",
+    "label": "Facilitățile Noastre",
+    "title": "Facilitățile Vraja Mării",
+    "description": "Descoperă facilitățile noastre de clasă mondială, proiectate pentru călătoria ta completă de wellness, de la relaxare la recuperare.",
     "categories": {
       "wellness": "Wellness",
       "recovery": "Recuperare",
@@ -74,53 +69,53 @@
     "wellness": {
       "saltRoom": {
         "name": "Camera de Sare",
-        "description": "Sedinte terapeutice de haloterapie intr-un mediu pristine infuzat cu sare"
+        "description": "Ședințe terapeutice de haloterapie într-un mediu pristine infuzat cu sare"
       },
       "finnishSauna": {
-        "name": "Sauna Finlandeza",
-        "description": "Sauna traditionala pe lemne cu experienta autentica finlandeza"
+        "name": "Sauna Finlandeză",
+        "description": "Sauna tradițională pe lemne cu experiență autentică finlandeză"
       },
       "relaxationPool": {
-        "name": "Piscina de Relaxare",
-        "description": "Piscina minerala incalzita cu vedere panoramica la mare"
+        "name": "Piscină de Relaxare",
+        "description": "Piscină minerală încălzită cu vedere panoramică la mare"
       }
     },
     "recovery": {
       "cryotherapy": {
         "name": "Camera de Crioterapie",
-        "description": "Crioterapie avansata pentru intregul corp pentru recuperare rapida"
+        "description": "Crioterapie avansată pentru întregul corp pentru recuperare rapidă"
       },
       "infraredSauna": {
-        "name": "Sauna cu Infrarosu",
-        "description": "Terapie cu caldura infrarosie pentru detoxifiere profunda"
+        "name": "Sauna cu Infraroșu",
+        "description": "Terapie cu căldură infraroșie pentru detoxifiere profundă"
       },
       "iceBath": {
-        "name": "Baie cu Gheata",
-        "description": "Terapie de imersie la rece pentru reducerea inflamatiei"
+        "name": "Baie cu Gheață",
+        "description": "Terapie de imersie la rece pentru reducerea inflamației"
       }
     },
     "therapy": {
       "massageRoom": {
         "name": "Sala de Masaj",
-        "description": "Camere private de tratament pentru masaje terapeutice si de relaxare"
+        "description": "Camere private de tratament pentru masaje terapeutice și de relaxare"
       },
       "physiotherapy": {
         "name": "Centru de Fizioterapie",
-        "description": "Reabilitare si terapie de miscare condusa de experti"
+        "description": "Reabilitare și terapie de mișcare condusă de experți"
       },
       "floatationTank": {
         "name": "Capsula de Flotare",
-        "description": "Capsule de deprivare senzoriala pentru meditatie profunda si recuperare"
+        "description": "Capsule de deprivare senzorială pentru meditație profundă și recuperare"
       }
     },
     "dining": {
       "restaurant": {
         "name": "Restaurant cu Vedere la Mare",
-        "description": "Bucatarie de la ferma la masa cu panorame uimitoare ale Marii Negre"
+        "description": "Bucătărie de la fermă la masă cu panorame uimitoare ale Mării Negre"
       },
       "juiceBar": {
         "name": "Bar de Sucuri Vitality",
-        "description": "Sucuri proaspat stoarse si elixiruri de wellness"
+        "description": "Sucuri proaspăt stoarse și elixiruri de wellness"
       },
       "terrace": {
         "name": "Terasa Apusului",
@@ -137,13 +132,28 @@
   "footer": {
     "cta": "Fa primul pas pentru a fi cu un pas inaintea sanatatii tale",
     "company": "Companie",
+    "about": "Despre Noi",
     "members": "Membri",
-    "follow": "Urmareste-ne",
-    "healthCentres": "Centre de Sanatate",
+    "follow": "Urmărește-ne",
+    "healthCentres": "Centre de Sănătate",
     "careers": "Cariere",
-    "pressRoom": "Presa",
+    "pressRoom": "Presă",
     "cookieNotice": "Politica Cookie",
     "privacyPolicy": "Politica de Confidentialitate",
-    "termsOfService": "Termeni si Conditii"
+    "termsOfService": "Termeni si Conditii",
+    "login": "Autentificare",
+    "faq": "Întrebări Frecvente",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "getSupport": "Obține Suport",
+    "email": "contact@vrajamarii.ro",
+    "phone": "+40 241 123 456",
+    "hours": "Luni - Vineri 9:00 - 18:00",
+    "copyright": "© 2026 Vraja Mării by the Sea. Toate drepturile rezervate.",
+    "country": "Romania",
+    "locations": {
+      "constanta": "Vraja Mării in City",
+      "eforie": "Complex Vraja Mării"
+    }
   }
 }

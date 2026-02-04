@@ -88,7 +88,7 @@ function FacilityCard({
       <div className="relative flex items-end gap-4 md:block lg:gap-0">
         {/* Small image - hidden on mobile, positioned top-left overlapping on lg */}
         <motion.div
-          className="relative z-10 hidden aspect-3/4 w-1/4 overflow-hidden md:block lg:absolute lg:-left-12 lg:-top-8 lg:w-[35%]"
+          className="relative z-10 hidden aspect-3/4 w-1/4 overflow-hidden md:block lg:absolute  lg:-top-8 lg:w-[35%]"
           style={{
             y: smallImgYMove,
           }}

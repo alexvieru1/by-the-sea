@@ -6,7 +6,7 @@
     "getDirections": "Get Directions"
   },
   "nav": {
-    "bodyScan": "Neko Body Scan",
+    "bodyScan": "Body Scan",
     "support": "Support",
     "about": "About",
     "login": "Log In",
@@ -56,14 +56,9 @@
       "title": "Improve your values over time"
     }
   },
-  "locations": {
-    "label": "Our Locations",
-    "title": "Neko Health Centres",
-    "description": "Neko Health Centres are conveniently located in the heart of London, Manchester, Birmingham and Stockholm."
-  },
   "facilities": {
     "label": "Our Facilities",
-    "title": "Vraja Marii Centres",
+    "title": "Vraja Mării Facilities",
     "description": "Discover our world-class facilities designed for your complete wellness journey, from relaxation to recovery.",
     "categories": {
       "wellness": "Wellness",
@@ -137,6 +132,7 @@
   "footer": {
     "cta": "Take the first step in getting ahead of your health",
     "company": "Company",
+    "about": "About Us",
     "members": "Members",
     "follow": "Follow",
     "healthCentres": "Health Centres",
@@ -144,6 +140,20 @@
     "pressRoom": "Press Room",
     "cookieNotice": "Cookie Notice",
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service"
+    "termsOfService": "Terms of Service",
+    "login": "Log In",
+    "faq": "FAQ",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "getSupport": "Get Support",
+    "email": "contact@vrajamarii.ro",
+    "phone": "+40 241 123 456",
+    "hours": "Monday - Friday 9am - 6pm",
+    "copyright": "© 2026 Vraja Mării by the Sea. All rights reserved.",
+    "country": "Romania",
+    "locations": {
+      "constanta": "Vraja Mării in City",
+      "eforie": "Vraja Mării Complex"
+    }
   }
 }

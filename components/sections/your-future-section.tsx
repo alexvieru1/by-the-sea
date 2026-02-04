@@ -3,7 +3,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, useScroll, useTransform, useInView } from 'motion/react';
-import ClaudeButton from '@/components/ui/claude-button';
+import { Link } from '@/i18n/routing';
 import { TextRoll } from '@/components/ui/text-roll';
 import Image from 'next/image';
 
@@ -14,19 +14,38 @@ export default function YourFutureSection() {
   const containerRef = useRef<HTMLElement | null>(null);
   const cardRef = useRef<HTMLDivElement>(null);
 
-  const isInView = useInView(cardRef, { once: true, margin: '-100px' });
+  const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
+  const [showBox, setShowBox] = useState(false);
   const [showText, setShowText] = useState(false);
+  const [showTextEffect, setShowTextEffect] = useState(false);
+  const [showButton, setShowButton] = useState(false);
 
   // Get the main scroll container
   useEffect(() => {
     containerRef.current = document.querySelector('main');
   }, []);
 
-  // Trigger text animation after card animation completes
+  // Sequential animation stages
   useEffect(() => {
     if (isInView) {
-      const timer = setTimeout(() => setShowText(true), 600);
-      return () => clearTimeout(timer);
+      // Stage 1: Box slides in
+      const timer0 = setTimeout(() => setShowBox(true), 100);
+
+      // Stage 2: Text appears (after box animation)
+      const timer1 = setTimeout(() => setShowText(true), 800);
+
+      // Stage 3: Text effect (after text appears)
+      const timer2 = setTimeout(() => setShowTextEffect(true), 1100);
+
+      // Stage 4: Button appears (after text effect)
+      const timer3 = setTimeout(() => setShowButton(true), 1600);
+
+      return () => {
+        clearTimeout(timer0);
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+        clearTimeout(timer3);
+      };
     }
   }, [isInView]);
 
@@ -36,109 +55,53 @@ export default function YourFutureSection() {
     offset: ['start end', 'end start'],
   });
 
-  // Subtler parallax that works well with snap scroll
-  const imageScale = useTransform(scrollYProgress, [0.2, 0.8], [1.03, 1]);
-  const imageY = useTransform(scrollYProgress, [0.2, 0.8], ['-2%', '2%']);
+  // Subtle parallax on background image
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1.1, 1]);
+  const imageY = useTransform(scrollYProgress, [0, 1], ['-5%', '5%']);
 
   return (
     <section
       ref={sectionRef}
-      className="snap-section relative overflow-hidden bg-[#d8f0f2] py-16 lg:py-0"
+      className="snap-section relative min-h-screen"
     >
-      <div className="mx-auto flex h-full min-h-screen max-w-7xl flex-col-reverse items-center px-6 lg:flex-row lg:items-stretch lg:px-12">
-        {/* Left side - Image with floating orbs */}
-        <div className="relative flex w-full items-center justify-center lg:w-1/2">
-          <motion.div
-            className="relative aspect-3/4 w-full max-w-md overflow-hidden lg:aspect-auto lg:h-[80vh] lg:max-w-none"
-            style={{ scale: imageScale, y: imageY }}
-          >
-            {/* Placeholder for person image */}
-            <Image
-              className="absolute inset-0 bg-linear-to-br from-[#c8e8eb] to-[#b5dce0]"
-              src="/images/your_future.webp"
-              alt="Person"
-              fill
-            />
+      {/* Full Background Image - this one has overflow hidden */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <motion.div
+          className="h-full w-full"
+          style={{ scale: imageScale, y: imageY }}
+        >
+          <Image
+            src="/images/your_future.webp"
+            alt="Your future background"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Subtle overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/20" />
+        </motion.div>
+      </div>
 
-            {/* Floating orbs effect */}
-            <div className="absolute inset-0 overflow-hidden">
-              {/* Large soft orb 1 */}
-              <motion.div
-                className="absolute h-64 w-64 rounded-full bg-white/10 blur-3xl"
-                style={{ top: '15%', right: '20%' }}
-                animate={{
-                  x: [0, -30, 20, 0],
-                  y: [0, -35, 25, 0],
-                  scale: [1, 1.1, 0.95, 1],
-                }}
-                transition={{
-                  duration: 11,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              />
-
-              {/* Large soft orb 2 */}
-              <motion.div
-                className="absolute h-48 w-48 rounded-full bg-[#0097a7]/15 blur-3xl"
-                style={{ bottom: '25%', left: '15%' }}
-                animate={{
-                  x: [0, 25, -15, 0],
-                  y: [0, 25, -30, 0],
-                  scale: [1, 0.9, 1.1, 1],
-                }}
-                transition={{
-                  duration: 9,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              />
-
-              {/* Medium orb */}
-              <motion.div
-                className="absolute h-32 w-32 rounded-full bg-white/8 blur-2xl"
-                style={{ top: '55%', right: '35%' }}
-                animate={{
-                  x: [0, -35, 25, 0],
-                  y: [0, 20, -30, 0],
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              />
-
-              {/* Small accent orb */}
-              <motion.div
-                className="absolute h-20 w-20 rounded-full bg-[#0097a7]/10 blur-xl"
-                style={{ top: '35%', left: '25%' }}
-                animate={{
-                  x: [0, 20, -25, 0],
-                  y: [0, -20, 15, 0],
-                  opacity: [0.5, 0.8, 0.5],
-                }}
-                transition={{
-                  duration: 7,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-              />
-            </div>
-          </motion.div>
-        </div>
-
-        {/* Right side - Content Card */}
-        <div className="z-10 flex w-full items-center py-12 lg:w-1/2 lg:justify-end lg:py-24">
+      {/* Content Container - NO overflow hidden here */}
+      <div className="relative z-10 flex min-h-screen items-center justify-end">
+        {/* Content Card + Button Container - flush right */}
+        <div className="flex flex-col items-end">
+          {/* Large Text Box - slides in from right */}
           <motion.div
             ref={cardRef}
-            className="w-full max-w-lg bg-[#0097a7] p-8 shadow-2xl lg:p-12"
-            initial={{ x: 100, opacity: 0 }}
-            animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="w-[90vw] max-w-2xl bg-[#0097a7] px-8 py-10 shadow-2xl sm:px-12 sm:py-14 lg:px-16 lg:py-16"
+            initial={{ x: 800 }}
+            animate={{ x: showBox ? 0 : 800 }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h2 className="font-(family-name:--font-playfair) text-4xl font-normal italic leading-tight text-white lg:text-5xl">
-              {showText ? (
+            {/* Title with text effect */}
+            <motion.h2
+              className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic leading-tight text-white sm:text-5xl lg:text-6xl"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: showText ? 1 : 0 }}
+              transition={{ duration: 0.4 }}
+            >
+              {showTextEffect ? (
                 <TextRoll
                   duration={0.3}
                   getEnterDelay={(i) => i * 0.03}
@@ -147,29 +110,80 @@ export default function YourFutureSection() {
                   {t('title')}
                 </TextRoll>
               ) : (
-                <span className="invisible">{t('title')}</span>
+                t('title')
               )}
-            </h2>
+            </motion.h2>
+
+            {/* Description */}
             <motion.p
-              className="mt-6 text-base leading-relaxed text-white/90 lg:text-lg"
+              className="mt-6 text-base leading-relaxed text-white/90 sm:mt-8 sm:text-lg lg:text-xl"
               initial={{ opacity: 0, y: 10 }}
-              animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-              transition={{ duration: 0.4, delay: 0.4 }}
+              animate={{ opacity: showText ? 1 : 0, y: showText ? 0 : 10 }}
+              transition={{ duration: 0.5, delay: 0.15 }}
             >
               {t('description')}
             </motion.p>
-            <motion.div
-              className="mt-8"
-              initial={{ opacity: 0, y: 10 }}
-              animate={showText ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-              transition={{ duration: 0.4, delay: 0.6 }}
+          </motion.div>
+
+          {/* CTA Button - appears below the box */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: showButton ? 1 : 0, y: showButton ? 0 : 20 }}
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+          >
+            <Link
+              href="/book"
+              className="group inline-flex items-center gap-3 bg-gray-900 px-8 py-5 text-sm font-medium uppercase tracking-wider text-white transition-all hover:bg-gray-800"
             >
-              <ClaudeButton href="/book" variant="dark" size="lg">
-                {tCommon('bookScan')}
-              </ClaudeButton>
-            </motion.div>
+              {tCommon('bookScan')}
+              <svg
+                className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
+                />
+              </svg>
+            </Link>
           </motion.div>
         </div>
+      </div>
+
+      {/* Floating orbs effect */}
+      <div className="pointer-events-none absolute inset-0 z-[5] overflow-hidden">
+        <motion.div
+          className="absolute h-64 w-64 rounded-full bg-white/10 blur-3xl"
+          style={{ top: '15%', left: '20%' }}
+          animate={{
+            x: [0, -30, 20, 0],
+            y: [0, -35, 25, 0],
+            scale: [1, 1.1, 0.95, 1],
+          }}
+          transition={{
+            duration: 11,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />
+        <motion.div
+          className="absolute h-48 w-48 rounded-full bg-[#0097a7]/20 blur-3xl"
+          style={{ bottom: '25%', left: '15%' }}
+          animate={{
+            x: [0, 25, -15, 0],
+            y: [0, 25, -30, 0],
+            scale: [1, 0.9, 1.1, 1],
+          }}
+          transition={{
+            duration: 9,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
+        />
       </div>
     </section>
   );
