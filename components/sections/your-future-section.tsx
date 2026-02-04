@@ -62,7 +62,7 @@ export default function YourFutureSection() {
   return (
     <section
       ref={sectionRef}
-      className="snap-section relative min-h-screen"
+      className="relative min-h-screen"
     >
       {/* Full Background Image - this one has overflow hidden */}
       <div className="absolute inset-0 z-0 overflow-hidden">

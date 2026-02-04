@@ -125,10 +125,10 @@ main {
   overscroll-behavior: contain;
 }
 
-/* Safari-specific scroll snap fix */
+/* Safari/iOS scroll snap - use proximity to prevent scroll trapping */
 @supports (-webkit-touch-callout: none) {
   main {
-    scroll-snap-type: y mandatory; /* Safari handles mandatory better */
+    scroll-snap-type: y proximity;
   }
 }
 
