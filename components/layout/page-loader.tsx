@@ -1,29 +1,23 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { AnimatePresence } from 'motion/react';
 import Preloader from '@/components/ui/preloader';
 
 export default function PageLoader() {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
-    // Show preloader for a minimum of 500ms after all resources are loaded
     const hidePreloader = () => {
-      const preloader = document.getElementById('preloader');
-      if (preloader) {
-        preloader.style.opacity = '0';
-        preloader.style.pointerEvents = 'none';
-        // Remove from DOM after fade out
-        setTimeout(() => {
-          preloader.remove();
-        }, 500);
-      }
+      setIsLoading(false);
     };
 
     // Wait for all resources to load
     if (document.readyState === 'complete') {
-      // Page already loaded
+      // Page already loaded, wait 500ms
       setTimeout(hidePreloader, 500);
     } else {
-      // Wait for load event
+      // Wait for load event + 500ms
       const handleLoad = () => {
         setTimeout(hidePreloader, 500);
       };
@@ -34,5 +28,9 @@ export default function PageLoader() {
     }
   }, []);
 
-  return <Preloader />;
+  return (
+    <AnimatePresence mode="wait">
+      {isLoading && <Preloader />}
+    </AnimatePresence>
+  );
 }
