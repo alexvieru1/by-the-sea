@@ -174,7 +174,7 @@ export default function FacilitiesSection() {
   }, []);
 
   return (
-    <section className="snap-section bg-gray-50 py-20 lg:py-32">
+    <section className=" bg-gray-50 py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Header */}
         <div className="mb-12 flex flex-col gap-8 lg:mb-16 lg:flex-row lg:items-start lg:justify-between">
