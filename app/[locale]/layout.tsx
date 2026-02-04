@@ -5,6 +5,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/header';
+import PageLoader from '@/components/layout/page-loader';
 import '../globals.css';
 
 const geistSans = Geist({
@@ -50,6 +51,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} antialiased`}
       >
+        <PageLoader />
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}
