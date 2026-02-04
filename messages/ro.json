@@ -3,7 +3,84 @@
     "bookScan": "Programeaza Sejur",
     "bookScanHover": "Rezerva Acum",
     "learnMore": "Afla Mai Multe",
-    "getDirections": "Indicatii"
+    "getDirections": "Indicatii",
+    "backHome": "Înapoi Acasă",
+    "comingSoon": "În curând"
+  },
+  "notFound": {
+    "title": "Pagină negăsită",
+    "description": "Ne pare rău, pagina pe care o cauți nu există sau a fost mutată.",
+    "code": "404"
+  },
+  "pages": {
+    "bodyScan": {
+      "title": "Scanare Corporală",
+      "subtitle": "Tehnologie avansată pentru sănătatea ta",
+      "description": "Descoperă starea reală a corpului tău prin scanări complete și non-invazive. Monitorizează-ți sănătatea cu precizie."
+    },
+    "support": {
+      "title": "Suport",
+      "subtitle": "Suntem aici pentru tine",
+      "description": "Echipa noastră de suport este dedicată să te ajute cu orice întrebare sau nelămurire."
+    },
+    "about": {
+      "title": "Despre Noi",
+      "subtitle": "Misiunea noastră",
+      "description": "Vraja Mării by the Sea este un complex de biohacking dedicat optimizării sănătății și bunăstării tale."
+    },
+    "book": {
+      "title": "Rezervă Sejur",
+      "subtitle": "Începe-ți călătoria wellness",
+      "description": "Programează-ți vizita la complexul nostru și descoperă o nouă abordare a sănătății."
+    },
+    "careers": {
+      "title": "Cariere",
+      "subtitle": "Alătură-te echipei noastre",
+      "description": "Căutăm persoane pasionate de sănătate și wellness care vor să facă diferența."
+    },
+    "press": {
+      "title": "Presă",
+      "subtitle": "Noutăți și apariții media",
+      "description": "Descoperă cele mai recente știri și apariții media despre Vraja Mării."
+    },
+    "login": {
+      "title": "Autentificare",
+      "subtitle": "Bine ai revenit",
+      "description": "Accesează-ți contul pentru a vedea programările și istoricul tău."
+    },
+    "faq": {
+      "title": "Întrebări Frecvente",
+      "subtitle": "Răspunsuri la întrebările tale",
+      "description": "Găsește răspunsuri la cele mai comune întrebări despre serviciile noastre."
+    },
+    "cookies": {
+      "title": "Politica Cookie",
+      "subtitle": "Informații despre cookie-uri",
+      "description": "Află cum folosim cookie-urile pentru a-ți îmbunătăți experiența pe site."
+    },
+    "privacy": {
+      "title": "Politica de Confidențialitate",
+      "subtitle": "Protejăm datele tale",
+      "description": "Află cum colectăm, folosim și protejăm informațiile tale personale."
+    },
+    "terms": {
+      "title": "Termeni și Condiții",
+      "subtitle": "Regulile de utilizare",
+      "description": "Citește termenii și condițiile de utilizare a serviciilor noastre."
+    },
+    "locations": {
+      "title": "Locații",
+      "constanta": {
+        "title": "Vraja Mării în Oraș",
+        "subtitle": "Centrul din Constanța",
+        "description": "Localizat în inima orașului, centrul nostru oferă acces facil la servicii premium de wellness."
+      },
+      "eforie": {
+        "title": "Complex Vraja Mării",
+        "subtitle": "Eforie Sud",
+        "description": "Complexul principal, situat pe malul mării, oferă experiența completă de biohacking și relaxare."
+      }
+    }
   },
   "nav": {
     "bodyScan": "Scanare Corporală",

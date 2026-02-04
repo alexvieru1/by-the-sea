@@ -3,7 +3,84 @@
     "bookScan": "Book a Stay",
     "bookScanHover": "Reserve Now",
     "learnMore": "Learn More",
-    "getDirections": "Get Directions"
+    "getDirections": "Get Directions",
+    "backHome": "Back Home",
+    "comingSoon": "Coming Soon"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "Sorry, the page you are looking for doesn't exist or has been moved.",
+    "code": "404"
+  },
+  "pages": {
+    "bodyScan": {
+      "title": "Body Scan",
+      "subtitle": "Advanced technology for your health",
+      "description": "Discover the real state of your body through comprehensive and non-invasive scans. Monitor your health with precision."
+    },
+    "support": {
+      "title": "Support",
+      "subtitle": "We're here for you",
+      "description": "Our support team is dedicated to help you with any questions or concerns."
+    },
+    "about": {
+      "title": "About Us",
+      "subtitle": "Our mission",
+      "description": "Vraja Mării by the Sea is a biohacking complex dedicated to optimizing your health and wellbeing."
+    },
+    "book": {
+      "title": "Book a Stay",
+      "subtitle": "Start your wellness journey",
+      "description": "Schedule your visit to our complex and discover a new approach to health."
+    },
+    "careers": {
+      "title": "Careers",
+      "subtitle": "Join our team",
+      "description": "We're looking for passionate individuals in health and wellness who want to make a difference."
+    },
+    "press": {
+      "title": "Press Room",
+      "subtitle": "News and media appearances",
+      "description": "Discover the latest news and media coverage about Vraja Mării."
+    },
+    "login": {
+      "title": "Log In",
+      "subtitle": "Welcome back",
+      "description": "Access your account to view your appointments and history."
+    },
+    "faq": {
+      "title": "FAQ",
+      "subtitle": "Answers to your questions",
+      "description": "Find answers to the most common questions about our services."
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "subtitle": "Information about cookies",
+      "description": "Learn how we use cookies to improve your experience on our website."
+    },
+    "privacy": {
+      "title": "Privacy Policy",
+      "subtitle": "We protect your data",
+      "description": "Learn how we collect, use and protect your personal information."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "subtitle": "Terms of use",
+      "description": "Read the terms and conditions for using our services."
+    },
+    "locations": {
+      "title": "Locations",
+      "constanta": {
+        "title": "Vraja Mării in City",
+        "subtitle": "Constanța Center",
+        "description": "Located in the heart of the city, our center offers easy access to premium wellness services."
+      },
+      "eforie": {
+        "title": "Vraja Mării Complex",
+        "subtitle": "Eforie Sud",
+        "description": "The main complex, situated on the seaside, offers the complete biohacking and relaxation experience."
+      }
+    }
   },
   "nav": {
     "bodyScan": "Body Scan",

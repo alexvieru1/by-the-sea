@@ -2,15 +2,8 @@
 
 import { useRef, useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, useScroll, useTransform } from 'motion/react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { motion, useScroll, useTransform, useInView } from 'motion/react';
 import Image from 'next/image';
-
-// Register GSAP plugins
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger);
-}
 
 // Label positions for the floating badges - desktop positions
 const labelPositionsDesktop = [
@@ -38,6 +31,9 @@ export default function DataPointsSection() {
   const containerRef = useRef<HTMLElement | null>(null);
   const [visibleLabels, setVisibleLabels] = useState<Set<string>>(new Set());
 
+  // Only animate waves when section is in view (performance optimization for Chrome)
+  const isInView = useInView(sectionRef, { amount: 0.1 });
+
   // Get the main scroll container
   useEffect(() => {
     containerRef.current = document.querySelector('main');
@@ -53,40 +49,49 @@ export default function DataPointsSection() {
   const titleOpacity = useTransform(scrollYProgress, [0.1, 0.25, 0.75, 0.9], [0, 1, 1, 0]);
   const titleY = useTransform(scrollYProgress, [0.1, 0.25], [30, 0]);
 
-  // GSAP ScrollTrigger for labels
+  // GSAP ScrollTrigger for labels - dynamically imported for better bundle size
   useEffect(() => {
     if (!sectionRef.current) return;
 
-    const mainElement = document.querySelector('main');
+    let ctx: ReturnType<typeof import('gsap').gsap.context> | null = null;
 
-    const ctx = gsap.context(() => {
-      // Animate labels appearing as user scrolls
-      ScrollTrigger.create({
-        trigger: sectionRef.current,
-        scroller: mainElement,
-        start: 'top 60%',
-        end: 'bottom 40%',
-        onUpdate: (self) => {
-          const progress = self.progress;
-          const maxLabels = Math.max(labelPositionsDesktop.length, labelPositionsMobile.length);
-          const labelsToShow = Math.floor(progress * maxLabels * 1.5);
-          const newVisibleLabels = new Set<string>();
+    const initGsap = async () => {
+      const { gsap } = await import('gsap');
+      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+      gsap.registerPlugin(ScrollTrigger);
 
-          // Add desktop labels
-          for (let i = 0; i < Math.min(labelsToShow, labelPositionsDesktop.length); i++) {
-            newVisibleLabels.add(labelPositionsDesktop[i].key);
-          }
-          // Add mobile labels
-          for (let i = 0; i < Math.min(labelsToShow, labelPositionsMobile.length); i++) {
-            newVisibleLabels.add(labelPositionsMobile[i].key);
-          }
+      const mainElement = document.querySelector('main');
 
-          setVisibleLabels(newVisibleLabels);
-        },
-      });
-    }, sectionRef);
+      ctx = gsap.context(() => {
+        ScrollTrigger.create({
+          trigger: sectionRef.current,
+          scroller: mainElement,
+          start: 'top 60%',
+          end: 'bottom 40%',
+          onUpdate: (self) => {
+            const progress = self.progress;
+            const maxLabels = Math.max(labelPositionsDesktop.length, labelPositionsMobile.length);
+            const labelsToShow = Math.floor(progress * maxLabels * 1.5);
+            const newVisibleLabels = new Set<string>();
 
-    return () => ctx.revert();
+            for (let i = 0; i < Math.min(labelsToShow, labelPositionsDesktop.length); i++) {
+              newVisibleLabels.add(labelPositionsDesktop[i].key);
+            }
+            for (let i = 0; i < Math.min(labelsToShow, labelPositionsMobile.length); i++) {
+              newVisibleLabels.add(labelPositionsMobile[i].key);
+            }
+
+            setVisibleLabels(newVisibleLabels);
+          },
+        });
+      }, sectionRef);
+    };
+
+    initGsap();
+
+    return () => {
+      ctx?.revert();
+    };
   }, []);
 
   return (
@@ -130,45 +135,25 @@ export default function DataPointsSection() {
           />
         </div>
 
-        {/* Animated wave highlight effect */}
-        <div className="pointer-events-none absolute inset-0 overflow-hidden">
-          {/* Wave 1 */}
-          <motion.div
-            className="absolute h-full w-full"
-            style={{
-              background: 'linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%)',
-              maskImage: 'linear-gradient(90deg, transparent, black 20%, black 80%, transparent)',
-              WebkitMaskImage: 'linear-gradient(90deg, transparent, black 20%, black 80%, transparent)',
-            }}
-            animate={{
-              x: ['-100%', '100%'],
-            }}
-            transition={{
-              duration: 6,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
-          />
-          
-          {/* Wave 2 - offset and slower */}
-          <motion.div
-            className="absolute h-full w-full"
-            style={{
-              background: 'linear-gradient(180deg, transparent 0%, rgba(0,165,201,0.2) 50%, transparent 100%)',
-              maskImage: 'linear-gradient(90deg, transparent, black 30%, black 70%, transparent)',
-              WebkitMaskImage: 'linear-gradient(90deg, transparent, black 30%, black 70%, transparent)',
-            }}
-            animate={{
-              x: ['-100%', '100%'],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: 2,
-            }}
-          />
-        </div>
+        {/* Animated wave highlight effect - only runs when in view */}
+        {isInView && (
+          <div className="pointer-events-none absolute inset-0 overflow-hidden">
+            {/* Wave 1 - CSS animation for better performance */}
+            <div
+              className="absolute h-full w-full animate-wave-slow"
+              style={{
+                background: 'linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%)',
+              }}
+            />
+            {/* Wave 2 - offset and slower */}
+            <div
+              className="absolute h-full w-full animate-wave-slower"
+              style={{
+                background: 'linear-gradient(180deg, transparent 0%, rgba(0,165,201,0.15) 50%, transparent 100%)',
+              }}
+            />
+          </div>
+        )}
         
         {/* Floating Labels - Desktop */}
         <div className="pointer-events-none absolute inset-0 hidden md:block">
@@ -194,10 +179,7 @@ export default function DataPointsSection() {
               }}
             >
               <div className="flex items-center gap-2 whitespace-nowrap rounded-full border border-gray-200 bg-white px-4 py-2 shadow-sm">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#00a5c9] opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[#00a5c9]" />
-                </span>
+                <span className="inline-flex h-2 w-2 rounded-full bg-[#00a5c9]" />
                 <span className="text-xs font-medium tracking-wider text-gray-900">
                   {t(`labels.${key}`)}
                 </span>
@@ -230,10 +212,7 @@ export default function DataPointsSection() {
               }}
             >
               <div className="flex items-center gap-1.5 whitespace-nowrap rounded-full border border-gray-200 bg-white px-3 py-1.5 shadow-sm">
-                <span className="relative flex h-1.5 w-1.5">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#00a5c9] opacity-75" />
-                  <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-[#00a5c9]" />
-                </span>
+                <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#00a5c9]" />
                 <span className="text-[10px] font-medium tracking-wider text-gray-900">
                   {t(`labels.${key}`)}
                 </span>

@@ -75,7 +75,8 @@ export default function YourFutureSection() {
             alt="Your future background"
             fill
             className="object-cover"
-            priority
+            loading="lazy"
+            sizes="100vw"
           />
           {/* Subtle overlay for better text readability */}
           <div className="absolute inset-0 bg-black/20" />
@@ -154,35 +155,15 @@ export default function YourFutureSection() {
         </div>
       </div>
 
-      {/* Floating orbs effect */}
+      {/* Static decorative orbs - optimized for Chrome performance */}
       <div className="pointer-events-none absolute inset-0 z-[5] overflow-hidden">
-        <motion.div
-          className="absolute h-64 w-64 rounded-full bg-white/10 blur-3xl"
+        <div
+          className="absolute h-64 w-64 rounded-full bg-white/10 blur-2xl"
           style={{ top: '15%', left: '20%' }}
-          animate={{
-            x: [0, -30, 20, 0],
-            y: [0, -35, 25, 0],
-            scale: [1, 1.1, 0.95, 1],
-          }}
-          transition={{
-            duration: 11,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
         />
-        <motion.div
-          className="absolute h-48 w-48 rounded-full bg-[#0097a7]/20 blur-3xl"
+        <div
+          className="absolute h-48 w-48 rounded-full bg-[#0097a7]/15 blur-2xl"
           style={{ bottom: '25%', left: '15%' }}
-          animate={{
-            x: [0, 25, -15, 0],
-            y: [0, 25, -30, 0],
-            scale: [1, 0.9, 1.1, 1],
-          }}
-          transition={{
-            duration: 9,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
         />
       </div>
     </section>

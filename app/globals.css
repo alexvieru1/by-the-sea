@@ -190,3 +190,25 @@ main {
     @apply bg-background text-foreground;
   }
 }
+
+/* Performance-optimized wave animations */
+@keyframes wave-slow {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes wave-slower {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-wave-slow {
+  animation: wave-slow 8s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-wave-slower {
+  animation: wave-slower 12s ease-in-out infinite;
+  animation-delay: 3s;
+  will-change: transform;
+}

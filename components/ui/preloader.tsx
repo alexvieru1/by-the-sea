@@ -45,7 +45,7 @@ export default function Preloader() {
         initial="initial"
         exit="exit"
       >
-        <SpinningText>VRΛJΛ MΛRII • by the Sea • Health Oasis •</SpinningText>
+        <SpinningText> VRΛJΛ MΛRII • by the Sea • Health Oasis •</SpinningText>
       </motion.div>
     </>
   );
