@@ -104,6 +104,7 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 html {
@@ -117,6 +118,7 @@ body {
 /* Scroll snap container */
 main {
   scroll-snap-type: y proximity;
+  overflow-x: hidden;
   overflow-y: scroll;
   height: 100vh;
   height: 100dvh;
