@@ -140,16 +140,16 @@ export default function DataPointsSection() {
           <div className="pointer-events-none absolute inset-0 overflow-hidden">
             {/* Wave 1 - CSS animation for better performance */}
             <div
-              className="absolute h-full w-full animate-wave-slow"
+              className="absolute h-full w-full animate-wave-slow blur-[60px]"
               style={{
-                background: 'linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.3) 50%, transparent 100%)',
+                background: 'linear-gradient(180deg, transparent 0%, transparent 20%, rgba(255,255,255,0.2) 50%, transparent 80%, transparent 100%)',
               }}
             />
             {/* Wave 2 - offset and slower */}
             <div
-              className="absolute h-full w-full animate-wave-slower"
+              className="absolute h-full w-full animate-wave-slower blur-[80px]"
               style={{
-                background: 'linear-gradient(180deg, transparent 0%, rgba(0,165,201,0.15) 50%, transparent 100%)',
+                background: 'linear-gradient(180deg, transparent 0%, transparent 25%, rgba(0,165,201,0.08) 50%, transparent 75%, transparent 100%)',
               }}
             />
           </div>
