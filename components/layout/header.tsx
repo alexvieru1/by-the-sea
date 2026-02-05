@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { motion, AnimatePresence } from "motion/react";
-import { Link } from "@/i18n/routing";
+import TransitionLink from "./transition-link";
 import LanguageSwitcher from "./language-switcher";
 import AnimatedButton from "@/components/ui/animated-button";
 import AnimatedLink from "@/components/ui/animated-link";
@@ -121,13 +121,13 @@ export default function Header() {
             }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
-            <Link href="/" className="shrink-0 px-6 py-5 lg:px-10">
+            <TransitionLink href="/" className="shrink-0 px-6 py-5 lg:px-10">
               <SlicedText
                 text="VRΛJΛ MΛRII"
                 className={`text-2xl transition-colors duration-300 ${textColor}`}
                 splitSpacing={3}
               />
-            </Link>
+            </TransitionLink>
           </motion.div>
 
           {/* Logo - Mobile (slides left on scroll down) */}
@@ -141,13 +141,13 @@ export default function Header() {
             }}
             transition={{ duration: 0.3, ease: "easeOut" }}
           >
-            <Link href="/" className="shrink-0 px-4 py-4">
+            <TransitionLink href="/" className="shrink-0 px-4 py-4">
               <SlicedText
                 text="VRΛJΛ MΛRII"
                 className={`text-lg transition-colors duration-300 ${textColor}`}
                 splitSpacing={2}
               />
-            </Link>
+            </TransitionLink>
           </motion.div>
 
           {/* Right side: Nav links + CTA Button grouped together */}
@@ -202,12 +202,12 @@ export default function Header() {
               }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
-              <Link
+              <TransitionLink
                 href="/book"
                 className="flex h-16 items-center bg-[#C2A87A] px-6 text-sm font-medium uppercase tracking-wider text-white"
               >
                 {tCommon("bookScan")}
-              </Link>
+              </TransitionLink>
             </motion.div>
 
             {/* Mobile: Menu Button (slides right on scroll down) */}
@@ -299,13 +299,13 @@ export default function Header() {
                     custom={index}
                     className="border-b border-white/20 py-4"
                   >
-                    <Link
+                    <TransitionLink
                       href={link.href}
                       className="font-(family-name:--font-playfair) text-3xl font-light italic text-white transition-opacity hover:opacity-70"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {link.label}
-                    </Link>
+                    </TransitionLink>
                   </motion.div>
                 ))}
               </nav>

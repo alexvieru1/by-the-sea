@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
-import { Link } from '@/i18n/routing';
+import TransitionLink from '@/components/layout/transition-link';
 
 interface PlaceholderPageProps {
   translationKey: string;
@@ -110,7 +110,7 @@ export default function PlaceholderPage({ translationKey }: PlaceholderPageProps
             transition={{ duration: 0.5, delay: 0.5 }}
             className="mt-8"
           >
-            <Link
+            <TransitionLink
               href="/"
               className="inline-flex items-center gap-2 bg-gray-900 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-gray-800"
             >
@@ -128,7 +128,7 @@ export default function PlaceholderPage({ translationKey }: PlaceholderPageProps
                 />
               </svg>
               {tCommon('backHome')}
-            </Link>
+            </TransitionLink>
           </motion.div>
         </div>
       </div>

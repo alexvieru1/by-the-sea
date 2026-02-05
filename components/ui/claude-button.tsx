@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'motion/react';
-import { Link } from '@/i18n/routing';
+import TransitionLink from '@/components/layout/transition-link';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -44,9 +44,9 @@ export default function ClaudeButton({
         transition={{ type: 'spring', stiffness: 400, damping: 17 }}
         className="inline-block"
       >
-        <Link href={href} className={combinedClassName}>
+        <TransitionLink href={href} className={combinedClassName}>
           {children}
-        </Link>
+        </TransitionLink>
       </motion.div>
     );
   }

@@ -1,6 +1,6 @@
 'use client';
 
-import { Link } from '@/i18n/routing';
+import TransitionLink from '@/components/layout/transition-link';
 
 interface AnimatedButtonProps {
   href?: string;
@@ -79,13 +79,13 @@ export default function AnimatedButton({
 
   if (href) {
     return (
-      <Link
+      <TransitionLink
         href={href}
         className={baseClasses}
         style={{ backgroundColor: bgColor }}
       >
         {content}
-      </Link>
+      </TransitionLink>
     );
   }
 

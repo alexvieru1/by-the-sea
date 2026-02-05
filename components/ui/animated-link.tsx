@@ -1,6 +1,6 @@
 'use client';
 
-import { Link } from '@/i18n/routing';
+import TransitionLink from '@/components/layout/transition-link';
 
 interface AnimatedLinkProps {
   href: string;
@@ -20,7 +20,7 @@ export default function AnimatedLink({
   const isLight = variant === 'light';
 
   return (
-    <Link
+    <TransitionLink
       href={href}
       onClick={onClick}
       className={`
@@ -45,6 +45,6 @@ export default function AnimatedLink({
           ${isLight ? 'bg-white' : 'bg-gray-900'}
         `}
       />
-    </Link>
+    </TransitionLink>
   );
 }

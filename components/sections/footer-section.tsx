@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
+import TransitionLink from '@/components/layout/transition-link';
 
 export default function FooterSection() {
   const t = useTranslations('footer');
@@ -11,16 +11,16 @@ export default function FooterSection() {
       <div className="mx-auto max-w-7xl px-6 lg:px-0">
         {/* Main Footer Content - Full width flex container */}
         <div className="flex flex-col lg:flex-row">
-          {/* Left side - Logo, Links and Bottom Bar */}
+          {/* Left side - Logo, TransitionLinks and Bottom Bar */}
           <div className="flex-1 pb-8 pt-24 lg:pr-12 lg:pl-12">
             {/* Logo */}
             <div className="mb-16">
-              <Link href="/" className="text-xl tracking-[0.2em] text-gray-900">
+              <TransitionLink href="/" className="text-xl tracking-[0.2em] text-gray-900">
                 VRΛJΛ MΛRII by the Sea
-              </Link>
+              </TransitionLink>
             </div>
 
-            {/* Links Grid */}
+            {/* TransitionLinks Grid */}
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:gap-16">
               {/* Company */}
               <div>
@@ -29,28 +29,28 @@ export default function FooterSection() {
                 </h3>
                 <ul className="space-y-3">
                   <li>
-                    <Link
+                    <TransitionLink
                       href="/about"
                       className="text-sm text-gray-500 transition-colors hover:text-gray-900"
                     >
                       {t('about')}
-                    </Link>
+                    </TransitionLink>
                   </li>
                   <li>
-                    <Link
+                    <TransitionLink
                       href="/careers"
                       className="text-sm text-gray-500 transition-colors hover:text-gray-900"
                     >
                       {t('careers')}
-                    </Link>
+                    </TransitionLink>
                   </li>
                   <li>
-                    <Link
+                    <TransitionLink
                       href="/press"
                       className="text-sm text-gray-500 transition-colors hover:text-gray-900"
                     >
                       {t('pressRoom')}
-                    </Link>
+                    </TransitionLink>
                   </li>
                 </ul>
               </div>
@@ -62,20 +62,20 @@ export default function FooterSection() {
                 </h3>
                 <ul className="space-y-3">
                   <li>
-                    <Link
+                    <TransitionLink
                       href="/login"
                       className="text-sm text-gray-500 transition-colors hover:text-gray-900"
                     >
                       {t('login')}
-                    </Link>
+                    </TransitionLink>
                   </li>
                   <li>
-                    <Link
+                    <TransitionLink
                       href="/faq"
                       className="text-sm text-gray-500 transition-colors hover:text-gray-900"
                     >
                       {t('faq')}
-                    </Link>
+                    </TransitionLink>
                   </li>
                 </ul>
               </div>
@@ -116,20 +116,20 @@ export default function FooterSection() {
                 </h3>
                 <ul className="space-y-3">
                   <li>
-                    <Link
+                    <TransitionLink
                       href="/locations/constanta"
                       className="text-sm text-gray-500 transition-colors hover:text-gray-900"
                     >
                       {t('locations.constanta')}
-                    </Link>
+                    </TransitionLink>
                   </li>
                   <li>
-                    <Link
+                    <TransitionLink
                       href="/locations/eforie"
                       className="text-sm text-gray-500 transition-colors hover:text-gray-900"
                     >
                       {t('locations.eforie')}
-                    </Link>
+                    </TransitionLink>
                   </li>
                 </ul>
               </div>
@@ -137,27 +137,27 @@ export default function FooterSection() {
 
             {/* Bottom Bar */}
             <div className="mt-20 flex flex-col items-start justify-between gap-4 border-t border-gray-300/50 pt-8 sm:flex-row sm:items-center">
-              {/* Copyright and Legal Links */}
+              {/* Copyright and Legal TransitionLinks */}
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-gray-500">
                 <span>{t('copyright')}</span>
-                <Link
+                <TransitionLink
                   href="/cookies"
                   className="transition-colors hover:text-gray-900"
                 >
                   {t('cookieNotice')}
-                </Link>
-                <Link
+                </TransitionLink>
+                <TransitionLink
                   href="/privacy"
                   className="transition-colors hover:text-gray-900"
                 >
                   {t('privacyPolicy')}
-                </Link>
-                <Link
+                </TransitionLink>
+                <TransitionLink
                   href="/terms"
                   className="transition-colors hover:text-gray-900"
                 >
                   {t('termsOfService')}
-                </Link>
+                </TransitionLink>
               </div>
 
               {/* Country Selector */}

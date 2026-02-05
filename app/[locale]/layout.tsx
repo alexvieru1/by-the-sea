@@ -6,6 +6,8 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/header';
 import PageLoader from '@/components/layout/page-loader';
+import { TransitionProvider } from '@/components/layout/transition-provider';
+import PageTransition from '@/components/layout/page-transition';
 import '../globals.css';
 
 const geistSans = Geist({
@@ -53,8 +55,11 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
       >
         <PageLoader />
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          {children}
+          <TransitionProvider>
+            <PageTransition />
+            <Header />
+            {children}
+          </TransitionProvider>
         </NextIntlClientProvider>
       </body>
     </html>

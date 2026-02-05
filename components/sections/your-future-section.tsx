@@ -3,7 +3,7 @@
 import { useRef, useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, useScroll, useTransform, useInView } from 'motion/react';
-import { Link } from '@/i18n/routing';
+import TransitionLink from '@/components/layout/transition-link';
 import { TextRoll } from '@/components/ui/text-roll';
 import Image from 'next/image';
 
@@ -130,7 +130,7 @@ export default function YourFutureSection() {
             animate={{ opacity: showButton ? 1 : 0, y: showButton ? 0 : 20 }}
             transition={{ duration: 0.5, ease: 'easeOut' }}
           >
-            <Link
+            <TransitionLink
               href="/book"
               className="group inline-flex items-center gap-3 bg-gray-900 px-8 py-5 text-sm font-medium uppercase tracking-wider text-white transition-all hover:bg-gray-800"
             >
@@ -148,7 +148,7 @@ export default function YourFutureSection() {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </Link>
+            </TransitionLink>
           </motion.div>
         </div>
       </div>
