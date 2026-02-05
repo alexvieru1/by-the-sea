@@ -17,7 +17,6 @@ export default function YourBodySection() {
   const isInView = useInView(sectionRef, { once: true, amount: 0.3 });
   const [showBox, setShowBox] = useState(false);
   const [showText, setShowText] = useState(false);
-  const [showTextEffect, setShowTextEffect] = useState(false);
   const [showButton, setShowButton] = useState(false);
 
   // Get the main scroll container
@@ -31,20 +30,16 @@ export default function YourBodySection() {
       // Stage 1: Box slides in
       const timer0 = setTimeout(() => setShowBox(true), 100);
 
-      // Stage 2: Text appears (after box animation)
+      // Stage 2: Text appears with roll animation (after box animation)
       const timer1 = setTimeout(() => setShowText(true), 800);
 
-      // Stage 3: Text effect (after text appears)
-      const timer2 = setTimeout(() => setShowTextEffect(true), 1100);
-
-      // Stage 4: Button appears (after text effect)
-      const timer3 = setTimeout(() => setShowButton(true), 1600);
+      // Stage 3: Button appears (after text roll animation)
+      const timer2 = setTimeout(() => setShowButton(true), 1400);
 
       return () => {
         clearTimeout(timer0);
         clearTimeout(timer1);
         clearTimeout(timer2);
-        clearTimeout(timer3);
       };
     }
   }, [isInView]);
@@ -95,25 +90,28 @@ export default function YourBodySection() {
             animate={{ x: showBox ? 0 : -800 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
-            {/* Title with text effect */}
-            <motion.h2
-              className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic leading-tight text-white sm:text-5xl lg:text-6xl"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: showText ? 1 : 0 }}
-              transition={{ duration: 0.4 }}
-            >
-              {showTextEffect ? (
+            {/* Title with text effect - rolls in as it appears */}
+            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic leading-tight text-white sm:text-5xl lg:text-6xl">
+              {showText && (
                 <TextRoll
-                  duration={0.3}
-                  getEnterDelay={(i) => i * 0.03}
-                  getExitDelay={(i) => i * 0.03 + 0.1}
+                  duration={0.4}
+                  getEnterDelay={() => 0}
+                  getExitDelay={(i) => i * 0.025}
+                  variants={{
+                    enter: {
+                      initial: { rotateX: -90, opacity: 0 },
+                      animate: { rotateX: -90, opacity: 0 },
+                    },
+                    exit: {
+                      initial: { rotateX: 90, opacity: 0 },
+                      animate: { rotateX: 0, opacity: 1 },
+                    },
+                  }}
                 >
                   {t('title')}
                 </TextRoll>
-              ) : (
-                t('title')
               )}
-            </motion.h2>
+            </h2>
 
             {/* Description */}
             <motion.p
