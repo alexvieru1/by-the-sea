@@ -92,7 +92,7 @@ export default function YourBodySection() {
           >
             {/* Title with text effect - rolls in as it appears */}
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic leading-tight text-white sm:text-5xl lg:text-6xl">
-              {showText && (
+              {showText ? (
                 <TextRoll
                   duration={0.4}
                   getEnterDelay={() => 0}
@@ -110,6 +110,8 @@ export default function YourBodySection() {
                 >
                   {t('title')}
                 </TextRoll>
+              ) : (
+                <span className="invisible">{t('title')}</span>
               )}
             </h2>
 
