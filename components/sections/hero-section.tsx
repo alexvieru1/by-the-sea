@@ -17,16 +17,32 @@ export default function HeroSection() {
     scrollContainerRef.current = document.querySelector('main');
   }, []);
 
-  // Handle video autoplay for Safari
+  // Handle video autoplay for Safari/iOS
   useEffect(() => {
     const video = videoRef.current;
-    if (video) {
+    if (!video) return;
+
+    const attemptPlay = () => {
       const playPromise = video.play();
       if (playPromise !== undefined) {
         playPromise.catch(() => {
-          // Autoplay was prevented - video will show poster
+          // Autoplay blocked (Low Power Mode, etc.) - retry on first user interaction
+          const resumePlay = () => {
+            video.play().catch(() => {});
+            document.removeEventListener('touchstart', resumePlay);
+            document.removeEventListener('click', resumePlay);
+          };
+          document.addEventListener('touchstart', resumePlay, { once: true });
+          document.addEventListener('click', resumePlay, { once: true });
         });
       }
+    };
+
+    // If video is ready, play immediately; otherwise wait for data
+    if (video.readyState >= 2) {
+      attemptPlay();
+    } else {
+      video.addEventListener('loadeddata', attemptPlay, { once: true });
     }
   }, []);
 
@@ -47,12 +63,14 @@ export default function HeroSection() {
     >
       {/* Video Background */}
       <div className="absolute inset-0">
+        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
         <video
           ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
           className="h-full w-full object-cover"
           poster="/images/hero-poster.webp"
         >
