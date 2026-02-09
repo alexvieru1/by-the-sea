@@ -116,22 +116,22 @@ export default function DataPointsSection() {
         {/* Base image - Desktop */}
         <div className="relative hidden aspect-[21/7] w-full md:block">
           <Image
-            src="/images/bg_desktop.png"
+            src="/images/bg_desktop.webp"
             alt="Data points visualization"
             fill
+            sizes="100vw"
             className="object-cover object-top"
-            priority
           />
         </div>
         
         {/* Base image - Mobile */}
         <div className="relative aspect-square w-full md:hidden">
           <Image
-            src="/images/bg_mobile.png"
+            src="/images/bg_mobile.webp"
             alt="Data points visualization"
             fill
+            sizes="100vw"
             className="object-cover object-bottom"
-            priority
           />
         </div>
 

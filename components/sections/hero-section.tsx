@@ -70,7 +70,7 @@ export default function HeroSection() {
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
           className="h-full w-full object-cover"
           poster="/images/hero-poster.webp"
         >

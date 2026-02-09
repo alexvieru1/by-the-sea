@@ -1,9 +1,11 @@
+import dynamic from 'next/dynamic';
 import HeroSection from '@/components/sections/hero-section';
-import DataPointsSection from '@/components/sections/data-points-section';
-import YourBodySection from '@/components/sections/your-body-section';
-import YourFutureSection from '@/components/sections/your-future-section';
-import FacilitiesSection from '@/components/sections/facilities-section';
-import FooterSection from '@/components/sections/footer-section';
+
+const DataPointsSection = dynamic(() => import('@/components/sections/data-points-section'));
+const YourBodySection = dynamic(() => import('@/components/sections/your-body-section'));
+const YourFutureSection = dynamic(() => import('@/components/sections/your-future-section'));
+const FacilitiesSection = dynamic(() => import('@/components/sections/facilities-section'));
+const FooterSection = dynamic(() => import('@/components/sections/footer-section'));
 
 export default function Home() {
   return (

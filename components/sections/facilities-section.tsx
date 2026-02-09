@@ -104,6 +104,7 @@ function FacilityCard({
               src={getImagePath(smallImg)}
               alt={t(`${category}.${facilityKey}.name`)}
               fill
+              sizes="(max-width: 768px) 0px, 35vw"
               className="object-cover"
             />
           </motion.div>
@@ -122,6 +123,7 @@ function FacilityCard({
               src={getImagePath(largeImg)}
               alt={t(`${category}.${facilityKey}.name`)}
               fill
+              sizes="(max-width: 768px) 100vw, 72vw"
               className="object-cover"
             />
           </motion.div>
