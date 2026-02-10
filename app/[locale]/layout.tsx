@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { Geist, Playfair_Display } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -10,6 +11,8 @@ import { TransitionProvider } from '@/components/layout/transition-provider';
 import PageTransition from '@/components/layout/page-transition';
 import { AuthProvider } from '@/components/providers/auth-provider';
 import '../globals.css';
+
+const FooterSection = dynamic(() => import('@/components/sections/footer-section'));
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -55,7 +58,10 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
             <TransitionProvider>
               <PageTransition />
               <Header />
-              {children}
+              <main>
+                {children}
+                <FooterSection />
+              </main>
             </TransitionProvider>
           </AuthProvider>
         </NextIntlClientProvider>

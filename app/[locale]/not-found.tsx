@@ -9,7 +9,7 @@ export default function NotFound() {
   const tCommon = useTranslations('common');
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-gray-50 px-6">
+    <div className="flex min-h-screen items-center justify-center bg-gray-50 px-6">
       <div className="text-center">
         {/* 404 Number */}
         <motion.div
@@ -71,6 +71,6 @@ export default function NotFound() {
           </TransitionLink>
         </motion.div>
       </div>
-    </main>
+    </div>
   );
 }

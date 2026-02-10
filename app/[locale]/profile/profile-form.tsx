@@ -70,7 +70,7 @@ export default function ProfileForm({ profile, email }: ProfileFormProps) {
   };
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       <div className="relative overflow-hidden bg-[#c5d5d8] px-6 pb-20 pt-32 lg:px-12 lg:pb-32 lg:pt-40">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <motion.div
@@ -256,6 +256,6 @@ export default function ProfileForm({ profile, email }: ProfileFormProps) {
           </div>
         </motion.div>
       </div>
-    </main>
+    </div>
   );
 }

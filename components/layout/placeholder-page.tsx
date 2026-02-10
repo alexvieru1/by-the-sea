@@ -13,7 +13,7 @@ export default function PlaceholderPage({ translationKey }: PlaceholderPageProps
   const tCommon = useTranslations('common');
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-[#c5d5d8] px-6 pb-20 pt-32 lg:px-12 lg:pb-32 lg:pt-40">
         {/* Background decoration */}
@@ -132,6 +132,6 @@ export default function PlaceholderPage({ translationKey }: PlaceholderPageProps
           </motion.div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
