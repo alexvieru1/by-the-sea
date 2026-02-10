@@ -8,6 +8,8 @@ import LanguageSwitcher from "./language-switcher";
 import AnimatedButton from "@/components/ui/animated-button";
 import AnimatedLink from "@/components/ui/animated-link";
 import SlicedText from "../ui/sliced-text";
+import UserMenu from "@/components/ui/user-menu";
+import { useAuth } from "@/components/providers/auth-provider";
 
 // Sliding stairs animation variants
 const stairsEase = [0.33, 1, 0.68, 1] as const;
@@ -53,6 +55,7 @@ const linkAnimation = {
 export default function Header() {
   const t = useTranslations("nav");
   const tCommon = useTranslations("common");
+  const { user, loading: authLoading } = useAuth();
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isInHero, setIsInHero] = useState(true);
@@ -100,6 +103,14 @@ export default function Header() {
     { href: "/body-scan", label: t("bodyScan") },
     { href: "/support", label: t("support") },
     { href: "/about", label: t("about") },
+  ];
+
+  const mobileNavLinks = [
+    ...navLinks,
+    {
+      href: user ? "/profile" : "/login",
+      label: user ? t("profile") : t("login"),
+    },
   ];
 
   const colorVariant = isInHero ? "light" : "dark";
@@ -178,6 +189,19 @@ export default function Header() {
             <div className="hidden pr-6 lg:block">
               <LanguageSwitcher variant={colorVariant} />
             </div>
+
+            {/* Auth - Login link or User menu */}
+            {!authLoading && (
+              <div className="hidden pr-6 lg:block">
+                {user ? (
+                  <UserMenu variant={colorVariant} />
+                ) : (
+                  <AnimatedLink href="/login" variant={colorVariant}>
+                    {t("login")}
+                  </AnimatedLink>
+                )}
+              </div>
+            )}
 
             {/* CTA Button - always visible on desktop */}
             <div className="hidden lg:block">
@@ -289,7 +313,7 @@ export default function Header() {
             >
               {/* Navigation Links */}
               <nav className="flex flex-1 flex-col justify-center px-10">
-                {navLinks.map((link, index) => (
+                {mobileNavLinks.map((link, index) => (
                   <motion.div
                     key={link.href}
                     variants={linkAnimation}

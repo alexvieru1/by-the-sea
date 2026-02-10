@@ -87,6 +87,7 @@
     "support": "Support",
     "about": "About",
     "login": "Log In",
+    "profile": "My Profile",
     "faq": "FAQ"
   },
   "hero": {
@@ -206,6 +207,78 @@
   "media": {
     "title": "Featured media"
   },
+  "auth": {
+    "login": {
+      "title": "Log In",
+      "subtitle": "Welcome back",
+      "email": "Email",
+      "password": "Password",
+      "emailPlaceholder": "example@email.com",
+      "passwordPlaceholder": "Your password",
+      "submit": "Log In",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account?",
+      "signUp": "Sign Up",
+      "orContinueWith": "or continue with",
+      "google": "Continue with Google",
+      "error": {
+        "invalidCredentials": "Invalid email or password",
+        "callbackFailed": "Authentication failed. Please try again.",
+        "generic": "An error occurred. Please try again."
+      }
+    },
+    "signup": {
+      "title": "Create Account",
+      "subtitle": "Join the Vraja Mării community",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "phone": "Phone",
+      "phonePlaceholder": "+40 7XX XXX XXX",
+      "county": "County",
+      "city": "City",
+      "selectCounty": "Select county",
+      "selectCity": "Select city",
+      "communityMember": "I want to join the Vraja Mării Community",
+      "communityDescription": "Receive special offers and exclusive updates",
+      "submit": "Create Account",
+      "hasAccount": "Already have an account?",
+      "logIn": "Log In",
+      "orContinueWith": "or continue with",
+      "google": "Continue with Google",
+      "success": "Account created! Check your email for confirmation.",
+      "error": {
+        "passwordMismatch": "Passwords don't match",
+        "weakPassword": "Password must be at least 6 characters",
+        "emailInUse": "This email is already in use",
+        "generic": "An error occurred. Please try again."
+      }
+    },
+    "profile": {
+      "title": "My Profile",
+      "subtitle": "Manage your account",
+      "personalInfo": "Personal Information",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "county": "County",
+      "city": "City",
+      "selectCounty": "Select county",
+      "selectCity": "Select city",
+      "communityMember": "Vraja Mării Community Member",
+      "save": "Save Changes",
+      "signOut": "Sign Out",
+      "saved": "Changes saved successfully.",
+      "error": "Could not save changes."
+    },
+    "userMenu": {
+      "profile": "My Profile",
+      "signOut": "Sign Out"
+    }
+  },
   "footer": {
     "cta": "Take the first step in getting ahead of your health",
     "company": "Company",
@@ -219,6 +292,7 @@
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
     "login": "Log In",
+    "myAccount": "My Account",
     "faq": "FAQ",
     "instagram": "Instagram",
     "facebook": "Facebook",

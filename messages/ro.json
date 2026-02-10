@@ -87,6 +87,7 @@
     "support": "Suport",
     "about": "Despre Noi",
     "login": "Autentificare",
+    "profile": "Profilul Meu",
     "faq": "Întrebări Frecvente"
   },
   "hero": {
@@ -206,6 +207,78 @@
   "media": {
     "title": "Aparitii media"
   },
+  "auth": {
+    "login": {
+      "title": "Autentificare",
+      "subtitle": "Bine ai revenit",
+      "email": "Email",
+      "password": "Parolă",
+      "emailPlaceholder": "exemplu@email.com",
+      "passwordPlaceholder": "Parola ta",
+      "submit": "Autentifică-te",
+      "forgotPassword": "Ai uitat parola?",
+      "noAccount": "Nu ai cont?",
+      "signUp": "Creează cont",
+      "orContinueWith": "sau continuă cu",
+      "google": "Continuă cu Google",
+      "error": {
+        "invalidCredentials": "Email sau parolă incorectă",
+        "callbackFailed": "Autentificarea a eșuat. Încearcă din nou.",
+        "generic": "A apărut o eroare. Încearcă din nou."
+      }
+    },
+    "signup": {
+      "title": "Creează Cont",
+      "subtitle": "Alătură-te comunității Vraja Mării",
+      "firstName": "Prenume",
+      "lastName": "Nume",
+      "email": "Email",
+      "password": "Parolă",
+      "confirmPassword": "Confirmă Parola",
+      "phone": "Telefon",
+      "phonePlaceholder": "+40 7XX XXX XXX",
+      "county": "Județ",
+      "city": "Oraș",
+      "selectCounty": "Selectează județul",
+      "selectCity": "Selectează orașul",
+      "communityMember": "Vreau să fac parte din Comunitatea Vraja Mării",
+      "communityDescription": "Primește oferte speciale și noutăți exclusive",
+      "submit": "Creează Cont",
+      "hasAccount": "Ai deja cont?",
+      "logIn": "Autentifică-te",
+      "orContinueWith": "sau continuă cu",
+      "google": "Continuă cu Google",
+      "success": "Contul a fost creat! Verifică-ți email-ul pentru confirmare.",
+      "error": {
+        "passwordMismatch": "Parolele nu se potrivesc",
+        "weakPassword": "Parola trebuie să aibă minim 6 caractere",
+        "emailInUse": "Acest email este deja folosit",
+        "generic": "A apărut o eroare. Încearcă din nou."
+      }
+    },
+    "profile": {
+      "title": "Profilul Meu",
+      "subtitle": "Gestionează-ți contul",
+      "personalInfo": "Informații Personale",
+      "firstName": "Prenume",
+      "lastName": "Nume",
+      "email": "Email",
+      "phone": "Telefon",
+      "county": "Județ",
+      "city": "Oraș",
+      "selectCounty": "Selectează județul",
+      "selectCity": "Selectează orașul",
+      "communityMember": "Membru Comunitatea Vraja Mării",
+      "save": "Salvează Modificările",
+      "signOut": "Deconectare",
+      "saved": "Modificările au fost salvate.",
+      "error": "Nu s-au putut salva modificările."
+    },
+    "userMenu": {
+      "profile": "Profilul Meu",
+      "signOut": "Deconectare"
+    }
+  },
   "footer": {
     "cta": "Fa primul pas pentru a fi cu un pas inaintea sanatatii tale",
     "company": "Companie",
@@ -219,6 +292,7 @@
     "privacyPolicy": "Politica de Confidentialitate",
     "termsOfService": "Termeni si Conditii",
     "login": "Autentificare",
+    "myAccount": "Contul Meu",
     "faq": "Întrebări Frecvente",
     "instagram": "Instagram",
     "facebook": "Facebook",

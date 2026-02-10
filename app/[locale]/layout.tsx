@@ -8,6 +8,7 @@ import Header from '@/components/layout/header';
 import PageLoader from '@/components/layout/page-loader';
 import { TransitionProvider } from '@/components/layout/transition-provider';
 import PageTransition from '@/components/layout/page-transition';
+import { AuthProvider } from '@/components/providers/auth-provider';
 import '../globals.css';
 
 const geistSans = Geist({
@@ -50,11 +51,13 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
       >
         <PageLoader />
         <NextIntlClientProvider messages={messages}>
-          <TransitionProvider>
-            <PageTransition />
-            <Header />
-            {children}
-          </TransitionProvider>
+          <AuthProvider>
+            <TransitionProvider>
+              <PageTransition />
+              <Header />
+              {children}
+            </TransitionProvider>
+          </AuthProvider>
         </NextIntlClientProvider>
       </body>
     </html>

@@ -2,9 +2,11 @@
 
 import { useTranslations } from 'next-intl';
 import TransitionLink from '@/components/layout/transition-link';
+import { useAuth } from '@/components/providers/auth-provider';
 
 export default function FooterSection() {
   const t = useTranslations('footer');
+  const { user } = useAuth();
 
   return (
     <footer className="bg-[#f5f5f0]">
@@ -63,10 +65,10 @@ export default function FooterSection() {
                 <ul className="space-y-3">
                   <li>
                     <TransitionLink
-                      href="/login"
+                      href={user ? '/profile' : '/login'}
                       className="text-sm text-gray-500 transition-colors hover:text-gray-900"
                     >
-                      {t('login')}
+                      {user ? t('myAccount') : t('login')}
                     </TransitionLink>
                   </li>
                   <li>
