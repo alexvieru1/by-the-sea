@@ -28,8 +28,13 @@ export default function UserMenu({ variant = 'dark' }: UserMenuProps) {
 
   if (!user) return null;
 
-  const initials =
-    (user.user_metadata?.first_name?.[0] ?? user.email?.[0] ?? '?').toUpperCase();
+  const avatarUrl = user.user_metadata?.avatar_url ?? user.user_metadata?.picture;
+  const firstName = user.user_metadata?.first_name ?? user.user_metadata?.full_name?.split(' ')[0];
+  const lastName = user.user_metadata?.last_name ?? user.user_metadata?.full_name?.split(' ').slice(1).join(' ');
+  const initials = [firstName?.[0], lastName?.[0]]
+    .filter(Boolean)
+    .join('')
+    .toUpperCase() || user.email?.[0]?.toUpperCase() || '?';
 
   const textColor = variant === 'light' ? 'text-white' : 'text-gray-900';
   const borderColor = variant === 'light' ? 'border-white/30' : 'border-gray-300';
@@ -39,9 +44,18 @@ export default function UserMenu({ variant = 'dark' }: UserMenuProps) {
       <button
         type="button"
         onClick={() => setIsOpen(!isOpen)}
-        className={`flex h-9 w-9 items-center justify-center rounded-full border text-sm font-medium transition-colors ${textColor} ${borderColor}`}
+        className={`flex h-9 w-9 items-center justify-center overflow-hidden rounded-full border text-sm font-medium transition-colors ${textColor} ${borderColor}`}
       >
-        {initials}
+        {avatarUrl ? (
+          <img
+            src={avatarUrl}
+            alt=""
+            className="h-full w-full object-cover"
+            referrerPolicy="no-referrer"
+          />
+        ) : (
+          initials
+        )}
       </button>
 
       <AnimatePresence>

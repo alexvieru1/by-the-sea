@@ -14,14 +14,16 @@ export async function updateProfile(formData: FormData) {
 
   const { error } = await supabase
     .from('profiles')
-    .update({
+    .upsert({
+      id: user.id,
+      email: user.email,
       first_name: formData.get('first_name') as string,
       last_name: formData.get('last_name') as string,
       phone: formData.get('phone') as string,
       county: formData.get('county') as string,
       city: formData.get('city') as string,
-    })
-    .eq('id', user.id);
+      is_community_member: formData.get('is_community_member') === 'true',
+    });
 
   if (error) {
     return { error: error.message };

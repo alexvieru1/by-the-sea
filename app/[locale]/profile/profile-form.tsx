@@ -32,6 +32,7 @@ export default function ProfileForm({ profile, email }: ProfileFormProps) {
   const [phone, setPhone] = useState(profile?.phone ?? '');
   const [county, setCounty] = useState(profile?.county ?? '');
   const [city, setCity] = useState(profile?.city ?? '');
+  const [isCommunityMember, setIsCommunityMember] = useState(profile?.is_community_member ?? false);
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
@@ -55,6 +56,7 @@ export default function ProfileForm({ profile, email }: ProfileFormProps) {
     formData.set('phone', phone);
     formData.set('county', county);
     formData.set('city', city);
+    formData.set('is_community_member', isCommunityMember.toString());
 
     const result = await updateProfile(formData);
 
@@ -106,19 +108,6 @@ export default function ProfileForm({ profile, email }: ProfileFormProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {/* Community member badge */}
-          {profile?.is_community_member && (
-            <div className="mb-8 flex items-center gap-2 rounded-full border border-[#0097a7]/20 bg-[#0097a7]/5 px-4 py-2">
-              <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#0097a7] opacity-75" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#0097a7]" />
-              </span>
-              <span className="text-sm font-medium text-[#0097a7]">
-                {t('communityMember')}
-              </span>
-            </div>
-          )}
-
           <h2 className="mb-6 text-sm font-medium uppercase tracking-wider text-gray-700">
             {t('personalInfo')}
           </h2>
@@ -214,6 +203,23 @@ export default function ProfileForm({ profile, email }: ProfileFormProps) {
                     </option>
                   ))}
                 </select>
+              </div>
+            </div>
+
+            {/* Community member toggle */}
+            <div className="flex items-start gap-3 pt-2">
+              <input
+                id="community"
+                type="checkbox"
+                checked={isCommunityMember}
+                onChange={(e) => setIsCommunityMember(e.target.checked)}
+                className="mt-1 h-4 w-4 border-gray-300 accent-[#0097a7]"
+              />
+              <div>
+                <label htmlFor="community" className="text-sm font-medium text-gray-900 cursor-pointer">
+                  {t('communityMember')}
+                </label>
+                <p className="text-xs text-gray-500">{t('communityDescription')}</p>
               </div>
             </div>
 
