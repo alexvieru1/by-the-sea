@@ -85,7 +85,7 @@ export default function YourBodySection() {
           {/* Large Text Box - slides in from left */}
           <motion.div
             ref={cardRef}
-            className="w-[90vw] max-w-2xl bg-[#f07060] px-8 py-10 shadow-2xl sm:px-12 sm:py-14 lg:px-16 lg:py-16"
+            className="w-[90vw] max-w-2xl bg-[#D2B88B] px-8 py-10 shadow-2xl sm:px-12 sm:py-14 lg:px-16 lg:py-16"
             initial={{ x: -800 }}
             animate={{ x: showBox ? 0 : -800 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}

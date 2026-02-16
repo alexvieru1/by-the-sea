@@ -100,7 +100,7 @@ export default function Header() {
   }, [isMobileMenuOpen]);
 
   const navLinks = [
-    { href: "/body-scan", label: t("bodyScan") },
+    { href: "/offers", label: t("offers") },
     { href: "/support", label: t("support") },
     { href: "/about", label: t("about") },
   ];

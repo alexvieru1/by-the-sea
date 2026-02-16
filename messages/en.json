@@ -13,10 +13,10 @@
     "code": "404"
   },
   "pages": {
-    "bodyScan": {
-      "title": "Body Scan",
-      "subtitle": "Advanced technology for your health",
-      "description": "Discover the real state of your body through comprehensive and non-invasive scans. Monitor your health with precision."
+    "offers": {
+      "title": "Offers",
+      "subtitle": "Special packages for your wellness journey",
+      "description": "Discover our exclusive offers and packages designed to enhance your health and wellbeing."
     },
     "support": {
       "title": "Support",
@@ -83,7 +83,7 @@
     }
   },
   "nav": {
-    "bodyScan": "Body Scan",
+    "offers": "Offers",
     "support": "Support",
     "about": "About",
     "login": "Log In",
@@ -278,6 +278,42 @@
     "userMenu": {
       "profile": "My Profile",
       "signOut": "Sign Out"
+    }
+  },
+  "offers": {
+    "heroTitle": "Our Offers",
+    "heroSubtitle": "Exclusive packages for your wellness journey",
+    "heroDescription": "Discover our curated offers and packages designed to enhance your health and wellbeing at Vraja Mării.",
+    "bookNow": "Book Now",
+    "featured": "Featured",
+    "perMonth": "/month",
+    "offer1": {
+      "title": "Recovery Package",
+      "subtitle": "Rebuild. Restore. Recover.",
+      "description": "A comprehensive recovery program combining cryotherapy, infrared sauna, ice baths, and physiotherapy sessions. Designed for athletes and anyone recovering from injury or chronic fatigue.",
+      "includes": "5 cryotherapy sessions, 3 infrared sauna sessions, 2 ice bath sessions, 1 physiotherapy consultation",
+      "price": "799 RON"
+    },
+    "offer2": {
+      "title": "Endometriosis Wellness",
+      "subtitle": "Relief. Balance. Wellbeing.",
+      "description": "A specialised wellness package targeting endometriosis symptoms through a combination of floatation therapy, infrared heat therapy, therapeutic massage, and anti-inflammatory nutrition guidance.",
+      "includes": "4 floatation sessions, 3 infrared sauna sessions, 2 therapeutic massages, nutrition consultation",
+      "price": "899 RON"
+    },
+    "offer3": {
+      "title": "Couples Spa Day",
+      "subtitle": "Reconnect. Relax. Recharge.",
+      "description": "A full day for two with premium treatments including massage, pool access, sauna sessions, and a healthy dining experience by the sea.",
+      "includes": "2 massages, full-day pool access, sauna sessions, 2-course healthy lunch",
+      "price": "699 RON"
+    },
+    "offer4": {
+      "title": "Monthly Membership",
+      "subtitle": "Unlimited. Unrestricted. Yours.",
+      "description": "Full monthly access to all Vraja Mării facilities including sauna, pool, cryotherapy, recovery rooms, and member-exclusive workshops.",
+      "includes": "Unlimited facility access, 2 monthly workshops, priority booking, member discounts",
+      "price": "899 RON"
     }
   },
   "footer": {

@@ -13,10 +13,10 @@
     "code": "404"
   },
   "pages": {
-    "bodyScan": {
-      "title": "Scanare Corporală",
-      "subtitle": "Tehnologie avansată pentru sănătatea ta",
-      "description": "Descoperă starea reală a corpului tău prin scanări complete și non-invazive. Monitorizează-ți sănătatea cu precizie."
+    "offers": {
+      "title": "Oferte",
+      "subtitle": "Pachete speciale pentru călătoria ta de bunăstare",
+      "description": "Descoperă ofertele noastre exclusive și pachetele concepute pentru a-ți îmbunătăți sănătatea și bunăstarea."
     },
     "support": {
       "title": "Suport",
@@ -83,7 +83,7 @@
     }
   },
   "nav": {
-    "bodyScan": "Scanare Corporală",
+    "offers": "Oferte",
     "support": "Suport",
     "about": "Despre Noi",
     "login": "Autentificare",
@@ -278,6 +278,42 @@
     "userMenu": {
       "profile": "Profilul Meu",
       "signOut": "Deconectare"
+    }
+  },
+  "offers": {
+    "heroTitle": "Oferte Noastre",
+    "heroSubtitle": "Pachete exclusive pentru călătoria ta de bunăstare",
+    "heroDescription": "Descoperă ofertele noastre exclusive și pachetele concepute pentru a-ți îmbunătăți sănătatea și bunăstarea la Vraja Mării.",
+    "bookNow": "Rezervă Acum",
+    "featured": "Recomandat",
+    "perMonth": "/lună",
+    "offer1": {
+      "title": "Pachet Recuperare",
+      "subtitle": "Reconstruiește. Restaurează. Recuperează.",
+      "description": "Un program complet de recuperare care combină crioterapia, sauna cu infraroșu, băile cu gheață și ședințe de fizioterapie. Conceput pentru sportivi și oricine se recuperează după accidentări sau oboseală cronică.",
+      "includes": "5 ședințe crioterapie, 3 ședințe saună infraroșu, 2 ședințe baie cu gheață, 1 consultație fizioterapie",
+      "price": "799 RON"
+    },
+    "offer2": {
+      "title": "Wellness Endometrioză",
+      "subtitle": "Ameliorare. Echilibru. Bunăstare.",
+      "description": "Un pachet wellness specializat care vizează simptomele endometriozei printr-o combinație de terapie de flotare, terapie cu căldură infraroșie, masaj terapeutic și ghidare nutrițională antiinflamatorie.",
+      "includes": "4 ședințe flotare, 3 ședințe saună infraroșu, 2 masaje terapeutice, consultație nutriție",
+      "price": "899 RON"
+    },
+    "offer3": {
+      "title": "Zi Spa pentru Cupluri",
+      "subtitle": "Reconectare. Relaxare. Reîncărcare.",
+      "description": "O zi completă pentru doi cu tratamente premium incluzând masaj, acces la piscină, ședințe de saună și o experiență culinară sănătoasă lângă mare.",
+      "includes": "2 masaje, acces la piscină toată ziua, ședințe saună, prânz sănătos 2 feluri",
+      "price": "699 RON"
+    },
+    "offer4": {
+      "title": "Abonament Lunar",
+      "subtitle": "Nelimitat. Nerestricționat. Al tău.",
+      "description": "Acces lunar complet la toate facilitățile Vraja Mării incluzând sauna, piscina, crioterapia, camerele de recuperare și atelierele exclusive pentru membri.",
+      "includes": "Acces nelimitat facilități, 2 ateliere lunare, rezervare prioritară, reduceri membri",
+      "price": "899 RON"
     }
   },
   "footer": {
