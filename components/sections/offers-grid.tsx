@@ -54,7 +54,7 @@ export default function OffersGrid() {
         >
           {/* Gradient visual area */}
           <div
-            className={`relative mb-8 aspect-[16/9] w-full overflow-hidden rounded-2xl bg-gradient-to-br ${offer.gradient}`}
+            className={`relative mb-8 aspect-[16/9] w-full overflow-hidden bg-gradient-to-br ${offer.gradient}`}
           >
             <div className="absolute inset-0 opacity-20">
               <div className="absolute left-1/4 top-1/4 h-32 w-32 rounded-full bg-white/30 blur-2xl" />
