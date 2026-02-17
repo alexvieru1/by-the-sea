@@ -316,6 +316,21 @@
       "price": "899 RON"
     }
   },
+  "waitlist": {
+    "heroTitle": "Rezervă un Sejur",
+    "heroSubtitle": "Începe-ți călătoria wellness",
+    "heroDescription": "Fii printre primii care experimentează complexul nostru de biohacking. Înscrie-te pe lista de așteptare pentru acces prioritar.",
+    "triggerButton": "Înscrie-te pe lista de așteptare",
+    "formTitle": "Rezervă-ți locul",
+    "benefit1": "Acces prioritar la rezervări și oferte exclusive.",
+    "benefit2": "Fii notificat când deschidem rezervările.",
+    "firstName": "Prenume",
+    "lastName": "Nume",
+    "email": "Email",
+    "phone": "Telefon",
+    "offersInterest": "Oferte de interes",
+    "submit": "Înscrie-te"
+  },
   "footer": {
     "cta": "Fa primul pas pentru a fi cu un pas inaintea sanatatii tale",
     "company": "Companie",

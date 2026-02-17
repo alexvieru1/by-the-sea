@@ -59,7 +59,7 @@ export default function OffersGrid() {
           >
             {/* Gradient visual area */}
             <motion.div
-              className={`relative mb-10 aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gradient-to-br ${offer.gradient} lg:mb-0 lg:w-1/2`}
+              className={`relative mb-10 aspect-[4/3] w-full overflow-hidden bg-gradient-to-br ${offer.gradient} lg:mb-0 lg:w-1/2`}
               initial={{ opacity: 0, x: offer.align === 'left' ? -40 : 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}

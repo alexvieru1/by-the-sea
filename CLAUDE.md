@@ -335,6 +335,9 @@ export default function LanguageSwitcher() {
 
 ## Design System
 
+### General Rules
+- **Sharp corners (no rounded borders) on all elements** - do not use `rounded-*` Tailwind classes on inputs, buttons, cards, or containers
+
 ### Colors
 ```css
 --color-primary: #0097a7;        /* Teal/Cyan - primary brand color */

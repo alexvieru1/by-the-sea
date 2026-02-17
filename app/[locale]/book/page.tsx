@@ -1,5 +1,5 @@
-import PlaceholderPage from '@/components/layout/placeholder-page';
+import WaitlistSection from '@/components/sections/waitlist-section';
 
 export default function BookPage() {
-  return <PlaceholderPage translationKey="book" />;
+  return <WaitlistSection />;
 }

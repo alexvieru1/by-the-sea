@@ -316,6 +316,21 @@
       "price": "899 RON"
     }
   },
+  "waitlist": {
+    "heroTitle": "Book a Stay",
+    "heroSubtitle": "Start your wellness journey",
+    "heroDescription": "Be among the first to experience our biohacking complex. Join the waitlist for priority access.",
+    "triggerButton": "Join the waitlist",
+    "formTitle": "Reserve your spot",
+    "benefit1": "Get priority access to bookings and exclusive offers.",
+    "benefit2": "Be notified when we open reservations.",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "offersInterest": "Offers of interest",
+    "submit": "Join waitlist"
+  },
   "footer": {
     "cta": "Take the first step in getting ahead of your health",
     "company": "Company",
