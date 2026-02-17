@@ -68,7 +68,7 @@ export default function WaitlistSection() {
   };
 
   return (
-    <section className="min-h-screen bg-[#E1D4C6] flex flex-col items-center justify-center px-4 py-24 sm:py-32">
+    <section className="min-h-screen bg-[#F9FAFB] flex flex-col items-center justify-center px-4 py-24 sm:py-32">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
