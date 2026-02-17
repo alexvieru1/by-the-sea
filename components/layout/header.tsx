@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
+import { usePathname } from "@/i18n/routing";
 import { motion, AnimatePresence } from "motion/react";
 import TransitionLink from "./transition-link";
 import LanguageSwitcher from "./language-switcher";
@@ -56,10 +57,17 @@ export default function Header() {
   const t = useTranslations("nav");
   const tCommon = useTranslations("common");
   const { user, loading: authLoading } = useAuth();
+  const pathname = usePathname();
+  const isHomepage = pathname === "/";
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isInHero, setIsInHero] = useState(true);
+  const [isInHero, setIsInHero] = useState(isHomepage);
   const lastScrollY = useRef(0);
+
+  // Reset isInHero when navigating between pages
+  useEffect(() => {
+    setIsInHero(isHomepage);
+  }, [isHomepage]);
 
   useEffect(() => {
     const mainElement = document.querySelector("main");
@@ -69,8 +77,8 @@ export default function Header() {
       const currentScrollY = mainElement.scrollTop;
       const viewportHeight = window.innerHeight;
 
-      // Detect if we're in the hero section (first viewport)
-      setIsInHero(currentScrollY < viewportHeight * 0.8);
+      // Only use light (white) text when on the homepage and within the hero viewport
+      setIsInHero(isHomepage && currentScrollY < viewportHeight * 0.8);
 
       if (currentScrollY < lastScrollY.current || currentScrollY < 100) {
         setIsNavVisible(true);
@@ -86,7 +94,7 @@ export default function Header() {
 
     mainElement.addEventListener("scroll", handleScroll, { passive: true });
     return () => mainElement.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isHomepage]);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
