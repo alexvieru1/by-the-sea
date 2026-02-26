@@ -6,12 +6,12 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/header';
-import PageLoader from '@/components/layout/page-loader';
 import { TransitionProvider } from '@/components/layout/transition-provider';
-import PageTransition from '@/components/layout/page-transition';
-import { AuthProvider } from '@/components/providers/auth-provider';
-import '../globals.css';
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import '../globals.css';
+
+const PageLoader = dynamic(() => import('@/components/layout/page-loader'));
+const PageTransition = dynamic(() => import('@/components/layout/page-transition'));
 
 const FooterSection = dynamic(() => import('@/components/sections/footer-section'));
 
@@ -23,8 +23,8 @@ const geistSans = Geist({
 const playfair = Playfair_Display({
   variable: '--font-playfair',
   subsets: ['latin'],
-  weight: ['400', '500', '600'],
-  style: ['normal', 'italic'],
+  weight: ['400'],
+  style: ['italic'],
 });
 
 export const metadata: Metadata = {
@@ -55,16 +55,14 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
       >
         <PageLoader />
         <NextIntlClientProvider messages={messages}>
-          <AuthProvider>
-            <TransitionProvider>
-              <PageTransition />
-              <Header />
-              <main>
-                {children}
-                <FooterSection />
-              </main>
-            </TransitionProvider>
-          </AuthProvider>
+          <TransitionProvider>
+            <PageTransition />
+            <Header />
+            <main>
+              {children}
+              <FooterSection />
+            </main>
+          </TransitionProvider>
         </NextIntlClientProvider>
         <SpeedInsights />
       </body>
