@@ -134,7 +134,7 @@ export default function YourFutureSection() {
           >
             <TransitionLink
               href="/book"
-              className="group inline-flex items-center gap-3 bg-gray-900 px-8 py-5 text-sm font-medium uppercase tracking-wider text-white transition-all hover:bg-gray-800"
+              className="group inline-flex items-center gap-3 bg-gray-900 px-8 py-5 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-gray-800"
             >
               {tCommon('bookScan')}
               <svg
@@ -155,15 +155,15 @@ export default function YourFutureSection() {
         </div>
       </div>
 
-      {/* Static decorative orbs - optimized for Chrome performance */}
+      {/* Decorative orbs — radial gradients instead of blur filter for Safari perf */}
       <div className="pointer-events-none absolute inset-0 z-[5] overflow-hidden">
         <div
-          className="absolute h-64 w-64 rounded-full bg-white/10 blur-2xl"
-          style={{ top: '15%', left: '20%' }}
+          className="absolute h-64 w-64 rounded-full"
+          style={{ top: '15%', left: '20%', background: 'radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%)' }}
         />
         <div
-          className="absolute h-48 w-48 rounded-full bg-[#0097a7]/15 blur-2xl"
-          style={{ bottom: '25%', left: '15%' }}
+          className="absolute h-48 w-48 rounded-full"
+          style={{ bottom: '25%', left: '15%', background: 'radial-gradient(circle, rgba(0,151,167,0.15) 0%, transparent 70%)' }}
         />
       </div>
     </section>

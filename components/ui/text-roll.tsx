@@ -51,12 +51,12 @@ export function TextRoll({
   const letters = children.split('');
 
   return (
-    <span className={className}>
+    <span className={`${className ?? ''} [perspective:10000px]`}>
       {letters.map((letter, i) => {
         return (
           <span
             key={i}
-            className='relative inline-block [perspective:10000px] [transform-style:preserve-3d] [width:auto]'
+            className='relative inline-block [transform-style:preserve-3d] [width:auto]'
             aria-hidden='true'
           >
             <motion.span
