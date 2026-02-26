@@ -11,6 +11,7 @@ import { TransitionProvider } from '@/components/layout/transition-provider';
 import PageTransition from '@/components/layout/page-transition';
 import { AuthProvider } from '@/components/providers/auth-provider';
 import '../globals.css';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const FooterSection = dynamic(() => import('@/components/sections/footer-section'));
 
@@ -65,6 +66,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
             </TransitionProvider>
           </AuthProvider>
         </NextIntlClientProvider>
+        <SpeedInsights />
       </body>
     </html>
   );
