@@ -18,8 +18,8 @@
       "subtitle": "Special packages for your wellness journey",
       "description": "Discover our exclusive offers and packages designed to enhance your health and wellbeing."
     },
-    "support": {
-      "title": "Support",
+    "contact": {
+      "title": "Contact Us",
       "subtitle": "We're here for you",
       "description": "Our support team is dedicated to help you with any questions or concerns."
     },
@@ -84,7 +84,7 @@
   },
   "nav": {
     "offers": "Offers",
-    "support": "Support",
+    "contact": "Contact",
     "about": "About",
     "login": "Log In",
     "profile": "My Profile",
@@ -348,7 +348,7 @@
     "faq": "FAQ",
     "instagram": "Instagram",
     "facebook": "Facebook",
-    "getSupport": "Get Support",
+    "getSupport": "Contact Us",
     "email": "contact@vrajamarii.ro",
     "phone": "+40 241 123 456",
     "hours": "Monday - Friday 9am - 6pm",

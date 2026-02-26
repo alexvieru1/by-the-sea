@@ -18,8 +18,8 @@
       "subtitle": "Pachete speciale pentru călătoria ta de bunăstare",
       "description": "Descoperă ofertele noastre exclusive și pachetele concepute pentru a-ți îmbunătăți sănătatea și bunăstarea."
     },
-    "support": {
-      "title": "Suport",
+    "contact": {
+      "title": "Contactează-ne",
       "subtitle": "Suntem aici pentru tine",
       "description": "Echipa noastră de suport este dedicată să te ajute cu orice întrebare sau nelămurire."
     },
@@ -84,7 +84,7 @@
   },
   "nav": {
     "offers": "Oferte",
-    "support": "Suport",
+    "contact": "Contact",
     "about": "Despre Noi",
     "login": "Autentificare",
     "profile": "Profilul Meu",
@@ -348,7 +348,7 @@
     "faq": "Întrebări Frecvente",
     "instagram": "Instagram",
     "facebook": "Facebook",
-    "getSupport": "Obține Suport",
+    "getSupport": "Contactează-ne",
     "email": "contact@vrajamarii.ro",
     "phone": "+40 241 123 456",
     "hours": "Luni - Vineri 9:00 - 18:00",

@@ -44,7 +44,7 @@ export default function StepPersonalData({ register, errors }: StepPersonalDataP
           <label htmlFor="age" className={labelClass}>
             {t('age')} *
           </label>
-          <input id="age" type="number" min={1} max={150} {...register('age')} className={inputClass} />
+          <input id="age" type="number" min={1} max={150} {...register('age')} onWheel={(e) => e.currentTarget.blur()} className={inputClass} />
           {errors.age && <p className={errorClass}>{tErr('required')}</p>}
         </div>
         <div>
@@ -82,14 +82,14 @@ export default function StepPersonalData({ register, errors }: StepPersonalDataP
           <label htmlFor="weight" className={labelClass}>
             {t('weight')} *
           </label>
-          <input id="weight" type="number" min={1} max={500} {...register('weight')} className={inputClass} />
+          <input id="weight" type="number" min={1} max={500} {...register('weight')} onWheel={(e) => e.currentTarget.blur()} className={inputClass} />
           {errors.weight && <p className={errorClass}>{tErr('required')}</p>}
         </div>
         <div>
           <label htmlFor="height" className={labelClass}>
             {t('height')} *
           </label>
-          <input id="height" type="number" min={1} max={300} {...register('height')} className={inputClass} />
+          <input id="height" type="number" min={1} max={300} {...register('height')} onWheel={(e) => e.currentTarget.blur()} className={inputClass} />
           {errors.height && <p className={errorClass}>{tErr('required')}</p>}
         </div>
       </div>

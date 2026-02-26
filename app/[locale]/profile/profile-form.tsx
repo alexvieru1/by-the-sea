@@ -103,161 +103,166 @@ export default function ProfileForm({ profile, email, children }: ProfileFormPro
       </div>
 
       <div className="px-6 py-16 lg:px-12 lg:py-24">
-        <motion.div
-          className="mx-auto max-w-md"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <h2 className="mb-6 text-sm font-medium uppercase tracking-wider text-gray-700">
-            {t('personalInfo')}
-          </h2>
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+          {/* Left column — Personal Info */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <h2 className="mb-6 text-sm font-medium uppercase tracking-wider text-gray-700">
+              {t('personalInfo')}
+            </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-5">
-            <div className="grid grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="firstName" className="mb-2 block text-sm font-medium uppercase tracking-wider text-gray-700">
+                    {t('firstName')}
+                  </label>
+                  <input
+                    id="firstName"
+                    type="text"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                    className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="lastName" className="mb-2 block text-sm font-medium uppercase tracking-wider text-gray-700">
+                    {t('lastName')}
+                  </label>
+                  <input
+                    id="lastName"
+                    type="text"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                    className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                  />
+                </div>
+              </div>
+
               <div>
-                <label htmlFor="firstName" className="mb-2 block text-sm font-medium uppercase tracking-wider text-gray-700">
-                  {t('firstName')}
+                <label htmlFor="email" className="mb-2 block text-sm font-medium uppercase tracking-wider text-gray-700">
+                  {t('email')}
                 </label>
                 <input
-                  id="firstName"
-                  type="text"
-                  value={firstName}
-                  onChange={(e) => setFirstName(e.target.value)}
+                  id="email"
+                  type="email"
+                  value={email}
+                  disabled
+                  className="w-full border border-gray-300 bg-gray-100 px-4 py-3 text-sm text-gray-500 outline-none"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="mb-2 block text-sm font-medium uppercase tracking-wider text-gray-700">
+                  {t('phone')}
+                </label>
+                <input
+                  id="phone"
+                  type="tel"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
                   className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
                 />
               </div>
-              <div>
-                <label htmlFor="lastName" className="mb-2 block text-sm font-medium uppercase tracking-wider text-gray-700">
-                  {t('lastName')}
-                </label>
+
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="county" className="mb-2 block text-sm font-medium uppercase tracking-wider text-gray-700">
+                    {t('county')}
+                  </label>
+                  <select
+                    id="county"
+                    value={county}
+                    onChange={(e) => handleCountyChange(e.target.value)}
+                    className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                  >
+                    <option value="">{t('selectCounty')}</option>
+                    {counties.map((c) => (
+                      <option key={c.code} value={c.name}>
+                        {c.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="city" className="mb-2 block text-sm font-medium uppercase tracking-wider text-gray-700">
+                    {t('city')}
+                  </label>
+                  <select
+                    id="city"
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                    disabled={!county}
+                    className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7] disabled:opacity-50"
+                  >
+                    <option value="">{t('selectCity')}</option>
+                    {cities.map((c) => (
+                      <option key={c} value={c}>
+                        {c}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              {/* Community member toggle */}
+              <div className="flex items-start gap-3 pt-2">
                 <input
-                  id="lastName"
-                  type="text"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                  id="community"
+                  type="checkbox"
+                  checked={isCommunityMember}
+                  onChange={(e) => setIsCommunityMember(e.target.checked)}
+                  className="mt-1 h-4 w-4 border-gray-300 accent-[#0097a7]"
                 />
+                <div>
+                  <label htmlFor="community" className="text-sm font-medium text-gray-900 cursor-pointer">
+                    {t('communityMember')}
+                  </label>
+                  <p className="text-xs text-gray-500">{t('communityDescription')}</p>
+                </div>
               </div>
+
+              {message && (
+                <motion.p className="text-sm text-green-600" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                  {message}
+                </motion.p>
+              )}
+
+              {error && (
+                <motion.p className="text-sm text-red-600" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                  {error}
+                </motion.p>
+              )}
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-gray-900 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-gray-800 disabled:opacity-50"
+              >
+                {loading ? '...' : t('save')}
+              </button>
+            </form>
+
+            {/* Sign out */}
+            <div className="mt-12 border-t border-gray-200 pt-8">
+              <button
+                type="button"
+                onClick={signOut}
+                className="w-full border border-gray-300 bg-white px-8 py-4 text-sm font-medium uppercase tracking-wider text-gray-700 transition-colors hover:bg-gray-50"
+              >
+                {t('signOut')}
+              </button>
             </div>
+          </motion.div>
 
-            <div>
-              <label htmlFor="email" className="mb-2 block text-sm font-medium uppercase tracking-wider text-gray-700">
-                {t('email')}
-              </label>
-              <input
-                id="email"
-                type="email"
-                value={email}
-                disabled
-                className="w-full border border-gray-300 bg-gray-100 px-4 py-3 text-sm text-gray-500 outline-none"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="phone" className="mb-2 block text-sm font-medium uppercase tracking-wider text-gray-700">
-                {t('phone')}
-              </label>
-              <input
-                id="phone"
-                type="tel"
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
-              />
-            </div>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label htmlFor="county" className="mb-2 block text-sm font-medium uppercase tracking-wider text-gray-700">
-                  {t('county')}
-                </label>
-                <select
-                  id="county"
-                  value={county}
-                  onChange={(e) => handleCountyChange(e.target.value)}
-                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
-                >
-                  <option value="">{t('selectCounty')}</option>
-                  {counties.map((c) => (
-                    <option key={c.code} value={c.name}>
-                      {c.name}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <label htmlFor="city" className="mb-2 block text-sm font-medium uppercase tracking-wider text-gray-700">
-                  {t('city')}
-                </label>
-                <select
-                  id="city"
-                  value={city}
-                  onChange={(e) => setCity(e.target.value)}
-                  disabled={!county}
-                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7] disabled:opacity-50"
-                >
-                  <option value="">{t('selectCity')}</option>
-                  {cities.map((c) => (
-                    <option key={c} value={c}>
-                      {c}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </div>
-
-            {/* Community member toggle */}
-            <div className="flex items-start gap-3 pt-2">
-              <input
-                id="community"
-                type="checkbox"
-                checked={isCommunityMember}
-                onChange={(e) => setIsCommunityMember(e.target.checked)}
-                className="mt-1 h-4 w-4 border-gray-300 accent-[#0097a7]"
-              />
-              <div>
-                <label htmlFor="community" className="text-sm font-medium text-gray-900 cursor-pointer">
-                  {t('communityMember')}
-                </label>
-                <p className="text-xs text-gray-500">{t('communityDescription')}</p>
-              </div>
-            </div>
-
-            {message && (
-              <motion.p className="text-sm text-green-600" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                {message}
-              </motion.p>
-            )}
-
-            {error && (
-              <motion.p className="text-sm text-red-600" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                {error}
-              </motion.p>
-            )}
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full bg-gray-900 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-gray-800 disabled:opacity-50"
-            >
-              {loading ? '...' : t('save')}
-            </button>
-          </form>
-
-          {children}
-
-          {/* Sign out */}
-          <div className="mt-12 border-t border-gray-200 pt-8">
-            <button
-              type="button"
-              onClick={signOut}
-              className="w-full border border-gray-300 bg-white px-8 py-4 text-sm font-medium uppercase tracking-wider text-gray-700 transition-colors hover:bg-gray-50"
-            >
-              {t('signOut')}
-            </button>
+          {/* Right column — Evaluation Summary */}
+          <div>
+            {children}
           </div>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

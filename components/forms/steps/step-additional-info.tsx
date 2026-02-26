@@ -113,6 +113,7 @@ export default function StepAdditionalInfo({ register, watch, errors }: StepAddi
               min={1}
               max={42}
               {...register('pregnancy_weeks')}
+              onWheel={(e) => e.currentTarget.blur()}
               className={inputClass}
             />
             {errors.pregnancy_weeks && <p className={errorClass}>{tErr('required')}</p>}

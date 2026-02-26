@@ -53,7 +53,7 @@ export const evaluationFormSchema = z.object({
   shortness_of_breath: yesNo,
   tuberculosis: yesNo,
   smoker: yesNo,
-  cigarettes_per_day: z.coerce.number().optional(),
+  cigarettes_per_day: z.coerce.number().max(100).optional(),
 
   // Hepatic / Gastric
   hepatitis: yesNo,

@@ -167,7 +167,9 @@ export default function StepMedicalHistory({ register, watch, errors, setValue }
                 id="cigarettes_per_day"
                 type="number"
                 min={1}
+                max={100}
                 {...register('cigarettes_per_day')}
+                onWheel={(e) => e.currentTarget.blur()}
                 className={inputClass}
               />
               {errors.cigarettes_per_day && <p className={errorClass}>{tErr('required')}</p>}

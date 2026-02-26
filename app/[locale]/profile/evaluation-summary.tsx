@@ -1,7 +1,8 @@
 'use client';
 
+import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion } from 'motion/react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Link } from '@/i18n/routing';
 
 interface EvaluationData {
@@ -68,17 +69,9 @@ interface EvaluationSummaryProps {
 }
 
 const sectionTitleClass = 'mb-3 text-xs font-semibold uppercase tracking-widest text-[#4a9ead]';
+const subsectionTitleClass = 'mb-2 mt-4 text-xs font-medium uppercase tracking-wider text-gray-400 first:mt-0';
 const valueClass = 'text-sm text-gray-900';
 const labelSmClass = 'text-xs uppercase tracking-wider text-gray-500';
-
-function BooleanBadge({ value, label }: { value: boolean; label: string }) {
-  if (!value) return null;
-  return (
-    <span className="inline-block border border-gray-300 bg-gray-50 px-2.5 py-1 text-xs text-gray-700">
-      {label}
-    </span>
-  );
-}
 
 function InfoRow({ label, value }: { label: string; value: string | number | null | undefined }) {
   return (
@@ -89,6 +82,67 @@ function InfoRow({ label, value }: { label: string; value: string | number | nul
   );
 }
 
+function BooleanBadge({ value, label }: { value: boolean; label: string }) {
+  if (!value) return null;
+  return (
+    <span className="inline-block border border-gray-300 bg-gray-50 px-2.5 py-1 text-xs text-gray-700">
+      {label}
+    </span>
+  );
+}
+
+function YesNoRow({ label, value, detail }: { label: string; value: boolean; detail?: string | null }) {
+  return (
+    <div className="flex items-center justify-between py-1.5">
+      <span className="text-sm text-gray-700">{label}</span>
+      <div className="flex items-center gap-2">
+        {detail && <span className="text-xs text-gray-500">{detail}</span>}
+        <span className={`text-base ${value ? 'text-red-600' : 'text-gray-900'}`}>
+          {value ? '●' : '○'}
+        </span>
+      </div>
+    </div>
+  );
+}
+
+function ExpandToggle({ expanded, onToggle }: { expanded: boolean; onToggle: () => void }) {
+  return (
+    <button
+      onClick={onToggle}
+      className="ml-auto flex h-5 w-5 items-center justify-center text-gray-400 transition-colors hover:text-gray-600"
+      aria-label={expanded ? 'Collapse' : 'Expand'}
+    >
+      <motion.span
+        className="block text-lg leading-none"
+        animate={{ rotate: expanded ? 45 : 0 }}
+        transition={{ duration: 0.2 }}
+      >
+        +
+      </motion.span>
+    </button>
+  );
+}
+
+function ExpandableContent({ expanded, children }: { expanded: boolean; children: React.ReactNode }) {
+  return (
+    <AnimatePresence initial={false}>
+      {expanded && (
+        <motion.div
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: 'auto', opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.25, ease: 'easeInOut' }}
+          className="overflow-hidden"
+        >
+          <div className="pt-3">
+            {children}
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}
+
 export default function EvaluationSummary({ evaluation }: EvaluationSummaryProps) {
   const t = useTranslations('evaluation');
   const t1 = useTranslations('evaluation.step1');
@@ -96,15 +150,19 @@ export default function EvaluationSummary({ evaluation }: EvaluationSummaryProps
   const t3 = useTranslations('evaluation.step3');
   const t4 = useTranslations('evaluation.step4');
 
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({});
+
+  const toggle = (key: string) =>
+    setExpandedSections((prev) => ({ ...prev, [key]: !prev[key] }));
+
   if (!evaluation) {
     return (
       <motion.div
-        className="mt-12 border-t border-gray-200 pt-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        <h2 className="mb-4 text-sm font-medium uppercase tracking-wider text-gray-700">
+        <h2 className="mb-6 text-sm font-medium uppercase tracking-wider text-gray-700">
           {t('title')}
         </h2>
         <p className="mb-4 text-sm text-gray-500">{t('noEvaluation')}</p>
@@ -158,22 +216,13 @@ export default function EvaluationSummary({ evaluation }: EvaluationSummaryProps
 
   return (
     <motion.div
-      className="mt-12 border-t border-gray-200 pt-8"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.3 }}
     >
-      <div className="mb-6 flex items-center justify-between">
-        <h2 className="text-sm font-medium uppercase tracking-wider text-gray-700">
-          {t('title')}
-        </h2>
-        <Link
-          href="/evaluation"
-          className="text-xs font-medium uppercase tracking-wider text-[#4a9ead] transition-colors hover:text-[#3d8a98]"
-        >
-          {t('edit')}
-        </Link>
-      </div>
+      <h2 className="mb-6 text-sm font-medium uppercase tracking-wider text-gray-700">
+        {t('title')}
+      </h2>
 
       {/* Personal Data */}
       <div className="mb-6">
@@ -191,8 +240,11 @@ export default function EvaluationSummary({ evaluation }: EvaluationSummaryProps
       </div>
 
       {/* Communication */}
-      <div className="mb-6 border-t border-gray-100 pt-4">
-        <p className={sectionTitleClass}>{t('stepLabel2')}</p>
+      <div className="mb-6">
+        <div className="mb-3 flex items-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#4a9ead]">{t('stepLabel2')}</p>
+          <ExpandToggle expanded={!!expandedSections.communication} onToggle={() => toggle('communication')} />
+        </div>
         <div className="space-y-2">
           <p className={valueClass}>
             {evaluation.speaks_romanian ? t2('speaksRomanian') : `${t2('otherLanguage')}: ${evaluation.other_language}`}
@@ -203,46 +255,140 @@ export default function EvaluationSummary({ evaluation }: EvaluationSummaryProps
             <BooleanBadge value={evaluation.speech_impairment} label={t2('speechImpairment')} />
           </div>
         </div>
+
+        <ExpandableContent expanded={!!expandedSections.communication}>
+          <div className="divide-y divide-gray-50">
+            <YesNoRow label={t2('visualImpairment')} value={evaluation.visual_impairment} />
+            <YesNoRow label={t2('hearingImpairment')} value={evaluation.hearing_impairment} />
+            <YesNoRow label={t2('speechImpairment')} value={evaluation.speech_impairment} />
+          </div>
+        </ExpandableContent>
       </div>
 
       {/* Medical History */}
-      <div className="mb-6 border-t border-gray-100 pt-4">
-        <p className={sectionTitleClass}>{t('stepLabel3')}</p>
-        {activeConditions.length > 0 ? (
-          <div className="flex flex-wrap gap-2">
-            {activeConditions.map((c) => (
-              <span
-                key={c.key}
-                className="inline-block border border-red-200 bg-red-50 px-2.5 py-1 text-xs text-red-700"
-              >
-                {c.label}
-              </span>
-            ))}
-          </div>
-        ) : (
-          <p className="text-sm text-gray-500">{t('noConditions')}</p>
-        )}
+      <div className="mb-6">
+        <div className="mb-3 flex items-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#4a9ead]">{t('stepLabel3')}</p>
+          <ExpandToggle expanded={!!expandedSections.medical} onToggle={() => toggle('medical')} />
+        </div>
 
-        {evaluation.cardiac_pacemaker && evaluation.pacemaker_type && (
-          <p className="mt-2 text-xs text-gray-600">
-            {t3('pacemakerType')}: {evaluation.pacemaker_type}
-          </p>
-        )}
-        {evaluation.smoker && evaluation.cigarettes_per_day && (
-          <p className="mt-1 text-xs text-gray-600">
-            {t3('cigarettesPerDay')}: {evaluation.cigarettes_per_day}
-          </p>
-        )}
-        {evaluation.other_conditions && (
-          <p className="mt-1 text-xs text-gray-600">
-            {t3('otherConditions')}: {evaluation.other_conditions}
-          </p>
-        )}
+        {/* Compact view — always visible */}
+        <div>
+          {activeConditions.length > 0 ? (
+            <div className="flex flex-wrap gap-2">
+              {activeConditions.map((c) => (
+                <span
+                  key={c.key}
+                  className="inline-block border border-red-200 bg-red-50 px-2.5 py-1 text-xs text-red-700"
+                >
+                  {c.label}
+                </span>
+              ))}
+            </div>
+          ) : (
+            <p className="text-sm text-gray-500">{t('noConditions')}</p>
+          )}
+
+          {evaluation.cardiac_pacemaker && evaluation.pacemaker_type && (
+            <p className="mt-2 text-xs text-gray-600">
+              {t3('pacemakerType')}: {evaluation.pacemaker_type}
+            </p>
+          )}
+          {evaluation.smoker && evaluation.cigarettes_per_day && (
+            <p className="mt-1 text-xs text-gray-600">
+              {t3('cigarettesPerDay')}: {evaluation.cigarettes_per_day}
+            </p>
+          )}
+          {evaluation.other_conditions && (
+            <p className="mt-1 text-xs text-gray-600">
+              {t3('otherConditions')}: {evaluation.other_conditions}
+            </p>
+          )}
+        </div>
+
+        {/* Expanded view — all fields grouped by subsection */}
+        <ExpandableContent expanded={!!expandedSections.medical}>
+          <p className={subsectionTitleClass}>{t3('neurological')}</p>
+          <div className="divide-y divide-gray-50">
+            <YesNoRow label={t3('stroke')} value={evaluation.stroke} />
+            <YesNoRow label={t3('seizures')} value={evaluation.seizures} />
+            <YesNoRow label={t3('hemiparesis')} value={evaluation.hemiparesis} />
+          </div>
+
+          <p className={subsectionTitleClass}>{t3('cardiovascular')}</p>
+          <div className="divide-y divide-gray-50">
+            <YesNoRow label={t3('hypertension')} value={evaluation.hypertension} />
+            <YesNoRow label={t3('cardiopathy')} value={evaluation.cardiopathy} />
+            <YesNoRow label={t3('swollenFeet')} value={evaluation.swollen_feet} />
+            <YesNoRow label={t3('fatigueStairs')} value={evaluation.fatigue_stairs} />
+            <YesNoRow label={t3('varicoseVeins')} value={evaluation.varicose_veins} />
+            <YesNoRow label={t3('myocardialInfarction')} value={evaluation.myocardial_infarction} />
+            <YesNoRow label={t3('chestPain')} value={evaluation.chest_pain} />
+            <YesNoRow label={t3('irregularHeartbeat')} value={evaluation.irregular_heartbeat} />
+            <YesNoRow
+              label={t3('cardiacPacemaker')}
+              value={evaluation.cardiac_pacemaker}
+              detail={evaluation.cardiac_pacemaker ? evaluation.pacemaker_type : null}
+            />
+            <YesNoRow label={t3('valvulopathy')} value={evaluation.valvulopathy} />
+          </div>
+
+          <p className={subsectionTitleClass}>{t3('pulmonary')}</p>
+          <div className="divide-y divide-gray-50">
+            <YesNoRow label={t3('bronchitis')} value={evaluation.bronchitis} />
+            <YesNoRow label={t3('respiratoryVirus')} value={evaluation.respiratory_virus} />
+            <YesNoRow label={t3('shortnessOfBreath')} value={evaluation.shortness_of_breath} />
+            <YesNoRow label={t3('tuberculosis')} value={evaluation.tuberculosis} />
+            <YesNoRow
+              label={t3('smoker')}
+              value={evaluation.smoker}
+              detail={evaluation.smoker && evaluation.cigarettes_per_day ? `${evaluation.cigarettes_per_day} ${t3('cigarettesPerDay').toLowerCase()}` : null}
+            />
+          </div>
+
+          <p className={subsectionTitleClass}>{t3('hepaticGastric')}</p>
+          <div className="divide-y divide-gray-50">
+            <YesNoRow label={t3('hepatitis')} value={evaluation.hepatitis} />
+            <YesNoRow label={t3('gastricUlcer')} value={evaluation.gastric_ulcer} />
+            <YesNoRow label={t3('diabetes')} value={evaluation.diabetes} />
+          </div>
+
+          <p className={subsectionTitleClass}>{t3('hematological')}</p>
+          <div className="divide-y divide-gray-50">
+            <YesNoRow label={t3('hemophilia')} value={evaluation.hemophilia} />
+            <YesNoRow label={t3('recentBleeding')} value={evaluation.recent_bleeding} />
+            <YesNoRow label={t3('anemia')} value={evaluation.anemia} />
+            <YesNoRow label={t3('hivInfection')} value={evaluation.hiv_infection} />
+          </div>
+
+          <p className={subsectionTitleClass}>{t3('other')}</p>
+          <div className="divide-y divide-gray-50">
+            <YesNoRow label={t3('spinalProblems')} value={evaluation.spinal_problems} />
+            <YesNoRow label={t3('kidneyDisease')} value={evaluation.kidney_disease} />
+            <YesNoRow label={t3('thyroidDisease')} value={evaluation.thyroid_disease} />
+            <YesNoRow label={t3('myastheniaGravis')} value={evaluation.myasthenia_gravis} />
+            <YesNoRow label={t3('duchenneDisease')} value={evaluation.duchenne_disease} />
+            <YesNoRow label={t3('rheumaticDiseases')} value={evaluation.rheumatic_diseases} />
+            <YesNoRow label={t3('accidentsTrauma')} value={evaluation.accidents_trauma} />
+            <YesNoRow label={t3('psychiatricConditions')} value={evaluation.psychiatric_conditions} />
+          </div>
+
+          {evaluation.other_conditions && (
+            <div className="mt-3">
+              <InfoRow label={t3('otherConditions')} value={evaluation.other_conditions} />
+            </div>
+          )}
+        </ExpandableContent>
       </div>
 
       {/* Additional Info */}
-      <div className="border-t border-gray-100 pt-4">
-        <p className={sectionTitleClass}>{t('stepLabel4')}</p>
+      <div>
+        <div className="mb-3 flex items-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#4a9ead]">{t('stepLabel4')}</p>
+          <ExpandToggle expanded={!!expandedSections.additional} onToggle={() => toggle('additional')} />
+        </div>
+
+        {/* Compact view */}
         <div className="space-y-2">
           <div className="flex flex-wrap gap-2">
             <BooleanBadge value={evaluation.cultural_restrictions} label={t4('culturalRestrictions')} />
@@ -262,6 +408,25 @@ export default function EvaluationSummary({ evaluation }: EvaluationSummaryProps
             </div>
           )}
         </div>
+
+        {/* Expanded view */}
+        <ExpandableContent expanded={!!expandedSections.additional}>
+          <div className="divide-y divide-gray-50">
+            <YesNoRow label={t4('culturalRestrictions')} value={evaluation.cultural_restrictions} />
+            <YesNoRow label={t4('recentInfectiousContact')} value={evaluation.recent_infectious_contact} />
+            <YesNoRow
+              label={t4('pregnancy')}
+              value={evaluation.pregnancy}
+              detail={evaluation.pregnancy && evaluation.pregnancy_weeks ? `${evaluation.pregnancy_weeks} ${t4('pregnancyWeeks').toLowerCase()}` : null}
+            />
+            <YesNoRow label={t4('previousSurgeries')} value={evaluation.previous_surgeries} />
+          </div>
+          {evaluation.medication_last_month && (
+            <div className="mt-3">
+              <InfoRow label={t4('medicationLastMonth')} value={evaluation.medication_last_month} />
+            </div>
+          )}
+        </ExpandableContent>
       </div>
     </motion.div>
   );
