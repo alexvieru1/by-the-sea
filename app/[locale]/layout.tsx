@@ -6,6 +6,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/header';
+import { AuthProvider } from '@/components/providers/auth-provider';
 import { TransitionProvider } from '@/components/layout/transition-provider';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import '../globals.css';
@@ -57,7 +58,9 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
         <NextIntlClientProvider messages={messages}>
           <TransitionProvider>
             <PageTransition />
-            <Header />
+            <AuthProvider>
+              <Header />
+            </AuthProvider>
             <main>
               {children}
               <FooterSection />
