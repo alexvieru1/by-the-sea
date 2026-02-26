@@ -11,10 +11,10 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <DataPointsSection />
-      <OffersPreview />
+      {/* <DataPointsSection /> */}
       <YourBodySection />
       <YourFutureSection />
+      <OffersPreview />
       <FacilitiesSection />
     </>
   );

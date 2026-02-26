@@ -21,9 +21,10 @@ interface Profile {
 interface ProfileFormProps {
   profile: Profile | null;
   email: string;
+  children?: React.ReactNode;
 }
 
-export default function ProfileForm({ profile, email }: ProfileFormProps) {
+export default function ProfileForm({ profile, email, children }: ProfileFormProps) {
   const t = useTranslations('auth.profile');
   const { signOut } = useAuth();
 
@@ -243,6 +244,8 @@ export default function ProfileForm({ profile, email }: ProfileFormProps) {
               {loading ? '...' : t('save')}
             </button>
           </form>
+
+          {children}
 
           {/* Sign out */}
           <div className="mt-12 border-t border-gray-200 pt-8">

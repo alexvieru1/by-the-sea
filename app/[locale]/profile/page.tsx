@@ -1,6 +1,7 @@
 import { createClient } from '@/lib/supabase/server';
 import { redirect } from 'next/navigation';
 import ProfileForm from './profile-form';
+import EvaluationSummary from './evaluation-summary';
 
 export default async function ProfilePage() {
   const supabase = await createClient();
@@ -12,11 +13,14 @@ export default async function ProfilePage() {
     redirect('/login');
   }
 
-  const { data: profile } = await supabase
-    .from('profiles')
-    .select('*')
-    .eq('id', user.id)
-    .single();
+  const [{ data: profile }, { data: evaluation }] = await Promise.all([
+    supabase.from('profiles').select('*').eq('id', user.id).single(),
+    supabase.from('evaluation_forms').select('*').eq('user_id', user.id).single(),
+  ]);
 
-  return <ProfileForm profile={profile} email={user.email ?? ''} />;
+  return (
+    <ProfileForm profile={profile} email={user.email ?? ''}>
+      <EvaluationSummary evaluation={evaluation} />
+    </ProfileForm>
+  );
 }

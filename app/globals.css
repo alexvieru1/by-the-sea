@@ -104,16 +104,14 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  overflow: hidden; /* Let main handle scrolling */
-}
+/* body overflow already set above — main handles scrolling */
 
 /* Scroll snap container */
 main {
