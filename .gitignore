@@ -36,13 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
-# large video files (stored externally)
-public/videos/
-*.mp4
-*.MP4
+# large video files
 *.mov
 *.MOV
-*.webm
 
 # typescript
 *.tsbuildinfo
