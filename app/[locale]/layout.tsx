@@ -8,7 +8,8 @@ import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/header';
 import { AuthProvider } from '@/components/providers/auth-provider';
 import { TransitionProvider } from '@/components/layout/transition-provider';
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from '@vercel/analytics/next';
 import '../globals.css';
 
 const PageLoader = dynamic(() => import('@/components/layout/page-loader'));
@@ -68,6 +69,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
           </TransitionProvider>
         </NextIntlClientProvider>
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
