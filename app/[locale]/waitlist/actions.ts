@@ -7,7 +7,10 @@ interface WaitlistData {
   lastName: string;
   email: string;
   phone?: string;
+  ageInterval: string;
+  preferredMonth: string;
   selectedOffers: string[];
+  gdprConsent: true;
 }
 
 export async function submitWaitlist(data: WaitlistData) {
@@ -29,7 +32,10 @@ export async function submitWaitlist(data: WaitlistData) {
     last_name: data.lastName,
     email: data.email,
     phone: data.phone || null,
+    age_interval: data.ageInterval,
+    preferred_month: data.preferredMonth,
     selected_offers: data.selectedOffers,
+    gdpr_consent: data.gdprConsent,
   });
 
   if (error) {

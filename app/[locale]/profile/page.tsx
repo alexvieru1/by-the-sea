@@ -13,13 +13,14 @@ export default async function ProfilePage() {
     redirect('/login');
   }
 
-  const [{ data: profile }, { data: evaluation }] = await Promise.all([
+  const [{ data: profile }, { data: evaluation }, { data: waitlistEntry }] = await Promise.all([
     supabase.from('profiles').select('*').eq('id', user.id).single(),
     supabase.from('evaluation_forms').select('*').eq('user_id', user.id).single(),
+    supabase.from('waitlist').select('id').eq('email', user.email!).single(),
   ]);
 
   return (
-    <ProfileForm profile={profile} email={user.email ?? ''}>
+    <ProfileForm profile={profile} email={user.email ?? ''} isOnWaitlist={!!waitlistEntry}>
       <EvaluationSummary evaluation={evaluation} />
     </ProfileForm>
   );

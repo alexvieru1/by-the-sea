@@ -35,10 +35,11 @@ interface Profile {
 interface ProfileFormProps {
   profile: Profile | null;
   email: string;
+  isOnWaitlist?: boolean;
   children?: React.ReactNode;
 }
 
-export default function ProfileForm({ profile, email, children }: ProfileFormProps) {
+export default function ProfileForm({ profile, email, isOnWaitlist, children }: ProfileFormProps) {
   const t = useTranslations('auth.profile');
   const { signOut } = useAuth();
   const [message, setMessage] = useState('');
@@ -275,9 +276,11 @@ export default function ProfileForm({ profile, email, children }: ProfileFormPro
           </motion.div>
 
           {/* Right column — Evaluation Summary */}
-          <div>
-            {children}
-          </div>
+          {isOnWaitlist && (
+            <div>
+              {children}
+            </div>
+          )}
         </div>
       </div>
     </div>

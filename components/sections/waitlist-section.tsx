@@ -1,38 +1,70 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { useAuth } from '@/components/providers/auth-provider';
-import { createClient } from '@/lib/supabase/client';
 import { submitWaitlist } from '@/app/[locale]/waitlist/actions';
 import {
   ExpandableScreen,
   ExpandableScreenTrigger,
   ExpandableScreenContent,
 } from '@/components/ui/expandable-screen';
+import { Link, useRouter } from '@/i18n/routing';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
-const offerKeys = ['offer1', 'offer2', 'offer3', 'offer4'] as const;
+const offerKeys = ['recovery', 'endometriosis'] as const;
+
+const ageIntervals = ['18-25', '26-35', '36-45', '46-55', '56-65', '65+'] as const;
+
+function getAvailableMonths(t: (key: string) => string) {
+  const now = new Date();
+  const currentMonth = now.getMonth();
+  const currentYear = now.getFullYear();
+  const months: { value: string; label: string }[] = [
+    { value: 'asap', label: t('asap') },
+  ];
+
+  const monthKeys = [
+    'january', 'february', 'march', 'april', 'may', 'june',
+    'july', 'august', 'september', 'october', 'november', 'december',
+  ];
+
+  for (let i = 1; i <= 12; i++) {
+    const monthIndex = (currentMonth + i) % 12;
+    const year = currentYear + (currentMonth + i >= 12 ? 1 : 0);
+    months.push({
+      value: `${monthKeys[monthIndex]}-${year}`,
+      label: `${t(`months.${monthKeys[monthIndex]}`)} ${year}`,
+    });
+  }
+
+  return months;
+}
 
 const waitlistSchema = z.object({
   firstName: z.string().min(1),
   lastName: z.string().min(1),
   email: z.string().email(),
   phone: z.string().optional(),
+  ageInterval: z.string().min(1),
+  preferredMonth: z.string().min(1),
   selectedOffers: z.array(z.string()),
+  gdprConsent: z.literal(true, {
+    errorMap: () => ({ message: 'required' }),
+  }),
 });
 
 type WaitlistFormData = z.infer<typeof waitlistSchema>;
 
 export default function WaitlistSection() {
   const t = useTranslations('waitlist');
-  const tOffers = useTranslations('offers');
-  const { user } = useAuth();
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error' | 'already_registered'>('idle');
+  const router = useRouter();
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'error' | 'already_registered'>('idle');
+
+  const availableMonths = useMemo(() => getAvailableMonths(t), [t]);
 
   const {
     register,
@@ -47,32 +79,15 @@ export default function WaitlistSection() {
       lastName: '',
       email: '',
       phone: '',
+      ageInterval: '',
+      preferredMonth: '',
       selectedOffers: [],
+      gdprConsent: false as unknown as true,
     },
   });
 
   const selectedOffers = watch('selectedOffers');
-
-  useEffect(() => {
-    if (!user) return;
-
-    const supabase = createClient();
-    supabase
-      .from('profiles')
-      .select('first_name, last_name, email, phone')
-      .eq('id', user.id)
-      .single()
-      .then(({ data }) => {
-        if (data) {
-          if (data.first_name) setValue('firstName', data.first_name);
-          if (data.last_name) setValue('lastName', data.last_name);
-          setValue('email', data.email || user.email || '');
-          if (data.phone) setValue('phone', data.phone);
-        } else {
-          setValue('email', user.email || '');
-        }
-      });
-  }, [user, setValue]);
+  const gdprConsent = watch('gdprConsent');
 
   const handleOfferToggle = (key: string, checked: boolean) => {
     const current = selectedOffers;
@@ -91,7 +106,7 @@ export default function WaitlistSection() {
     } else if (result.error) {
       setSubmitStatus('error');
     } else {
-      setSubmitStatus('success');
+      router.push('/waitlist/success');
     }
   };
 
@@ -158,21 +173,6 @@ export default function WaitlistSection() {
 
             {/* Right panel - Form */}
             <div className="flex flex-col justify-center px-8 py-12 lg:px-16 lg:w-7/12 bg-[#C4B5A5]">
-              {submitStatus === 'success' ? (
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="flex flex-col items-center gap-4 text-center py-12"
-                >
-                  <CheckCircle className="h-12 w-12 text-[#4A3F35]" />
-                  <p className="text-lg font-medium text-[#3A2F25]">
-                    {t('successTitle')}
-                  </p>
-                  <p className="text-sm text-[#6B5B4E]">
-                    {t('successDescription')}
-                  </p>
-                </motion.div>
-              ) : (
                 <form
                   onSubmit={handleSubmit(onSubmit)}
                   className="space-y-5 max-w-lg"
@@ -235,6 +235,49 @@ export default function WaitlistSection() {
                     />
                   </div>
 
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label htmlFor="waitlist-ageInterval" className="block text-sm text-[#4A3F35] mb-1.5">
+                        {t('ageInterval')}
+                      </label>
+                      <select
+                        id="waitlist-ageInterval"
+                        {...register('ageInterval')}
+                        className="w-full bg-[#E8DDD0] border border-[#B8A898] text-[#3A2F25] px-4 py-3 text-sm focus:outline-none focus:border-[#6B5B4E] transition-colors"
+                      >
+                        <option value="">{t('selectAge')}</option>
+                        {ageIntervals.map((interval) => (
+                          <option key={interval} value={interval}>
+                            {interval}
+                          </option>
+                        ))}
+                      </select>
+                      {errors.ageInterval && (
+                        <p className="mt-1 text-xs text-red-700">{t('required')}</p>
+                      )}
+                    </div>
+                    <div>
+                      <label htmlFor="waitlist-preferredMonth" className="block text-sm text-[#4A3F35] mb-1.5">
+                        {t('preferredMonth')}
+                      </label>
+                      <select
+                        id="waitlist-preferredMonth"
+                        {...register('preferredMonth')}
+                        className="w-full bg-[#E8DDD0] border border-[#B8A898] text-[#3A2F25] px-4 py-3 text-sm focus:outline-none focus:border-[#6B5B4E] transition-colors"
+                      >
+                        <option value="">{t('selectMonth')}</option>
+                        {availableMonths.map((month) => (
+                          <option key={month.value} value={month.value}>
+                            {month.label}
+                          </option>
+                        ))}
+                      </select>
+                      {errors.preferredMonth && (
+                        <p className="mt-1 text-xs text-red-700">{t('required')}</p>
+                      )}
+                    </div>
+                  </div>
+
                   <fieldset>
                     <legend className="block text-sm text-[#4A3F35] mb-3">
                       {t('offersInterest')}
@@ -277,12 +320,63 @@ export default function WaitlistSection() {
                             )}
                           </div>
                           <span className="text-sm text-[#3A2F25]">
-                            {tOffers(`${key}.title`)}
+                            {t(`offers.${key}`)}
                           </span>
                         </label>
                       ))}
                     </div>
                   </fieldset>
+
+                  <label
+                    htmlFor="waitlist-gdpr"
+                    className="flex items-start gap-3 cursor-pointer group"
+                  >
+                    <input
+                      id="waitlist-gdpr"
+                      type="checkbox"
+                      checked={gdprConsent === true}
+                      onChange={(e) => setValue('gdprConsent', e.target.checked as unknown as true)}
+                      className="sr-only"
+                    />
+                    <div
+                      className={`w-5 h-5 border flex items-center justify-center shrink-0 mt-0.5 transition-colors ${
+                        gdprConsent
+                          ? 'bg-[#6B5B4E] border-[#6B5B4E]'
+                          : errors.gdprConsent
+                            ? 'border-red-600'
+                            : 'border-[#8B7D6E] group-hover:border-[#6B5B4E]'
+                      }`}
+                    >
+                      {gdprConsent && (
+                        <svg
+                          className="w-3 h-3 text-white"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={3}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                      )}
+                    </div>
+                    <span className="text-xs text-[#3A2F25] leading-relaxed">
+                      {t('gdprLabel')}{' '}
+                      <Link
+                        href="/privacy"
+                        target="_blank"
+                        className="underline hover:text-[#6B5B4E]"
+                      >
+                        {t('gdprLink')}
+                      </Link>
+                    </span>
+                  </label>
+                  {errors.gdprConsent && (
+                    <p className="text-xs text-red-700">{t('gdprRequired')}</p>
+                  )}
 
                   {submitStatus === 'already_registered' && (
                     <p className="text-sm text-amber-800">{t('alreadyRegistered')}</p>
@@ -299,7 +393,6 @@ export default function WaitlistSection() {
                     {isSubmitting ? '...' : t('submit')}
                   </button>
                 </form>
-              )}
             </div>
           </div>
         </ExpandableScreenContent>
