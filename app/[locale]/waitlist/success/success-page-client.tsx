@@ -7,10 +7,11 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 
 interface SuccessPageClientProps {
   isLoggedIn: boolean;
+  isOnOwnWaitlist: boolean;
   hasEvaluation: boolean;
 }
 
-export default function SuccessPageClient({ isLoggedIn, hasEvaluation }: SuccessPageClientProps) {
+export default function SuccessPageClient({ isLoggedIn, isOnOwnWaitlist, hasEvaluation }: SuccessPageClientProps) {
   const t = useTranslations('waitlist.success');
 
   return (
@@ -52,7 +53,7 @@ export default function SuccessPageClient({ isLoggedIn, hasEvaluation }: Success
           </div>
         )}
 
-        {isLoggedIn && !hasEvaluation && (
+        {isLoggedIn && isOnOwnWaitlist && !hasEvaluation && (
           <div className="space-y-4">
             <Link
               href="/evaluation"
@@ -67,7 +68,7 @@ export default function SuccessPageClient({ isLoggedIn, hasEvaluation }: Success
           </div>
         )}
 
-        {isLoggedIn && hasEvaluation && (
+        {isLoggedIn && isOnOwnWaitlist && hasEvaluation && (
           <div className="space-y-2">
             <p className="text-lg font-medium text-[#6B5B4E]">
               {t('allSet')}
