@@ -1,9 +1,8 @@
 'use client';
 
 import { ReactNode, MouseEvent, CSSProperties } from 'react';
-import { Link } from '@/i18n/routing';
+import { Link, usePathname } from '@/i18n/routing';
 import { usePageTransition } from './transition-provider';
-import { usePathname } from 'next/navigation';
 
 interface TransitionLinkProps {
   href: string;

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useTranslations } from "next-intl";
 import { usePathname } from "@/i18n/routing";
+import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
 import TransitionLink from "./transition-link";
 import LanguageSwitcher from "./language-switcher";
@@ -143,7 +144,7 @@ export default function Header() {
             <TransitionLink href="/" className="shrink-0 px-6 py-5 lg:px-10">
               <SlicedText
                 text="VRΛJΛ MΛRII"
-                className={`text-2xl transition-colors duration-300 ${textColor}`}
+                className={cn("text-2xl transition-colors duration-300", textColor)}
                 splitSpacing={3}
               />
             </TransitionLink>
@@ -163,7 +164,7 @@ export default function Header() {
             <TransitionLink href="/" className="shrink-0 px-4 py-4">
               <SlicedText
                 text="VRΛJΛ MΛRII"
-                className={`text-lg transition-colors duration-300 ${textColor}`}
+                className={cn("text-lg transition-colors duration-300", textColor)}
                 splitSpacing={2}
               />
             </TransitionLink>
@@ -256,14 +257,15 @@ export default function Header() {
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className={`flex h-16 w-16 items-center justify-center transition-colors duration-300 lg:hidden ${
+                className={cn(
+                  "flex h-16 w-16 items-center justify-center transition-colors duration-300 lg:hidden",
                   isInHero ? "bg-gray-800/90" : "bg-gray-100"
-                }`}
+                )}
                 aria-label="Toggle menu"
               >
                 <div className="flex flex-col gap-1.5">
                   <motion.span
-                    className={`block h-0.5 w-5 transition-colors duration-300 ${hamburgerBg}`}
+                    className={cn("block h-0.5 w-5 transition-colors duration-300", hamburgerBg)}
                     animate={
                       isMobileMenuOpen
                         ? { rotate: 45, y: 8 }
@@ -272,12 +274,12 @@ export default function Header() {
                     transition={{ duration: 0.2 }}
                   />
                   <motion.span
-                    className={`block h-0.5 w-5 transition-colors duration-300 ${hamburgerBg}`}
+                    className={cn("block h-0.5 w-5 transition-colors duration-300", hamburgerBg)}
                     animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
                     transition={{ duration: 0.2 }}
                   />
                   <motion.span
-                    className={`block h-0.5 w-5 transition-colors duration-300 ${hamburgerBg}`}
+                    className={cn("block h-0.5 w-5 transition-colors duration-300", hamburgerBg)}
                     animate={
                       isMobileMenuOpen
                         ? { rotate: -45, y: -8 }

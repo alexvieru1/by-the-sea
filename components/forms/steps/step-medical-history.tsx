@@ -12,52 +12,11 @@ interface StepMedicalHistoryProps {
   setValue: UseFormSetValue<EvaluationFormData>;
 }
 
-const inputClass =
-  'w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#4a9ead]';
-const labelClass =
-  'mb-2 block text-sm font-medium uppercase tracking-wider text-gray-700';
-const errorClass = 'mt-1 text-xs text-red-500';
+import { inputClass, labelClass, errorClass } from '@/lib/form-styles';
+import YesNoField from '@/components/forms/yes-no-field';
+
 const sectionTitleClass =
   'text-xs font-semibold uppercase tracking-widest text-[#4a9ead]';
-
-function YesNoField({
-  id,
-  label,
-  register,
-  error,
-  tYes,
-  tNo,
-}: {
-  id: keyof EvaluationFormData;
-  label: string;
-  register: UseFormRegister<EvaluationFormData>;
-  error?: boolean;
-  tYes: string;
-  tNo: string;
-}) {
-  return (
-    <div>
-      <div className="flex items-center justify-between gap-4 py-1.5">
-        <span className="text-sm text-gray-900">{label}</span>
-        <div className="flex shrink-0 gap-1">
-          <label className="cursor-pointer">
-            <input type="radio" value="yes" {...register(id)} className="peer sr-only !fixed" />
-            <span className="inline-block border border-gray-300 px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-gray-500 transition-colors peer-checked:border-[#4a9ead] peer-checked:bg-[#4a9ead] peer-checked:text-white">
-              {tYes}
-            </span>
-          </label>
-          <label className="cursor-pointer">
-            <input type="radio" value="no" {...register(id)} className="peer sr-only !fixed" />
-            <span className="inline-block border border-gray-300 px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-gray-500 transition-colors peer-checked:border-gray-900 peer-checked:bg-gray-900 peer-checked:text-white">
-              {tNo}
-            </span>
-          </label>
-        </div>
-      </div>
-      {error && <p className={errorClass}>*</p>}
-    </div>
-  );
-}
 
 function SectionHeader({
   title,

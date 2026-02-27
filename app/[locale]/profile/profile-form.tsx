@@ -3,9 +3,23 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 import { useAuth } from '@/components/providers/auth-provider';
 import { counties, getCitiesByCounty } from '@/lib/data/romania-locations';
 import { updateProfile } from './actions';
+
+const profileSchema = z.object({
+  firstName: z.string().optional(),
+  lastName: z.string().optional(),
+  phone: z.string().optional(),
+  county: z.string().optional(),
+  city: z.string().optional(),
+  isCommunityMember: z.boolean(),
+});
+
+type ProfileFormData = z.infer<typeof profileSchema>;
 
 interface Profile {
   id: string;
@@ -27,47 +41,54 @@ interface ProfileFormProps {
 export default function ProfileForm({ profile, email, children }: ProfileFormProps) {
   const t = useTranslations('auth.profile');
   const { signOut } = useAuth();
-
-  const [firstName, setFirstName] = useState(profile?.first_name ?? '');
-  const [lastName, setLastName] = useState(profile?.last_name ?? '');
-  const [phone, setPhone] = useState(profile?.phone ?? '');
-  const [county, setCounty] = useState(profile?.county ?? '');
-  const [city, setCity] = useState(profile?.city ?? '');
-  const [isCommunityMember, setIsCommunityMember] = useState(profile?.is_community_member ?? false);
   const [message, setMessage] = useState('');
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [serverError, setServerError] = useState('');
 
-  const cities = county ? getCitiesByCounty(county) : [];
+  const {
+    register,
+    handleSubmit,
+    watch,
+    setValue,
+    formState: { isSubmitting },
+  } = useForm<ProfileFormData>({
+    resolver: zodResolver(profileSchema),
+    defaultValues: {
+      firstName: profile?.first_name ?? '',
+      lastName: profile?.last_name ?? '',
+      phone: profile?.phone ?? '',
+      county: profile?.county ?? '',
+      city: profile?.city ?? '',
+      isCommunityMember: profile?.is_community_member ?? false,
+    },
+  });
+
+  const countyValue = watch('county');
+  const cities = countyValue ? getCitiesByCounty(countyValue) : [];
 
   const handleCountyChange = (newCounty: string) => {
-    setCounty(newCounty);
-    setCity('');
+    setValue('county', newCounty);
+    setValue('city', '');
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const onSubmit = async (data: ProfileFormData) => {
     setMessage('');
-    setError('');
-    setLoading(true);
+    setServerError('');
 
     const formData = new FormData();
-    formData.set('first_name', firstName);
-    formData.set('last_name', lastName);
-    formData.set('phone', phone);
-    formData.set('county', county);
-    formData.set('city', city);
-    formData.set('is_community_member', isCommunityMember.toString());
+    formData.set('first_name', data.firstName ?? '');
+    formData.set('last_name', data.lastName ?? '');
+    formData.set('phone', data.phone ?? '');
+    formData.set('county', data.county ?? '');
+    formData.set('city', data.city ?? '');
+    formData.set('is_community_member', data.isCommunityMember.toString());
 
     const result = await updateProfile(formData);
 
     if (result.error) {
-      setError(t('error'));
+      setServerError(t('error'));
     } else {
       setMessage(t('saved'));
     }
-
-    setLoading(false);
   };
 
   return (
@@ -114,7 +135,7 @@ export default function ProfileForm({ profile, email, children }: ProfileFormPro
               {t('personalInfo')}
             </h2>
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="firstName" className="mb-2 block text-sm font-medium uppercase tracking-wider text-gray-700">
@@ -123,8 +144,7 @@ export default function ProfileForm({ profile, email, children }: ProfileFormPro
                   <input
                     id="firstName"
                     type="text"
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
+                    {...register('firstName')}
                     className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
                   />
                 </div>
@@ -135,8 +155,7 @@ export default function ProfileForm({ profile, email, children }: ProfileFormPro
                   <input
                     id="lastName"
                     type="text"
-                    value={lastName}
-                    onChange={(e) => setLastName(e.target.value)}
+                    {...register('lastName')}
                     className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
                   />
                 </div>
@@ -162,8 +181,7 @@ export default function ProfileForm({ profile, email, children }: ProfileFormPro
                 <input
                   id="phone"
                   type="tel"
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  {...register('phone')}
                   className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
                 />
               </div>
@@ -175,7 +193,7 @@ export default function ProfileForm({ profile, email, children }: ProfileFormPro
                   </label>
                   <select
                     id="county"
-                    value={county}
+                    value={countyValue}
                     onChange={(e) => handleCountyChange(e.target.value)}
                     className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
                   >
@@ -193,9 +211,8 @@ export default function ProfileForm({ profile, email, children }: ProfileFormPro
                   </label>
                   <select
                     id="city"
-                    value={city}
-                    onChange={(e) => setCity(e.target.value)}
-                    disabled={!county}
+                    {...register('city')}
+                    disabled={!countyValue}
                     className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7] disabled:opacity-50"
                   >
                     <option value="">{t('selectCity')}</option>
@@ -213,8 +230,7 @@ export default function ProfileForm({ profile, email, children }: ProfileFormPro
                 <input
                   id="community"
                   type="checkbox"
-                  checked={isCommunityMember}
-                  onChange={(e) => setIsCommunityMember(e.target.checked)}
+                  {...register('isCommunityMember')}
                   className="mt-1 h-4 w-4 border-gray-300 accent-[#0097a7]"
                 />
                 <div>
@@ -231,18 +247,18 @@ export default function ProfileForm({ profile, email, children }: ProfileFormPro
                 </motion.p>
               )}
 
-              {error && (
+              {serverError && (
                 <motion.p className="text-sm text-red-600" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                  {error}
+                  {serverError}
                 </motion.p>
               )}
 
               <button
                 type="submit"
-                disabled={loading}
+                disabled={isSubmitting}
                 className="w-full bg-gray-900 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-gray-800 disabled:opacity-50"
               >
-                {loading ? '...' : t('save')}
+                {isSubmitting ? '...' : t('save')}
               </button>
             </form>
 

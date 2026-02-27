@@ -2,6 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
+import { ArrowRight } from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 const offers = [
   {
@@ -50,16 +52,17 @@ export default function OffersGrid() {
       {offers.map((offer) => (
         <section
           key={offer.key}
-          className={`${offer.bg} relative overflow-hidden`}
+          className={cn(offer.bg, "relative overflow-hidden")}
         >
           <div
-            className={`mx-auto flex max-w-7xl flex-col px-6 py-24 lg:flex-row lg:items-center lg:gap-20 lg:px-12 lg:py-32 ${
-              offer.align === 'right' ? 'lg:flex-row-reverse' : ''
-            }`}
+            className={cn(
+              "mx-auto flex max-w-7xl flex-col px-6 py-24 lg:flex-row lg:items-center lg:gap-20 lg:px-12 lg:py-32",
+              offer.align === 'right' && 'lg:flex-row-reverse'
+            )}
           >
             {/* Gradient visual area */}
             <motion.div
-              className={`relative mb-10 aspect-[4/3] w-full overflow-hidden bg-gradient-to-br ${offer.gradient} lg:mb-0 lg:w-1/2`}
+              className={cn("relative mb-10 aspect-[4/3] w-full overflow-hidden bg-gradient-to-br lg:mb-0 lg:w-1/2", offer.gradient)}
               initial={{ opacity: 0, x: offer.align === 'left' ? -40 : 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -80,31 +83,31 @@ export default function OffersGrid() {
               transition={{ duration: 0.6, delay: 0.15 }}
             >
               <p
-                className={`mb-3 text-sm font-medium uppercase tracking-wider ${offer.mutedColor}`}
+                className={cn("mb-3 text-sm font-medium uppercase tracking-wider", offer.mutedColor)}
               >
                 {t(`${offer.key}.subtitle`)}
               </p>
 
               <h2
-                className={`font-[family-name:var(--font-playfair)] text-3xl font-normal italic sm:text-4xl lg:text-5xl ${offer.textColor}`}
+                className={cn("font-[family-name:var(--font-playfair)] text-3xl font-normal italic sm:text-4xl lg:text-5xl", offer.textColor)}
               >
                 {t(`${offer.key}.title`)}
               </h2>
 
-              <p className={`mt-4 text-base leading-relaxed lg:text-lg ${offer.mutedColor}`}>
+              <p className={cn("mt-4 text-base leading-relaxed lg:text-lg", offer.mutedColor)}>
                 {t(`${offer.key}.description`)}
               </p>
 
-              <p className={`mt-4 text-sm ${offer.mutedColor}`}>
+              <p className={cn("mt-4 text-sm", offer.mutedColor)}>
                 <span className="font-medium">✓</span>{' '}
                 {t(`${offer.key}.includes`)}
               </p>
 
               <div className="mt-8 flex items-center gap-6">
-                <span className={`text-3xl font-semibold ${offer.textColor}`}>
+                <span className={cn("text-3xl font-semibold", offer.textColor)}>
                   {t(`${offer.key}.price`)}
                   {offer.key === 'offer4' && (
-                    <span className={`text-base font-normal ${offer.mutedColor}`}>
+                    <span className={cn("text-base font-normal", offer.mutedColor)}>
                       {t('perMonth')}
                     </span>
                   )}
@@ -112,25 +115,13 @@ export default function OffersGrid() {
 
                 <motion.button
                   type="button"
-                  className={`inline-flex items-center gap-2 px-7 py-3.5 text-xs font-medium uppercase tracking-wider transition-colors ${offer.btnBg}`}
+                  className={cn("inline-flex items-center gap-2 px-7 py-3.5 text-xs font-medium uppercase tracking-wider transition-colors", offer.btnBg)}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                 >
                   {t('bookNow')}
-                  <svg
-                    className="h-3.5 w-3.5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
+                  <ArrowRight className="h-3.5 w-3.5" />
                 </motion.button>
               </div>
             </motion.div>

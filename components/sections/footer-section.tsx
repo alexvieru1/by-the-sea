@@ -1,6 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
+import { Globe } from 'lucide-react';
 import TransitionLink from '@/components/layout/transition-link';
 import { useAuth } from '@/components/providers/auth-provider';
 
@@ -164,18 +165,7 @@ export default function FooterSection() {
 
               {/* Country Selector */}
               <div className="flex items-center gap-2 text-sm text-gray-500">
-                <svg
-                  className="h-4 w-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <circle cx="12" cy="12" r="10" strokeWidth="1.5" />
-                  <path
-                    strokeWidth="1.5"
-                    d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                  />
-                </svg>
+                <Globe className="h-4 w-4" />
                 <span>{t('country')}</span>
               </div>
             </div>

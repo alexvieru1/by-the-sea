@@ -329,7 +329,13 @@
     "email": "Email",
     "phone": "Phone",
     "offersInterest": "Offers of interest",
-    "submit": "Join waitlist"
+    "submit": "Join waitlist",
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email address",
+    "successTitle": "You're on the list!",
+    "successDescription": "We'll notify you when reservations open.",
+    "alreadyRegistered": "This email is already on the waitlist.",
+    "errorGeneric": "Something went wrong. Please try again."
   },
   "footer": {
     "cta": "Take the first step in getting ahead of your health",

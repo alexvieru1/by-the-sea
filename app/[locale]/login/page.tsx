@@ -1,40 +1,61 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 import { createClient } from '@/lib/supabase/client';
 import TransitionLink from '@/components/layout/transition-link';
 
+const loginSchema = z.object({
+  email: z.string().email(),
+  password: z.string().min(1),
+});
+
+type LoginFormData = z.infer<typeof loginSchema>;
+
 export default function LoginPage() {
   const t = useTranslations('auth.login');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [serverError, setServerError] = useState('');
 
   const supabase = createClient();
 
-  const handleEmailLogin = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError('');
-    setLoading(true);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<LoginFormData>({
+    resolver: zodResolver(loginSchema),
+    defaultValues: { email: '', password: '' },
+  });
+
+  // Check for callback error in URL
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('error') === 'auth_callback_failed') {
+      setServerError(t('error.callbackFailed'));
+    }
+  }, [t]);
+
+  const onSubmit = async (data: LoginFormData) => {
+    setServerError('');
 
     const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
+      email: data.email,
+      password: data.password,
     });
 
     if (error) {
-      setError(t('error.invalidCredentials'));
-      setLoading(false);
+      setServerError(t('error.invalidCredentials'));
     } else {
       window.location.href = '/profile';
     }
   };
 
   const handleGoogleLogin = async () => {
-    setError('');
+    setServerError('');
     const { error } = await supabase.auth.signInWithOAuth({
       provider: 'google',
       options: {
@@ -43,17 +64,9 @@ export default function LoginPage() {
     });
 
     if (error) {
-      setError(t('error.generic'));
+      setServerError(t('error.generic'));
     }
   };
-
-  // Check for callback error in URL
-  if (typeof window !== 'undefined') {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('error') === 'auth_callback_failed' && !error) {
-      setError(t('error.callbackFailed'));
-    }
-  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -135,7 +148,7 @@ export default function LoginPage() {
           </div>
 
           {/* Email/Password Form */}
-          <form onSubmit={handleEmailLogin} className="space-y-5">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
             <div>
               <label
                 htmlFor="email"
@@ -146,12 +159,13 @@ export default function LoginPage() {
               <input
                 id="email"
                 type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                {...register('email')}
                 placeholder={t('emailPlaceholder')}
-                required
                 className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
               />
+              {errors.email && (
+                <p className="mt-1 text-xs text-red-600">{t('error.invalidEmail')}</p>
+              )}
             </div>
 
             <div>
@@ -164,30 +178,28 @@ export default function LoginPage() {
               <input
                 id="password"
                 type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                {...register('password')}
                 placeholder={t('passwordPlaceholder')}
-                required
                 className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
               />
             </div>
 
-            {error && (
+            {serverError && (
               <motion.p
                 className="text-sm text-red-600"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
               >
-                {error}
+                {serverError}
               </motion.p>
             )}
 
             <button
               type="submit"
-              disabled={loading}
+              disabled={isSubmitting}
               className="w-full bg-gray-900 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-gray-800 disabled:opacity-50"
             >
-              {loading ? '...' : t('submit')}
+              {isSubmitting ? '...' : t('submit')}
             </button>
           </form>
 

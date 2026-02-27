@@ -329,7 +329,13 @@
     "email": "Email",
     "phone": "Telefon",
     "offersInterest": "Oferte de interes",
-    "submit": "Înscrie-te"
+    "submit": "Înscrie-te",
+    "required": "Acest câmp este obligatoriu",
+    "invalidEmail": "Adresa de email nu este validă",
+    "successTitle": "Te-ai înscris cu succes!",
+    "successDescription": "Te vom notifica când deschidem rezervările.",
+    "alreadyRegistered": "Această adresă de email este deja înscrisă pe lista de așteptare.",
+    "errorGeneric": "A apărut o eroare. Te rugăm să încerci din nou."
   },
   "footer": {
     "cta": "Fa primul pas pentru a fi cu un pas inaintea sanatatii tale",

@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
+import { ArrowLeft } from 'lucide-react';
 import TransitionLink from '@/components/layout/transition-link';
 
 interface PlaceholderPageProps {
@@ -114,19 +115,7 @@ export default function PlaceholderPage({ translationKey }: PlaceholderPageProps
               href="/"
               className="inline-flex items-center gap-2 bg-gray-900 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-gray-800"
             >
-              <svg
-                className="h-4 w-4 rotate-180"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
+              <ArrowLeft className="h-4 w-4" />
               {tCommon('backHome')}
             </TransitionLink>
           </motion.div>

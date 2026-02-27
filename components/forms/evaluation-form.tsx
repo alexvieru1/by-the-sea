@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
 import { motion, AnimatePresence } from 'motion/react';
+import { Check } from 'lucide-react';
 import { useRouter } from '@/i18n/routing';
 import {
   evaluationFormSchema,
@@ -99,9 +100,7 @@ export default function EvaluationForm({ defaultValues }: EvaluationFormProps) {
       >
         <div className="mb-6 flex justify-center">
           <div className="flex h-16 w-16 items-center justify-center border-2 border-[#4a9ead] text-[#4a9ead]">
-            <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <path strokeLinecap="square" strokeLinejoin="miter" d="M5 13l4 4L19 7" />
-            </svg>
+            <Check className="h-8 w-8" strokeWidth={2} />
           </div>
         </div>
         <h2 className="mb-3 font-[family-name:var(--font-playfair)] text-2xl font-normal italic text-gray-900">
@@ -136,9 +135,7 @@ export default function EvaluationForm({ defaultValues }: EvaluationFormProps) {
                 }`}
               >
                 {i < currentStep ? (
-                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
-                    <path strokeLinecap="square" strokeLinejoin="miter" d="M5 13l4 4L19 7" />
-                  </svg>
+                  <Check className="h-4 w-4" strokeWidth={3} />
                 ) : (
                   i + 1
                 )}

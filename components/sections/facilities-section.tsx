@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform } from "motion/react";
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
 // Facility data structure with image pairs
@@ -143,19 +144,7 @@ function FacilityCard({
           className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-gray-900 transition-colors hover:text-gray-600"
         >
           {tCommon("learnMore")}
-          <svg
-            className="h-4 w-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M7 17L17 7M17 7H7M17 7v10"
-            />
-          </svg>
+          <ArrowUpRight className="h-4 w-4" />
         </a>
       </div>
     </div>
