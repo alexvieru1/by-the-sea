@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useTranslations } from 'next-intl';
@@ -31,6 +31,13 @@ export default function EvaluationForm({ defaultValues }: EvaluationFormProps) {
   const [submitting, setSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   const [submitError, setSubmitError] = useState('');
+  const formTopRef = useRef<HTMLDivElement>(null);
+
+  const scrollToTop = () => {
+    setTimeout(() => {
+      formTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 300);
+  };
 
   const {
     register,
@@ -68,11 +75,13 @@ export default function EvaluationForm({ defaultValues }: EvaluationFormProps) {
     const valid = await trigger(fields as (keyof EvaluationFormData)[]);
     if (valid) {
       setCurrentStep((s) => Math.min(s + 1, TOTAL_STEPS - 1));
+      scrollToTop();
     }
   };
 
   const handleBack = () => {
     setCurrentStep((s) => Math.max(s - 1, 0));
+    scrollToTop();
   };
 
   const onSubmit = async (data: EvaluationFormData) => {
@@ -119,7 +128,7 @@ export default function EvaluationForm({ defaultValues }: EvaluationFormProps) {
   }
 
   return (
-    <div className="mx-auto max-w-lg">
+    <div ref={formTopRef} className="mx-auto max-w-lg scroll-mt-20">
       {/* Stepper indicators */}
       <div className="mb-8 flex items-center justify-between">
         {stepLabels.map((label, i) => (
