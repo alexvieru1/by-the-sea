@@ -46,6 +46,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, children }
   const { signOut } = useAuth();
   const [message, setMessage] = useState('');
   const [serverError, setServerError] = useState('');
+  const showEvaluationSection = waitlistStatus === 'confirmed' || waitlistStatus === 'evaluated';
 
   const {
     register,
@@ -127,7 +128,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, children }
       </div>
 
       <div className="px-6 py-16 lg:px-12 lg:py-24">
-        <div className={`mx-auto ${waitlistStatus === 'confirmed' || waitlistStatus === 'evaluated' ? 'grid max-w-5xl grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16' : 'max-w-2xl'}`}>
+        <div className={`mx-auto ${showEvaluationSection ? 'grid max-w-5xl grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16' : 'max-w-2xl'}`}>
           {/* Left column — Personal Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -280,7 +281,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, children }
           </motion.div>
 
           {/* Right column — Evaluation Summary */}
-          {(waitlistStatus === 'confirmed' || waitlistStatus === 'evaluated') && (
+          {showEvaluationSection && (
             <div>
               {children}
             </div>
