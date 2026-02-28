@@ -274,7 +274,19 @@
       "save": "Save Changes",
       "signOut": "Sign Out",
       "saved": "Changes saved successfully.",
-      "error": "Could not save changes."
+      "error": "Could not save changes.",
+      "waitlistStatus": {
+        "noneTitle": "Join Our Waitlist",
+        "noneDescription": "Reserve your spot at Vraja Marii.",
+        "noneAction": "Book a Stay",
+        "pendingTitle": "Reservation Pending",
+        "pendingDescription": "Your reservation is being processed. A member of our team will contact you soon to confirm your booking.",
+        "confirmedTitle": "Booking Confirmed",
+        "confirmedDescription": "Your booking has been confirmed! Please complete your initial evaluation form before your visit.",
+        "confirmedAction": "Complete Evaluation",
+        "evaluatedTitle": "All Set",
+        "evaluatedDescription": "Your evaluation form has been submitted. We look forward to welcoming you."
+      }
     },
     "userMenu": {
       "profile": "My Profile",

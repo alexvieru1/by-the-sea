@@ -274,7 +274,19 @@
       "save": "Salvează Modificările",
       "signOut": "Deconectare",
       "saved": "Modificările au fost salvate.",
-      "error": "Nu s-au putut salva modificările."
+      "error": "Nu s-au putut salva modificările.",
+      "waitlistStatus": {
+        "noneTitle": "Inscrie-te pe Lista de Asteptare",
+        "noneDescription": "Rezerva-ti locul la Vraja Marii.",
+        "noneAction": "Rezerva un Sejur",
+        "pendingTitle": "Rezervare in Asteptare",
+        "pendingDescription": "Rezervarea ta este in curs de procesare. Un membru al echipei noastre te va contacta in curand pentru a confirma rezervarea.",
+        "confirmedTitle": "Rezervare Confirmata",
+        "confirmedDescription": "Rezervarea ta a fost confirmata! Te rugam sa completezi fisa de evaluare initiala inainte de vizita.",
+        "confirmedAction": "Completeaza Evaluarea",
+        "evaluatedTitle": "Totul este in Regula",
+        "evaluatedDescription": "Fisa de evaluare a fost trimisa. Abia asteptam sa te primim."
+      }
     },
     "userMenu": {
       "profile": "Profilul Meu",
