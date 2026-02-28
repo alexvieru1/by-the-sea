@@ -1,30 +1,16 @@
 import { createClient } from '@/lib/supabase/server';
 import SuccessPageClient from './success-page-client';
 
-export default async function WaitlistSuccessPage() {
+interface Props {
+  searchParams: Promise<{ email?: string }>;
+}
+
+export default async function WaitlistSuccessPage({ searchParams }: Props) {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const [{ data: { user } }, params] = await Promise.all([
+    supabase.auth.getUser(),
+    searchParams,
+  ]);
 
-  let hasEvaluation = false;
-  let isOnOwnWaitlist = false;
-
-  if (user) {
-    const [{ data: evaluation }, { data: waitlistEntry }] = await Promise.all([
-      supabase.from('evaluation_forms').select('id').eq('user_id', user.id).single(),
-      supabase.from('waitlist').select('id').eq('email', user.email!).single(),
-    ]);
-
-    hasEvaluation = !!evaluation;
-    isOnOwnWaitlist = !!waitlistEntry;
-  }
-
-  return (
-    <SuccessPageClient
-      isLoggedIn={!!user}
-      isOnOwnWaitlist={isOnOwnWaitlist}
-      hasEvaluation={hasEvaluation}
-    />
-  );
+  return <SuccessPageClient isLoggedIn={!!user} email={params.email} />;
 }

@@ -106,7 +106,7 @@ export default function WaitlistSection() {
     } else if (result.error) {
       setSubmitStatus('error');
     } else {
-      router.push('/waitlist/success');
+      router.push(`/waitlist/success?email=${encodeURIComponent(data.email)}`);
     }
   };
 

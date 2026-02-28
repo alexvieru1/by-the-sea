@@ -7,11 +7,10 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 
 interface SuccessPageClientProps {
   isLoggedIn: boolean;
-  isOnOwnWaitlist: boolean;
-  hasEvaluation: boolean;
+  email?: string;
 }
 
-export default function SuccessPageClient({ isLoggedIn, isOnOwnWaitlist, hasEvaluation }: SuccessPageClientProps) {
+export default function SuccessPageClient({ isLoggedIn, email }: SuccessPageClientProps) {
   const t = useTranslations('waitlist.success');
 
   return (
@@ -35,7 +34,7 @@ export default function SuccessPageClient({ isLoggedIn, isOnOwnWaitlist, hasEval
         {!isLoggedIn && (
           <div className="space-y-4">
             <Link
-              href="/signup"
+              href={email ? { pathname: '/signup', query: { email } } : '/signup'}
               className="flex items-center justify-center gap-3 w-full bg-[#6B5B4E] text-white px-8 py-4 text-sm font-semibold transition-colors hover:bg-[#5A4A3E]"
             >
               {t('createAccount')}
@@ -49,32 +48,6 @@ export default function SuccessPageClient({ isLoggedIn, isOnOwnWaitlist, hasEval
               <Link href="/login" className="text-[#6B5B4E] underline hover:text-[#5A4A3E]">
                 {t('login')}
               </Link>
-            </p>
-          </div>
-        )}
-
-        {isLoggedIn && isOnOwnWaitlist && !hasEvaluation && (
-          <div className="space-y-4">
-            <Link
-              href="/evaluation"
-              className="flex items-center justify-center gap-3 w-full bg-[#6B5B4E] text-white px-8 py-4 text-sm font-semibold transition-colors hover:bg-[#5A4A3E]"
-            >
-              {t('completeEvaluation')}
-              <ArrowRight className="h-4 w-4" />
-            </Link>
-            <p className="text-sm text-gray-500">
-              {t('completeEvaluationDescription')}
-            </p>
-          </div>
-        )}
-
-        {isLoggedIn && isOnOwnWaitlist && hasEvaluation && (
-          <div className="space-y-2">
-            <p className="text-lg font-medium text-[#6B5B4E]">
-              {t('allSet')}
-            </p>
-            <p className="text-sm text-gray-500">
-              {t('allSetDescription')}
             </p>
           </div>
         )}
