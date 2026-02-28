@@ -4,23 +4,27 @@ import { createClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
 import BookingConfirmedEmail from '@/lib/emails/booking-confirmed';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-const resendApiKey = process.env.RESEND_API_KEY;
-
-if (!supabaseUrl || !supabaseServiceKey || !resendApiKey) {
-  throw new Error(
-    'Missing required environment variables: NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, RESEND_API_KEY'
-  );
-}
-
-const supabase = createClient(supabaseUrl, supabaseServiceKey);
-const resend = new Resend(resendApiKey);
-
 function isValidApiKey(provided: string | null, expected: string | undefined): boolean {
   if (!provided || !expected) return false;
   if (provided.length !== expected.length) return false;
   return timingSafeEqual(Buffer.from(provided), Buffer.from(expected));
+}
+
+function getClients() {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const supabaseServiceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const resendApiKey = process.env.RESEND_API_KEY;
+
+  if (!supabaseUrl || !supabaseServiceKey || !resendApiKey) {
+    throw new Error(
+      'Missing required environment variables: NEXT_PUBLIC_SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, RESEND_API_KEY'
+    );
+  }
+
+  return {
+    supabase: createClient(supabaseUrl, supabaseServiceKey),
+    resend: new Resend(resendApiKey),
+  };
 }
 
 export async function POST(request: NextRequest) {
@@ -29,6 +33,8 @@ export async function POST(request: NextRequest) {
   if (!isValidApiKey(apiKey, process.env.BITMANAGER_WEBHOOK_SECRET)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
+
+  const { supabase, resend } = getClients();
 
   // Parse and validate body
   let body: { email: string; confirmed: boolean };
