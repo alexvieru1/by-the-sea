@@ -15,12 +15,12 @@ export default async function EvaluationPage() {
   const [{ data: profile }, { data: existing }, { data: waitlistEntry }] = await Promise.all([
     supabase.from('profiles').select('first_name, last_name').eq('id', user.id).single(),
     supabase.from('evaluation_forms').select('id').eq('user_id', user.id).single(),
-    supabase.from('waitlist').select('id').eq('email', user.email!).single(),
+    supabase.from('waitlist').select('id').eq('email', user.email!).eq('booking_confirmed', true).single(),
   ]);
 
-  // Not on waitlist — redirect to waitlist page
+  // Not on waitlist or not confirmed — redirect to booking page
   if (!waitlistEntry) {
-    redirect('/waitlist');
+    redirect('/book');
   }
 
   // Already completed — redirect to profile (read-only)
