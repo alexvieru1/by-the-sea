@@ -248,6 +248,7 @@
       "logIn": "Autentifică-te",
       "orContinueWith": "sau continuă cu",
       "google": "Continuă cu Google",
+      "emailLocked": "Folosește același email cu care te-ai înscris pe lista de așteptare",
       "success": "Contul a fost creat! Verifică-ți email-ul pentru confirmare.",
       "error": {
         "passwordMismatch": "Parolele nu se potrivesc",
@@ -367,10 +368,6 @@
       "description": "Un membru al echipei noastre te va contacta în cel mai scurt timp posibil pentru a finaliza rezervarea.",
       "createAccount": "Creează un Cont",
       "createAccountDescription": "Creează un cont pentru a urmări statusul rezervării tale și a completa fișa de evaluare.",
-      "completeEvaluation": "Completează Fișa de Evaluare",
-      "completeEvaluationDescription": "Completează evaluarea medicală inițială pentru ca echipa noastră să se poată pregăti mai bine pentru vizita ta.",
-      "allSet": "Totul este în ordine!",
-      "allSetDescription": "Înscrierea și evaluarea ta sunt complete. Echipa noastră te va contacta în curând.",
       "backHome": "Înapoi Acasă",
       "alreadyHaveAccount": "Ai deja un cont?",
       "login": "Autentifică-te"

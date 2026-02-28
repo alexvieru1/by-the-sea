@@ -248,6 +248,7 @@
       "logIn": "Log In",
       "orContinueWith": "or continue with",
       "google": "Continue with Google",
+      "emailLocked": "Use the same email you registered on the waitlist",
       "success": "Account created! Check your email for confirmation.",
       "error": {
         "passwordMismatch": "Passwords don't match",
@@ -367,10 +368,6 @@
       "description": "A member of our team will contact you as soon as possible to complete your reservation.",
       "createAccount": "Create an Account",
       "createAccountDescription": "Create an account to track your reservation status and complete your evaluation form.",
-      "completeEvaluation": "Complete Evaluation Form",
-      "completeEvaluationDescription": "Fill out your initial medical evaluation so our team can better prepare for your visit.",
-      "allSet": "You're all set!",
-      "allSetDescription": "Your registration and evaluation are complete. Our team will be in touch soon.",
       "backHome": "Back Home",
       "alreadyHaveAccount": "Already have an account?",
       "login": "Log In"

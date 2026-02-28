@@ -6,6 +6,7 @@ import { motion } from 'motion/react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { useSearchParams } from 'next/navigation';
 import { Check } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
 import TransitionLink from '@/components/layout/transition-link';
@@ -36,6 +37,8 @@ export default function SignupPage() {
   const [success, setSuccess] = useState(false);
 
   const supabase = createClient();
+  const searchParams = useSearchParams();
+  const lockedEmail = searchParams.get('email');
 
   const {
     register,
@@ -48,7 +51,7 @@ export default function SignupPage() {
     defaultValues: {
       firstName: '',
       lastName: '',
-      email: '',
+      email: lockedEmail ?? '',
       phone: '',
       county: '',
       city: '',
@@ -269,8 +272,14 @@ export default function SignupPage() {
                 id="signup-email"
                 type="email"
                 {...register('email')}
-                className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                readOnly={!!lockedEmail}
+                className={`w-full border border-gray-300 px-4 py-3 text-sm outline-none transition-colors focus:border-[#0097a7] ${
+                  lockedEmail ? 'bg-gray-100 text-gray-500' : 'bg-white text-gray-900'
+                }`}
               />
+              {lockedEmail && (
+                <p className="mt-1 text-xs text-gray-500">{t('emailLocked')}</p>
+              )}
               {errors.email && (
                 <p className="mt-1 text-xs text-red-600">{t('error.invalidEmail')}</p>
               )}
