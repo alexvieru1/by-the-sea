@@ -9,6 +9,8 @@ import { z } from 'zod';
 import { useAuth } from '@/components/providers/auth-provider';
 import { counties, getCitiesByCounty } from '@/lib/data/romania-locations';
 import { updateProfile } from './actions';
+import WaitlistStatusBanner from './waitlist-status-banner';
+import type { WaitlistStatus } from './page';
 
 const profileSchema = z.object({
   firstName: z.string().optional(),
@@ -35,11 +37,11 @@ interface Profile {
 interface ProfileFormProps {
   profile: Profile | null;
   email: string;
-  isOnWaitlist?: boolean;
+  waitlistStatus: WaitlistStatus;
   children?: React.ReactNode;
 }
 
-export default function ProfileForm({ profile, email, isOnWaitlist, children }: ProfileFormProps) {
+export default function ProfileForm({ profile, email, waitlistStatus, children }: ProfileFormProps) {
   const t = useTranslations('auth.profile');
   const { signOut } = useAuth();
   const [message, setMessage] = useState('');
@@ -125,7 +127,7 @@ export default function ProfileForm({ profile, email, isOnWaitlist, children }: 
       </div>
 
       <div className="px-6 py-16 lg:px-12 lg:py-24">
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className={`mx-auto ${waitlistStatus === 'confirmed' || waitlistStatus === 'evaluated' ? 'grid max-w-5xl grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16' : 'max-w-2xl'}`}>
           {/* Left column — Personal Info */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -135,6 +137,8 @@ export default function ProfileForm({ profile, email, isOnWaitlist, children }: 
             <h2 className="mb-6 text-sm font-medium uppercase tracking-wider text-gray-700">
               {t('personalInfo')}
             </h2>
+
+            <WaitlistStatusBanner status={waitlistStatus} />
 
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
               <div className="grid grid-cols-2 gap-4">
@@ -276,7 +280,7 @@ export default function ProfileForm({ profile, email, isOnWaitlist, children }: 
           </motion.div>
 
           {/* Right column — Evaluation Summary */}
-          {isOnWaitlist && (
+          {(waitlistStatus === 'confirmed' || waitlistStatus === 'evaluated') && (
             <div>
               {children}
             </div>
