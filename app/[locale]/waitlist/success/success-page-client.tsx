@@ -34,7 +34,7 @@ export default function SuccessPageClient({ isLoggedIn, email }: SuccessPageClie
         {!isLoggedIn && (
           <div className="space-y-4">
             <Link
-              href={email ? { pathname: '/signup', query: { email } } : '/signup'}
+              href={email ? `/signup?email=${encodeURIComponent(email)}` : '/signup'}
               className="flex items-center justify-center gap-3 w-full bg-[#6B5B4E] text-white px-8 py-4 text-sm font-semibold transition-colors hover:bg-[#5A4A3E]"
             >
               {t('createAccount')}

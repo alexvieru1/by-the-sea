@@ -38,7 +38,8 @@ export default function SignupPage() {
 
   const supabase = createClient();
   const searchParams = useSearchParams();
-  const lockedEmail = searchParams.get('email');
+  const rawEmail = searchParams.get('email');
+  const lockedEmail = rawEmail && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(rawEmail) ? rawEmail : null;
 
   const {
     register,
