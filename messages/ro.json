@@ -1,7 +1,7 @@
 {
   "common": {
-    "bookScan": "Programeaza Sejur",
-    "bookScanHover": "Rezerva Acum",
+    "bookScan": "Solicită un Sejur",
+    "bookScanHover": "Începe Acum",
     "learnMore": "Afla Mai Multe",
     "getDirections": "Indicatii",
     "backHome": "Înapoi Acasă",
@@ -29,9 +29,9 @@
       "description": "Vraja Mării by the Sea este un complex de biohacking dedicat optimizării sănătății și bunăstării tale."
     },
     "book": {
-      "title": "Rezervă Sejur",
+      "title": "Solicită un Sejur",
       "subtitle": "Începe-ți călătoria wellness",
-      "description": "Programează-ți vizita la complexul nostru și descoperă o nouă abordare a sănătății."
+      "description": "Spune-ne despre tine și echipa noastră te va contacta personal pentru a-ți crea experiența wellness perfectă."
     },
     "careers": {
       "title": "Cariere",
@@ -276,11 +276,11 @@
       "saved": "Modificările au fost salvate.",
       "error": "Nu s-au putut salva modificările.",
       "waitlistStatus": {
-        "noneTitle": "Inscrie-te pe Lista de Asteptare",
-        "noneDescription": "Rezerva-ti locul la Vraja Marii.",
-        "noneAction": "Rezerva un Sejur",
-        "pendingTitle": "Rezervare in Asteptare",
-        "pendingDescription": "Rezervarea ta este in curs de procesare. Un membru al echipei noastre te va contacta in curand pentru a confirma rezervarea.",
+        "noneTitle": "Începe-ți Călătoria",
+        "noneDescription": "Solicită un sejur și echipa noastră te va contacta personal.",
+        "noneAction": "Solicită un Sejur",
+        "pendingTitle": "Cerere Primită",
+        "pendingDescription": "Am primit cererea ta! Un membru al echipei noastre te va contacta în curând pentru a discuta despre sejurul tău și a confirma rezervarea.",
         "confirmedTitle": "Rezervare Confirmata",
         "confirmedDescription": "Rezervarea ta a fost confirmata! Te rugam sa completezi fisa de evaluare initiala inainte de vizita.",
         "confirmedAction": "Completeaza Evaluarea",
@@ -330,13 +330,13 @@
     }
   },
   "waitlist": {
-    "heroTitle": "Rezervă un Sejur",
+    "heroTitle": "Solicită un Sejur",
     "heroSubtitle": "Începe-ți călătoria wellness",
-    "heroDescription": "Fii printre primii care experimentează complexul nostru de biohacking. Înscrie-te pe lista de așteptare pentru acces prioritar.",
-    "triggerButton": "Înscrie-te pe lista de așteptare",
-    "formTitle": "Rezervă-ți locul",
-    "benefit1": "Acces prioritar la rezervări și oferte exclusive.",
-    "benefit2": "Fii notificat când deschidem rezervările.",
+    "heroDescription": "Fii printre primii care experimentează complexul nostru de biohacking. Spune-ne despre tine și te vom contacta personal.",
+    "triggerButton": "Solicită un Sejur",
+    "formTitle": "Spune-ne despre tine",
+    "benefit1": "Echipa noastră te va contacta personal pentru a-ți planifica vizita.",
+    "benefit2": "Acces prioritar și oferte exclusive pentru membri.",
     "firstName": "Prenume",
     "lastName": "Nume",
     "email": "Email",
@@ -368,18 +368,18 @@
     "gdprLabel": "Sunt de acord cu prelucrarea datelor personale conform",
     "gdprLink": "Politicii de Confidențialitate",
     "gdprRequired": "Trebuie să accepți politica de confidențialitate",
-    "submit": "Înscrie-te",
+    "submit": "Trimite Cererea",
     "required": "Acest câmp este obligatoriu",
     "invalidEmail": "Adresa de email nu este validă",
-    "successTitle": "Te-ai înscris cu succes!",
-    "successDescription": "Te vom notifica când deschidem rezervările.",
+    "successTitle": "Am primit cererea ta!",
+    "successDescription": "Un membru al echipei noastre te va contacta personal pentru a discuta despre sejurul tău.",
     "alreadyRegistered": "Această adresă de email este deja înscrisă pe lista de așteptare.",
     "errorGeneric": "A apărut o eroare. Te rugăm să încerci din nou.",
     "success": {
-      "title": "Înscrierea a fost realizată cu succes!",
-      "description": "Un membru al echipei noastre te va contacta în cel mai scurt timp posibil pentru a finaliza rezervarea.",
+      "title": "Cerere primită!",
+      "description": "Mulțumim pentru interesul tău! Un membru al echipei noastre te va contacta personal pentru a discuta despre sejurul tău.",
       "createAccount": "Creează un Cont",
-      "createAccountDescription": "Creează un cont pentru a urmări statusul rezervării tale și a completa fișa de evaluare.",
+      "createAccountDescription": "Creează un cont pentru a urmări statusul cererii tale și a completa fișa de evaluare.",
       "backHome": "Înapoi Acasă",
       "alreadyHaveAccount": "Ai deja un cont?",
       "login": "Autentifică-te"

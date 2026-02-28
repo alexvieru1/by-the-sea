@@ -1,7 +1,7 @@
 {
   "common": {
-    "bookScan": "Book a Stay",
-    "bookScanHover": "Reserve Now",
+    "bookScan": "Request a Stay",
+    "bookScanHover": "Get Started",
     "learnMore": "Learn More",
     "getDirections": "Get Directions",
     "backHome": "Back Home",
@@ -29,9 +29,9 @@
       "description": "Vraja Mării by the Sea is a biohacking complex dedicated to optimizing your health and wellbeing."
     },
     "book": {
-      "title": "Book a Stay",
+      "title": "Request a Stay",
       "subtitle": "Start your wellness journey",
-      "description": "Schedule your visit to our complex and discover a new approach to health."
+      "description": "Tell us about yourself and our team will personally reach out to craft your perfect wellness experience."
     },
     "careers": {
       "title": "Careers",
@@ -276,11 +276,11 @@
       "saved": "Changes saved successfully.",
       "error": "Could not save changes.",
       "waitlistStatus": {
-        "noneTitle": "Join Our Waitlist",
-        "noneDescription": "Reserve your spot at Vraja Marii.",
-        "noneAction": "Book a Stay",
-        "pendingTitle": "Reservation Pending",
-        "pendingDescription": "Your reservation is being processed. A member of our team will contact you soon to confirm your booking.",
+        "noneTitle": "Begin Your Journey",
+        "noneDescription": "Request a stay and our team will reach out to you personally.",
+        "noneAction": "Request a Stay",
+        "pendingTitle": "Request Received",
+        "pendingDescription": "We've received your request! A member of our team will reach out soon to discuss your stay and confirm your booking.",
         "confirmedTitle": "Booking Confirmed",
         "confirmedDescription": "Your booking has been confirmed! Please complete your initial evaluation form before your visit.",
         "confirmedAction": "Complete Evaluation",
@@ -330,13 +330,13 @@
     }
   },
   "waitlist": {
-    "heroTitle": "Book a Stay",
+    "heroTitle": "Request a Stay",
     "heroSubtitle": "Start your wellness journey",
-    "heroDescription": "Be among the first to experience our biohacking complex. Join the waitlist for priority access.",
-    "triggerButton": "Join the waitlist",
-    "formTitle": "Reserve your spot",
-    "benefit1": "Get priority access to bookings and exclusive offers.",
-    "benefit2": "Be notified when we open reservations.",
+    "heroDescription": "Be among the first to experience our biohacking complex. Tell us about yourself and we'll reach out personally.",
+    "triggerButton": "Request a Stay",
+    "formTitle": "Tell us about yourself",
+    "benefit1": "Our team will personally reach out to plan your visit.",
+    "benefit2": "Enjoy priority access and exclusive member offers.",
     "firstName": "First Name",
     "lastName": "Last Name",
     "email": "Email",
@@ -368,18 +368,18 @@
     "gdprLabel": "I agree to the processing of my personal data according to the",
     "gdprLink": "Privacy Policy",
     "gdprRequired": "You must accept the privacy policy",
-    "submit": "Join waitlist",
+    "submit": "Send Request",
     "required": "This field is required",
     "invalidEmail": "Please enter a valid email address",
-    "successTitle": "You're on the list!",
-    "successDescription": "We'll notify you when reservations open.",
+    "successTitle": "We've received your request!",
+    "successDescription": "A member of our team will reach out to you personally to discuss your stay.",
     "alreadyRegistered": "This email is already on the waitlist.",
     "errorGeneric": "Something went wrong. Please try again.",
     "success": {
-      "title": "Registration successful!",
-      "description": "A member of our team will contact you as soon as possible to complete your reservation.",
+      "title": "Request received!",
+      "description": "Thank you for your interest! A member of our team will reach out to you personally to discuss your stay.",
       "createAccount": "Create an Account",
-      "createAccountDescription": "Create an account to track your reservation status and complete your evaluation form.",
+      "createAccountDescription": "Create an account to track your request status and complete your evaluation form.",
       "backHome": "Back Home",
       "alreadyHaveAccount": "Already have an account?",
       "login": "Log In"
