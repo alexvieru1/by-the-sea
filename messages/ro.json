@@ -5,7 +5,9 @@
     "learnMore": "Afla Mai Multe",
     "getDirections": "Indicatii",
     "backHome": "Înapoi Acasă",
-    "comingSoon": "În curând"
+    "comingSoon": "În curând",
+    "allTherapies": "Toate Terapiile",
+    "requestStay": "Solicită un Sejur"
   },
   "notFound": {
     "title": "Pagină negăsită",
@@ -13,10 +15,10 @@
     "code": "404"
   },
   "pages": {
-    "offers": {
-      "title": "Oferte",
-      "subtitle": "Pachete speciale pentru călătoria ta de bunăstare",
-      "description": "Descoperă ofertele noastre exclusive și pachetele concepute pentru a-ți îmbunătăți sănătatea și bunăstarea."
+    "therapies": {
+      "title": "Terapiile Noastre",
+      "subtitle": "Explorează tratamentele noastre",
+      "description": "Descoperă gama noastră completă de terapii concepute pentru a restaura, regenera și optimiza sănătatea ta."
     },
     "contact": {
       "title": "Contactează-ne",
@@ -68,6 +70,21 @@
       "subtitle": "Regulile de utilizare",
       "description": "Citește termenii și condițiile de utilizare a serviciilor noastre."
     },
+    "patientGuide": {
+      "title": "Ghidul Pacientului",
+      "subtitle": "Pregătește-te pentru vizită",
+      "description": "Tot ce trebuie să știi înainte, în timpul și după sejurul tău — de la ce să aduci până la ce să te aștepți."
+    },
+    "gallery": {
+      "title": "Galerie",
+      "subtitle": "Descoperă spațiile noastre",
+      "description": "Fă un tur vizual al facilităților noastre, camerelor de tratament și cadrului splendid de pe malul mării."
+    },
+    "otherInfo": {
+      "title": "Alte Informații",
+      "subtitle": "Detalii utile",
+      "description": "Informații suplimentare despre serviciile noastre, politici și tot ce trebuie să știi înainte de vizita ta."
+    },
     "locations": {
       "title": "Locații",
       "constanta": {
@@ -82,8 +99,9 @@
       }
     }
   },
-  "nav": {
+"nav": {
     "therapies": "Terapii",
+    "patientGuide": "Ghidul Pacientului",
     "contact": "Contact",
     "about": "Despre Noi",
     "login": "Autentificare",

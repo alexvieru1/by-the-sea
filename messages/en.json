@@ -5,7 +5,9 @@
     "learnMore": "Learn More",
     "getDirections": "Get Directions",
     "backHome": "Back Home",
-    "comingSoon": "Coming Soon"
+    "comingSoon": "Coming Soon",
+    "allTherapies": "All Therapies",
+    "requestStay": "Request a Stay"
   },
   "notFound": {
     "title": "Page not found",
@@ -13,10 +15,10 @@
     "code": "404"
   },
   "pages": {
-    "offers": {
-      "title": "Offers",
-      "subtitle": "Special packages for your wellness journey",
-      "description": "Discover our exclusive offers and packages designed to enhance your health and wellbeing."
+    "therapies": {
+      "title": "Our Therapies",
+      "subtitle": "Explore our treatments",
+      "description": "Discover our comprehensive range of therapies designed to restore, rejuvenate, and optimise your health."
     },
     "contact": {
       "title": "Contact Us",
@@ -68,6 +70,21 @@
       "subtitle": "Terms of use",
       "description": "Read the terms and conditions for using our services."
     },
+    "patientGuide": {
+      "title": "Patient Guide",
+      "subtitle": "Prepare for your visit",
+      "description": "Everything you need to know before, during, and after your stay — from what to bring to what to expect."
+    },
+    "gallery": {
+      "title": "Gallery",
+      "subtitle": "See our spaces",
+      "description": "Take a visual tour of our facilities, treatment rooms, and the stunning seaside setting."
+    },
+    "otherInfo": {
+      "title": "Other Information",
+      "subtitle": "Useful details",
+      "description": "Additional information about our services, policies, and everything you need to know before your visit."
+    },
     "locations": {
       "title": "Locations",
       "constanta": {
@@ -82,19 +99,20 @@
       }
     }
   },
-  "nav": {
+"nav": {
     "therapies": "Therapies",
+    "patientGuide": "Patient Guide",
     "contact": "Contact",
-    "about": "About",
+    "about": "About Us",
     "login": "Log In",
     "profile": "My Profile",
     "gallery": "Gallery",
     "otherInfo": "Other Information"
   },
-  "hero": {
-    "title1": "A better health check.",
-    "title2": "Finally.",
-    "description": "Get a thorough health check, like you've never experienced before. Receive all your results instantly."
+"hero": {
+    "title1": "Rediscover balance.",
+    "title2": "At your own pace.",
+    "description": "Personalized programs, expertise in Physical Medicine and Balneology, advanced technologies, and genuine care for people."
   },
   "dataPoints": {
     "title1": "Track millions of data points.",
