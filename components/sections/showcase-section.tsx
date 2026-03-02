@@ -10,12 +10,14 @@ import { TextRoll } from '@/components/ui/text-roll';
 import Image from 'next/image';
 
 interface ShowcaseSectionProps {
-  translationKey: 'yourBody' | 'yourFuture';
+  translationKey: 'endometriosis' | 'longevity' | 'fertility';
   imageSrc: string;
   imageAlt: string;
   cardBg: string;
   align: 'left' | 'right';
   className?: string;
+  ctaKey?: string;
+  ctaHref?: string;
   orbs: Array<{
     size: string;
     position: React.CSSProperties;
@@ -29,6 +31,8 @@ export default function ShowcaseSection({
   cardBg,
   align,
   className,
+  ctaKey,
+  ctaHref = '/book',
   orbs,
 }: ShowcaseSectionProps) {
   const t = useTranslations(translationKey);
@@ -136,14 +140,21 @@ export default function ShowcaseSection({
               )}
             </h2>
 
-            <motion.p
-              className="mt-6 text-base leading-relaxed text-white/90 sm:mt-8 sm:text-lg lg:text-xl"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: showText ? 1 : 0, y: showText ? 0 : 10 }}
-              transition={{ duration: 0.5, delay: 0.15 }}
-            >
-              {t('description')}
-            </motion.p>
+            {['description', 'description-2', 'description-3', 'description-4'].map((key, i) => {
+              const text = t.has(key) ? t(key) : null;
+              if (!text) return null;
+              return (
+                <motion.p
+                  key={key}
+                  className="mt-6 text-base leading-relaxed text-white/90 first:sm:mt-8 sm:text-lg lg:text-xl"
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: showText ? 1 : 0, y: showText ? 0 : 10 }}
+                  transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
+                >
+                  {text}
+                </motion.p>
+              );
+            })}
           </motion.div>
 
           {/* CTA Button */}
@@ -153,10 +164,10 @@ export default function ShowcaseSection({
             transition={{ duration: 0.5, ease: 'easeOut' }}
           >
             <TransitionLink
-              href="/book"
+              href={ctaHref}
               className="group inline-flex items-center gap-3 bg-gray-900 px-8 py-5 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-gray-800"
             >
-              {tCommon('bookScan')}
+              {tCommon(ctaKey ?? 'bookScan')}
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </TransitionLink>
           </motion.div>

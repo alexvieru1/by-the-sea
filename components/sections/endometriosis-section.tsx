@@ -1,13 +1,15 @@
 import ShowcaseSection from './showcase-section';
 
-export default function YourBodySection() {
+export default function EndometriosisSection() {
   return (
     <ShowcaseSection
-      translationKey="yourBody"
+      translationKey="endometriosis"
       imageSrc="/images/your_body.webp"
-      imageAlt="Your body background"
+      imageAlt="Endometriosis therapy"
       cardBg="bg-[#D2B88B]"
       align="left"
+      ctaKey="learnMore"
+      ctaHref="/therapies/endometriosis"
       className="snap-section"
       orbs={[
         {

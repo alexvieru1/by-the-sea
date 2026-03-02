@@ -83,17 +83,18 @@
     }
   },
   "nav": {
-    "offers": "Oferte",
+    "therapies": "Terapii",
     "contact": "Contact",
     "about": "Despre Noi",
     "login": "Autentificare",
     "profile": "Profilul Meu",
-    "faq": "Întrebări Frecvente"
+    "gallery": "Galerie",
+    "otherInfo": "Alte Informații"
   },
   "hero": {
-    "title1": "Un control medical mai bun.",
-    "title2": "În sfârșit.",
-    "description": "Beneficiază de un control medical complet, cum nu ai mai experimentat până acum. Primește toate rezultatele instantaneu."
+    "title1": "Redescoperă echilibrul.",
+    "title2": "În ritmul tău.",
+    "description": "Programe personalizate, expertiză în Medicină Fizică și Balneologie, tehnologii avansate și grijă autentică pentru oameni."
   },
   "dataPoints": {
     "title1": "Urmărește milioane de puncte de date.",
@@ -110,13 +111,32 @@
       "bodyMeasurements": "MASURATORI CORPORALE"
     }
   },
-  "yourBody": {
-    "title": "Corpul tău",
-    "description": "Inspecțiile regulate sunt obligatorii pentru mașinile de pe drumurile noastre, dar în sistemul nostru de sănătate, așteptăm adesea până când corpul nostru cedează înainte de a lua măsuri. De ce să nu prioritizăm sănătatea în același mod?"
+  "aboutContent": {
+    "title": "Despre noi",
+    "description": "Trăim într-o lume aflată într-o transformare continuă, în care ritmul accelerat, presiunile sociale și instabilitatea globală ne solicită sănătatea mai mult ca oricând.",
+    "description-2": "În acest context, recuperarea și restabilirea stării de sănătate devin esențiale. Ele necesită o abordare care pune omul în centrul procesului, pentru a îi oferi posibilitatea să își trăiască viața la potențialul său maxim.",
+    "description-3": "Vraja Mării by The Sea s-a născut din această nevoie: aceea de a crea un spațiu unde medicina bazată pe dovezi și liniștea mediului natural se întâlnesc pentru a susține refacerea profundă a corpului și a echilibrului interior.",
+    "description-4": "Aici, vindecarea începe cu calm, timp și atenție.",
+    "visionTitle": "Viziunea noastră",
+    "visionDescription": "Ne imaginăm o medicină a viitorului care nu se limitează la tratarea simptomelor, ci privește omul în ansamblul său.",
+    "visionDescription-2": "Vraja Mării by The Sea își propune să devină un reper în recuperarea medicală și wellness integrativ, un loc unde știința, empatia și natura lucrează împreună pentru refacere, prevenție și optimizarea stării de sănătate.",
+    "visionDescription-3": "Credem într-o abordare blândă, personalizată și conștientă, adaptată ritmului fiecărui corp.",
+    "missionTitle": "Misiunea noastră",
+    "missionDescription": "La Vraja Mării by The Sea, excelența în Recuperare Medicală, Medicină Fizică și Balneologie se întâlnește cu principiile Medicinei Funcționale pentru a oferi pacienților noștri un concept medical integrativ, unic în regiune.",
+    "missionDescription-2": "Misiunea noastră este de a susține prin protocoale avansate de recuperare, tehnologii inovatoare și expertiză în Balneologie și Medicină Fizică.",
+    "missionDescription-3": "Nu tratăm doar simptomele, ci identificăm și corectăm cauzele profunde ale afecțiunilor cronice, pentru rezultate durabile și stare de bine generală."
   },
-  "yourFuture": {
-    "title": "Viitorul tău",
-    "description": "Echipând medicii noștri cu cele mai bune instrumente pentru a avea grijă de monitorizarea sănătății tale, modelul nostru de îngrijire condus de medici oferă o experiență mai bună pentru toți."
+  "endometriosis": {
+    "title": "Endometrioză",
+    "description": "A trăi cu endometrioză înseamnă a naviga prin durere, incertitudine și adesea sentimentul că nu ești ascultată. Protocoalele noastre integrative combină medicina funcțională, fizioterapia și balneologia pentru a-ți reda confortul și calitatea vieții."
+  },
+  "longevity": {
+    "title": "Longevitate",
+    "description": "A îmbătrâni frumos nu înseamnă a întoarce timpul înapoi — înseamnă a oferi corpului tău instrumentele necesare pentru a prospera. Programele noastre de longevitate îmbină diagnosticarea avansată, crioterapia și terapiile regenerative, proiectate unic pentru tine."
+  },
+  "fertility": {
+    "title": "Fertilitate",
+    "description": "Drumul către a deveni părinte poate fi copleșitor. Programele noastre de suport pentru fertilitate abordează echilibrul hormonal, reducerea stresului și bunăstarea fizică prin medicină integrativă — creând un mediu plin de grijă pentru corpul și mintea ta."
   },
   "buildData": {
     "title1": "Construiește pe baza datelor tale.",
@@ -293,40 +313,26 @@
       "signOut": "Deconectare"
     }
   },
-  "offers": {
-    "heroTitle": "Oferte Noastre",
-    "heroSubtitle": "Pachete exclusive pentru călătoria ta de bunăstare",
-    "heroDescription": "Descoperă ofertele noastre exclusive și pachetele concepute pentru a-ți îmbunătăți sănătatea și bunăstarea la Vraja Mării.",
-    "bookNow": "Rezervă Acum",
-    "featured": "Recomandat",
-    "perMonth": "/lună",
-    "offer1": {
-      "title": "Pachet Recuperare",
+  "therapies": {
+    "medicalRecovery": {
+      "title": "Recuperare Medicală",
       "subtitle": "Reconstruiește. Restaurează. Recuperează.",
-      "description": "Un program complet de recuperare care combină crioterapia, sauna cu infraroșu, băile cu gheață și ședințe de fizioterapie. Conceput pentru sportivi și oricine se recuperează după accidentări sau oboseală cronică.",
-      "includes": "5 ședințe crioterapie, 3 ședințe saună infraroșu, 2 ședințe baie cu gheață, 1 consultație fizioterapie",
-      "price": "799 RON"
+      "description": "Protocoale avansate de reabilitare care combină fizioterapia, balneologia și medicina regenerativă pentru recuperarea post-chirurgicală, post-traumatică și a afecțiunilor cronice."
     },
-    "offer2": {
-      "title": "Wellness Endometrioză",
-      "subtitle": "Ameliorare. Echilibru. Bunăstare.",
-      "description": "Un pachet wellness specializat care vizează simptomele endometriozei printr-o combinație de terapie de flotare, terapie cu căldură infraroșie, masaj terapeutic și ghidare nutrițională antiinflamatorie.",
-      "includes": "4 ședințe flotare, 3 ședințe saună infraroșu, 2 masaje terapeutice, consultație nutriție",
-      "price": "899 RON"
+    "wellness": {
+      "title": "Wellness & MedSpa",
+      "subtitle": "Relaxare. Reîntinerire. Reînnoire.",
+      "description": "Experiențe premium de wellness care îmbină masajul terapeutic, hidroterapia și tratamentele estetice într-un cadru liniștit la malul mării."
     },
-    "offer3": {
-      "title": "Zi Spa pentru Cupluri",
-      "subtitle": "Reconectare. Relaxare. Reîncărcare.",
-      "description": "O zi completă pentru doi cu tratamente premium incluzând masaj, acces la piscină, ședințe de saună și o experiență culinară sănătoasă lângă mare.",
-      "includes": "2 masaje, acces la piscină toată ziua, ședințe saună, prânz sănătos 2 feluri",
-      "price": "699 RON"
+    "immunology": {
+      "title": "Imunologie",
+      "subtitle": "Întărește. Protejează. Prosperă.",
+      "description": "Programe de suport imunitar bazate pe dovezi, folosind medicina funcțională, terapia nutrițională și diagnosticarea avansată pentru a optimiza apărarea naturală a corpului."
     },
-    "offer4": {
-      "title": "Abonament Lunar",
-      "subtitle": "Nelimitat. Nerestricționat. Al tău.",
-      "description": "Acces lunar complet la toate facilitățile Vraja Mării incluzând sauna, piscina, crioterapia, camerele de recuperare și atelierele exclusive pentru membri.",
-      "includes": "Acces nelimitat facilități, 2 ateliere lunare, rezervare prioritară, reduceri membri",
-      "price": "899 RON"
+    "chemotherapy": {
+      "title": "Suport Chimioterapie",
+      "subtitle": "Susținere. Recuperare. Vindecare.",
+      "description": "Îngrijire integrativă plină de compasiune, concepută să sprijine pacienții pe parcursul chimioterapiei — gestionând efectele secundare, restaurând vitalitatea și susținând recuperarea."
     }
   },
   "waitlist": {

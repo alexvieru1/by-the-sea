@@ -1,13 +1,16 @@
 import ShowcaseSection from './showcase-section';
 
-export default function YourFutureSection() {
+export default function LongevitySection() {
   return (
     <ShowcaseSection
-      translationKey="yourFuture"
+      translationKey="longevity"
       imageSrc="/images/your_future.webp"
-      imageAlt="Your future background"
+      imageAlt="Longevity therapy"
       cardBg="bg-[#0097a7]"
       align="right"
+      ctaKey="learnMore"
+      ctaHref="/therapies/longevity"
+      className="snap-section"
       orbs={[
         {
           size: 'h-64 w-64',

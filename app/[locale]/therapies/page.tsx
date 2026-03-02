@@ -4,7 +4,7 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import OffersGrid from '@/components/sections/offers-grid';
 
-export default function OffersPage() {
+export default function TherapiesPage() {
   const t = useTranslations('offers');
 
   return (
