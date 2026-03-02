@@ -286,7 +286,8 @@
       "logIn": "Autentifică-te",
       "orContinueWith": "sau continuă cu",
       "google": "Continuă cu Google",
-      "emailLocked": "Folosește același email cu care te-ai înscris pe lista de așteptare",
+      "phoneLocked": "Folosește același număr de telefon cu care ai completat solicitarea de programare",
+      "emailLocked": "Folosește același email cu care ai completat solicitarea de programare",
       "success": "Contul a fost creat! Verifică-ți email-ul pentru confirmare.",
       "error": {
         "passwordMismatch": "Parolele nu se potrivesc",

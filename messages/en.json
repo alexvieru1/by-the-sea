@@ -278,6 +278,7 @@
       "logIn": "Log In",
       "orContinueWith": "or continue with",
       "google": "Continue with Google",
+      "phoneLocked": "Use the same phone number you registered on the waitlist",
       "emailLocked": "Use the same email you registered on the waitlist",
       "success": "Account created! Check your email for confirmation.",
       "error": {
