@@ -1,13 +1,13 @@
 {
   "common": {
-    "bookScan": "Solicită un Sejur",
+    "bookScan": "Solicită o Programare",
     "bookScanHover": "Începe Acum",
     "learnMore": "Afla Mai Multe",
     "getDirections": "Indicatii",
     "backHome": "Înapoi Acasă",
     "comingSoon": "În curând",
     "allTherapies": "Toate Terapiile",
-    "requestStay": "Solicită un Sejur"
+    "requestStay": "Solicită o Programare"
   },
   "notFound": {
     "title": "Pagină negăsită",
@@ -31,7 +31,7 @@
       "description": "Vraja Mării by the Sea este un complex de biohacking dedicat optimizării sănătății și bunăstării tale."
     },
     "book": {
-      "title": "Solicită un Sejur",
+      "title": "Solicită o Programare",
       "subtitle": "Începe-ți călătoria wellness",
       "description": "Spune-ne despre tine și echipa noastră te va contacta personal pentru a-ți crea experiența wellness perfectă."
     },
@@ -292,6 +292,7 @@
         "passwordMismatch": "Parolele nu se potrivesc",
         "weakPassword": "Parola trebuie să aibă minim 6 caractere",
         "emailInUse": "Acest email este deja folosit",
+        "invalidPhone": "Te rugăm să introduci un număr de mobil valid (07XXXXXXXX)",
         "generic": "A apărut o eroare. Încearcă din nou."
       }
     },
@@ -309,14 +310,17 @@
       "selectCity": "Selectează orașul",
       "communityMember": "Membru Comunitatea Vraja Mării",
       "communityDescription": "Primește oferte speciale și noutăți exclusive",
+      "invalidPhone": "Te rugăm să introduci un număr de mobil valid (07XXXXXXXX)",
+      "phoneRequiredTitle": "Număr de telefon necesar",
+      "phoneRequiredDescription": "Te rugăm să adaugi numărul de telefon pentru a-ți conecta contul cu rezervarea.",
       "save": "Salvează Modificările",
       "signOut": "Deconectare",
       "saved": "Modificările au fost salvate.",
       "error": "Nu s-au putut salva modificările.",
       "waitlistStatus": {
         "noneTitle": "Începe-ți Călătoria",
-        "noneDescription": "Solicită un sejur și echipa noastră te va contacta personal.",
-        "noneAction": "Solicită un Sejur",
+        "noneDescription": "Solicită o programare și echipa noastră te va contacta personal.",
+        "noneAction": "Solicită o Programare",
         "pendingTitle": "Cerere Primită",
         "pendingDescription": "Am primit cererea ta! Un membru al echipei noastre te va contacta în curând pentru a discuta despre sejurul tău și a confirma rezervarea.",
         "confirmedTitle": "Rezervare Confirmata",
@@ -354,10 +358,10 @@
     }
   },
   "waitlist": {
-    "heroTitle": "Solicită un Sejur",
+    "heroTitle": "Solicită o Programare",
     "heroSubtitle": "Începe-ți călătoria wellness",
     "heroDescription": "Fii printre primii care experimentează complexul nostru de biohacking. Spune-ne despre tine și te vom contacta personal.",
-    "triggerButton": "Solicită un Sejur",
+    "triggerButton": "Solicită o Programare",
     "formTitle": "Spune-ne despre tine",
     "benefit1": "Echipa noastră te va contacta personal pentru a-ți planifica vizita.",
     "benefit2": "Acces prioritar și oferte exclusive pentru membri.",
@@ -365,8 +369,6 @@
     "lastName": "Nume",
     "email": "Email",
     "phone": "Telefon",
-    "ageInterval": "Interval de vârstă",
-    "selectAge": "Selectează vârsta",
     "preferredMonth": "Luna preferată",
     "selectMonth": "Selectează luna",
     "asap": "Cât mai curând posibil",
@@ -398,6 +400,8 @@
     "successTitle": "Am primit cererea ta!",
     "successDescription": "Un membru al echipei noastre te va contacta personal pentru a discuta despre sejurul tău.",
     "alreadyRegistered": "Această adresă de email este deja înscrisă pe lista de așteptare.",
+    "phoneAlreadyRegistered": "Acest număr de telefon este deja înscris pe lista de așteptare.",
+    "invalidPhone": "Te rugăm să introduci un număr de mobil valid (07XXXXXXXX)",
     "errorGeneric": "A apărut o eroare. Te rugăm să încerci din nou.",
     "success": {
       "title": "Cerere primită!",

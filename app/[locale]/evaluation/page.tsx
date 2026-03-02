@@ -12,20 +12,57 @@ export default async function EvaluationPage() {
     redirect('/login');
   }
 
-  const [{ data: profile }, { data: existing }, { data: waitlistEntry }] = await Promise.all([
-    supabase.from('profiles').select('first_name, last_name').eq('id', user.id).single(),
+  const [{ data: profile }, { data: existing }] = await Promise.all([
+    supabase.from('profiles').select('first_name, last_name, phone').eq('id', user.id).single(),
     supabase.from('evaluation_forms').select('id').eq('user_id', user.id).single(),
-    supabase.from('waitlist').select('id').eq('email', user.email!).eq('booking_confirmed', true).single(),
   ]);
-
-  // Not on waitlist or not confirmed — redirect to booking page
-  if (!waitlistEntry) {
-    redirect('/book');
-  }
 
   // Already completed — redirect to profile (read-only)
   if (existing) {
     redirect('/profile');
+  }
+
+  // Gate: require phone on profile
+  if (!profile?.phone) {
+    redirect('/profile?completePhone=1');
+  }
+
+  // Try email-based waitlist match first
+  let waitlistEntry = null;
+  if (user.email) {
+    const { data } = await supabase
+      .from('waitlist')
+      .select('id, email')
+      .eq('email', user.email)
+      .eq('booking_confirmed', true)
+      .single();
+    waitlistEntry = data;
+  }
+
+  // If no email match, try phone-based match
+  if (!waitlistEntry && profile.phone) {
+    const { data } = await supabase
+      .from('waitlist')
+      .select('id, email')
+      .eq('phone', profile.phone)
+      .eq('booking_confirmed', true)
+      .single();
+
+    if (data) {
+      // Backfill email on the phone-only waitlist entry
+      if (!data.email && user.email) {
+        await supabase
+          .from('waitlist')
+          .update({ email: user.email })
+          .eq('id', data.id);
+      }
+      waitlistEntry = data;
+    }
+  }
+
+  // Not on waitlist or not confirmed — redirect to booking page
+  if (!waitlistEntry) {
+    redirect('/book');
   }
 
   const defaultValues: Record<string, unknown> = {};

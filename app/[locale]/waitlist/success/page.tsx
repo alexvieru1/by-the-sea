@@ -2,7 +2,12 @@ import { createClient } from '@/lib/supabase/server';
 import SuccessPageClient from './success-page-client';
 
 interface Props {
-  searchParams: Promise<{ email?: string }>;
+  searchParams: Promise<{
+    email?: string;
+    firstName?: string;
+    lastName?: string;
+    phone?: string;
+  }>;
 }
 
 export default async function WaitlistSuccessPage({ searchParams }: Props) {
@@ -12,5 +17,13 @@ export default async function WaitlistSuccessPage({ searchParams }: Props) {
     searchParams,
   ]);
 
-  return <SuccessPageClient isLoggedIn={!!user} email={params.email} />;
+  return (
+    <SuccessPageClient
+      isLoggedIn={!!user}
+      email={params.email}
+      firstName={params.firstName}
+      lastName={params.lastName}
+      phone={params.phone}
+    />
+  );
 }

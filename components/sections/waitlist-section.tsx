@@ -6,6 +6,7 @@ import { motion } from 'motion/react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { romanianPhoneSchema } from '@/lib/validation/phone';
 import { submitWaitlist } from '@/app/[locale]/waitlist/actions';
 import {
   ExpandableScreen,
@@ -16,8 +17,6 @@ import { Link, useRouter } from '@/i18n/routing';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
 const offerKeys = ['recovery', 'endometriosis'] as const;
-
-const ageIntervals = ['18-25', '26-35', '36-45', '46-55', '56-65', '65+'] as const;
 
 function getAvailableMonths(t: (key: string) => string) {
   const now = new Date();
@@ -48,8 +47,7 @@ const waitlistSchema = z.object({
   firstName: z.string().min(1),
   lastName: z.string().min(1),
   email: z.string().email(),
-  phone: z.string().optional(),
-  ageInterval: z.string().min(1),
+  phone: romanianPhoneSchema,
   preferredMonth: z.string().min(1),
   selectedOffers: z.array(z.string()),
   gdprConsent: z.literal(true, {
@@ -62,7 +60,7 @@ type WaitlistFormData = z.infer<typeof waitlistSchema>;
 export default function WaitlistSection() {
   const t = useTranslations('waitlist');
   const router = useRouter();
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'error' | 'already_registered'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'error' | 'already_registered' | 'phone_already_registered'>('idle');
 
   const availableMonths = useMemo(() => getAvailableMonths(t), [t]);
 
@@ -79,7 +77,6 @@ export default function WaitlistSection() {
       lastName: '',
       email: '',
       phone: '',
-      ageInterval: '',
       preferredMonth: '',
       selectedOffers: [],
       gdprConsent: false as unknown as true,
@@ -103,10 +100,18 @@ export default function WaitlistSection() {
 
     if (result.error === 'already_registered') {
       setSubmitStatus('already_registered');
+    } else if (result.error === 'phone_already_registered') {
+      setSubmitStatus('phone_already_registered');
     } else if (result.error) {
       setSubmitStatus('error');
     } else {
-      router.push(`/waitlist/success?email=${encodeURIComponent(data.email)}`);
+      const params = new URLSearchParams({
+        email: data.email,
+        firstName: data.firstName,
+        lastName: data.lastName,
+        phone: data.phone,
+      });
+      router.push(`/waitlist/success?${params.toString()}`);
     }
   };
 
@@ -231,51 +236,33 @@ export default function WaitlistSection() {
                       id="waitlist-phone"
                       type="tel"
                       {...register('phone')}
+                      placeholder="07XXXXXXXX"
                       className="w-full bg-[#E8DDD0] border border-[#B8A898] text-[#3A2F25] placeholder-[#8B7D6E] px-4 py-3 text-sm focus:outline-none focus:border-[#6B5B4E] transition-colors"
                     />
+                    {errors.phone && (
+                      <p className="mt-1 text-xs text-red-700">{t('invalidPhone')}</p>
+                    )}
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                    <div>
-                      <label htmlFor="waitlist-ageInterval" className="block text-sm text-[#4A3F35] mb-1.5">
-                        {t('ageInterval')}
-                      </label>
-                      <select
-                        id="waitlist-ageInterval"
-                        {...register('ageInterval')}
-                        className="w-full bg-[#E8DDD0] border border-[#B8A898] text-[#3A2F25] px-4 py-3 text-sm focus:outline-none focus:border-[#6B5B4E] transition-colors"
-                      >
-                        <option value="">{t('selectAge')}</option>
-                        {ageIntervals.map((interval) => (
-                          <option key={interval} value={interval}>
-                            {interval}
-                          </option>
-                        ))}
-                      </select>
-                      {errors.ageInterval && (
-                        <p className="mt-1 text-xs text-red-700">{t('required')}</p>
-                      )}
-                    </div>
-                    <div>
-                      <label htmlFor="waitlist-preferredMonth" className="block text-sm text-[#4A3F35] mb-1.5">
-                        {t('preferredMonth')}
-                      </label>
-                      <select
-                        id="waitlist-preferredMonth"
-                        {...register('preferredMonth')}
-                        className="w-full bg-[#E8DDD0] border border-[#B8A898] text-[#3A2F25] px-4 py-3 text-sm focus:outline-none focus:border-[#6B5B4E] transition-colors"
-                      >
-                        <option value="">{t('selectMonth')}</option>
-                        {availableMonths.map((month) => (
-                          <option key={month.value} value={month.value}>
-                            {month.label}
-                          </option>
-                        ))}
-                      </select>
-                      {errors.preferredMonth && (
-                        <p className="mt-1 text-xs text-red-700">{t('required')}</p>
-                      )}
-                    </div>
+                  <div>
+                    <label htmlFor="waitlist-preferredMonth" className="block text-sm text-[#4A3F35] mb-1.5">
+                      {t('preferredMonth')}
+                    </label>
+                    <select
+                      id="waitlist-preferredMonth"
+                      {...register('preferredMonth')}
+                      className="w-full bg-[#E8DDD0] border border-[#B8A898] text-[#3A2F25] px-4 py-3 text-sm focus:outline-none focus:border-[#6B5B4E] transition-colors"
+                    >
+                      <option value="">{t('selectMonth')}</option>
+                      {availableMonths.map((month) => (
+                        <option key={month.value} value={month.value}>
+                          {month.label}
+                        </option>
+                      ))}
+                    </select>
+                    {errors.preferredMonth && (
+                      <p className="mt-1 text-xs text-red-700">{t('required')}</p>
+                    )}
                   </div>
 
                   <fieldset>
@@ -380,6 +367,9 @@ export default function WaitlistSection() {
 
                   {submitStatus === 'already_registered' && (
                     <p className="text-sm text-amber-800">{t('alreadyRegistered')}</p>
+                  )}
+                  {submitStatus === 'phone_already_registered' && (
+                    <p className="text-sm text-amber-800">{t('phoneAlreadyRegistered')}</p>
                   )}
                   {submitStatus === 'error' && (
                     <p className="text-sm text-red-700">{t('errorGeneric')}</p>

@@ -2,11 +2,14 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useSearchParams } from 'next/navigation';
 import { motion } from 'motion/react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { romanianPhoneSchema } from '@/lib/validation/phone';
 import { useAuth } from '@/components/providers/auth-provider';
+import { useRouter } from '@/i18n/routing';
 import { counties, getCitiesByCounty } from '@/lib/data/romania-locations';
 import { updateProfile } from './actions';
 import WaitlistStatusBanner from './waitlist-status-banner';
@@ -15,7 +18,7 @@ import type { WaitlistStatus } from './page';
 const profileSchema = z.object({
   firstName: z.string().optional(),
   lastName: z.string().optional(),
-  phone: z.string().optional(),
+  phone: romanianPhoneSchema,
   county: z.string().optional(),
   city: z.string().optional(),
   isCommunityMember: z.boolean(),
@@ -38,12 +41,16 @@ interface ProfileFormProps {
   profile: Profile | null;
   email: string;
   waitlistStatus: WaitlistStatus;
+  phoneRequired: boolean;
   children?: React.ReactNode;
 }
 
-export default function ProfileForm({ profile, email, waitlistStatus, children }: ProfileFormProps) {
+export default function ProfileForm({ profile, email, waitlistStatus, phoneRequired, children }: ProfileFormProps) {
   const t = useTranslations('auth.profile');
   const { signOut } = useAuth();
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const completePhone = searchParams.get('completePhone') === '1';
   const [message, setMessage] = useState('');
   const [serverError, setServerError] = useState('');
   const showEvaluationSection = waitlistStatus === 'confirmed' || waitlistStatus === 'evaluated';
@@ -53,7 +60,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, children }
     handleSubmit,
     watch,
     setValue,
-    formState: { isSubmitting },
+    formState: { errors, isSubmitting },
   } = useForm<ProfileFormData>({
     resolver: zodResolver(profileSchema),
     defaultValues: {
@@ -92,6 +99,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, children }
       setServerError(t('error'));
     } else {
       setMessage(t('saved'));
+      router.refresh();
     }
   };
 
@@ -141,6 +149,13 @@ export default function ProfileForm({ profile, email, waitlistStatus, children }
 
             <WaitlistStatusBanner status={waitlistStatus} />
 
+            {phoneRequired && (
+              <div className="mb-6 border border-amber-300 bg-amber-50 px-4 py-3">
+                <p className="text-sm font-medium text-amber-800">{t('phoneRequiredTitle')}</p>
+                <p className="mt-1 text-xs text-amber-700">{t('phoneRequiredDescription')}</p>
+              </div>
+            )}
+
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
               <div className="grid grid-cols-2 gap-4">
                 <div>
@@ -188,8 +203,14 @@ export default function ProfileForm({ profile, email, waitlistStatus, children }
                   id="phone"
                   type="tel"
                   {...register('phone')}
-                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                  placeholder="07XXXXXXXX"
+                  className={`w-full border bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7] ${
+                    completePhone && !profile?.phone ? 'border-amber-400' : 'border-gray-300'
+                  }`}
                 />
+                {errors.phone && (
+                  <p className="mt-1 text-xs text-red-600">{t('invalidPhone')}</p>
+                )}
               </div>
 
               <div className="grid grid-cols-2 gap-4">

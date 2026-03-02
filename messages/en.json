@@ -284,6 +284,7 @@
         "passwordMismatch": "Passwords don't match",
         "weakPassword": "Password must be at least 6 characters",
         "emailInUse": "This email is already in use",
+        "invalidPhone": "Please enter a valid Romanian mobile number (07XXXXXXXX)",
         "generic": "An error occurred. Please try again."
       }
     },
@@ -301,6 +302,9 @@
       "selectCity": "Select city",
       "communityMember": "Vraja Mării Community Member",
       "communityDescription": "Receive special offers and exclusive updates",
+      "invalidPhone": "Please enter a valid Romanian mobile number (07XXXXXXXX)",
+      "phoneRequiredTitle": "Phone number required",
+      "phoneRequiredDescription": "Please add your phone number to link your account with your booking.",
       "save": "Save Changes",
       "signOut": "Sign Out",
       "saved": "Changes saved successfully.",
@@ -357,8 +361,6 @@
     "lastName": "Last Name",
     "email": "Email",
     "phone": "Phone",
-    "ageInterval": "Age range",
-    "selectAge": "Select age range",
     "preferredMonth": "Preferred month",
     "selectMonth": "Select month",
     "asap": "As soon as possible",
@@ -390,6 +392,8 @@
     "successTitle": "We've received your request!",
     "successDescription": "A member of our team will reach out to you personally to discuss your stay.",
     "alreadyRegistered": "This email is already on the waitlist.",
+    "phoneAlreadyRegistered": "This phone number is already on the waitlist.",
+    "invalidPhone": "Please enter a valid Romanian mobile number (07XXXXXXXX)",
     "errorGeneric": "Something went wrong. Please try again.",
     "success": {
       "title": "Request received!",

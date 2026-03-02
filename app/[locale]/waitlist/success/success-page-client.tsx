@@ -8,10 +8,21 @@ import { CheckCircle, ArrowRight } from 'lucide-react';
 interface SuccessPageClientProps {
   isLoggedIn: boolean;
   email?: string;
+  firstName?: string;
+  lastName?: string;
+  phone?: string;
 }
 
-export default function SuccessPageClient({ isLoggedIn, email }: SuccessPageClientProps) {
+export default function SuccessPageClient({ isLoggedIn, email, firstName, lastName, phone }: SuccessPageClientProps) {
   const t = useTranslations('waitlist.success');
+
+  const signupParams = new URLSearchParams();
+  if (email) signupParams.set('email', email);
+  if (firstName) signupParams.set('firstName', firstName);
+  if (lastName) signupParams.set('lastName', lastName);
+  if (phone) signupParams.set('phone', phone);
+  const signupQuery = signupParams.toString();
+  const signupHref = signupQuery ? `/signup?${signupQuery}` : '/signup';
 
   return (
     <section className="min-h-screen bg-[#F9FAFB] flex flex-col items-center justify-center px-4 py-24 sm:py-32">
@@ -34,7 +45,7 @@ export default function SuccessPageClient({ isLoggedIn, email }: SuccessPageClie
         {!isLoggedIn && (
           <div className="space-y-4">
             <Link
-              href={email ? `/signup?email=${encodeURIComponent(email)}` : '/signup'}
+              href={signupHref}
               className="flex items-center justify-center gap-3 w-full bg-[#6B5B4E] text-white px-8 py-4 text-sm font-semibold transition-colors hover:bg-[#5A4A3E]"
             >
               {t('createAccount')}

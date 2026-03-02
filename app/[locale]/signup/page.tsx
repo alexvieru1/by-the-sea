@@ -6,6 +6,7 @@ import { motion } from 'motion/react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { romanianPhoneSchema } from '@/lib/validation/phone';
 import { useSearchParams } from 'next/navigation';
 import { Check } from 'lucide-react';
 import { createClient } from '@/lib/supabase/client';
@@ -17,7 +18,7 @@ const signupSchema = z
     firstName: z.string().min(1),
     lastName: z.string().min(1),
     email: z.string().email(),
-    phone: z.string().optional(),
+    phone: romanianPhoneSchema,
     county: z.string().optional(),
     city: z.string().optional(),
     password: z.string().min(6),
@@ -40,6 +41,9 @@ export default function SignupPage() {
   const searchParams = useSearchParams();
   const rawEmail = searchParams.get('email');
   const lockedEmail = rawEmail && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(rawEmail) ? rawEmail : null;
+  const prefillFirstName = searchParams.get('firstName') ?? '';
+  const prefillLastName = searchParams.get('lastName') ?? '';
+  const prefillPhone = searchParams.get('phone') ?? '';
 
   const {
     register,
@@ -50,10 +54,10 @@ export default function SignupPage() {
   } = useForm<SignupFormData>({
     resolver: zodResolver(signupSchema),
     defaultValues: {
-      firstName: '',
-      lastName: '',
+      firstName: prefillFirstName,
+      lastName: prefillLastName,
       email: lockedEmail ?? '',
-      phone: '',
+      phone: prefillPhone,
       county: '',
       city: '',
       password: '',
@@ -102,7 +106,7 @@ export default function SignupPage() {
           id: authData.user.id,
           first_name: data.firstName,
           last_name: data.lastName,
-          phone: data.phone || null,
+          phone: data.phone,
           county: data.county || null,
           city: data.city || null,
           is_community_member: data.isCommunityMember,
@@ -294,9 +298,12 @@ export default function SignupPage() {
                 id="signup-phone"
                 type="tel"
                 {...register('phone')}
-                placeholder={t('phonePlaceholder')}
+                placeholder="07XXXXXXXX"
                 className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
               />
+              {errors.phone && (
+                <p className="mt-1 text-xs text-red-600">{t('error.invalidPhone')}</p>
+              )}
             </div>
 
             {/* County & City */}
