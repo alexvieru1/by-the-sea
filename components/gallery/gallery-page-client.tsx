@@ -1,49 +1,12 @@
 'use client';
 
-import { useRef, useState, useEffect, useCallback } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
-import CategoryNav from './category-nav';
 import GallerySection from './gallery-section';
 import { GALLERY_CATEGORIES, getImagesByCategory } from '@/lib/gallery-data';
-import type { GalleryCategory } from '@/lib/gallery-data';
 
 export default function GalleryPageClient() {
   const t = useTranslations('pages.gallery');
-  const [activeCategory, setActiveCategory] = useState<GalleryCategory | null>(null);
-  const sectionRefs = useRef<Map<GalleryCategory, HTMLElement>>(new Map());
-
-  const setSectionRef = useCallback(
-    (category: GalleryCategory) => (el: HTMLElement | null) => {
-      if (el) {
-        sectionRefs.current.set(category, el);
-      } else {
-        sectionRefs.current.delete(category);
-      }
-    },
-    []
-  );
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-            const category = id.replace('gallery-', '') as GalleryCategory;
-            setActiveCategory(category);
-          }
-        }
-      },
-      { rootMargin: '-120px 0px -60% 0px', threshold: 0 }
-    );
-
-    for (const el of sectionRefs.current.values()) {
-      observer.observe(el);
-    }
-
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -85,14 +48,10 @@ export default function GalleryPageClient() {
         </div>
       </div>
 
-      {/* Sticky Category Nav */}
-      <CategoryNav categories={GALLERY_CATEGORIES} activeCategory={activeCategory} />
-
       {/* Category Sections */}
       {GALLERY_CATEGORIES.map((category) => (
         <GallerySection
           key={category}
-          ref={setSectionRef(category)}
           category={category}
           images={getImagesByCategory(category)}
         />

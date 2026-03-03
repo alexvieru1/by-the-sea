@@ -23,13 +23,15 @@ const CATEGORIES: GalleryCategory[] = [
   'relaxationAreas',
 ];
 
+const ORIENTATIONS: ImageOrientation[] = ['landscape', 'portrait', 'square'];
+
 // Placeholder distribution — reassign images and orientations later
 export const GALLERY_IMAGES: GalleryImage[] = Array.from({ length: 46 }, (_, i) => ({
   id: i + 1,
   src: `/images/gallery/vraja_marii_by_the_sea_eforie_sud_${i + 1}.webp`,
   alt: `Vraja Mării by the Sea - Image ${i + 1}`,
   category: CATEGORIES[i % CATEGORIES.length],
-  orientation: 'landscape' as ImageOrientation,
+  orientation: ORIENTATIONS[(i * 7 + 3) % ORIENTATIONS.length],
 }));
 
 export const GALLERY_CATEGORIES = CATEGORIES;

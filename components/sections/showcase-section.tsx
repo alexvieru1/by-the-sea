@@ -116,6 +116,15 @@ export default function ShowcaseSection({
             animate={{ x: showBox ? 0 : slideFrom }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           >
+            <motion.p
+              className="mb-3 text-xs font-medium uppercase tracking-wider text-white/70 sm:text-sm"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: showText ? 1 : 0, y: showText ? 0 : 10 }}
+              transition={{ duration: 0.4 }}
+            >
+              {t('subtitle')}
+            </motion.p>
+
             <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic leading-tight text-white sm:text-5xl lg:text-6xl">
               {showText ? (
                 <TextRoll

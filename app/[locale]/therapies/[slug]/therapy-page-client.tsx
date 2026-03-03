@@ -57,7 +57,7 @@ export default function TherapyPageClient({ slug }: { slug: string }) {
 
   const title = t(`${prefix}title`);
   const description = t(`${prefix}description`);
-  const subtitle = therapy.translationKey ? t(`${prefix}subtitle`) : null;
+  const subtitle = t(`${prefix}subtitle`);
 
   return (
     <div className="min-h-screen bg-gray-50">
