@@ -1,5 +1,5 @@
-import PlaceholderPage from '@/components/layout/placeholder-page';
+import GalleryPageClient from '@/components/gallery/gallery-page-client';
 
 export default function GalleryPage() {
-  return <PlaceholderPage translationKey="gallery" />;
+  return <GalleryPageClient />;
 }
