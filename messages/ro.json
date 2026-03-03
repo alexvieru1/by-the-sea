@@ -78,7 +78,29 @@
     "gallery": {
       "title": "Galerie",
       "subtitle": "Descoperă spațiile noastre",
-      "description": "Fă un tur vizual al facilităților noastre, camerelor de tratament și cadrului splendid de pe malul mării."
+      "description": "Fă un tur vizual al facilităților noastre, camerelor de tratament și cadrului splendid de pe malul mării.",
+      "categories": {
+        "juniorSuite": {
+          "name": "Suită Junior",
+          "description": "Suite spațioase tip apartament cu dormitor separat și zonă de living cu canapea extensibilă — ideale pentru sejururi wellness prelungite."
+        },
+        "twinRoom": {
+          "name": "Cameră Twin",
+          "description": "Camere confortabile cu două paturi separate, concepute pentru o recuperare odihnită într-un cadru liniștit la malul mării."
+        },
+        "restaurant": {
+          "name": "Restaurant",
+          "description": "Restaurantul nostru servește preparate hrănitoare din ingrediente locale, create să completeze călătoria ta wellness."
+        },
+        "fitnessRoom": {
+          "name": "Sala de Fitness",
+          "description": "Un spațiu de fitness complet echipat pentru a-ți menține rutina de exerciții în timpul sejurului."
+        },
+        "relaxationAreas": {
+          "name": "Zone de Relaxare",
+          "description": "Spații liniștite din tot complexul, concepute pentru odihnă, reflecție și relaxare între tratamente."
+        }
+      }
     },
     "otherInfo": {
       "title": "Alte Informații",
@@ -146,14 +168,17 @@
   },
   "endometriosis": {
     "title": "Endometrioză",
+    "subtitle": "Înțelege. Gestionează. Prosperă.",
     "description": "A trăi cu endometrioză înseamnă a naviga prin durere, incertitudine și adesea sentimentul că nu ești ascultată. Protocoalele noastre integrative combină medicina funcțională, fizioterapia și balneologia pentru a-ți reda confortul și calitatea vieții."
   },
   "longevity": {
     "title": "Longevitate",
+    "subtitle": "Optimizează. Regenerează. Înflorește.",
     "description": "A îmbătrâni frumos nu înseamnă a întoarce timpul înapoi — înseamnă a oferi corpului tău instrumentele necesare pentru a prospera. Programele noastre de longevitate îmbină diagnosticarea avansată, crioterapia și terapiile regenerative, proiectate unic pentru tine."
   },
   "fertility": {
     "title": "Fertilitate",
+    "subtitle": "Echilibrează. Hrănește. Concepe.",
     "description": "Drumul către a deveni părinte poate fi copleșitor. Programele noastre de suport pentru fertilitate abordează echilibrul hormonal, reducerea stresului și bunăstarea fizică prin medicină integrativă — creând un mediu plin de grijă pentru corpul și mintea ta."
   },
   "buildData": {

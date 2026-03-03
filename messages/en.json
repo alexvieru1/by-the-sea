@@ -78,7 +78,29 @@
     "gallery": {
       "title": "Gallery",
       "subtitle": "See our spaces",
-      "description": "Take a visual tour of our facilities, treatment rooms, and the stunning seaside setting."
+      "description": "Take a visual tour of our facilities, treatment rooms, and the stunning seaside setting.",
+      "categories": {
+        "juniorSuite": {
+          "name": "Junior Suite",
+          "description": "Spacious apartment-style suites with a separate bedroom and living area featuring an expandable couch — ideal for extended wellness stays."
+        },
+        "twinRoom": {
+          "name": "Twin Room",
+          "description": "Comfortable rooms with two separate beds, designed for restful recovery in a serene seaside setting."
+        },
+        "restaurant": {
+          "name": "Restaurant",
+          "description": "Our restaurant serves nourishing, locally sourced cuisine crafted to complement your wellness journey."
+        },
+        "fitnessRoom": {
+          "name": "Fitness Room",
+          "description": "A fully equipped fitness space for maintaining your exercise routine during your stay."
+        },
+        "relaxationAreas": {
+          "name": "Relaxation Areas",
+          "description": "Tranquil spaces throughout the complex designed for rest, reflection, and unwinding between treatments."
+        }
+      }
     },
     "otherInfo": {
       "title": "Other Information",
@@ -138,14 +160,17 @@
   },
   "endometriosis": {
     "title": "Endometriosis",
+    "subtitle": "Understand. Manage. Thrive.",
     "description": "Living with endometriosis means navigating pain, uncertainty, and often feeling unheard. Our integrative protocols combine functional medicine, physiotherapy, and balneology to help restore comfort and quality of life."
   },
   "longevity": {
     "title": "Longevity",
+    "subtitle": "Optimise. Regenerate. Flourish.",
     "description": "Aging well isn't about turning back the clock — it's about giving your body the tools to thrive. Our longevity programs blend advanced diagnostics, cryotherapy, and regenerative therapies designed uniquely for you."
   },
   "fertility": {
     "title": "Fertility",
+    "subtitle": "Balance. Nurture. Conceive.",
     "description": "The path to parenthood can feel overwhelming. Our fertility support programs address hormonal balance, stress reduction, and physical wellness through evidence-based integrative medicine — creating a nurturing environment for your body and mind."
   },
   "buildData": {
