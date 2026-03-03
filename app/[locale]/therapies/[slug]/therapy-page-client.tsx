@@ -6,6 +6,11 @@ import { ArrowLeft, ArrowRight } from 'lucide-react';
 import TransitionLink from '@/components/layout/transition-link';
 
 const therapyMap: Record<string, { translationNamespace: string; translationKey: string; bg: string }> = {
+  'medical-rehabilitation': {
+    translationNamespace: 'medicalRehabilitation',
+    translationKey: '',
+    bg: 'bg-[#D2B88B]',
+  },
   endometriosis: {
     translationNamespace: 'endometriosis',
     translationKey: '',
@@ -16,34 +21,29 @@ const therapyMap: Record<string, { translationNamespace: string; translationKey:
     translationKey: '',
     bg: 'bg-[#0097a7]',
   },
-  fertility: {
-    translationNamespace: 'fertility',
-    translationKey: '',
-    bg: 'bg-[#7A8B6F]',
-  },
-  'medical-recovery': {
+  infertility: {
     translationNamespace: 'therapies',
-    translationKey: 'medicalRecovery',
+    translationKey: 'infertility',
     bg: 'bg-[#0097a7]',
+  },
+  rheumatology: {
+    translationNamespace: 'therapies',
+    translationKey: 'rheumatology',
+    bg: 'bg-[#BCA390]',
   },
   wellness: {
     translationNamespace: 'therapies',
     translationKey: 'wellness',
     bg: 'bg-[#BCA390]',
   },
-  immunology: {
+  'post-chemotherapy': {
     translationNamespace: 'therapies',
-    translationKey: 'immunology',
-    bg: 'bg-[#e8d8d4]',
-  },
-  chemotherapy: {
-    translationNamespace: 'therapies',
-    translationKey: 'chemotherapy',
+    translationKey: 'postChemotherapy',
     bg: 'bg-[#c5d5d8]',
   },
 };
 
-const darkTextSlugs = new Set(['immunology', 'chemotherapy']);
+const darkTextSlugs = new Set(['wellness', 'post-chemotherapy']);
 
 export default function TherapyPageClient({ slug }: { slug: string }) {
   const therapy = therapyMap[slug];

@@ -10,7 +10,7 @@ import { TextRoll } from '@/components/ui/text-roll';
 import Image from 'next/image';
 
 interface ShowcaseSectionProps {
-  translationKey: 'endometriosis' | 'longevity' | 'fertility';
+  translationKey: 'medicalRehabilitation' | 'longevity';
   imageSrc: string;
   imageAlt: string;
   cardBg: string;

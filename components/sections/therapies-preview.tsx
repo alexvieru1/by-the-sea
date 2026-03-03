@@ -8,10 +8,18 @@ import TransitionLink from '@/components/layout/transition-link';
 
 const therapies = [
   {
-    key: 'medicalRecovery',
-    slug: 'medical-recovery',
-    image: '/images/therapies/medical-recovery.webp',
+    key: 'infertility',
+    slug: 'infertility',
+    image: '/images/therapies/infertility.webp',
     bg: 'bg-[#0097a7]',
+    textColor: 'text-white',
+    mutedColor: 'text-white/70',
+  },
+  {
+    key: 'rheumatology',
+    slug: 'rheumatology',
+    image: '/images/therapies/rheumatology.webp',
+    bg: 'bg-[#BCA390]',
     textColor: 'text-white',
     mutedColor: 'text-white/70',
   },
@@ -19,22 +27,14 @@ const therapies = [
     key: 'wellness',
     slug: 'wellness',
     image: '/images/therapies/wellness.webp',
-    bg: 'bg-[#BCA390]',
-    textColor: 'text-white',
-    mutedColor: 'text-white/70',
-  },
-  {
-    key: 'immunology',
-    slug: 'immunology',
-    image: '/images/therapies/immunology.webp',
     bg: 'bg-[#e8d8d4]',
     textColor: 'text-gray-900',
     mutedColor: 'text-gray-600',
   },
   {
-    key: 'chemotherapy',
-    slug: 'chemotherapy',
-    image: '/images/therapies/chemotherapy.webp',
+    key: 'postChemotherapy',
+    slug: 'post-chemotherapy',
+    image: '/images/therapies/post-chemotherapy.webp',
     bg: 'bg-[#c5d5d8]',
     textColor: 'text-gray-900',
     mutedColor: 'text-gray-600',
@@ -51,10 +51,10 @@ export default function TherapiesPreview() {
         <TransitionLink
           key={therapy.key}
           href={`/therapies/${therapy.slug}`}
-          className="group block"
+          className="group flex"
         >
           <motion.div
-            className={`${therapy.bg} relative overflow-hidden px-6 py-14 lg:px-10 lg:py-16`}
+            className={`${therapy.bg} relative flex w-full flex-col overflow-hidden px-6 py-14 lg:px-10 lg:py-16`}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -88,7 +88,7 @@ export default function TherapiesPreview() {
               {t(`${therapy.key}.description`)}
             </p>
 
-            <div className="mt-4 flex items-end justify-end">
+            <div className="mt-auto flex items-end justify-end pt-4">
               <span
                 className={`inline-flex items-center gap-1.5 text-xs font-medium uppercase tracking-wider ${therapy.mutedColor} transition-colors`}
               >

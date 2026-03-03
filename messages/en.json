@@ -168,10 +168,10 @@
     "subtitle": "Optimise. Regenerate. Flourish.",
     "description": "Aging well isn't about turning back the clock — it's about giving your body the tools to thrive. Our longevity programs blend advanced diagnostics, cryotherapy, and regenerative therapies designed uniquely for you."
   },
-  "fertility": {
-    "title": "Fertility",
-    "subtitle": "Balance. Nurture. Conceive.",
-    "description": "The path to parenthood can feel overwhelming. Our fertility support programs address hormonal balance, stress reduction, and physical wellness through evidence-based integrative medicine — creating a nurturing environment for your body and mind."
+  "medicalRehabilitation": {
+    "title": "Medical Rehabilitation",
+    "subtitle": "Rebuild. Restore. Recover.",
+    "description": "Advanced rehabilitation protocols combining physiotherapy, balneology, and regenerative medicine for post-surgical, post-injury, and chronic condition recovery."
   },
   "buildData": {
     "title1": "Build upon your data.",
@@ -354,25 +354,25 @@
     }
   },
   "therapies": {
-    "medicalRecovery": {
-      "title": "Medical Recovery",
-      "subtitle": "Rebuild. Restore. Recover.",
-      "description": "Advanced rehabilitation protocols combining physiotherapy, balneology, and regenerative medicine for post-surgical, post-injury, and chronic condition recovery."
+    "infertility": {
+      "title": "Infertility",
+      "subtitle": "Balance. Nurture. Conceive.",
+      "description": "The path to parenthood can feel overwhelming. Our fertility support programs address hormonal balance, stress reduction, and physical wellness through evidence-based integrative medicine — creating a nurturing environment for your body and mind."
+    },
+    "rheumatology": {
+      "title": "Rheumatology",
+      "subtitle": "Ease. Strengthen. Move.",
+      "description": "Specialised rheumatology programs combining balneotherapy, physiotherapy, and functional medicine to manage autoimmune and inflammatory conditions — reducing pain and restoring mobility."
     },
     "wellness": {
       "title": "Wellness & MedSpa",
       "subtitle": "Relax. Rejuvenate. Renew.",
       "description": "Premium wellness experiences blending therapeutic massage, hydrotherapy, and aesthetic treatments in a serene seaside setting."
     },
-    "immunology": {
-      "title": "Immunology",
-      "subtitle": "Strengthen. Protect. Thrive.",
-      "description": "Evidence-based immune support programs using functional medicine, nutritional therapy, and advanced diagnostics to optimise your body's natural defences."
-    },
-    "chemotherapy": {
-      "title": "Chemotherapy Support",
+    "postChemotherapy": {
+      "title": "Post-Chemotherapy Recovery",
       "subtitle": "Support. Recover. Heal.",
-      "description": "Compassionate integrative care designed to support patients through chemotherapy — managing side effects, restoring vitality, and nurturing recovery."
+      "description": "Compassionate integrative care designed to support patients after chemotherapy — managing side effects, restoring vitality, and nurturing recovery."
     }
   },
   "waitlist": {

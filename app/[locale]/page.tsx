@@ -5,9 +5,9 @@ const HeroSection = dynamic(() => import('@/components/sections/hero-section'), 
     <section className="hero-section snap-section relative overflow-hidden bg-[#c5d5d8]" />
   ),
 });
+const MedicalRehabilitationSection = dynamic(() => import('@/components/sections/medical-rehabilitation-section'));
 const EndometriosisSection = dynamic(() => import('@/components/sections/endometriosis-section'));
 const LongevitySection = dynamic(() => import('@/components/sections/longevity-section'));
-const FertilitySection = dynamic(() => import('@/components/sections/fertility-section'));
 const TherapiesPreview = dynamic(() => import('@/components/sections/therapies-preview'));
 const FacilitiesSection = dynamic(() => import('@/components/sections/facilities-section'));
 
@@ -15,9 +15,9 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <MedicalRehabilitationSection />
       <EndometriosisSection />
       <LongevitySection />
-      <FertilitySection />
       <TherapiesPreview />
       <FacilitiesSection />
     </>

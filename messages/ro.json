@@ -176,10 +176,10 @@
     "subtitle": "Optimizează. Regenerează. Înflorește.",
     "description": "A îmbătrâni frumos nu înseamnă a întoarce timpul înapoi — înseamnă a oferi corpului tău instrumentele necesare pentru a prospera. Programele noastre de longevitate îmbină diagnosticarea avansată, crioterapia și terapiile regenerative, proiectate unic pentru tine."
   },
-  "fertility": {
-    "title": "Fertilitate",
-    "subtitle": "Echilibrează. Hrănește. Concepe.",
-    "description": "Drumul către a deveni părinte poate fi copleșitor. Programele noastre de suport pentru fertilitate abordează echilibrul hormonal, reducerea stresului și bunăstarea fizică prin medicină integrativă — creând un mediu plin de grijă pentru corpul și mintea ta."
+  "medicalRehabilitation": {
+    "title": "Recuperare Medicală",
+    "subtitle": "Reconstruiește. Restaurează. Recuperează.",
+    "description": "Protocoale avansate de reabilitare care combină fizioterapia, balneologia și medicina regenerativă pentru recuperarea post-chirurgicală, post-traumatică și a afecțiunilor cronice."
   },
   "buildData": {
     "title1": "Construiește pe baza datelor tale.",
@@ -362,25 +362,25 @@
     }
   },
   "therapies": {
-    "medicalRecovery": {
-      "title": "Recuperare Medicală",
-      "subtitle": "Reconstruiește. Restaurează. Recuperează.",
-      "description": "Protocoale avansate de reabilitare care combină fizioterapia, balneologia și medicina regenerativă pentru recuperarea post-chirurgicală, post-traumatică și a afecțiunilor cronice."
+    "infertility": {
+      "title": "Infertilitate",
+      "subtitle": "Echilibrează. Hrănește. Concepe.",
+      "description": "Drumul către a deveni părinte poate fi copleșitor. Programele noastre de suport pentru fertilitate abordează echilibrul hormonal, reducerea stresului și bunăstarea fizică prin medicină integrativă — creând un mediu plin de grijă pentru corpul și mintea ta."
+    },
+    "rheumatology": {
+      "title": "Reumatologie",
+      "subtitle": "Ameliorează. Întărește. Mișcă.",
+      "description": "Programe specializate de reumatologie care combină balneoterapia, fizioterapia și medicina funcțională pentru gestionarea afecțiunilor autoimune și inflamatorii — reducând durerea și restabilind mobilitatea."
     },
     "wellness": {
       "title": "Wellness & MedSpa",
       "subtitle": "Relaxare. Reîntinerire. Reînnoire.",
       "description": "Experiențe premium de wellness care îmbină masajul terapeutic, hidroterapia și tratamentele estetice într-un cadru liniștit la malul mării."
     },
-    "immunology": {
-      "title": "Imunologie",
-      "subtitle": "Întărește. Protejează. Prosperă.",
-      "description": "Programe de suport imunitar bazate pe dovezi, folosind medicina funcțională, terapia nutrițională și diagnosticarea avansată pentru a optimiza apărarea naturală a corpului."
-    },
-    "chemotherapy": {
-      "title": "Suport Chimioterapie",
+    "postChemotherapy": {
+      "title": "Recuperare Post-Chimioterapie",
       "subtitle": "Susținere. Recuperare. Vindecare.",
-      "description": "Îngrijire integrativă plină de compasiune, concepută să sprijine pacienții pe parcursul chimioterapiei — gestionând efectele secundare, restaurând vitalitatea și susținând recuperarea."
+      "description": "Îngrijire integrativă plină de compasiune, concepută să sprijine pacienții după chimioterapie — gestionând efectele secundare, restaurând vitalitatea și susținând recuperarea."
     }
   },
   "waitlist": {

@@ -2,13 +2,13 @@ import { notFound } from 'next/navigation';
 import TherapyPageClient from './therapy-page-client';
 
 const validSlugs = new Set([
+  'medical-rehabilitation',
   'endometriosis',
   'longevity',
-  'fertility',
-  'medical-recovery',
+  'infertility',
+  'rheumatology',
   'wellness',
-  'immunology',
-  'chemotherapy',
+  'post-chemotherapy',
 ]);
 
 export default async function TherapyPage({ params }: { params: Promise<{ slug: string }> }) {
