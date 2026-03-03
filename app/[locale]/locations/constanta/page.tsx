@@ -1,5 +1,9 @@
 import PlaceholderPage from '@/components/layout/placeholder-page';
+import { setRequestLocale } from 'next-intl/server';
 
-export default function ConstantaLocationPage() {
+export default async function ConstantaLocationPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return <PlaceholderPage translationKey="locations.constanta" />;
 }

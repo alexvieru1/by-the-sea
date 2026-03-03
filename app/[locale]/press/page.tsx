@@ -1,5 +1,9 @@
 import PlaceholderPage from '@/components/layout/placeholder-page';
+import { setRequestLocale } from 'next-intl/server';
 
-export default function PressPage() {
+export default async function PressPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return <PlaceholderPage translationKey="press" />;
 }

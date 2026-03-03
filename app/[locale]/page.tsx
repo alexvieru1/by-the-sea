@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import { setRequestLocale } from 'next-intl/server';
 
 const HeroSection = dynamic(() => import('@/components/sections/hero-section'), {
   loading: () => (
@@ -11,7 +12,10 @@ const LongevitySection = dynamic(() => import('@/components/sections/longevity-s
 const TherapiesPreview = dynamic(() => import('@/components/sections/therapies-preview'));
 const FacilitiesSection = dynamic(() => import('@/components/sections/facilities-section'));
 
-export default function Home() {
+export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return (
     <>
       <HeroSection />

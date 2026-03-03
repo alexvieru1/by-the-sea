@@ -1,8 +1,12 @@
 import { createClient } from '@/lib/supabase/server';
 import { redirect } from 'next/navigation';
+import { setRequestLocale } from 'next-intl/server';
 import EvaluationPageClient from './evaluation-page-client';
 
-export default async function EvaluationPage() {
+export default async function EvaluationPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   const supabase = await createClient();
   const {
     data: { user },

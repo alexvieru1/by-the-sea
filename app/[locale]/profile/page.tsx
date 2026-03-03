@@ -1,11 +1,15 @@
 import { createClient } from '@/lib/supabase/server';
 import { redirect } from 'next/navigation';
+import { setRequestLocale } from 'next-intl/server';
 import ProfileForm from './profile-form';
 import EvaluationSummary from './evaluation-summary';
 
 export type WaitlistStatus = 'none' | 'pending' | 'confirmed' | 'evaluated';
 
-export default async function ProfilePage() {
+export default async function ProfilePage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   const supabase = await createClient();
   const {
     data: { user },

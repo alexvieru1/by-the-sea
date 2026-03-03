@@ -1,5 +1,9 @@
 import PlaceholderPage from '@/components/layout/placeholder-page';
+import { setRequestLocale } from 'next-intl/server';
 
-export default function PrivacyPage() {
+export default async function PrivacyPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   return <PlaceholderPage translationKey="privacy" />;
 }

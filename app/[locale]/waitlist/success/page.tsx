@@ -1,7 +1,9 @@
 import { createClient } from '@/lib/supabase/server';
+import { setRequestLocale } from 'next-intl/server';
 import SuccessPageClient from './success-page-client';
 
 interface Props {
+  params: Promise<{ locale: string }>;
   searchParams: Promise<{
     email?: string;
     firstName?: string;
@@ -10,9 +12,12 @@ interface Props {
   }>;
 }
 
-export default async function WaitlistSuccessPage({ searchParams }: Props) {
+export default async function WaitlistSuccessPage({ params, searchParams }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
   const supabase = await createClient();
-  const [{ data: { user } }, params] = await Promise.all([
+  const [{ data: { user } }, resolvedSearchParams] = await Promise.all([
     supabase.auth.getUser(),
     searchParams,
   ]);
@@ -20,10 +25,10 @@ export default async function WaitlistSuccessPage({ searchParams }: Props) {
   return (
     <SuccessPageClient
       isLoggedIn={!!user}
-      email={params.email}
-      firstName={params.firstName}
-      lastName={params.lastName}
-      phone={params.phone}
+      email={resolvedSearchParams.email}
+      firstName={resolvedSearchParams.firstName}
+      lastName={resolvedSearchParams.lastName}
+      phone={resolvedSearchParams.phone}
     />
   );
 }

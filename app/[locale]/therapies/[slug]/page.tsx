@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation';
+import { setRequestLocale } from 'next-intl/server';
 import TherapyPageClient from './therapy-page-client';
 
-const validSlugs = new Set([
+const validSlugs = [
   'medical-rehabilitation',
   'endometriosis',
   'longevity',
@@ -9,12 +10,19 @@ const validSlugs = new Set([
   'rheumatology',
   'wellness',
   'post-chemotherapy',
-]);
+] as const;
 
-export default async function TherapyPage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
+const validSlugSet = new Set<string>(validSlugs);
 
-  if (!validSlugs.has(slug)) {
+export function generateStaticParams() {
+  return validSlugs.map((slug) => ({ slug }));
+}
+
+export default async function TherapyPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+  const { locale, slug } = await params;
+  setRequestLocale(locale);
+
+  if (!validSlugSet.has(slug)) {
     notFound();
   }
 

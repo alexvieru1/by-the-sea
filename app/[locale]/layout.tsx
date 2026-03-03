@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import { Geist, Playfair_Display } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/header';
@@ -37,6 +37,10 @@ interface RootLayoutProps {
   params: Promise<{ locale: string }>;
 }
 
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
 export default async function RootLayout({ children, params }: RootLayoutProps) {
   const { locale } = await params;
 
@@ -44,6 +48,9 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   if (!routing.locales.includes(locale as 'ro' | 'en')) {
     notFound();
   }
+
+  // Enable static rendering
+  setRequestLocale(locale);
 
   // Provide all messages to the client
   const messages = await getMessages();
