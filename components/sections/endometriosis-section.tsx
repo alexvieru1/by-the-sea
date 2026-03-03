@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import { useRef, useEffect, useState } from 'react';
-import { useTranslations } from 'next-intl';
-import { motion, useScroll, useTransform, useInView } from 'motion/react';
-import { ArrowRight } from 'lucide-react';
-import TransitionLink from '@/components/layout/transition-link';
-import { TextRoll } from '@/components/ui/text-roll';
+import { useRef, useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
+import { motion, useScroll, useTransform, useInView } from "motion/react";
+import { ArrowRight } from "lucide-react";
+import TransitionLink from "@/components/layout/transition-link";
+import { TextRoll } from "@/components/ui/text-roll";
 
 export default function EndometriosisSection() {
-  const t = useTranslations('endometriosis');
-  const tCommon = useTranslations('common');
+  const t = useTranslations("endometriosis");
+  const tCommon = useTranslations("common");
   const sectionRef = useRef<HTMLElement>(null);
   const containerRef = useRef<HTMLElement | null>(null);
 
@@ -19,7 +19,7 @@ export default function EndometriosisSection() {
   const [showButton, setShowButton] = useState(false);
 
   useEffect(() => {
-    containerRef.current = document.querySelector('main');
+    containerRef.current = document.querySelector("main");
   }, []);
 
   useEffect(() => {
@@ -39,16 +39,13 @@ export default function EndometriosisSection() {
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     container: containerRef,
-    offset: ['start end', 'end start'],
+    offset: ["start end", "end start"],
   });
 
   const videoScale = useTransform(scrollYProgress, [0, 1], [1.1, 1]);
 
   return (
-    <section
-      ref={sectionRef}
-      className="snap-section relative min-h-screen"
-    >
+    <section ref={sectionRef} className="snap-section relative min-h-screen">
       {/* Desktop: side-by-side | Mobile: stacked */}
       <div className="flex min-h-screen flex-col lg:flex-row">
         {/* Text card - mobile: order-1 on top, desktop: right half */}
@@ -66,7 +63,7 @@ export default function EndometriosisSection() {
                 animate={{ opacity: showText ? 1 : 0, y: showText ? 0 : 10 }}
                 transition={{ duration: 0.4 }}
               >
-                {t('subtitle')}
+                {t("subtitle")}
               </motion.p>
 
               <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic leading-tight text-white sm:text-5xl lg:text-6xl">
@@ -86,14 +83,19 @@ export default function EndometriosisSection() {
                       },
                     }}
                   >
-                    {t('title')}
+                    {t("title")}
                   </TextRoll>
                 ) : (
-                  <span className="invisible">{t('title')}</span>
+                  <span className="invisible">{t("title")}</span>
                 )}
               </h2>
 
-              {['description', 'description-2', 'description-3', 'description-4'].map((key, i) => {
+              {[
+                "description",
+                "description-2",
+                "description-3",
+                "description-4",
+              ].map((key, i) => {
                 const text = t.has(key) ? t(key) : null;
                 if (!text) return null;
                 return (
@@ -101,7 +103,10 @@ export default function EndometriosisSection() {
                     key={key}
                     className="mt-6 text-base leading-relaxed text-white/90 first:sm:mt-8 sm:text-lg lg:text-xl"
                     initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: showText ? 1 : 0, y: showText ? 0 : 10 }}
+                    animate={{
+                      opacity: showText ? 1 : 0,
+                      y: showText ? 0 : 10,
+                    }}
                     transition={{ duration: 0.5, delay: 0.15 + i * 0.1 }}
                   >
                     {text}
@@ -114,13 +119,13 @@ export default function EndometriosisSection() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: showButton ? 1 : 0, y: showButton ? 0 : 20 }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
             >
               <TransitionLink
                 href="/therapies/endometriosis"
                 className="group inline-flex items-center gap-3 bg-gray-900 px-8 py-5 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-gray-800"
               >
-                {tCommon('learnMore')}
+                {tCommon("learnMore")}
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </TransitionLink>
             </motion.div>
@@ -140,7 +145,10 @@ export default function EndometriosisSection() {
               playsInline
               className="h-full w-full object-cover"
             >
-              <source src="/videos/endometriosis_gradient.mp4" type="video/mp4" />
+              <source
+                src="/videos/endometriosis_gradient.mp4"
+                type="video/mp4"
+              />
             </video>
           </motion.div>
         </div>
