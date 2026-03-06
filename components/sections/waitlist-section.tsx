@@ -261,7 +261,7 @@ export default function WaitlistSection() {
                       type="checkbox"
                       checked={selectedOffers.includes(key)}
                       onChange={(e) => handleOfferToggle(key, e.target.checked)}
-                      className="sr-only peer"
+                      className="peer sr-only !fixed"
                     />
                     <div
                       className={`w-5 h-5 border flex items-center justify-center shrink-0 transition-colors ${
@@ -303,7 +303,7 @@ export default function WaitlistSection() {
                 type="checkbox"
                 checked={gdprConsent === true}
                 onChange={(e) => setValue('gdprConsent', e.target.checked as unknown as true)}
-                className="sr-only"
+                className="sr-only !fixed"
               />
               <div
                 className={`w-5 h-5 border flex items-center justify-center shrink-0 mt-0.5 transition-colors ${
