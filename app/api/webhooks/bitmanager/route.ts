@@ -1,10 +1,43 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { timingSafeEqual } from 'crypto';
-import { createClient } from '@supabase/supabase-js';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { Resend } from 'resend';
 import BookingConfirmedEmail from '@/lib/emails/booking-confirmed';
 
 const PHONE_REGEX = /^07\d{8}$/;
+
+async function syncProfileBookingConfirmed(
+  supabase: SupabaseClient,
+  { email, phone }: { email?: string; phone?: string }
+) {
+  if (email) {
+    const { data } = await supabase
+      .from('profiles')
+      .select('id')
+      .eq('email', email)
+      .single();
+    if (data) {
+      await supabase
+        .from('profiles')
+        .update({ booking_confirmed: true })
+        .eq('id', data.id);
+      return;
+    }
+  }
+  if (phone) {
+    const { data } = await supabase
+      .from('profiles')
+      .select('id')
+      .eq('phone', phone)
+      .single();
+    if (data) {
+      await supabase
+        .from('profiles')
+        .update({ booking_confirmed: true })
+        .eq('id', data.id);
+    }
+  }
+}
 
 function isValidApiKey(provided: string | null, expected: string | undefined): boolean {
   if (!provided || !expected) return false;
@@ -118,6 +151,7 @@ export async function POST(request: NextRequest) {
 
       if (body.confirmed) {
         await sendConfirmationEmail(resend, entry.email, entry.first_name);
+        await syncProfileBookingConfirmed(supabase, { email: body.email, phone: body.phone });
       }
 
       return NextResponse.json({ success: true });
@@ -159,6 +193,10 @@ export async function POST(request: NextRequest) {
     // If entry has email, send confirmation email
     if (body.confirmed && phoneEntry.email) {
       await sendConfirmationEmail(resend, phoneEntry.email, phoneEntry.first_name);
+    }
+
+    if (body.confirmed) {
+      await syncProfileBookingConfirmed(supabase, { email: phoneEntry.email, phone: body.phone });
     }
 
     return NextResponse.json({ success: true });

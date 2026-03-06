@@ -309,6 +309,8 @@
       "selectCity": "Selectează orașul",
       "communityMember": "Vreau să fac parte din Comunitatea Vraja Mării",
       "communityDescription": "Sunt de acord să primesc email-uri de marketing, oferte speciale și noutăți exclusive",
+      "hasBookingConfirmed": "Am deja o rezervare confirmată",
+      "hasBookingConfirmedDescription": "Bifează dacă ai confirmat deja o rezervare telefonic sau cu echipa noastră de la recepție",
       "gdprConsent": "Sunt de acord cu prelucrarea datelor personale conform",
       "gdprLink": "Politicii de Confidențialitate",
       "gdprRequired": "Trebuie să accepți politica de confidențialitate pentru a crea un cont",

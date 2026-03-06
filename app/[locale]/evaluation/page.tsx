@@ -17,7 +17,7 @@ export default async function EvaluationPage({ params }: { params: Promise<{ loc
   }
 
   const [{ data: profile }, { data: existing }] = await Promise.all([
-    supabase.from('profiles').select('first_name, last_name, phone').eq('id', user.id).single(),
+    supabase.from('profiles').select('first_name, last_name, phone, booking_confirmed').eq('id', user.id).single(),
     supabase.from('evaluation_forms').select('id').eq('user_id', user.id).single(),
   ]);
 
@@ -31,7 +31,15 @@ export default async function EvaluationPage({ params }: { params: Promise<{ loc
     redirect('/profile?completePhone=1');
   }
 
-  // Try email-based waitlist match first
+  // Check profile.booking_confirmed first (source of truth)
+  if (profile.booking_confirmed) {
+    const defaultValues: Record<string, unknown> = {};
+    if (profile.first_name) defaultValues.first_name = profile.first_name;
+    if (profile.last_name) defaultValues.last_name = profile.last_name;
+    return <EvaluationPageClient defaultValues={defaultValues} />;
+  }
+
+  // Fallback: check waitlist for backwards compatibility
   let waitlistEntry = null;
   if (user.email) {
     const { data } = await supabase
@@ -43,7 +51,6 @@ export default async function EvaluationPage({ params }: { params: Promise<{ loc
     waitlistEntry = data;
   }
 
-  // If no email match, try phone-based match
   if (!waitlistEntry && profile.phone) {
     const { data } = await supabase
       .from('waitlist')
@@ -53,7 +60,6 @@ export default async function EvaluationPage({ params }: { params: Promise<{ loc
       .single();
 
     if (data) {
-      // Backfill email on the phone-only waitlist entry
       if (!data.email && user.email) {
         await supabase
           .from('waitlist')
@@ -69,12 +75,15 @@ export default async function EvaluationPage({ params }: { params: Promise<{ loc
     redirect('/book');
   }
 
-  const defaultValues: Record<string, unknown> = {};
+  // Lazy-sync: waitlist says confirmed but profile doesn't — update profile
+  await supabase
+    .from('profiles')
+    .update({ booking_confirmed: true })
+    .eq('id', user.id);
 
-  if (profile) {
-    if (profile.first_name) defaultValues.first_name = profile.first_name;
-    if (profile.last_name) defaultValues.last_name = profile.last_name;
-  }
+  const defaultValues: Record<string, unknown> = {};
+  if (profile.first_name) defaultValues.first_name = profile.first_name;
+  if (profile.last_name) defaultValues.last_name = profile.last_name;
 
   return <EvaluationPageClient defaultValues={defaultValues} />;
 }

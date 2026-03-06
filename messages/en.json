@@ -301,6 +301,8 @@
       "selectCity": "Select city",
       "communityMember": "I want to join the Vraja Mării Community",
       "communityDescription": "I agree to receive marketing emails, special offers and exclusive updates",
+      "hasBookingConfirmed": "I already have a confirmed booking",
+      "hasBookingConfirmedDescription": "Check this if you have already confirmed a booking by phone or with our reception team",
       "gdprConsent": "I agree to the processing of my personal data according to the",
       "gdprLink": "Privacy Policy",
       "gdprRequired": "You must accept the privacy policy to create an account",

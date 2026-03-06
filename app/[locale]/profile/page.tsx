@@ -24,7 +24,22 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
     supabase.from('evaluation_forms').select('*').eq('user_id', user.id).single(),
   ]);
 
-  // Try email-based waitlist match first
+  // Check profile.booking_confirmed first (source of truth)
+  if (profile?.booking_confirmed) {
+    const waitlistStatus: WaitlistStatus = evaluation ? 'evaluated' : 'confirmed';
+    return (
+      <ProfileForm
+        profile={profile}
+        email={user.email ?? ''}
+        waitlistStatus={waitlistStatus}
+        phoneRequired={!profile?.phone}
+      >
+        <EvaluationSummary evaluation={evaluation} />
+      </ProfileForm>
+    );
+  }
+
+  // Fallback: check waitlist for backwards compatibility
   let waitlistEntry = null;
   if (user.email) {
     const { data } = await supabase
@@ -35,7 +50,6 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
     waitlistEntry = data;
   }
 
-  // If no email match and profile has phone, try phone-based match
   if (!waitlistEntry && profile?.phone) {
     const { data } = await supabase
       .from('waitlist')
@@ -44,7 +58,6 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
       .single();
 
     if (data) {
-      // Backfill email on the phone-only waitlist entry
       if (!data.email && user.email) {
         await supabase
           .from('waitlist')
@@ -61,6 +74,14 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
       waitlistStatus = 'evaluated';
     } else if (waitlistEntry.booking_confirmed) {
       waitlistStatus = 'confirmed';
+
+      // Lazy-sync: waitlist says confirmed but profile doesn't — update profile
+      if (profile) {
+        await supabase
+          .from('profiles')
+          .update({ booking_confirmed: true })
+          .eq('id', user.id);
+      }
     } else {
       waitlistStatus = 'pending';
     }

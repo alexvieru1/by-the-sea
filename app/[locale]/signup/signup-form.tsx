@@ -15,6 +15,8 @@ import { Check } from "lucide-react";
 import { createClient } from "@/lib/supabase/client";
 import TransitionLink from "@/components/layout/transition-link";
 import { counties, getCitiesByCounty } from "@/lib/data/romania-locations";
+import { verifyBookingByPhone } from "@/lib/actions/verify-booking";
+import { POLICY_VERSIONS } from "@/lib/constants/policy-versions";
 
 const signupSchema = z
   .object({
@@ -27,6 +29,7 @@ const signupSchema = z
     password: z.string().min(6),
     confirmPassword: z.string().min(1),
     isCommunityMember: z.boolean(),
+    hasBookingConfirmed: z.boolean(),
     gdprConsent: z.literal(true, {
       errorMap: () => ({ message: "gdprRequired" }),
     }),
@@ -76,6 +79,7 @@ export default function SignupForm() {
       password: "",
       confirmPassword: "",
       isCommunityMember: false,
+      hasBookingConfirmed: false,
       gdprConsent: false as unknown as true,
       termsAccepted: false as unknown as true,
     },
@@ -116,6 +120,14 @@ export default function SignupForm() {
     // Update profile with additional fields and consent data
     if (authData.user) {
       const now = new Date().toISOString();
+
+      // Verify booking if user claims they have one
+      let bookingConfirmed = false;
+      if (data.hasBookingConfirmed && data.phone) {
+        const result = await verifyBookingByPhone(data.phone);
+        bookingConfirmed = result.confirmed;
+      }
+
       await supabase.from("profiles").upsert({
         id: authData.user.id,
         first_name: data.firstName,
@@ -124,12 +136,13 @@ export default function SignupForm() {
         county: data.county || null,
         city: data.city || null,
         is_community_member: data.isCommunityMember,
+        booking_confirmed: bookingConfirmed,
         gdpr_consent: true,
         gdpr_consent_at: now,
-        gdpr_policy_version: "1.0",
+        gdpr_policy_version: POLICY_VERSIONS.gdpr,
         terms_accepted: true,
         terms_accepted_at: now,
-        terms_version: "1.0",
+        terms_version: POLICY_VERSIONS.terms,
         ...(data.isCommunityMember ? { marketing_consent_at: now } : {}),
       });
     }
@@ -473,6 +486,27 @@ export default function SignupForm() {
                 </label>
                 <p className="text-xs text-gray-500">
                   {t("communityDescription")}
+                </p>
+              </div>
+            </div>
+
+            {/* Booking confirmed checkbox */}
+            <div className="flex items-start gap-3">
+              <input
+                id="hasBookingConfirmed"
+                type="checkbox"
+                {...register("hasBookingConfirmed")}
+                className="mt-1 h-4 w-4 border-gray-300 accent-[#0097a7]"
+              />
+              <div>
+                <label
+                  htmlFor="hasBookingConfirmed"
+                  className="text-sm font-medium text-gray-900 cursor-pointer"
+                >
+                  {t("hasBookingConfirmed")}
+                </label>
+                <p className="text-xs text-gray-500">
+                  {t("hasBookingConfirmedDescription")}
                 </p>
               </div>
             </div>
