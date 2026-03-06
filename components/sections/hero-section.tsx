@@ -3,7 +3,7 @@
 import { useRef, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion, useScroll, useTransform } from 'motion/react';
-import ClaudeButton from '@/components/ui/claude-button';
+import PrimaryButton from '@/components/ui/primary-button';
 
 export default function HeroSection() {
   const t = useTranslations('hero');
@@ -116,9 +116,9 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
           >
-            <ClaudeButton href="/book" variant="primary" size="lg">
+            <PrimaryButton href="/book" variant="primary" size="lg">
               {tCommon('bookScan')}
-            </ClaudeButton>
+            </PrimaryButton>
           </motion.div>
         </div>
       </motion.div>

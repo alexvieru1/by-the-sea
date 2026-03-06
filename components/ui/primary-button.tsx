@@ -3,6 +3,7 @@
 import { motion } from 'motion/react';
 import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
+import { ArrowRight } from 'lucide-react';
 import TransitionLink from '@/components/layout/transition-link';
 
 const buttonVariants = cva(
@@ -12,12 +13,13 @@ const buttonVariants = cva(
       variant: {
         primary: 'bg-[#C2A87A] text-white hover:bg-[#007a9e]',
         secondary: 'bg-white text-gray-900 hover:bg-gray-100 border border-gray-200',
-        dark: 'bg-[#2d3436] text-white hover:bg-[#1a1a1a]',
+        dark: 'bg-gray-900 text-white hover:bg-gray-800 uppercase tracking-wider',
       },
       size: {
         sm: 'px-5 py-2.5 text-sm',
         md: 'px-6 py-3 text-sm',
         lg: 'px-8 py-4 text-base',
+        xl: 'px-8 py-5 text-sm',
       },
     },
     defaultVariants: {
@@ -27,22 +29,33 @@ const buttonVariants = cva(
   }
 );
 
-interface ButtonProps extends VariantProps<typeof buttonVariants> {
+interface PrimaryButtonProps extends VariantProps<typeof buttonVariants> {
   children: React.ReactNode;
   href?: string;
   onClick?: () => void;
   className?: string;
+  arrow?: boolean;
 }
 
-export default function ClaudeButton({
+export default function PrimaryButton({
   children,
   href,
   onClick,
   variant,
   size,
   className,
-}: ButtonProps) {
-  const classes = cn(buttonVariants({ variant, size }), className);
+  arrow = false,
+}: PrimaryButtonProps) {
+  const classes = cn(buttonVariants({ variant, size }), arrow && 'group gap-3', className);
+
+  const content = (
+    <>
+      {children}
+      {arrow && (
+        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+      )}
+    </>
+  );
 
   if (href) {
     return (
@@ -53,7 +66,7 @@ export default function ClaudeButton({
         className="inline-block"
       >
         <TransitionLink href={href} className={classes}>
-          {children}
+          {content}
         </TransitionLink>
       </motion.div>
     );
@@ -68,7 +81,7 @@ export default function ClaudeButton({
       whileTap={{ scale: 0.99 }}
       transition={{ type: 'spring', stiffness: 400, damping: 17 }}
     >
-      {children}
+      {content}
     </motion.button>
   );
 }

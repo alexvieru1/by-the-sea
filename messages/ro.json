@@ -378,8 +378,8 @@
       "description": "Experiențe premium de wellness care îmbină masajul terapeutic, hidroterapia și tratamentele estetice într-un cadru liniștit la malul mării."
     },
     "postChemotherapy": {
-      "title": "Recuperare Post-Chimioterapie",
-      "subtitle": "Susținere. Recuperare. Vindecare.",
+      "title": "Reabilitare Post-Chimioterapie",
+      "subtitle": "Susținere. Reabilitare. Vindecare.",
       "description": "Îngrijire integrativă plină de compasiune, concepută să sprijine pacienții după chimioterapie — gestionând efectele secundare, restaurând vitalitatea și susținând recuperarea."
     }
   },
@@ -387,10 +387,8 @@
     "heroTitle": "Solicită o Programare",
     "heroSubtitle": "Începe-ți călătoria wellness",
     "heroDescription": "Fii printre primii care experimentează complexul nostru de biohacking. Spune-ne despre tine și te vom contacta personal.",
-    "triggerButton": "Solicită o Programare",
     "formTitle": "Spune-ne despre tine",
-    "benefit1": "Echipa noastră te va contacta personal pentru a-ți planifica vizita.",
-    "benefit2": "Acces prioritar și oferte exclusive pentru membri.",
+    "formSubtitle": "Completează detaliile de mai jos și echipa noastră te va contacta personal pentru a-ți planifica sejurul perfect.",
     "firstName": "Prenume",
     "lastName": "Nume",
     "email": "Email",

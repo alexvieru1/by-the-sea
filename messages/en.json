@@ -370,7 +370,7 @@
       "description": "Premium wellness experiences blending therapeutic massage, hydrotherapy, and aesthetic treatments in a serene seaside setting."
     },
     "postChemotherapy": {
-      "title": "Post-Chemotherapy Recovery",
+      "title": "Post-Chemotherapy Rehabilitation",
       "subtitle": "Support. Recover. Heal.",
       "description": "Compassionate integrative care designed to support patients after chemotherapy — managing side effects, restoring vitality, and nurturing recovery."
     }
@@ -379,10 +379,8 @@
     "heroTitle": "Request a Stay",
     "heroSubtitle": "Start your wellness journey",
     "heroDescription": "Be among the first to experience our biohacking complex. Tell us about yourself and we'll reach out personally.",
-    "triggerButton": "Request a Stay",
     "formTitle": "Tell us about yourself",
-    "benefit1": "Our team will personally reach out to plan your visit.",
-    "benefit2": "Enjoy priority access and exclusive member offers.",
+    "formSubtitle": "Fill in the details below and our team will personally reach out to plan your perfect stay.",
     "firstName": "First Name",
     "lastName": "Last Name",
     "email": "Email",

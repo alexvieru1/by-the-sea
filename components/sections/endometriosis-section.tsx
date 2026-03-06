@@ -3,8 +3,7 @@
 import { useRef, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform, useInView } from "motion/react";
-import { ArrowRight } from "lucide-react";
-import TransitionLink from "@/components/layout/transition-link";
+import PrimaryButton from "@/components/ui/primary-button";
 import { TextRoll } from "@/components/ui/text-roll";
 
 export default function EndometriosisSection() {
@@ -121,13 +120,9 @@ export default function EndometriosisSection() {
               animate={{ opacity: showButton ? 1 : 0, y: showButton ? 0 : 20 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              <TransitionLink
-                href="/therapies/endometriosis"
-                className="group inline-flex items-center gap-3 bg-gray-900 px-8 py-5 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-gray-800"
-              >
+              <PrimaryButton href="/therapies/endometriosis" variant="dark" size="xl" arrow>
                 {tCommon("learnMore")}
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </TransitionLink>
+              </PrimaryButton>
             </motion.div>
           </div>
         </div>
