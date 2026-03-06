@@ -28,7 +28,7 @@
     "zod": "^3.25.76"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^5.15.8",
+    "@netlify/plugin-nextjs": "4.41.6",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
