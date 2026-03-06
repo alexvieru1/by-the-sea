@@ -49,6 +49,7 @@ export default function EvaluationForm({ defaultValues }: EvaluationFormProps) {
   } = useForm<EvaluationFormData>({
     resolver: zodResolver(evaluationFormSchema),
     defaultValues: {
+      medical_data_consent: false as unknown as true,
       first_name: '',
       last_name: '',
       age: undefined as unknown as number,

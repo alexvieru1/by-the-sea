@@ -145,6 +145,12 @@ export async function submitEvaluationForm(data: EvaluationFormData) {
     return { success: false, error: error.message };
   }
 
+  // Save medical data consent to profiles table
+  await supabase.from('profiles').update({
+    medical_data_consent: true,
+    medical_data_consent_at: new Date().toISOString(),
+  }).eq('id', user.id);
+
   return { success: true };
 }
 

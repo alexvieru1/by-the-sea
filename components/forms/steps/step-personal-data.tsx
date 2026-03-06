@@ -14,10 +14,36 @@ import { inputClass, labelClass, errorClass } from '@/lib/form-styles';
 
 export default function StepPersonalData({ register, errors }: StepPersonalDataProps) {
   const t = useTranslations('evaluation.step1');
+  const tEval = useTranslations('evaluation');
   const tErr = useTranslations('evaluation.errors');
 
   return (
     <div className="space-y-5">
+      {/* Medical data consent gate */}
+      <div className="border border-gray-200 bg-gray-50 p-4">
+        <div className="flex items-start gap-3">
+          <input
+            id="medical_data_consent"
+            type="checkbox"
+            {...register('medical_data_consent')}
+            className="mt-1 h-4 w-4 border-gray-300 accent-[#0097a7]"
+          />
+          <div>
+            <label
+              htmlFor="medical_data_consent"
+              className="text-sm font-medium text-gray-900 cursor-pointer"
+            >
+              {tEval('medicalConsent')} *
+            </label>
+            {errors.medical_data_consent && (
+              <p className="mt-1 text-xs text-red-600">
+                {tEval('medicalConsentRequired')}
+              </p>
+            )}
+          </div>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
           <label htmlFor="first_name" className={labelClass}>

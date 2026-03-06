@@ -11,7 +11,10 @@ import { romanianPhoneSchema } from '@/lib/validation/phone';
 import { useAuth } from '@/components/providers/auth-provider';
 import { useRouter } from '@/i18n/routing';
 import { counties, getCitiesByCounty } from '@/lib/data/romania-locations';
-import { updateProfile } from './actions';
+import { Check, X } from 'lucide-react';
+import { POLICY_VERSIONS } from '@/lib/constants/policy-versions';
+import { updateProfile, revokeGdprConsent, acceptConsents } from './actions';
+import ConsentModal from './consent-modal';
 import WaitlistStatusBanner from './waitlist-status-banner';
 import type { WaitlistStatus } from './page';
 
@@ -35,6 +38,15 @@ interface Profile {
   county: string | null;
   city: string | null;
   is_community_member: boolean;
+  gdpr_consent: boolean;
+  gdpr_consent_at: string | null;
+  gdpr_policy_version: string | null;
+  terms_accepted: boolean;
+  terms_accepted_at: string | null;
+  terms_version: string | null;
+  medical_data_consent: boolean;
+  medical_data_consent_at: string | null;
+  marketing_consent_at: string | null;
 }
 
 interface ProfileFormProps {
@@ -45,6 +57,13 @@ interface ProfileFormProps {
   children?: React.ReactNode;
 }
 
+function formatDate(iso: string) {
+  const d = new Date(iso);
+  const day = String(d.getDate()).padStart(2, '0');
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  return `${day}/${month}/${d.getFullYear()}`;
+}
+
 export default function ProfileForm({ profile, email, waitlistStatus, phoneRequired, children }: ProfileFormProps) {
   const t = useTranslations('auth.profile');
   const { signOut } = useAuth();
@@ -53,7 +72,17 @@ export default function ProfileForm({ profile, email, waitlistStatus, phoneRequi
   const completePhone = searchParams.get('completePhone') === '1';
   const [message, setMessage] = useState('');
   const [serverError, setServerError] = useState('');
-  const showEvaluationSection = waitlistStatus === 'confirmed' || waitlistStatus === 'evaluated';
+  const [showRevokeConfirm, setShowRevokeConfirm] = useState(false);
+  const [isRevoking, setIsRevoking] = useState(false);
+  const [isReaccepting, setIsReaccepting] = useState(false);
+  const gdprRevoked = profile?.gdpr_consent === false;
+  const needsConsent = !profile?.gdpr_consent || !profile?.terms_accepted;
+  const hasOutdatedConsent = profile?.gdpr_consent && profile?.terms_accepted && (
+    profile.gdpr_policy_version !== POLICY_VERSIONS.gdpr ||
+    profile.terms_version !== POLICY_VERSIONS.terms
+  );
+  const showConsentModal = needsConsent || hasOutdatedConsent;
+  const showEvaluationSection = (waitlistStatus === 'confirmed' || waitlistStatus === 'evaluated') && !gdprRevoked;
 
   const {
     register,
@@ -92,6 +121,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, phoneRequi
     formData.set('county', data.county ?? '');
     formData.set('city', data.city ?? '');
     formData.set('is_community_member', data.isCommunityMember.toString());
+    formData.set('was_community_member', (profile?.is_community_member ?? false).toString());
 
     const result = await updateProfile(formData);
 
@@ -103,8 +133,28 @@ export default function ProfileForm({ profile, email, waitlistStatus, phoneRequi
     }
   };
 
+  const handleRevokeGdpr = async () => {
+    setIsRevoking(true);
+    const result = await revokeGdprConsent();
+    if (result.success) {
+      router.refresh();
+    }
+    setIsRevoking(false);
+    setShowRevokeConfirm(false);
+  };
+
+  const handleReaccept = async () => {
+    setIsReaccepting(true);
+    const result = await acceptConsents();
+    if (result.success) {
+      router.refresh();
+    }
+    setIsReaccepting(false);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      {showConsentModal && <ConsentModal isUpdate={!!hasOutdatedConsent} />}
       <div className="relative overflow-hidden bg-[#c5d5d8] px-6 pb-20 pt-32 lg:px-12 lg:pb-32 lg:pt-40">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <motion.div
@@ -267,6 +317,135 @@ export default function ProfileForm({ profile, email, waitlistStatus, phoneRequi
                   <p className="text-xs text-gray-500">{t('communityDescription')}</p>
                 </div>
               </div>
+
+              {/* Consent status display */}
+              {profile && (
+                <div className="border-t border-gray-200 pt-4 mt-2 space-y-3">
+                  <h3 className="text-xs font-medium uppercase tracking-wider text-gray-500">
+                    {t('consentsTitle')}
+                  </h3>
+
+                  {/* GDPR revoked banner */}
+                  {gdprRevoked && (
+                    <div className="border border-amber-300 bg-amber-50 px-4 py-3">
+                      <p className="text-sm text-amber-800">{t('gdprRevoked')}</p>
+                      <button
+                        type="button"
+                        onClick={handleReaccept}
+                        disabled={isReaccepting}
+                        className="mt-2 bg-[#0097a7] px-4 py-2 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#00838f] disabled:opacity-50"
+                      >
+                        {isReaccepting ? '...' : t('reaccept')}
+                      </button>
+                    </div>
+                  )}
+
+                  {/* GDPR row */}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      {profile.gdpr_consent ? (
+                        <Check className="h-4 w-4 text-green-600" />
+                      ) : (
+                        <X className="h-4 w-4 text-gray-400" />
+                      )}
+                      <div>
+                        <p className="text-sm text-gray-700">{t('gdprStatus')}</p>
+                        {profile.gdpr_consent && profile.gdpr_consent_at && (
+                          <p className="text-xs text-gray-500">
+                            {t('acceptedOn', { date: formatDate(profile.gdpr_consent_at) })}
+                            {profile.gdpr_policy_version && (
+                              <span className="ml-1 text-gray-400">
+                                ({t('consentVersion', { version: profile.gdpr_policy_version })})
+                              </span>
+                            )}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    {profile.gdpr_consent && !showRevokeConfirm && (
+                      <button
+                        type="button"
+                        onClick={() => setShowRevokeConfirm(true)}
+                        className="text-xs text-red-600 underline"
+                      >
+                        {t('revokeGdpr')}
+                      </button>
+                    )}
+                  </div>
+
+                  {/* Revoke confirmation */}
+                  {showRevokeConfirm && (
+                    <div className="border border-red-200 bg-red-50 px-4 py-3">
+                      <p className="text-xs text-red-700">{t('revokeGdprWarning')}</p>
+                      <div className="mt-2 flex gap-2">
+                        <button
+                          type="button"
+                          onClick={handleRevokeGdpr}
+                          disabled={isRevoking}
+                          className="bg-red-600 px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-red-700 disabled:opacity-50"
+                        >
+                          {isRevoking ? '...' : t('revokeGdprConfirm')}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setShowRevokeConfirm(false)}
+                          className="border border-gray-300 bg-white px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-gray-700 transition-colors hover:bg-gray-50"
+                        >
+                          {t('revokeGdprCancel')}
+                        </button>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Terms row */}
+                  <div className="flex items-center gap-2">
+                    {profile.terms_accepted ? (
+                      <Check className="h-4 w-4 text-green-600" />
+                    ) : (
+                      <X className="h-4 w-4 text-gray-400" />
+                    )}
+                    <div>
+                      <p className="text-sm text-gray-700">{t('termsStatus')}</p>
+                      {profile.terms_accepted && profile.terms_accepted_at && (
+                        <p className="text-xs text-gray-500">
+                          {t('acceptedOn', { date: formatDate(profile.terms_accepted_at) })}
+                          {profile.terms_version && (
+                            <span className="ml-1 text-gray-400">
+                              ({t('consentVersion', { version: profile.terms_version })})
+                            </span>
+                          )}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+
+                  {/* Medical consent row */}
+                  {profile.medical_data_consent && profile.medical_data_consent_at && (
+                    <div className="flex items-center gap-2">
+                      <Check className="h-4 w-4 text-green-600" />
+                      <div>
+                        <p className="text-sm text-gray-700">{t('medicalConsentStatus')}</p>
+                        <p className="text-xs text-gray-500">
+                          {t('acceptedOn', { date: formatDate(profile.medical_data_consent_at) })}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Marketing consent row */}
+                  {profile.is_community_member && profile.marketing_consent_at && (
+                    <div className="flex items-center gap-2">
+                      <Check className="h-4 w-4 text-green-600" />
+                      <div>
+                        <p className="text-sm text-gray-700">{t('marketingConsentDate')}</p>
+                        <p className="text-xs text-gray-500">
+                          {t('acceptedOn', { date: formatDate(profile.marketing_consent_at) })}
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
 
               {message && (
                 <motion.p className="text-sm text-green-600" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>

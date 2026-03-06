@@ -27,6 +27,12 @@ const signupSchema = z
     password: z.string().min(6),
     confirmPassword: z.string().min(1),
     isCommunityMember: z.boolean(),
+    gdprConsent: z.literal(true, {
+      errorMap: () => ({ message: "gdprRequired" }),
+    }),
+    termsAccepted: z.literal(true, {
+      errorMap: () => ({ message: "termsRequired" }),
+    }),
   })
   .refine((data) => data.password === data.confirmPassword, {
     path: ["confirmPassword"],
@@ -70,6 +76,8 @@ export default function SignupForm() {
       password: "",
       confirmPassword: "",
       isCommunityMember: false,
+      gdprConsent: false as unknown as true,
+      termsAccepted: false as unknown as true,
     },
   });
 
@@ -105,8 +113,9 @@ export default function SignupForm() {
       return;
     }
 
-    // Update profile with additional fields
+    // Update profile with additional fields and consent data
     if (authData.user) {
+      const now = new Date().toISOString();
       await supabase.from("profiles").upsert({
         id: authData.user.id,
         first_name: data.firstName,
@@ -115,6 +124,13 @@ export default function SignupForm() {
         county: data.county || null,
         city: data.city || null,
         is_community_member: data.isCommunityMember,
+        gdpr_consent: true,
+        gdpr_consent_at: now,
+        gdpr_policy_version: "1.0",
+        terms_accepted: true,
+        terms_accepted_at: now,
+        terms_version: "1.0",
+        ...(data.isCommunityMember ? { marketing_consent_at: now } : {}),
       });
     }
 
@@ -440,7 +456,7 @@ export default function SignupForm() {
               </div>
             </div>
 
-            {/* Community member checkbox */}
+            {/* Community member checkbox (marketing consent) */}
             <div className="flex items-start gap-3 pt-2">
               <input
                 id="community"
@@ -458,6 +474,66 @@ export default function SignupForm() {
                 <p className="text-xs text-gray-500">
                   {t("communityDescription")}
                 </p>
+              </div>
+            </div>
+
+            {/* GDPR consent checkbox */}
+            <div className="flex items-start gap-3">
+              <input
+                id="gdprConsent"
+                type="checkbox"
+                {...register("gdprConsent")}
+                className="mt-1 h-4 w-4 border-gray-300 accent-[#0097a7]"
+              />
+              <div>
+                <label
+                  htmlFor="gdprConsent"
+                  className="text-sm text-gray-700 cursor-pointer"
+                >
+                  {t("gdprConsent")}{" "}
+                  <TransitionLink
+                    href="/privacy"
+                    className="font-medium text-[#0097a7] underline-offset-4 hover:underline"
+
+                  >
+                    {t("gdprLink")}
+                  </TransitionLink>
+                </label>
+                {errors.gdprConsent && (
+                  <p className="mt-1 text-xs text-red-600">
+                    {t("gdprRequired")}
+                  </p>
+                )}
+              </div>
+            </div>
+
+            {/* Terms acceptance checkbox */}
+            <div className="flex items-start gap-3">
+              <input
+                id="termsAccepted"
+                type="checkbox"
+                {...register("termsAccepted")}
+                className="mt-1 h-4 w-4 border-gray-300 accent-[#0097a7]"
+              />
+              <div>
+                <label
+                  htmlFor="termsAccepted"
+                  className="text-sm text-gray-700 cursor-pointer"
+                >
+                  {t("termsConsent")}{" "}
+                  <TransitionLink
+                    href="/terms"
+                    className="font-medium text-[#0097a7] underline-offset-4 hover:underline"
+
+                  >
+                    {t("termsLink")}
+                  </TransitionLink>
+                </label>
+                {errors.termsAccepted && (
+                  <p className="mt-1 text-xs text-red-600">
+                    {t("termsRequired")}
+                  </p>
+                )}
               </div>
             </div>
 

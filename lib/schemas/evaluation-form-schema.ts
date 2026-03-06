@@ -11,6 +11,11 @@ const yesNo = z.enum(['yes', 'no'], {
 });
 
 export const evaluationFormSchema = z.object({
+  // Medical data consent — must be accepted before proceeding
+  medical_data_consent: z.literal(true, {
+    errorMap: () => ({ message: 'medicalConsentRequired' }),
+  }),
+
   // Step 1 — Personal Data
   first_name: z.string().min(1, 'required'),
   last_name: z.string().min(1, 'required'),
@@ -136,7 +141,7 @@ export const yesNoFields = [
 
 // Fields per step for partial validation with trigger()
 export const stepFields: Record<number, string[]> = {
-  0: ['first_name', 'last_name', 'age', 'date_of_birth', 'profession', 'blood_type', 'weight', 'height'],
+  0: ['medical_data_consent', 'first_name', 'last_name', 'age', 'date_of_birth', 'profession', 'blood_type', 'weight', 'height'],
   1: ['speaks_romanian', 'other_language', 'visual_impairment', 'hearing_impairment', 'speech_impairment'],
   2: [
     'stroke', 'seizures', 'hemiparesis',

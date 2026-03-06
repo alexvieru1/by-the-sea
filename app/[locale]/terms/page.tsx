@@ -1,9 +1,18 @@
-import PlaceholderPage from '@/components/layout/placeholder-page';
 import { setRequestLocale } from 'next-intl/server';
+import PolicyPageLayout from '@/components/layout/policy-page-layout';
+import { getPolicyContent } from '@/lib/policies';
 
 export default async function TermsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <PlaceholderPage translationKey="terms" />;
+  const { frontmatter, content } = getPolicyContent('terms', locale);
+
+  return (
+    <PolicyPageLayout
+      translationKey="terms"
+      content={content}
+      version={frontmatter.lastUpdated}
+    />
+  );
 }
