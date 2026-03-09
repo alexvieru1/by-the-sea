@@ -593,5 +593,134 @@
       "medicationPlaceholder": "List medications taken in the last month...",
       "previousSurgeries": "Previous surgical interventions"
     }
+  },
+  "patientGuide": {
+    "admission": {
+      "title": "Admission Process",
+      "description": "Patient admission (retirees, employees, children, uninsured) is carried out following a prior appointment obtained either by phone or by visiting the reception, confirmed by our Reservations team and processed in our system after the advance payment has been made."
+    },
+    "insuranceCheck": {
+      "title": "Check Your Insurance Status",
+      "description": "You can check your insurance status yourself, as well as the status of your health card, by accessing the link below and entering your Personal Identification Number (CNP)",
+      "warning": "If this check reveals any discrepancies with your situation (for example, you appear as uninsured, the card appears as issued but you have not received it, etc.), please resolve the situation before arriving, so that you can use your referral (otherwise, our services can only be accessed at full cost).",
+      "cta": "Check on CNAS"
+    },
+    "documents": {
+      "title": "Required Documents",
+      "description": "To avoid any unpleasant situations, please bring all the documents required for your admission:",
+      "items": {
+        "referral": "Referral letter for MEDICAL REHABILITATION",
+        "healthCard": "Health card",
+        "id": "Identity card / ID",
+        "employment": "Employment certificate / last pension coupon: ONLY FOR OPSNAJ INSURED"
+      }
+    },
+    "yourStay": {
+      "title": "Your Stay",
+      "p1": "Upon arrival, you will check in at the Marea Neagră reception to complete the necessary documentation for your stay and sign the medical services contract, receive your room assignment according to your booking, and schedule your specialist medical consultation to establish your treatment plan.",
+      "p2": "This is recorded on an individual treatment form, with which you will be directed to the scheduling and procedure planning service, where your treatment times will be assigned. Daily, after completing your treatment, you will hand in the treatment form at the treatment center reception, and collect it the following day at the start of your treatment."
+    },
+    "notices": {
+      "title": "Important Information",
+      "refusal": {
+        "title": "Right of Refusal",
+        "description": "We reserve the right to refuse admission or discharge patients who present undeclared conditions incompatible with medical rehabilitation treatment, as well as patients who do not fulfill their conduct and/or financial obligations specified in the contract/patient obligations."
+      },
+      "dailyVisit": {
+        "title": "Daily Medical Visit",
+        "description": "Being present in your room and cooperating with our team for the daily medical visit is mandatory. In your room you have access to the phone number where you can contact on-duty medical staff, at any hour, regarding any aspect of your health condition."
+      },
+      "discharge": {
+        "title": "Discharge",
+        "description": "Discharge mandatorily requires the use of your health card; failure to do so will result in the case not being reimbursed and the patient bearing the full costs."
+      }
+    },
+    "contraindications": {
+      "absoluteTitle": "Absolute Contraindications",
+      "absoluteWarning": "Patients who present at least one of the following contraindications are not recommended for inpatient treatment!",
+      "absolute": {
+        "pacemaker": "Cardiac stimulator – pacemaker",
+        "epilepsy": "Epilepsy",
+        "psychiatric": "Major psychiatric disorders – psychoses, dementia",
+        "anemia": "Anemia (hemoglobin < 10 g/dl)",
+        "malignantTumors": "Recently discovered or operated malignant tumors, leukemia",
+        "infectious": "Infectious diseases – TB, herpes zoster, acute hepatitis, etc.",
+        "recentStroke": "Recent stroke < 3 months",
+        "recentHeartAttack": "Recent myocardial infarction (MI) < 12 months",
+        "mobilityImpaired": "Patients with severe mobility limitations or visual impairment without a companion",
+        "pregnancy": "Pregnancy / postpartum",
+        "recentTrauma": "Recent unhealed trauma or fractures",
+        "recentBleeding": "Recent unhealed internal or external hemorrhages",
+        "dialysis": "Patients on renal dialysis and/or with stage III/IV chronic kidney failure",
+        "childrenUnder4": "Children under 4 years old"
+      },
+      "relativeTitle": "Relative Contraindications",
+      "relativeNote": "Patients who present at least one of the relative contraindications must bring their medical records at admission and, only upon written recommendation/approval from their attending physician (neurologist / cardiologist / oncologist / nephrologist), will be informed that the treatment will be limited and adapted to their associated pathology.",
+      "relative": {
+        "cardiac": {
+          "category": "Cardiac conditions",
+          "items": {
+            "atrialFibrillation": "atrial fibrillation",
+            "decompensatedCardiopathy": "decompensated chronic cardiopathies",
+            "recentCoronary": "recent coronary conditions – stent or bypass",
+            "uncontrolledHypertension": "therapeutically uncontrolled hypertension"
+          }
+        },
+        "neurological": {
+          "category": "Neurological conditions",
+          "items": {
+            "stroke": "stroke",
+            "alzheimer": "decompensated Alzheimer's"
+          }
+        },
+        "respiratory": {
+          "category": "Respiratory conditions",
+          "items": {
+            "activeTB": "active progressive TB",
+            "activeCOPD": "active COPD",
+            "decompensatedAsthma": "decompensated bronchial asthma"
+          }
+        },
+        "digestive": {
+          "category": "Digestive conditions",
+          "items": {
+            "activeUlcer": "gastroduodenal ulcer in active flare",
+            "recentHepatitis": "recent hepatitis",
+            "hepaticCirrhosis": "hepatic cirrhosis"
+          }
+        },
+        "renal": {
+          "category": "Renal conditions",
+          "items": {
+            "limitedFunction": "acute/chronic nephropathies with limited functional reserves",
+            "decompensatedFailure": "decompensated renal failure"
+          }
+        },
+        "dermatological": {
+          "category": "Dermatological conditions",
+          "items": {
+            "bedsores": "bedsores",
+            "purulentWounds": "purulent wounds",
+            "eczema": "eczema",
+            "unhealedPostOp": "unhealed post-operative wounds"
+          }
+        },
+        "endocrine": {
+          "category": "Endocrine conditions",
+          "items": {
+            "addisons": "Addison's disease",
+            "unbalancedDiabetes": "unbalanced diabetes",
+            "decompensatedHyperthyroidism": "decompensated hyperthyroidism"
+          }
+        },
+        "oncological": {
+          "category": "Oncological conditions",
+          "items": {
+            "malignantTumors": "malignant tumors of any localization"
+          }
+        }
+      }
+    },
+    "closingNote": "By respecting all of the above, you are respecting yourself and those around you. We assure you that our team is made up of professionals who want you to have the most pleasant experience with us, both in terms of comfort and therapeutic benefits."
   }
 }

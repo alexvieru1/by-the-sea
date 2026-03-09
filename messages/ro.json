@@ -1,6 +1,6 @@
 {
   "common": {
-    "bookScan": "Solicită o Programare",
+    "bookScan": "Programează-te",
     "bookScanHover": "Începe Acum",
     "learnMore": "Afla Mai Multe",
     "getDirections": "Indicatii",
@@ -601,5 +601,134 @@
       "medicationPlaceholder": "Enumeră medicamentele luate în ultima lună...",
       "previousSurgeries": "Intervenții chirurgicale anterioare"
     }
+  },
+  "patientGuide": {
+    "admission": {
+      "title": "Procesul de Internare",
+      "description": "Internarea pacienților (pensionari, salariați, copii, neasigurați) se face după o prealabilă programare obținută fie telefonic, fie prin prezentarea la recepție, confirmată de colegii noștri de la Rezervări și operată în sistemul nostru după achitarea prealabilă a avansului."
+    },
+    "insuranceCheck": {
+      "title": "Verifică Calitatea de Asigurat",
+      "description": "Puteți verifica singur calitatea dumneavoastră de asigurat, precum și situația cardului dumneavoastră de sănătate, accesând link-ul de mai jos și introducând Codul Numeric Personal (CNP-ul)",
+      "warning": "Dacă la această verificare există neconcordanțe față de situația dumneavoastră (spre exemplu, figurați ca fiind neasigurat, cardul figurează ca fiind emis și dumneavoastră nu ați intrat în posesia lui etc.), vă rugăm să rezolvați situația anterior sosirii la noi, astfel încât să puteți utiliza biletul de trimitere (în caz contrar, serviciile noastre vor putea fi accesate doar contra cost).",
+      "cta": "Verifică pe CNAS"
+    },
+    "documents": {
+      "title": "Documente Necesare",
+      "description": "Pentru a evita situații neplăcute, vă rugăm să aduceți toate documentele necesare internării dumneavoastră:",
+      "items": {
+        "referral": "Bilet de trimitere către RECUPERARE MEDICALĂ",
+        "healthCard": "Cardul de sănătate",
+        "id": "Cartea de identitate / buletin",
+        "employment": "Adeverința de salariat / ultimul cupon de pensie: DOAR PENTRU ASIGURAȚII OPSNAJ"
+      }
+    },
+    "yourStay": {
+      "title": "Sejurul Tău",
+      "p1": "Odată sosit, vă veți adresa la recepția Marea Neagră pentru întocmirea documentației necesare șederii dumneavoastră și semnarea contractului de prestări servicii medicale, repartizarea camerei conform programării și planificarea consultului medical de specialitate în vederea stabilirii planului de tratament.",
+      "p2": "Acesta este înscris pe o fișă individuală de tratament, cu care veți fi preluați de serviciul programări – planificări proceduri, unde vor fi trecute orele de efectuare. Zilnic, după efectuarea tratamentului, veți preda fișa de tratament la recepția bazei de tratament, urmând să o luați a doua zi, la începerea tratamentului."
+    },
+    "notices": {
+      "title": "Informații Importante",
+      "refusal": {
+        "title": "Dreptul de Refuz",
+        "description": "Ne rezervăm dreptul de a refuza internarea/de a externa pacienții care prezintă afecțiuni nedeclarate incompatibile cu tratamentul de recuperare medicală, precum și pacienții care nu își onorează obligațiile de conduită și/sau financiare specificate în contract/obligații pacient."
+      },
+      "dailyVisit": {
+        "title": "Vizita Medicală Zilnică",
+        "description": "Prezența în cameră și colaborarea cu echipa noastră pentru efectuarea vizitei medicale zilnice este obligatorie. În cameră aveți la dispoziție numărul de telefon la care puteți contacta personalul medical de gardă, indiferent de oră, pentru orice aspect legat de starea dumneavoastră de sănătate."
+      },
+      "discharge": {
+        "title": "Externarea",
+        "description": "Externarea implică obligatoriu utilizarea cardului de sănătate; omiterea acestui pas atrage nedecontarea cazului și suportarea integrală a costurilor de către pacient."
+      }
+    },
+    "contraindications": {
+      "absoluteTitle": "Contraindicații Absolute",
+      "absoluteWarning": "Pacienților care prezintă cel puțin una dintre contraindicații nu le este recomandat tratamentul cu internare!",
+      "absolute": {
+        "pacemaker": "Stimulator cardiac – pacemaker",
+        "epilepsy": "Epilepsie",
+        "psychiatric": "Tulburări psihice majore – psihoze, demențe",
+        "anemia": "Anemie (hemoglobină < 10 g/dl)",
+        "malignantTumors": "Tumori maligne recent descoperite sau operate, leucemii",
+        "infectious": "Boli infecțioase – TBC, zona zoster, hepatită acutizată etc.",
+        "recentStroke": "AVC recent < 3 luni",
+        "recentHeartAttack": "IMA (infarct miocardic) recent < 12 luni",
+        "mobilityImpaired": "Pacienți greu deplasabili sau cu handicap de vedere fără însoțitor",
+        "pregnancy": "Sarcină / lăuzie",
+        "recentTrauma": "Traumatisme sau fracturi recente nevindecate",
+        "recentBleeding": "Hemoragii interne sau externe recente nevindecate",
+        "dialysis": "Pacienți cu dializă renală și/sau insuficiență renală cronică stadiul III/IV",
+        "childrenUnder4": "Copii < 4 ani"
+      },
+      "relativeTitle": "Contraindicații Relative",
+      "relativeNote": "Pacienții care prezintă cel puțin una dintre contraindicațiile relative se vor prezenta la internare cu actele medicale și, numai la indicația/aviz scris al medicului curant (neurolog / cardiolog / oncolog / nefrolog), vor fi înștiințați că tratamentul va fi limitat și adaptat patologiei asociate.",
+      "relative": {
+        "cardiac": {
+          "category": "Afecțiuni cardiologice",
+          "items": {
+            "atrialFibrillation": "fibrilație arterială",
+            "decompensatedCardiopathy": "cardiopatii cronice decompensate",
+            "recentCoronary": "afecțiuni coronariene recente – stent sau bypass",
+            "uncontrolledHypertension": "HTA necontrolată terapeutic"
+          }
+        },
+        "neurological": {
+          "category": "Afecțiuni neurologice",
+          "items": {
+            "stroke": "AVC",
+            "alzheimer": "Alzheimer decompensat"
+          }
+        },
+        "respiratory": {
+          "category": "Afecțiuni respiratorii",
+          "items": {
+            "activeTB": "TBC activ evolutiv",
+            "activeCOPD": "BPOC activă",
+            "decompensatedAsthma": "astm bronșic decompensat"
+          }
+        },
+        "digestive": {
+          "category": "Afecțiuni digestive",
+          "items": {
+            "activeUlcer": "ulcer gastroduodenal în puseu evolutiv",
+            "recentHepatitis": "hepatite recente",
+            "hepaticCirrhosis": "ciroză hepatică"
+          }
+        },
+        "renal": {
+          "category": "Afecțiuni ale aparatului renal",
+          "items": {
+            "limitedFunction": "nefropatii acute/cronice cu rezerve funcționale limitate",
+            "decompensatedFailure": "insuficiență renală decompensată"
+          }
+        },
+        "dermatological": {
+          "category": "Afecțiuni tegumentare",
+          "items": {
+            "bedsores": "escare",
+            "purulentWounds": "plăgi supurate",
+            "eczema": "eczeme",
+            "unhealedPostOp": "plăgi postoperatorii necicatrizate"
+          }
+        },
+        "endocrine": {
+          "category": "Afecțiuni endocrine",
+          "items": {
+            "addisons": "boala Addison",
+            "unbalancedDiabetes": "DZ dezechilibrat",
+            "decompensatedHyperthyroidism": "hipertiroidism decompensat"
+          }
+        },
+        "oncological": {
+          "category": "Afecțiuni oncologice",
+          "items": {
+            "malignantTumors": "tumori maligne cu orice localizare"
+          }
+        }
+      }
+    },
+    "closingNote": "Respectând toate acestea, vă respectați pe dumneavoastră înșivă și pe cei din jur. Vă asigurăm că echipa noastră este formată din profesioniști și dorește să aveți o experiență cât mai plăcută la noi, atât din punct de vedere al confortului, cât și al beneficiilor terapeutice."
   }
 }
