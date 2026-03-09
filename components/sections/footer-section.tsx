@@ -74,7 +74,7 @@ export default function FooterSection() {
                   </li>
                   <li>
                     <TransitionLink
-                      href="/faq"
+                      href="/contact#faq"
                       className="text-sm text-gray-500 transition-colors hover:text-gray-900"
                     >
                       {t('faq')}
