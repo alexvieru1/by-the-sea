@@ -730,5 +730,60 @@
       }
     },
     "closingNote": "Respectând toate acestea, vă respectați pe dumneavoastră înșivă și pe cei din jur. Vă asigurăm că echipa noastră este formată din profesioniști și dorește să aveți o experiență cât mai plăcută la noi, atât din punct de vedere al confortului, cât și al beneficiilor terapeutice."
+  },
+  "contact": {
+    "info": {
+      "title": "Informații de Contact",
+      "phone": "+40 241 123 456",
+      "email": "contact@vrajamariibythesea.ro",
+      "address": "Aleea Mercur Nr.2, Eforie Sud, România",
+      "hours": "Luni – Vineri: 09:00 – 18:00",
+      "hoursSaturday": "Sâmbătă: 09:00 – 14:00",
+      "hoursSunday": "Duminică: Închis"
+    },
+    "social": {
+      "title": "Urmărește-ne",
+      "instagram": "Instagram",
+      "facebook": "Facebook"
+    },
+    "directions": {
+      "title": "Cum Ajungi",
+      "fromConstanta": "Din Constanța: ~30 min cu mașina pe DN39 spre sud, direcția Eforie.",
+      "fromBucharest": "Din București: ~3h pe A2 spre Constanța, apoi DN39 spre Eforie Sud.",
+      "train": "Cu trenul: Gara Eforie Sud (CFR) — la aproximativ 10 minute de mers pe jos.",
+      "parking": "Parcare gratuită disponibilă în incinta complexului."
+    },
+    "form": {
+      "title": "Trimite-ne un Mesaj",
+      "description": "Completează formularul de mai jos și te vom contacta cât mai curând.",
+      "name": "Nume complet",
+      "email": "Email",
+      "phone": "Telefon (opțional)",
+      "subject": "Subiect",
+      "subjects": {
+        "general": "Întrebare generală",
+        "booking": "Întrebare despre programare",
+        "medical": "Întrebare medicală",
+        "other": "Altele"
+      },
+      "message": "Mesaj",
+      "messagePlaceholder": "Scrie mesajul tău aici...",
+      "submit": "Trimite Mesajul",
+      "success": "Mesajul a fost trimis! Te vom contacta în curând.",
+      "error": "A apărut o eroare. Te rugăm să încerci din nou."
+    },
+    "faq": {
+      "title": "Întrebări Frecvente",
+      "items": {
+        "q1": { "question": "Cum pot face o programare?", "answer": "Poți solicita o programare completând formularul de pe site sau sunând la numărul nostru de telefon. Echipa noastră te va contacta pentru confirmare." },
+        "q2": { "question": "Ce trebuie să aduc la internare?", "answer": "Ai nevoie de: biletul de trimitere către Recuperare Medicală, cardul de sănătate, cartea de identitate și adeverința de salariat sau ultimul cupon de pensie (pentru asigurații OPSNAJ). Detalii complete în Ghidul Pacientului." },
+        "q3": { "question": "Cât durează un sejur tipic?", "answer": "Durata sejurului variază în funcție de programul de tratament recomandat de medic, de obicei între 7 și 21 de zile." },
+        "q4": { "question": "Acceptați pacienți neasigurați?", "answer": "Da, acceptăm și pacienți neasigurați. În acest caz, serviciile sunt accesate contra cost. Contactați-ne pentru detalii despre tarife." },
+        "q5": { "question": "Cum pot verifica dacă sunt asigurat?", "answer": "Puteți verifica calitatea de asigurat pe site-ul CNAS la adresa siui.casan.ro/asigurati/ introducând CNP-ul dumneavoastră." },
+        "q6": { "question": "Este necesar un bilet de trimitere?", "answer": "Da, pentru pacienții asigurați este necesar un bilet de trimitere către Recuperare Medicală eliberat de medicul de familie sau medicul specialist." },
+        "q7": { "question": "Oferă complexul parcare?", "answer": "Da, parcarea este gratuită și disponibilă în incinta complexului." },
+        "q8": { "question": "Pot vizita complexul înainte de a face o programare?", "answer": "Desigur! Vă așteptăm cu drag. Vă recomandăm să ne contactați telefonic în prealabil pentru a vă asigura că un membru al echipei este disponibil să vă ghideze." }
+      }
+    }
   }
 }
