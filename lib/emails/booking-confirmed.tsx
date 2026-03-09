@@ -24,7 +24,7 @@ const content = {
     line1: 'Rezervarea ta la Vraja Marii by the Sea a fost confirmata.',
     line2: 'Te rugam sa completezi formularul de evaluare initiala inainte de vizita. Aceasta ne ajuta sa personalizam experienta ta.',
     cta: 'Completeaza Evaluarea',
-    footer: 'Daca ai intrebari, contacteaza-ne la contact@vrajamarii.ro.',
+    footer: 'Daca ai intrebari, contacteaza-ne la contact@complexvrajamarii.ro.',
   },
   en: {
     preview: 'Your booking at Vraja Marii has been confirmed',
@@ -32,7 +32,7 @@ const content = {
     line1: 'Your booking at Vraja Marii by the Sea has been confirmed.',
     line2: 'Please complete the initial evaluation form before your visit. This helps us personalize your experience.',
     cta: 'Complete Evaluation',
-    footer: 'If you have questions, contact us at contact@vrajamarii.ro.',
+    footer: 'If you have questions, contact us at contact@complexvrajamarii.ro.',
   },
 };
 

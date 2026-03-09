@@ -482,7 +482,7 @@
     "instagram": "Instagram",
     "facebook": "Facebook",
     "getSupport": "Contact Us",
-    "email": "contact@vrajamarii.ro",
+    "email": "contact@complexvrajamarii.ro",
     "phone": "+40 241 123 456",
     "hours": "Monday - Friday 9am - 6pm",
     "copyright": "© 2026 Vraja Mării by the Sea. All rights reserved.",
@@ -596,6 +596,7 @@
   },
   "patientGuide": {
     "admission": {
+      "label": "Patient Guide",
       "title": "Admission Process",
       "description": "Patient admission (retirees, employees, children, uninsured) is carried out following a prior appointment obtained either by phone or by visiting the reception, confirmed by our Reservations team and processed in our system after the advance payment has been made."
     },
@@ -606,6 +607,7 @@
       "cta": "Check on CNAS"
     },
     "documents": {
+      "label": "Preparation",
       "title": "Required Documents",
       "description": "To avoid any unpleasant situations, please bring all the documents required for your admission:",
       "items": {
@@ -616,6 +618,7 @@
       }
     },
     "yourStay": {
+      "label": "Your Experience",
       "title": "Your Stay",
       "p1": "Upon arrival, you will check in at the Marea Neagră reception to complete the necessary documentation for your stay and sign the medical services contract, receive your room assignment according to your booking, and schedule your specialist medical consultation to establish your treatment plan.",
       "p2": "This is recorded on an individual treatment form, with which you will be directed to the scheduling and procedure planning service, where your treatment times will be assigned. Daily, after completing your treatment, you will hand in the treatment form at the treatment center reception, and collect it the following day at the start of your treatment."
@@ -725,9 +728,10 @@
   },
   "contact": {
     "info": {
+      "label": "Contact",
       "title": "Contact Information",
       "phone": "+40 241 123 456",
-      "email": "contact@vrajamariibythesea.ro",
+      "email": "contact@complexvrajamarii.ro",
       "address": "Aleea Mercur Nr.2, Eforie Sud, Romania",
       "hours": "Monday – Friday: 09:00 – 18:00",
       "hoursSaturday": "Saturday: 09:00 – 14:00",
@@ -739,6 +743,7 @@
       "facebook": "Facebook"
     },
     "directions": {
+      "label": "Location",
       "title": "Getting There",
       "fromConstanta": "From Constanța: ~30 min drive on DN39 heading south towards Eforie.",
       "fromBucharest": "From Bucharest: ~3h on A2 motorway to Constanța, then DN39 to Eforie Sud.",
@@ -769,7 +774,7 @@
       "items": {
         "q1": { "question": "How can I book an appointment?", "answer": "You can request an appointment by filling out the form on our website or calling our phone number. Our team will contact you for confirmation." },
         "q2": { "question": "What should I bring for admission?", "answer": "You'll need: a referral letter for Medical Rehabilitation, your health card, ID card, and proof of employment or latest pension slip (for OPSNAJ insured patients). Full details in the Patient Guide." },
-        "q3": { "question": "How long is a typical stay?", "answer": "The length of stay varies depending on the treatment program recommended by the doctor, usually between 7 and 21 days." },
+        "q3": { "question": "How long is a typical stay?", "answer": "The length of stay varies depending on the treatment program recommended by the doctor, usually 7 days." },
         "q4": { "question": "Do you accept uninsured patients?", "answer": "Yes, we accept uninsured patients as well. In this case, services are accessed at full cost. Contact us for pricing details." },
         "q5": { "question": "How can I check my insurance status?", "answer": "You can verify your insurance status on the CNAS website at siui.casan.ro/asigurati/ by entering your personal identification number (CNP)." },
         "q6": { "question": "Is a referral letter required?", "answer": "Yes, for insured patients a referral letter for Medical Rehabilitation issued by a family doctor or specialist is required." },

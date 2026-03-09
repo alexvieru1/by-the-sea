@@ -3,6 +3,7 @@
 import { useState, FormEvent } from 'react';
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
+import PlaceholderImage from '@/components/ui/placeholder-image';
 import {
   Phone,
   Mail,
@@ -13,7 +14,6 @@ import {
   TrainFront,
   CircleParking,
   Plus,
-  Minus,
 } from 'lucide-react';
 
 const fadeInUp = {
@@ -58,7 +58,7 @@ export default function ContactPageContent() {
             {/* Left: Info */}
             <div>
               <p className="text-sm font-medium uppercase tracking-wider text-[#0097a7]">
-                {t('info.title')}
+                {t('info.label')}
               </p>
               <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900 sm:text-4xl">
                 {t('info.title')}
@@ -110,7 +110,7 @@ export default function ContactPageContent() {
             {/* Right: Map */}
             <div className="relative min-h-[400px] overflow-hidden bg-gray-200">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2856.5!2d28.6372!3d44.0492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDTCsDAyJzU3LjEiTiAyOMKwMzgnMTMuOCJF!5e0!3m2!1sro!2sro!4v1"
+                src="https://maps.google.com/maps?q=Aleea+Mercur+2,+905360+Eforie+Sud,+Romania&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 className="absolute inset-0 h-full w-full border-0"
                 allowFullScreen
                 loading="lazy"
@@ -128,7 +128,7 @@ export default function ContactPageContent() {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <p className="text-sm font-medium uppercase tracking-wider text-[#0097a7]">
-                {t('directions.title')}
+                {t('directions.label')}
               </p>
               <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900 sm:text-4xl">
                 {t('directions.title')}
@@ -153,13 +153,7 @@ export default function ContactPageContent() {
               </div>
             </div>
             {/* Placeholder image */}
-            <div className="relative aspect-[4/3] w-full overflow-hidden bg-gray-200">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-sm font-medium uppercase tracking-wider text-gray-400">
-                  Photo: Building Entrance
-                </span>
-              </div>
-            </div>
+            <PlaceholderImage label="Building Entrance" src="/images/contact/building-entrance.webp" />
           </div>
         </div>
       </motion.section>
@@ -205,7 +199,11 @@ export default function ContactPageContent() {
               />
             </div>
             <div>
+              <label htmlFor="subject" className="sr-only">
+                {t('form.subject')}
+              </label>
               <select
+                id="subject"
                 name="subject"
                 value={formData.subject}
                 onChange={(e) => updateField('subject', e.target.value)}
@@ -257,10 +255,7 @@ export default function ContactPageContent() {
               <details key={key} className="group">
                 <summary className="flex cursor-pointer items-center justify-between py-6 text-left font-medium text-gray-900">
                   {t(`faq.items.${key}.question`)}
-                  <span>
-                    <Plus size={18} className="shrink-0 text-gray-500 group-open:hidden" />
-                    <Minus size={18} className="hidden shrink-0 text-gray-500 group-open:block" />
-                  </span>
+                  <Plus size={18} className="shrink-0 text-gray-500 transition-transform duration-300 group-open:rotate-45" />
                 </summary>
                 <p className="pb-6 leading-relaxed text-gray-700">
                   {t(`faq.items.${key}.answer`)}

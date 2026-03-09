@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "tunnel": "npx cloudflared tunnel --url http://localhost:3000"
+    "tunnel": "cloudflared tunnel run vraja-dev",
+    "dev:tunnel": "cloudflared tunnel run vraja-dev & pnpm dev"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

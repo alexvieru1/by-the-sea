@@ -76,7 +76,7 @@ async function sendConfirmationEmail(resend: Resend, email: string, firstName: s
 
   try {
     await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || 'Vraja Marii <noreply@vrajamarii.ro>',
+      from: process.env.RESEND_FROM_EMAIL || 'Vraja Marii <noreply@complexvrajamarii.ro>',
       to: email,
       subject: 'Rezervarea ta a fost confirmata',
       react: BookingConfirmedEmail({

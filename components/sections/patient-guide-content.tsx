@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { CheckCircle, ExternalLink } from 'lucide-react';
+import PlaceholderImage from '@/components/ui/placeholder-image';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -41,17 +42,6 @@ const relativeCategories = [
 
 const documentKeys = ['referral', 'healthCard', 'id', 'employment'] as const;
 
-function PlaceholderImage({ label, className }: { label: string; className?: string }) {
-  return (
-    <div className={`relative w-full overflow-hidden bg-gray-200 ${className ?? 'aspect-[4/3]'}`}>
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span className="text-sm font-medium uppercase tracking-wider text-gray-400">
-          Photo: {label}
-        </span>
-      </div>
-    </div>
-  );
-}
 
 export default function PatientGuideContent() {
   const t = useTranslations('patientGuide');
@@ -62,10 +52,10 @@ export default function PatientGuideContent() {
       <motion.section {...fadeInUp}>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-12 lg:py-28">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <PlaceholderImage label="Reception Area" />
+            <PlaceholderImage label="Reception Area" src="/images/patient-guide/reception-area.webp" />
             <div>
               <p className="text-sm font-medium uppercase tracking-wider text-[#0097a7]">
-                {t('admission.title')}
+                {t('admission.label')}
               </p>
               <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900 sm:text-4xl">
                 {t('admission.title')}
@@ -110,7 +100,7 @@ export default function PatientGuideContent() {
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
               <p className="text-sm font-medium uppercase tracking-wider text-[#0097a7]">
-                {t('documents.title')}
+                {t('documents.label')}
               </p>
               <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900 sm:text-4xl">
                 {t('documents.title')}
@@ -127,7 +117,7 @@ export default function PatientGuideContent() {
                 ))}
               </div>
             </div>
-            <PlaceholderImage label="Lobby" />
+            <PlaceholderImage label="Lobby" src="/images/patient-guide/lobby.webp" />
           </div>
         </div>
       </motion.section>
@@ -136,10 +126,10 @@ export default function PatientGuideContent() {
       <motion.section {...fadeInUp} className="bg-[#f8f5f3]">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-12 lg:py-28">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <PlaceholderImage label="Treatment Room" />
+            <PlaceholderImage label="Treatment Room" src="/images/patient-guide/treatment-room.webp" />
             <div>
               <p className="text-sm font-medium uppercase tracking-wider text-[#0097a7]">
-                {t('yourStay.title')}
+                {t('yourStay.label')}
               </p>
               <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900 sm:text-4xl">
                 {t('yourStay.title')}
@@ -199,7 +189,7 @@ export default function PatientGuideContent() {
       </motion.section>
 
       {/* Section 7: Photo Divider */}
-      <PlaceholderImage label="Sea View" className="h-64 lg:h-96" />
+      <PlaceholderImage label="Sea View" className="h-64 lg:h-96" src="/images/patient-guide/sea-view.webp" />
 
       {/* Section 8: Relative Contraindications */}
       <motion.section {...fadeInUp}>

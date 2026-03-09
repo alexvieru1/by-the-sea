@@ -490,7 +490,7 @@
     "instagram": "Instagram",
     "facebook": "Facebook",
     "getSupport": "Contactează-ne",
-    "email": "contact@vrajamarii.ro",
+    "email": "contact@complexvrajamarii.ro",
     "phone": "+40 241 123 456",
     "hours": "Luni - Vineri 9:00 - 18:00",
     "copyright": "© 2026 Vraja Mării by the Sea. Toate drepturile rezervate.",
@@ -604,6 +604,7 @@
   },
   "patientGuide": {
     "admission": {
+      "label": "Ghidul Pacientului",
       "title": "Procesul de Internare",
       "description": "Internarea pacienților (pensionari, salariați, copii, neasigurați) se face după o prealabilă programare obținută fie telefonic, fie prin prezentarea la recepție, confirmată de colegii noștri de la Rezervări și operată în sistemul nostru după achitarea prealabilă a avansului."
     },
@@ -614,6 +615,7 @@
       "cta": "Verifică pe CNAS"
     },
     "documents": {
+      "label": "Pregătire",
       "title": "Documente Necesare",
       "description": "Pentru a evita situații neplăcute, vă rugăm să aduceți toate documentele necesare internării dumneavoastră:",
       "items": {
@@ -624,6 +626,7 @@
       }
     },
     "yourStay": {
+      "label": "Experiența Ta",
       "title": "Sejurul Tău",
       "p1": "Odată sosit, vă veți adresa la recepția Marea Neagră pentru întocmirea documentației necesare șederii dumneavoastră și semnarea contractului de prestări servicii medicale, repartizarea camerei conform programării și planificarea consultului medical de specialitate în vederea stabilirii planului de tratament.",
       "p2": "Acesta este înscris pe o fișă individuală de tratament, cu care veți fi preluați de serviciul programări – planificări proceduri, unde vor fi trecute orele de efectuare. Zilnic, după efectuarea tratamentului, veți preda fișa de tratament la recepția bazei de tratament, urmând să o luați a doua zi, la începerea tratamentului."
@@ -733,9 +736,10 @@
   },
   "contact": {
     "info": {
+      "label": "Contact",
       "title": "Informații de Contact",
       "phone": "+40 241 123 456",
-      "email": "contact@vrajamariibythesea.ro",
+      "email": "contact@complexvrajamarii.ro",
       "address": "Aleea Mercur Nr.2, Eforie Sud, România",
       "hours": "Luni – Vineri: 09:00 – 18:00",
       "hoursSaturday": "Sâmbătă: 09:00 – 14:00",
@@ -747,6 +751,7 @@
       "facebook": "Facebook"
     },
     "directions": {
+      "label": "Locație",
       "title": "Cum Ajungi",
       "fromConstanta": "Din Constanța: ~30 min cu mașina pe DN39 spre sud, direcția Eforie.",
       "fromBucharest": "Din București: ~3h pe A2 spre Constanța, apoi DN39 spre Eforie Sud.",
@@ -777,7 +782,7 @@
       "items": {
         "q1": { "question": "Cum pot face o programare?", "answer": "Poți solicita o programare completând formularul de pe site sau sunând la numărul nostru de telefon. Echipa noastră te va contacta pentru confirmare." },
         "q2": { "question": "Ce trebuie să aduc la internare?", "answer": "Ai nevoie de: biletul de trimitere către Recuperare Medicală, cardul de sănătate, cartea de identitate și adeverința de salariat sau ultimul cupon de pensie (pentru asigurații OPSNAJ). Detalii complete în Ghidul Pacientului." },
-        "q3": { "question": "Cât durează un sejur tipic?", "answer": "Durata sejurului variază în funcție de programul de tratament recomandat de medic, de obicei între 7 și 21 de zile." },
+        "q3": { "question": "Cât durează un sejur tipic?", "answer": "Durata sejurului variază în funcție de programul de tratament recomandat de medic, de obicei 7 zile." },
         "q4": { "question": "Acceptați pacienți neasigurați?", "answer": "Da, acceptăm și pacienți neasigurați. În acest caz, serviciile sunt accesate contra cost. Contactați-ne pentru detalii despre tarife." },
         "q5": { "question": "Cum pot verifica dacă sunt asigurat?", "answer": "Puteți verifica calitatea de asigurat pe site-ul CNAS la adresa siui.casan.ro/asigurati/ introducând CNP-ul dumneavoastră." },
         "q6": { "question": "Este necesar un bilet de trimitere?", "answer": "Da, pentru pacienții asigurați este necesar un bilet de trimitere către Recuperare Medicală eliberat de medicul de familie sau medicul specialist." },
