@@ -48,13 +48,32 @@ export async function updateProfile(formData: FormData) {
     return { error: error.message };
   }
 
-  // After successful upsert, backfill email on phone-only waitlist entries
-  if (phone && user.email) {
-    await supabase
+  // After successful upsert, check waitlist for confirmed booking by phone
+  if (phone) {
+    const { data: waitlistEntry } = await supabase
       .from('waitlist')
-      .update({ email: user.email })
+      .select('booking_confirmed, email')
       .eq('phone', phone)
-      .is('email', null);
+      .single();
+
+    if (waitlistEntry) {
+      // Backfill email on phone-only waitlist entries
+      if (!waitlistEntry.email && user.email) {
+        await supabase
+          .from('waitlist')
+          .update({ email: user.email })
+          .eq('phone', phone)
+          .is('email', null);
+      }
+
+      // Sync booking_confirmed to profile
+      if (waitlistEntry.booking_confirmed) {
+        await supabase
+          .from('profiles')
+          .update({ booking_confirmed: true })
+          .eq('id', user.id);
+      }
+    }
   }
 
   return { success: true };
