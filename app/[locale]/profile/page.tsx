@@ -6,6 +6,13 @@ import EvaluationSummary from './evaluation-summary';
 
 export type WaitlistStatus = 'none' | 'pending' | 'confirmed' | 'evaluated';
 
+export interface TelemedicineBooking {
+  id: string;
+  doctor_name: string;
+  scheduled_at: string;
+  status: 'scheduled' | 'confirmed';
+}
+
 export default async function ProfilePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -19,9 +26,17 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
     redirect('/login');
   }
 
-  const [{ data: profile }, { data: evaluation }] = await Promise.all([
+  const [{ data: profile }, { data: evaluation }, { data: telemedicineBooking }] = await Promise.all([
     supabase.from('profiles').select('*').eq('id', user.id).single(),
     supabase.from('evaluation_forms').select('*').eq('user_id', user.id).single(),
+    supabase
+      .from('telemedicine_bookings')
+      .select('id, doctor_name, scheduled_at, status')
+      .eq('user_id', user.id)
+      .in('status', ['scheduled', 'confirmed'])
+      .order('scheduled_at', { ascending: true })
+      .limit(1)
+      .single(),
   ]);
 
   // Check profile.booking_confirmed first (source of truth)
@@ -33,6 +48,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
         email={user.email ?? ''}
         waitlistStatus={waitlistStatus}
         phoneRequired={!profile?.phone}
+        telemedicineBooking={telemedicineBooking}
       >
         <EvaluationSummary evaluation={evaluation} />
       </ProfileForm>
@@ -93,6 +109,7 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
       email={user.email ?? ''}
       waitlistStatus={waitlistStatus}
       phoneRequired={!profile?.phone}
+      telemedicineBooking={telemedicineBooking}
     >
       <EvaluationSummary evaluation={evaluation} />
     </ProfileForm>

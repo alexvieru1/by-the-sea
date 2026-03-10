@@ -459,7 +459,13 @@
         "confirmedDescription": "Your booking has been confirmed! Please complete your initial evaluation form before your visit.",
         "confirmedAction": "Complete Evaluation",
         "evaluatedTitle": "All Set",
-        "evaluatedDescription": "Your evaluation form has been submitted. We look forward to welcoming you."
+        "evaluatedDescription": "Your evaluation form has been submitted. We look forward to welcoming you.",
+        "telemedicine": {
+          "title": "Telemedicine Consultation",
+          "scheduled": "Scheduled with {doctor} on {date} at {time}",
+          "action": "Join Consultation",
+          "awaitingConfirmation": "Awaiting phone confirmation"
+        }
       }
     },
     "userMenu": {

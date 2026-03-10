@@ -16,7 +16,7 @@ import { POLICY_VERSIONS } from '@/lib/constants/policy-versions';
 import { updateProfile, revokeGdprConsent, acceptConsents } from './actions';
 import ConsentModal from './consent-modal';
 import WaitlistStatusBanner from './waitlist-status-banner';
-import type { WaitlistStatus } from './page';
+import type { WaitlistStatus, TelemedicineBooking } from './page';
 
 const profileSchema = z.object({
   firstName: z.string().optional(),
@@ -54,6 +54,7 @@ interface ProfileFormProps {
   email: string;
   waitlistStatus: WaitlistStatus;
   phoneRequired: boolean;
+  telemedicineBooking?: TelemedicineBooking | null;
   children?: React.ReactNode;
 }
 
@@ -64,7 +65,7 @@ function formatDate(iso: string) {
   return `${day}/${month}/${d.getFullYear()}`;
 }
 
-export default function ProfileForm({ profile, email, waitlistStatus, phoneRequired, children }: ProfileFormProps) {
+export default function ProfileForm({ profile, email, waitlistStatus, phoneRequired, telemedicineBooking, children }: ProfileFormProps) {
   const t = useTranslations('auth.profile');
   const { signOut } = useAuth();
   const router = useRouter();
@@ -197,7 +198,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, phoneRequi
               {t('personalInfo')}
             </h2>
 
-            <WaitlistStatusBanner status={waitlistStatus} />
+            <WaitlistStatusBanner status={waitlistStatus} telemedicineBooking={telemedicineBooking} />
 
             {phoneRequired && (
               <div className="mb-6 border border-amber-300 bg-amber-50 px-4 py-3">

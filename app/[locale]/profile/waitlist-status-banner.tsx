@@ -1,33 +1,92 @@
 'use client';
 
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'motion/react';
 import { Link } from '@/i18n/routing';
-import { Clock, CheckCircle, ArrowRight } from 'lucide-react';
-import type { WaitlistStatus } from './page';
+import { Clock, CheckCircle, ArrowRight, Video } from 'lucide-react';
+import type { WaitlistStatus, TelemedicineBooking } from './page';
 
 interface WaitlistStatusBannerProps {
   status: WaitlistStatus;
+  telemedicineBooking?: TelemedicineBooking | null;
 }
 
-export default function WaitlistStatusBanner({ status }: WaitlistStatusBannerProps) {
+function formatBookingDateTime(scheduledAt: string, locale: string) {
+  const date = new Date(scheduledAt);
+  const dateStr = date.toLocaleDateString(locale === 'ro' ? 'ro-RO' : 'en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+  });
+  const timeStr = date.toLocaleTimeString(locale === 'ro' ? 'ro-RO' : 'en-GB', {
+    hour: '2-digit',
+    minute: '2-digit',
+  });
+  return { dateStr, timeStr };
+}
+
+export default function WaitlistStatusBanner({ status, telemedicineBooking }: WaitlistStatusBannerProps) {
   const t = useTranslations('auth.profile.waitlistStatus');
+  const locale = useLocale();
 
   if (status === 'evaluated') {
     return (
-      <motion.div
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        className="mb-8 border border-green-200 bg-green-50 p-5"
-      >
-        <div className="flex items-start gap-3">
-          <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-600" />
-          <div>
-            <p className="text-sm font-semibold text-green-900">{t('evaluatedTitle')}</p>
-            <p className="mt-1 text-sm text-green-700">{t('evaluatedDescription')}</p>
+      <>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-8 border border-green-200 bg-green-50 p-5"
+        >
+          <div className="flex items-start gap-3">
+            <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-600" />
+            <div>
+              <p className="text-sm font-semibold text-green-900">{t('evaluatedTitle')}</p>
+              <p className="mt-1 text-sm text-green-700">{t('evaluatedDescription')}</p>
+            </div>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
+
+        {telemedicineBooking && (() => {
+          const { dateStr, timeStr } = formatBookingDateTime(telemedicineBooking.scheduled_at, locale);
+          return (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.1 }}
+              className="mb-8 border border-[#0097a7]/20 bg-[#d8f0f2] p-5"
+            >
+              <div className="flex items-start gap-3">
+                <Video className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#0097a7]" />
+                <div>
+                  <p className="text-sm font-semibold text-gray-900">
+                    {t('telemedicine.title')}
+                  </p>
+                  <p className="mt-1 text-sm text-gray-700">
+                    {t('telemedicine.scheduled', {
+                      doctor: telemedicineBooking.doctor_name,
+                      date: dateStr,
+                      time: timeStr,
+                    })}
+                  </p>
+                  {telemedicineBooking.status === 'confirmed' ? (
+                    <Link
+                      href="/consultation"
+                      className="mt-3 inline-flex items-center gap-2 bg-[#0097a7] px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#00838f]"
+                    >
+                      {t('telemedicine.action')}
+                      <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                  ) : (
+                    <p className="mt-2 text-xs text-gray-500">
+                      {t('telemedicine.awaitingConfirmation')}
+                    </p>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          );
+        })()}
+      </>
     );
   }
 
