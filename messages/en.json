@@ -162,27 +162,117 @@
     "medicalRehabilitation": {
       "title": "Medical Rehabilitation",
       "subtitle": "Rebuild. Restore. Recover.",
-      "description": "Advanced rehabilitation protocols combining physiotherapy, balneology, and regenerative medicine for post-surgical, post-injury, and chronic condition recovery."
+      "description": "Advanced rehabilitation protocols combining physiotherapy, balneology, and regenerative medicine for post-surgical, post-injury, and chronic condition recovery.",
+      "page": {
+        "section1Subtitle": "Our Approach",
+        "section1Title": "Evidence-Based Recovery",
+        "section1Text": "Our medical rehabilitation programs are built on the latest clinical research, combining traditional physiotherapy techniques with cutting-edge regenerative medicine.",
+        "section1Text2": "Each treatment plan is personalised by our team of specialists, ensuring optimal recovery outcomes tailored to your specific condition and goals.",
+        "section2Subtitle": "Your Journey",
+        "section2Title": "A Path to Renewed Strength",
+        "section2Text": "From initial assessment through to discharge, our multidisciplinary team guides you through every stage of rehabilitation with expertise and compassion.",
+        "section2Text2": "Our seaside location provides the ideal environment for recovery — fresh air, natural light, and the therapeutic benefits of the Black Sea coast.",
+        "therapiesTitle": "Included Therapies",
+        "therapies": {
+          "t1": { "name": "Physiotherapy", "description": "Targeted exercises and manual therapy to restore movement and function." },
+          "t2": { "name": "Balneotherapy", "description": "Therapeutic bathing using mineral-rich waters from natural sources." },
+          "t3": { "name": "Electrotherapy", "description": "Electrical stimulation techniques to reduce pain and accelerate healing." },
+          "t4": { "name": "Kinesiotherapy", "description": "Movement-based therapy designed to improve mobility and coordination." },
+          "t5": { "name": "Massage Therapy", "description": "Therapeutic massage to relieve tension, improve circulation, and support recovery." }
+        }
+      }
     },
     "endometriosisInfertility": {
       "title": "Endometriosis & Infertility",
       "subtitle": "Understand. Nurture. Thrive.",
-      "description": "Living with endometriosis or facing fertility challenges means navigating pain, uncertainty, and often feeling unheard. Our integrative protocols combine functional medicine, physiotherapy, and balneology to help restore comfort, hormonal balance, and quality of life."
+      "description": "Living with endometriosis or facing fertility challenges means navigating pain, uncertainty, and often feeling unheard. Our integrative protocols combine functional medicine, physiotherapy, and balneology to help restore comfort, hormonal balance, and quality of life.",
+      "page": {
+        "section1Subtitle": "Understanding Your Body",
+        "section1Title": "Integrative Care for Complex Conditions",
+        "section1Text": "Endometriosis and infertility require a holistic approach that addresses both the physical symptoms and emotional wellbeing of each patient.",
+        "section1Text2": "Our protocols combine functional medicine diagnostics with evidence-based treatments, creating a comprehensive plan unique to your needs.",
+        "section2Subtitle": "Support & Healing",
+        "section2Title": "Beyond Symptom Management",
+        "section2Text": "We go beyond managing symptoms to identify root causes — working with hormonal balance, inflammation reduction, and stress management as interconnected pathways to wellness.",
+        "section2Text2": "Our compassionate team understands the emotional weight of these conditions and provides a supportive, judgement-free environment throughout your journey.",
+        "therapiesTitle": "Included Therapies",
+        "therapies": {
+          "t1": { "name": "Functional Medicine Assessment", "description": "Comprehensive diagnostic approach to uncover underlying hormonal and metabolic imbalances." },
+          "t2": { "name": "Pelvic Physiotherapy", "description": "Specialised therapy targeting pelvic floor dysfunction and pain management." },
+          "t3": { "name": "Balneotherapy", "description": "Therapeutic mineral baths to reduce inflammation and promote relaxation." },
+          "t4": { "name": "Stress Reduction Program", "description": "Guided techniques including breathing exercises and mindfulness for emotional balance." },
+          "t5": { "name": "Nutritional Counselling", "description": "Personalised dietary guidance to support hormonal health and fertility." }
+        }
+      }
     },
     "longevity": {
       "title": "Longevity",
       "subtitle": "Optimise. Regenerate. Flourish.",
-      "description": "Aging well isn't about turning back the clock — it's about giving your body the tools to thrive. Our longevity programs blend advanced diagnostics, cryotherapy, and regenerative therapies designed uniquely for you."
+      "description": "Aging well isn't about turning back the clock — it's about giving your body the tools to thrive. Our longevity programs blend advanced diagnostics, cryotherapy, and regenerative therapies designed uniquely for you.",
+      "page": {
+        "section1Subtitle": "Science of Aging Well",
+        "section1Title": "Optimise Your Biological Age",
+        "section1Text": "Our longevity programs combine advanced diagnostics with regenerative therapies to help you age on your own terms — proactively, not reactively.",
+        "section1Text2": "Through comprehensive biomarker analysis and personalised interventions, we create a roadmap for sustained vitality and peak performance.",
+        "section2Subtitle": "Regenerative Protocols",
+        "section2Title": "Unlock Your Body's Potential",
+        "section2Text": "From cryotherapy to IV nutrient therapy, our regenerative protocols are designed to enhance cellular function, reduce oxidative stress, and support your body's natural repair mechanisms.",
+        "section2Text2": "Regular monitoring and program adjustments ensure you're always progressing toward your optimal health benchmarks.",
+        "therapiesTitle": "Included Therapies",
+        "therapies": {
+          "t1": { "name": "Cryotherapy", "description": "Whole-body cold exposure to boost metabolism, reduce inflammation, and enhance recovery." },
+          "t2": { "name": "IV Nutrient Therapy", "description": "Targeted intravenous delivery of vitamins, minerals, and antioxidants." },
+          "t3": { "name": "Biomarker Analysis", "description": "Comprehensive blood and metabolic testing to track your biological age." },
+          "t4": { "name": "Hyperbaric Oxygen Therapy", "description": "Pressurised oxygen sessions to accelerate cellular regeneration." },
+          "t5": { "name": "Infrared Sauna", "description": "Deep-penetrating heat therapy for detoxification and cardiovascular health." }
+        }
+      }
     },
     "rheumatology": {
       "title": "Rheumatology",
       "subtitle": "Ease. Strengthen. Move.",
-      "description": "Specialised rheumatology programs combining balneotherapy, physiotherapy, and functional medicine to manage autoimmune and inflammatory conditions — reducing pain and restoring mobility."
+      "description": "Specialised rheumatology programs combining balneotherapy, physiotherapy, and functional medicine to manage autoimmune and inflammatory conditions — reducing pain and restoring mobility.",
+      "page": {
+        "section1Subtitle": "Living Without Limits",
+        "section1Title": "Managing Autoimmune Conditions",
+        "section1Text": "Rheumatic and autoimmune conditions demand specialised, ongoing care. Our programs combine proven balneological traditions with modern functional medicine.",
+        "section1Text2": "We focus on reducing inflammation, managing pain, and restoring mobility — so you can return to the activities that matter most.",
+        "section2Subtitle": "Natural Healing",
+        "section2Title": "The Power of Balneotherapy",
+        "section2Text": "Romania's rich balneological heritage offers unique therapeutic resources. Our programs harness mineral-rich waters, therapeutic mud, and climate therapy backed by decades of clinical evidence.",
+        "section2Text2": "Combined with physiotherapy and functional medicine, these natural treatments provide lasting relief beyond what medication alone can achieve.",
+        "therapiesTitle": "Included Therapies",
+        "therapies": {
+          "t1": { "name": "Balneotherapy", "description": "Mineral-rich therapeutic baths to reduce joint inflammation and stiffness." },
+          "t2": { "name": "Mud Therapy", "description": "Application of therapeutic mud packs for deep pain relief and improved circulation." },
+          "t3": { "name": "Physiotherapy", "description": "Guided exercises to maintain joint mobility and muscular strength." },
+          "t4": { "name": "Hydrotherapy", "description": "Water-based exercises in heated pools for low-impact joint rehabilitation." },
+          "t5": { "name": "Anti-Inflammatory Nutrition", "description": "Dietary protocols designed to reduce systemic inflammation naturally." }
+        }
+      }
     },
     "postChemotherapy": {
       "title": "Post-Chemotherapy Rehabilitation",
       "subtitle": "Support. Recover. Heal.",
-      "description": "Compassionate integrative care designed to support patients after chemotherapy — managing side effects, restoring vitality, and nurturing recovery."
+      "description": "Compassionate integrative care designed to support patients after chemotherapy — managing side effects, restoring vitality, and nurturing recovery.",
+      "page": {
+        "section1Subtitle": "Recovery After Treatment",
+        "section1Title": "Restoring Vitality",
+        "section1Text": "The journey doesn't end with chemotherapy. Our post-treatment rehabilitation focuses on rebuilding strength, managing lingering side effects, and supporting your body's return to balance.",
+        "section1Text2": "Each program is carefully adapted to your treatment history and current condition, ensuring a safe and effective path to renewed energy.",
+        "section2Subtitle": "Compassionate Care",
+        "section2Title": "Healing Body and Mind",
+        "section2Text": "Recovery from chemotherapy affects every aspect of wellbeing. Our integrative approach addresses physical fatigue, immune function, and emotional resilience as interconnected elements of healing.",
+        "section2Text2": "In a peaceful seaside setting, surrounded by nature and supported by experienced professionals, you'll find the space to truly recover.",
+        "therapiesTitle": "Included Therapies",
+        "therapies": {
+          "t1": { "name": "Immune Support Therapy", "description": "Targeted protocols to rebuild immune function after chemotherapy." },
+          "t2": { "name": "Gentle Physiotherapy", "description": "Low-intensity exercises adapted to post-treatment energy levels." },
+          "t3": { "name": "Nutritional Rehabilitation", "description": "Dietary planning focused on restoring nutrient levels and digestive health." },
+          "t4": { "name": "Relaxation Therapy", "description": "Guided relaxation and breathing techniques for stress and anxiety management." },
+          "t5": { "name": "Lymphatic Drainage", "description": "Gentle massage technique to reduce swelling and support lymphatic circulation." }
+        }
+      }
     }
   },
   "buildData": {

@@ -170,27 +170,117 @@
     "medicalRehabilitation": {
       "title": "Recuperare Medicală",
       "subtitle": "Reconstruiește. Restaurează. Recuperează.",
-      "description": "Protocoale avansate de reabilitare care combină fizioterapia, balneologia și medicina regenerativă pentru recuperarea post-chirurgicală, post-traumatică și a afecțiunilor cronice."
+      "description": "Protocoale avansate de reabilitare care combină fizioterapia, balneologia și medicina regenerativă pentru recuperarea post-chirurgicală, post-traumatică și a afecțiunilor cronice.",
+      "page": {
+        "section1Subtitle": "Abordarea Noastră",
+        "section1Title": "Recuperare Bazată pe Dovezi",
+        "section1Text": "Programele noastre de recuperare medicală sunt construite pe cele mai recente cercetări clinice, combinând tehnici tradiționale de fizioterapie cu medicina regenerativă de ultimă generație.",
+        "section1Text2": "Fiecare plan de tratament este personalizat de echipa noastră de specialiști, asigurând rezultate optime de recuperare adaptate condiției și obiectivelor dumneavoastră.",
+        "section2Subtitle": "Călătoria Ta",
+        "section2Title": "Un Drum Către Forță Reînnoită",
+        "section2Text": "De la evaluarea inițială până la externare, echipa noastră multidisciplinară vă ghidează prin fiecare etapă a recuperării cu expertiză și compasiune.",
+        "section2Text2": "Locația noastră la malul mării oferă mediul ideal pentru recuperare — aer proaspăt, lumină naturală și beneficiile terapeutice ale coastei Mării Negre.",
+        "therapiesTitle": "Terapii Incluse",
+        "therapies": {
+          "t1": { "name": "Fizioterapie", "description": "Exerciții țintite și terapie manuală pentru restabilirea mișcării și funcției." },
+          "t2": { "name": "Balneoterapie", "description": "Băi terapeutice cu ape minerale din surse naturale." },
+          "t3": { "name": "Electroterapie", "description": "Tehnici de stimulare electrică pentru reducerea durerii și accelerarea vindecării." },
+          "t4": { "name": "Kinetoterapie", "description": "Terapie bazată pe mișcare pentru îmbunătățirea mobilității și coordonării." },
+          "t5": { "name": "Masaj Terapeutic", "description": "Masaj terapeutic pentru relaxarea tensiunilor, îmbunătățirea circulației și susținerea recuperării." }
+        }
+      }
     },
     "endometriosisInfertility": {
-      "title": "Endometrioză și Infertilitate",
+      "title": "Endometrioză & Infertilitate",
       "subtitle": "Înțelege. Hrănește. Prosperă.",
-      "description": "A trăi cu endometrioză sau a te confrunta cu provocări de fertilitate înseamnă a naviga prin durere, incertitudine și adesea sentimentul că nu ești ascultată. Protocoalele noastre integrative combină medicina funcțională, fizioterapia și balneologia pentru a-ți reda confortul, echilibrul hormonal și calitatea vieții."
+      "description": "A trăi cu endometrioză sau a te confrunta cu provocări de fertilitate înseamnă a naviga prin durere, incertitudine și adesea sentimentul că nu ești ascultată. Protocoalele noastre integrative combină medicina funcțională, fizioterapia și balneologia pentru a-ți reda confortul, echilibrul hormonal și calitatea vieții.",
+      "page": {
+        "section1Subtitle": "Înțelegerea Corpului Tău",
+        "section1Title": "Îngrijire Integrativă pentru Afecțiuni Complexe",
+        "section1Text": "Endometrioza și infertilitatea necesită o abordare holistică ce adresează atât simptomele fizice, cât și starea emoțională a fiecărei paciente.",
+        "section1Text2": "Protocoalele noastre combină diagnosticarea prin medicină funcțională cu tratamente bazate pe dovezi, creând un plan cuprinzător unic pentru nevoile dumneavoastră.",
+        "section2Subtitle": "Suport și Vindecare",
+        "section2Title": "Dincolo de Gestionarea Simptomelor",
+        "section2Text": "Mergem dincolo de gestionarea simptomelor pentru a identifica cauzele profunde — lucrând cu echilibrul hormonal, reducerea inflamației și gestionarea stresului ca și căi interconectate către bunăstare.",
+        "section2Text2": "Echipa noastră compătimitoare înțelege greutatea emoțională a acestor afecțiuni și oferă un mediu de susținere, fără judecăți, pe tot parcursul călătoriei dumneavoastră.",
+        "therapiesTitle": "Terapii Incluse",
+        "therapies": {
+          "t1": { "name": "Evaluare de Medicină Funcțională", "description": "Abordare diagnostică cuprinzătoare pentru descoperirea dezechilibrelor hormonale și metabolice." },
+          "t2": { "name": "Fizioterapie Pelvină", "description": "Terapie specializată vizând disfuncția planșeului pelvin și gestionarea durerii." },
+          "t3": { "name": "Balneoterapie", "description": "Băi terapeutice cu minerale pentru reducerea inflamației și promovarea relaxării." },
+          "t4": { "name": "Program de Reducere a Stresului", "description": "Tehnici ghidate incluzând exerciții de respirație și mindfulness pentru echilibru emoțional." },
+          "t5": { "name": "Consiliere Nutrițională", "description": "Ghidare dietetică personalizată pentru susținerea sănătății hormonale și a fertilității." }
+        }
+      }
     },
     "longevity": {
       "title": "Longevitate",
       "subtitle": "Optimizează. Regenerează. Înflorește.",
-      "description": "A îmbătrâni frumos nu înseamnă a întoarce timpul înapoi — înseamnă a oferi corpului tău instrumentele necesare pentru a prospera. Programele noastre de longevitate îmbină diagnosticarea avansată, crioterapia și terapiile regenerative, proiectate unic pentru tine."
+      "description": "A îmbătrâni frumos nu înseamnă a întoarce timpul înapoi — înseamnă a oferi corpului tău instrumentele necesare pentru a prospera. Programele noastre de longevitate îmbină diagnosticarea avansată, crioterapia și terapiile regenerative, proiectate unic pentru tine.",
+      "page": {
+        "section1Subtitle": "Știința Îmbătrânirii Sănătoase",
+        "section1Title": "Optimizează-ți Vârsta Biologică",
+        "section1Text": "Programele noastre de longevitate combină diagnosticarea avansată cu terapii regenerative pentru a vă ajuta să îmbătrâniți în propriii termeni — proactiv, nu reactiv.",
+        "section1Text2": "Prin analiza cuprinzătoare a biomarkerilor și intervenții personalizate, creăm o foaie de parcurs pentru vitalitate susținută și performanță optimă.",
+        "section2Subtitle": "Protocoale Regenerative",
+        "section2Title": "Deblochează Potențialul Corpului Tău",
+        "section2Text": "De la crioterapie la terapia cu nutrienți IV, protocoalele noastre regenerative sunt concepute pentru a îmbunătăți funcția celulară, a reduce stresul oxidativ și a susține mecanismele naturale de reparare ale corpului.",
+        "section2Text2": "Monitorizarea regulată și ajustările programului asigură că progresați mereu către parametrii optimi de sănătate.",
+        "therapiesTitle": "Terapii Incluse",
+        "therapies": {
+          "t1": { "name": "Crioterapie", "description": "Expunere la frig a întregului corp pentru stimularea metabolismului, reducerea inflamației și îmbunătățirea recuperării." },
+          "t2": { "name": "Terapie cu Nutrienți IV", "description": "Administrare intravenoasă țintită de vitamine, minerale și antioxidanți." },
+          "t3": { "name": "Analiză Biomarkeri", "description": "Testare cuprinzătoare a sângelui și metabolismului pentru urmărirea vârstei biologice." },
+          "t4": { "name": "Terapie cu Oxigen Hiperbaric", "description": "Ședințe de oxigen sub presiune pentru accelerarea regenerării celulare." },
+          "t5": { "name": "Saună cu Infraroșu", "description": "Terapie cu căldură profundă pentru detoxifiere și sănătate cardiovasculară." }
+        }
+      }
     },
     "rheumatology": {
       "title": "Reumatologie",
       "subtitle": "Ameliorează. Întărește. Mișcă.",
-      "description": "Programe specializate de reumatologie care combină balneoterapia, fizioterapia și medicina funcțională pentru gestionarea afecțiunilor autoimune și inflamatorii — reducând durerea și restabilind mobilitatea."
+      "description": "Programe specializate de reumatologie care combină balneoterapia, fizioterapia și medicina funcțională pentru gestionarea afecțiunilor autoimune și inflamatorii — reducând durerea și restabilind mobilitatea.",
+      "page": {
+        "section1Subtitle": "Viață Fără Limite",
+        "section1Title": "Gestionarea Afecțiunilor Autoimune",
+        "section1Text": "Afecțiunile reumatice și autoimune necesită îngrijire specializată și continuă. Programele noastre combină tradițiile balneologice dovedite cu medicina funcțională modernă.",
+        "section1Text2": "Ne concentrăm pe reducerea inflamației, gestionarea durerii și restabilirea mobilității — pentru a vă putea întoarce la activitățile care contează cel mai mult.",
+        "section2Subtitle": "Vindecare Naturală",
+        "section2Title": "Puterea Balneoterapiei",
+        "section2Text": "Bogatul patrimoniu balneologic al României oferă resurse terapeutice unice. Programele noastre valorifică apele minerale, nămolul terapeutic și climatoterapia, susținute de decenii de dovezi clinice.",
+        "section2Text2": "Combinate cu fizioterapia și medicina funcțională, aceste tratamente naturale oferă ameliorare de durată dincolo de ceea ce poate realiza doar medicația.",
+        "therapiesTitle": "Terapii Incluse",
+        "therapies": {
+          "t1": { "name": "Balneoterapie", "description": "Băi terapeutice cu minerale pentru reducerea inflamației articulare și a rigidității." },
+          "t2": { "name": "Terapie cu Nămol", "description": "Aplicarea de cataplasme cu nămol terapeutic pentru ameliorarea profundă a durerii și îmbunătățirea circulației." },
+          "t3": { "name": "Fizioterapie", "description": "Exerciții ghidate pentru menținerea mobilității articulare și a forței musculare." },
+          "t4": { "name": "Hidroterapie", "description": "Exerciții în apă în piscine încălzite pentru reabilitare articulară cu impact redus." },
+          "t5": { "name": "Nutriție Antiinflamatoare", "description": "Protocoale dietetice concepute pentru reducerea inflamației sistemice în mod natural." }
+        }
+      }
     },
     "postChemotherapy": {
-      "title": "Reabilitare Post-Chimioterapie",
+      "title": "Reabilitare Post Chimioterapie",
       "subtitle": "Susținere. Reabilitare. Vindecare.",
-      "description": "Îngrijire integrativă plină de compasiune, concepută să sprijine pacienții după chimioterapie — gestionând efectele secundare, restaurând vitalitatea și susținând recuperarea."
+      "description": "Îngrijire integrativă plină de compasiune, concepută să sprijine pacienții după chimioterapie — gestionând efectele secundare, restaurând vitalitatea și susținând recuperarea.",
+      "page": {
+        "section1Subtitle": "Recuperare După Tratament",
+        "section1Title": "Restabilirea Vitalității",
+        "section1Text": "Călătoria nu se termină odată cu chimioterapia. Reabilitarea noastră post-tratament se concentrează pe reconstruirea forței, gestionarea efectelor secundare persistente și susținerea întoarcerii corpului la echilibru.",
+        "section1Text2": "Fiecare program este adaptat cu grijă la istoricul tratamentului și condiția actuală, asigurând o cale sigură și eficientă către energie reînnoită.",
+        "section2Subtitle": "Îngrijire Plină de Compasiune",
+        "section2Title": "Vindecarea Corpului și a Minții",
+        "section2Text": "Recuperarea după chimioterapie afectează fiecare aspect al bunăstării. Abordarea noastră integrativă adresează oboseala fizică, funcția imunitară și reziliența emoțională ca elemente interconectate ale vindecării.",
+        "section2Text2": "Într-un cadru liniștit la malul mării, înconjurat de natură și susținut de profesioniști experimentați, veți găsi spațiul pentru a vă recupera cu adevărat.",
+        "therapiesTitle": "Terapii Incluse",
+        "therapies": {
+          "t1": { "name": "Terapie de Susținere Imunitară", "description": "Protocoale țintite pentru reconstruirea funcției imunitare după chimioterapie." },
+          "t2": { "name": "Fizioterapie Blândă", "description": "Exerciții de intensitate redusă adaptate nivelului de energie post-tratament." },
+          "t3": { "name": "Reabilitare Nutrițională", "description": "Planificare dietetică concentrată pe restabilirea nivelurilor de nutrienți și a sănătății digestive." },
+          "t4": { "name": "Terapie de Relaxare", "description": "Relaxare ghidată și tehnici de respirație pentru gestionarea stresului și anxietății." },
+          "t5": { "name": "Drenaj Limfatic", "description": "Tehnică de masaj blând pentru reducerea umflăturilor și susținerea circulației limfatice." }
+        }
+      }
     }
   },
   "buildData": {
