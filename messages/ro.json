@@ -6,7 +6,7 @@
     "getDirections": "Indicatii",
     "backHome": "Înapoi Acasă",
     "comingSoon": "În curând",
-    "allTherapies": "Toate Terapiile",
+    "allPrograms": "Toate Programele",
     "requestStay": "Solicită o Programare"
   },
   "notFound": {
@@ -15,10 +15,10 @@
     "code": "404"
   },
   "pages": {
-    "therapies": {
-      "title": "Terapiile Noastre",
-      "subtitle": "Explorează tratamentele noastre",
-      "description": "Descoperă gama noastră completă de terapii concepute pentru a restaura, regenera și optimiza sănătatea ta."
+    "medicalPrograms": {
+      "title": "Programe Medicale",
+      "subtitle": "Programele noastre specializate",
+      "description": "Descoperă gama noastră cuprinzătoare de programe medicale menite să restaureze, regenereze și optimizeze sănătatea ta."
     },
     "contact": {
       "title": "Contactează-ne",
@@ -122,7 +122,7 @@
     }
   },
 "nav": {
-    "therapies": "Terapii",
+    "medicalPrograms": "Programe Medicale",
     "patientGuide": "Ghidul Pacientului",
     "contact": "Contact",
     "about": "Despre Noi",
@@ -134,7 +134,7 @@
   "hero": {
     "title1": "Redescoperă echilibrul.",
     "title2": "În ritmul tău.",
-    "description": "Programe personalizate, expertiză în Medicină Fizică și Balneologie, tehnologii avansate și grijă autentică pentru oameni."
+    "description": "Terapii integrate într-o experiență perzonalizată."
   },
   "dataPoints": {
     "title1": "Urmărește milioane de puncte de date.",
@@ -166,20 +166,32 @@
     "missionDescription-2": "Misiunea noastră este de a susține prin protocoale avansate de recuperare, tehnologii inovatoare și expertiză în Balneologie și Medicină Fizică.",
     "missionDescription-3": "Nu tratăm doar simptomele, ci identificăm și corectăm cauzele profunde ale afecțiunilor cronice, pentru rezultate durabile și stare de bine generală."
   },
-  "endometriosis": {
-    "title": "Endometrioză",
-    "subtitle": "Înțelege. Gestionează. Prosperă.",
-    "description": "A trăi cu endometrioză înseamnă a naviga prin durere, incertitudine și adesea sentimentul că nu ești ascultată. Protocoalele noastre integrative combină medicina funcțională, fizioterapia și balneologia pentru a-ți reda confortul și calitatea vieții."
-  },
-  "longevity": {
-    "title": "Longevitate",
-    "subtitle": "Optimizează. Regenerează. Înflorește.",
-    "description": "A îmbătrâni frumos nu înseamnă a întoarce timpul înapoi — înseamnă a oferi corpului tău instrumentele necesare pentru a prospera. Programele noastre de longevitate îmbină diagnosticarea avansată, crioterapia și terapiile regenerative, proiectate unic pentru tine."
-  },
-  "medicalRehabilitation": {
-    "title": "Recuperare Medicală",
-    "subtitle": "Reconstruiește. Restaurează. Recuperează.",
-    "description": "Protocoale avansate de reabilitare care combină fizioterapia, balneologia și medicina regenerativă pentru recuperarea post-chirurgicală, post-traumatică și a afecțiunilor cronice."
+  "medicalPrograms": {
+    "medicalRehabilitation": {
+      "title": "Recuperare Medicală",
+      "subtitle": "Reconstruiește. Restaurează. Recuperează.",
+      "description": "Protocoale avansate de reabilitare care combină fizioterapia, balneologia și medicina regenerativă pentru recuperarea post-chirurgicală, post-traumatică și a afecțiunilor cronice."
+    },
+    "endometriosisInfertility": {
+      "title": "Endometrioză și Infertilitate",
+      "subtitle": "Înțelege. Hrănește. Prosperă.",
+      "description": "A trăi cu endometrioză sau a te confrunta cu provocări de fertilitate înseamnă a naviga prin durere, incertitudine și adesea sentimentul că nu ești ascultată. Protocoalele noastre integrative combină medicina funcțională, fizioterapia și balneologia pentru a-ți reda confortul, echilibrul hormonal și calitatea vieții."
+    },
+    "longevity": {
+      "title": "Longevitate",
+      "subtitle": "Optimizează. Regenerează. Înflorește.",
+      "description": "A îmbătrâni frumos nu înseamnă a întoarce timpul înapoi — înseamnă a oferi corpului tău instrumentele necesare pentru a prospera. Programele noastre de longevitate îmbină diagnosticarea avansată, crioterapia și terapiile regenerative, proiectate unic pentru tine."
+    },
+    "rheumatology": {
+      "title": "Reumatologie",
+      "subtitle": "Ameliorează. Întărește. Mișcă.",
+      "description": "Programe specializate de reumatologie care combină balneoterapia, fizioterapia și medicina funcțională pentru gestionarea afecțiunilor autoimune și inflamatorii — reducând durerea și restabilind mobilitatea."
+    },
+    "postChemotherapy": {
+      "title": "Reabilitare Post-Chimioterapie",
+      "subtitle": "Susținere. Reabilitare. Vindecare.",
+      "description": "Îngrijire integrativă plină de compasiune, concepută să sprijine pacienții după chimioterapie — gestionând efectele secundare, restaurând vitalitatea și susținând recuperarea."
+    }
   },
   "buildData": {
     "title1": "Construiește pe baza datelor tale.",
@@ -203,8 +215,8 @@
     "description": "Descoperă facilitățile noastre de clasă mondială, proiectate pentru călătoria ta completă de wellness, de la relaxare la recuperare.",
     "categories": {
       "wellness": "Wellness",
-      "recovery": "Recuperare",
-      "therapy": "Terapie",
+      "recovery": "Relaxare",
+      "therapy": "Events",
       "dining": "Gastronomie"
     },
     "wellness": {
@@ -397,25 +409,10 @@
     }
   },
   "therapies": {
-    "infertility": {
-      "title": "Infertilitate",
-      "subtitle": "Echilibrează. Hrănește. Concepe.",
-      "description": "Drumul către a deveni părinte poate fi copleșitor. Programele noastre de suport pentru fertilitate abordează echilibrul hormonal, reducerea stresului și bunăstarea fizică prin medicină integrativă — creând un mediu plin de grijă pentru corpul și mintea ta."
-    },
-    "rheumatology": {
-      "title": "Reumatologie",
-      "subtitle": "Ameliorează. Întărește. Mișcă.",
-      "description": "Programe specializate de reumatologie care combină balneoterapia, fizioterapia și medicina funcțională pentru gestionarea afecțiunilor autoimune și inflamatorii — reducând durerea și restabilind mobilitatea."
-    },
     "wellness": {
       "title": "Wellness & MedSpa",
       "subtitle": "Relaxare. Reîntinerire. Reînnoire.",
       "description": "Experiențe premium de wellness care îmbină masajul terapeutic, hidroterapia și tratamentele estetice într-un cadru liniștit la malul mării."
-    },
-    "postChemotherapy": {
-      "title": "Reabilitare Post-Chimioterapie",
-      "subtitle": "Susținere. Reabilitare. Vindecare.",
-      "description": "Îngrijire integrativă plină de compasiune, concepută să sprijine pacienții după chimioterapie — gestionând efectele secundare, restaurând vitalitatea și susținând recuperarea."
     }
   },
   "waitlist": {

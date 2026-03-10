@@ -6,7 +6,7 @@
     "getDirections": "Get Directions",
     "backHome": "Back Home",
     "comingSoon": "Coming Soon",
-    "allTherapies": "All Therapies",
+    "allPrograms": "All Programs",
     "requestStay": "Request a Stay"
   },
   "notFound": {
@@ -15,10 +15,10 @@
     "code": "404"
   },
   "pages": {
-    "therapies": {
-      "title": "Our Therapies",
-      "subtitle": "Explore our treatments",
-      "description": "Discover our comprehensive range of therapies designed to restore, rejuvenate, and optimise your health."
+    "medicalPrograms": {
+      "title": "Medical Programs",
+      "subtitle": "Our specialized programs",
+      "description": "Discover our comprehensive range of medical programs designed to restore, rejuvenate, and optimise your health."
     },
     "contact": {
       "title": "Contact Us",
@@ -122,7 +122,7 @@
     }
   },
 "nav": {
-    "therapies": "Therapies",
+    "medicalPrograms": "Medical Programs",
     "patientGuide": "Patient Guide",
     "contact": "Contact",
     "about": "About Us",
@@ -158,20 +158,32 @@
     "visionDescription": "By equipping our doctors with the best tools to take care of tracking your health, our doctor led model of care provides a better experience for everyone.",
     "missionTitle": "Our Mission"
   },
-  "endometriosis": {
-    "title": "Endometriosis",
-    "subtitle": "Understand. Manage. Thrive.",
-    "description": "Living with endometriosis means navigating pain, uncertainty, and often feeling unheard. Our integrative protocols combine functional medicine, physiotherapy, and balneology to help restore comfort and quality of life."
-  },
-  "longevity": {
-    "title": "Longevity",
-    "subtitle": "Optimise. Regenerate. Flourish.",
-    "description": "Aging well isn't about turning back the clock — it's about giving your body the tools to thrive. Our longevity programs blend advanced diagnostics, cryotherapy, and regenerative therapies designed uniquely for you."
-  },
-  "medicalRehabilitation": {
-    "title": "Medical Rehabilitation",
-    "subtitle": "Rebuild. Restore. Recover.",
-    "description": "Advanced rehabilitation protocols combining physiotherapy, balneology, and regenerative medicine for post-surgical, post-injury, and chronic condition recovery."
+  "medicalPrograms": {
+    "medicalRehabilitation": {
+      "title": "Medical Rehabilitation",
+      "subtitle": "Rebuild. Restore. Recover.",
+      "description": "Advanced rehabilitation protocols combining physiotherapy, balneology, and regenerative medicine for post-surgical, post-injury, and chronic condition recovery."
+    },
+    "endometriosisInfertility": {
+      "title": "Endometriosis & Infertility",
+      "subtitle": "Understand. Nurture. Thrive.",
+      "description": "Living with endometriosis or facing fertility challenges means navigating pain, uncertainty, and often feeling unheard. Our integrative protocols combine functional medicine, physiotherapy, and balneology to help restore comfort, hormonal balance, and quality of life."
+    },
+    "longevity": {
+      "title": "Longevity",
+      "subtitle": "Optimise. Regenerate. Flourish.",
+      "description": "Aging well isn't about turning back the clock — it's about giving your body the tools to thrive. Our longevity programs blend advanced diagnostics, cryotherapy, and regenerative therapies designed uniquely for you."
+    },
+    "rheumatology": {
+      "title": "Rheumatology",
+      "subtitle": "Ease. Strengthen. Move.",
+      "description": "Specialised rheumatology programs combining balneotherapy, physiotherapy, and functional medicine to manage autoimmune and inflammatory conditions — reducing pain and restoring mobility."
+    },
+    "postChemotherapy": {
+      "title": "Post-Chemotherapy Rehabilitation",
+      "subtitle": "Support. Recover. Heal.",
+      "description": "Compassionate integrative care designed to support patients after chemotherapy — managing side effects, restoring vitality, and nurturing recovery."
+    }
   },
   "buildData": {
     "title1": "Build upon your data.",
@@ -389,25 +401,10 @@
     }
   },
   "therapies": {
-    "infertility": {
-      "title": "Infertility",
-      "subtitle": "Balance. Nurture. Conceive.",
-      "description": "The path to parenthood can feel overwhelming. Our fertility support programs address hormonal balance, stress reduction, and physical wellness through evidence-based integrative medicine — creating a nurturing environment for your body and mind."
-    },
-    "rheumatology": {
-      "title": "Rheumatology",
-      "subtitle": "Ease. Strengthen. Move.",
-      "description": "Specialised rheumatology programs combining balneotherapy, physiotherapy, and functional medicine to manage autoimmune and inflammatory conditions — reducing pain and restoring mobility."
-    },
     "wellness": {
       "title": "Wellness & MedSpa",
       "subtitle": "Relax. Rejuvenate. Renew.",
       "description": "Premium wellness experiences blending therapeutic massage, hydrotherapy, and aesthetic treatments in a serene seaside setting."
-    },
-    "postChemotherapy": {
-      "title": "Post-Chemotherapy Rehabilitation",
-      "subtitle": "Support. Recover. Heal.",
-      "description": "Compassionate integrative care designed to support patients after chemotherapy — managing side effects, restoring vitality, and nurturing recovery."
     }
   },
   "waitlist": {
