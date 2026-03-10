@@ -4,9 +4,8 @@ import TherapyPageClient from './therapy-page-client';
 
 const validSlugs = [
   'medical-rehabilitation',
-  'endometriosis',
+  'endometriosis-infertility',
   'longevity',
-  'infertility',
   'rheumatology',
   'wellness',
   'post-chemotherapy',
@@ -18,7 +17,7 @@ export function generateStaticParams() {
   return validSlugs.map((slug) => ({ slug }));
 }
 
-export default async function TherapyPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
+export default async function MedicalProgramPage({ params }: { params: Promise<{ locale: string; slug: string }> }) {
   const { locale, slug } = await params;
   setRequestLocale(locale);
 

@@ -7,29 +7,24 @@ import TransitionLink from '@/components/layout/transition-link';
 
 const therapyMap: Record<string, { translationNamespace: string; translationKey: string; bg: string }> = {
   'medical-rehabilitation': {
-    translationNamespace: 'medicalRehabilitation',
-    translationKey: '',
+    translationNamespace: 'medicalPrograms',
+    translationKey: 'medicalRehabilitation',
     bg: 'bg-[#D2B88B]',
   },
-  endometriosis: {
-    translationNamespace: 'endometriosis',
-    translationKey: '',
+  'endometriosis-infertility': {
+    translationNamespace: 'medicalPrograms',
+    translationKey: 'endometriosisInfertility',
     bg: 'bg-[#D2B88B]',
   },
   longevity: {
-    translationNamespace: 'longevity',
-    translationKey: '',
-    bg: 'bg-[#0097a7]',
-  },
-  infertility: {
-    translationNamespace: 'therapies',
-    translationKey: 'infertility',
+    translationNamespace: 'medicalPrograms',
+    translationKey: 'longevity',
     bg: 'bg-[#0097a7]',
   },
   rheumatology: {
-    translationNamespace: 'therapies',
+    translationNamespace: 'medicalPrograms',
     translationKey: 'rheumatology',
-    bg: 'bg-[#BCA390]',
+    bg: 'bg-[#8FA3A8]',
   },
   wellness: {
     translationNamespace: 'therapies',
@@ -37,13 +32,13 @@ const therapyMap: Record<string, { translationNamespace: string; translationKey:
     bg: 'bg-[#BCA390]',
   },
   'post-chemotherapy': {
-    translationNamespace: 'therapies',
+    translationNamespace: 'medicalPrograms',
     translationKey: 'postChemotherapy',
-    bg: 'bg-[#c5d5d8]',
+    bg: 'bg-[#BCA390]',
   },
 };
 
-const darkTextSlugs = new Set(['wellness', 'post-chemotherapy']);
+const darkTextSlugs = new Set(['wellness']);
 
 export default function TherapyPageClient({ slug }: { slug: string }) {
   const therapy = therapyMap[slug];
@@ -128,11 +123,11 @@ export default function TherapyPageClient({ slug }: { slug: string }) {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <TransitionLink
-              href="/therapies"
+              href="/medical-programs"
               className="inline-flex items-center gap-2 bg-gray-900 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-gray-800"
             >
               <ArrowLeft className="h-4 w-4" />
-              {tCommon('allTherapies')}
+              {tCommon('allPrograms')}
             </TransitionLink>
 
             <TransitionLink
