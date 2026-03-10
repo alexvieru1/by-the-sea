@@ -67,10 +67,7 @@ export default function Header() {
   // Observe sections with .light-header-section to toggle light (white) navbar
   useEffect(() => {
     const sections = document.querySelectorAll(".light-header-section");
-    if (sections.length === 0) {
-      setIsLightMode(false);
-      return;
-    }
+    if (sections.length === 0) return;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -124,10 +121,10 @@ export default function Header() {
 
   const navLinks = [
     { href: "/about", label: t("about") },
-    { href: "/therapies", label: t("therapies") },
+    { href: "/medical-programs", label: t("medicalPrograms") },
     { href: "/patient-guide", label: t("patientGuide") },
-    { href: "/gallery", label: t("gallery") },
     { href: "/other-info", label: t("otherInfo") },
+    { href: "/gallery", label: t("gallery") },
     { href: "/contact", label: t("contact") },
   ];
 
