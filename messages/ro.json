@@ -20,6 +20,11 @@
       "subtitle": "Programele noastre specializate",
       "description": "Descoperă gama noastră cuprinzătoare de programe medicale menite să restaureze, regenereze și optimizeze sănătatea ta."
     },
+    "therapies": {
+      "title": "Terapiile Noastre",
+      "subtitle": "Tratamente terapeutice",
+      "description": "Explorează gama noastră cuprinzătoare de tratamente terapeutice, fiecare conceput pentru a-ți susține călătoria către o sănătate optimă."
+    },
     "contact": {
       "title": "Contactează-ne",
       "subtitle": "Suntem aici pentru tine",
@@ -122,7 +127,9 @@
     }
   },
 "nav": {
+    "services": "Servicii",
     "medicalPrograms": "Programe Medicale",
+    "therapies": "Terapii",
     "patientGuide": "Ghidul Pacientului",
     "contact": "Contact",
     "about": "Despre Noi",
@@ -181,13 +188,7 @@
         "section2Text": "De la evaluarea inițială până la externare, echipa noastră multidisciplinară vă ghidează prin fiecare etapă a recuperării cu expertiză și compasiune.",
         "section2Text2": "Locația noastră la malul mării oferă mediul ideal pentru recuperare — aer proaspăt, lumină naturală și beneficiile terapeutice ale coastei Mării Negre.",
         "therapiesTitle": "Terapii Incluse",
-        "therapies": {
-          "t1": { "name": "Fizioterapie", "description": "Exerciții țintite și terapie manuală pentru restabilirea mișcării și funcției." },
-          "t2": { "name": "Balneoterapie", "description": "Băi terapeutice cu ape minerale din surse naturale." },
-          "t3": { "name": "Electroterapie", "description": "Tehnici de stimulare electrică pentru reducerea durerii și accelerarea vindecării." },
-          "t4": { "name": "Kinetoterapie", "description": "Terapie bazată pe mișcare pentru îmbunătățirea mobilității și coordonării." },
-          "t5": { "name": "Masaj Terapeutic", "description": "Masaj terapeutic pentru relaxarea tensiunilor, îmbunătățirea circulației și susținerea recuperării." }
-        }
+        "therapyIds": "physiotherapy,balneotherapy,electrotherapy,kinesiotherapy,massageTherapy"
       }
     },
     "endometriosisInfertility": {
@@ -204,13 +205,7 @@
         "section2Text": "Mergem dincolo de gestionarea simptomelor pentru a identifica cauzele profunde — lucrând cu echilibrul hormonal, reducerea inflamației și gestionarea stresului ca și căi interconectate către bunăstare.",
         "section2Text2": "Echipa noastră compătimitoare înțelege greutatea emoțională a acestor afecțiuni și oferă un mediu de susținere, fără judecăți, pe tot parcursul călătoriei dumneavoastră.",
         "therapiesTitle": "Terapii Incluse",
-        "therapies": {
-          "t1": { "name": "Evaluare de Medicină Funcțională", "description": "Abordare diagnostică cuprinzătoare pentru descoperirea dezechilibrelor hormonale și metabolice." },
-          "t2": { "name": "Fizioterapie Pelvină", "description": "Terapie specializată vizând disfuncția planșeului pelvin și gestionarea durerii." },
-          "t3": { "name": "Balneoterapie", "description": "Băi terapeutice cu minerale pentru reducerea inflamației și promovarea relaxării." },
-          "t4": { "name": "Program de Reducere a Stresului", "description": "Tehnici ghidate incluzând exerciții de respirație și mindfulness pentru echilibru emoțional." },
-          "t5": { "name": "Consiliere Nutrițională", "description": "Ghidare dietetică personalizată pentru susținerea sănătății hormonale și a fertilității." }
-        }
+        "therapyIds": "functionalMedicineAssessment,pelvicPhysiotherapy,balneotherapy,stressReductionProgram,nutritionalCounselling"
       }
     },
     "longevity": {
@@ -227,13 +222,7 @@
         "section2Text": "De la crioterapie la terapia cu nutrienți IV, protocoalele noastre regenerative sunt concepute pentru a îmbunătăți funcția celulară, a reduce stresul oxidativ și a susține mecanismele naturale de reparare ale corpului.",
         "section2Text2": "Monitorizarea regulată și ajustările programului asigură că progresați mereu către parametrii optimi de sănătate.",
         "therapiesTitle": "Terapii Incluse",
-        "therapies": {
-          "t1": { "name": "Crioterapie", "description": "Expunere la frig a întregului corp pentru stimularea metabolismului, reducerea inflamației și îmbunătățirea recuperării." },
-          "t2": { "name": "Terapie cu Nutrienți IV", "description": "Administrare intravenoasă țintită de vitamine, minerale și antioxidanți." },
-          "t3": { "name": "Analiză Biomarkeri", "description": "Testare cuprinzătoare a sângelui și metabolismului pentru urmărirea vârstei biologice." },
-          "t4": { "name": "Terapie cu Oxigen Hiperbaric", "description": "Ședințe de oxigen sub presiune pentru accelerarea regenerării celulare." },
-          "t5": { "name": "Saună cu Infraroșu", "description": "Terapie cu căldură profundă pentru detoxifiere și sănătate cardiovasculară." }
-        }
+        "therapyIds": "cryotherapy,ivNutrientTherapy,biomarkerAnalysis,hyperbaricOxygenTherapy,infraredSauna"
       }
     },
     "rheumatology": {
@@ -250,13 +239,7 @@
         "section2Text": "Bogatul patrimoniu balneologic al României oferă resurse terapeutice unice. Programele noastre valorifică apele minerale, nămolul terapeutic și climatoterapia, susținute de decenii de dovezi clinice.",
         "section2Text2": "Combinate cu fizioterapia și medicina funcțională, aceste tratamente naturale oferă ameliorare de durată dincolo de ceea ce poate realiza doar medicația.",
         "therapiesTitle": "Terapii Incluse",
-        "therapies": {
-          "t1": { "name": "Balneoterapie", "description": "Băi terapeutice cu minerale pentru reducerea inflamației articulare și a rigidității." },
-          "t2": { "name": "Terapie cu Nămol", "description": "Aplicarea de cataplasme cu nămol terapeutic pentru ameliorarea profundă a durerii și îmbunătățirea circulației." },
-          "t3": { "name": "Fizioterapie", "description": "Exerciții ghidate pentru menținerea mobilității articulare și a forței musculare." },
-          "t4": { "name": "Hidroterapie", "description": "Exerciții în apă în piscine încălzite pentru reabilitare articulară cu impact redus." },
-          "t5": { "name": "Nutriție Antiinflamatoare", "description": "Protocoale dietetice concepute pentru reducerea inflamației sistemice în mod natural." }
-        }
+        "therapyIds": "balneotherapy,mudTherapy,physiotherapy,hydrotherapy,antiInflammatoryNutrition"
       }
     },
     "postChemotherapy": {
@@ -273,13 +256,7 @@
         "section2Text": "Recuperarea după chimioterapie afectează fiecare aspect al bunăstării. Abordarea noastră integrativă adresează oboseala fizică, funcția imunitară și reziliența emoțională ca elemente interconectate ale vindecării.",
         "section2Text2": "Într-un cadru liniștit la malul mării, înconjurat de natură și susținut de profesioniști experimentați, veți găsi spațiul pentru a vă recupera cu adevărat.",
         "therapiesTitle": "Terapii Incluse",
-        "therapies": {
-          "t1": { "name": "Terapie de Susținere Imunitară", "description": "Protocoale țintite pentru reconstruirea funcției imunitare după chimioterapie." },
-          "t2": { "name": "Fizioterapie Blândă", "description": "Exerciții de intensitate redusă adaptate nivelului de energie post-tratament." },
-          "t3": { "name": "Reabilitare Nutrițională", "description": "Planificare dietetică concentrată pe restabilirea nivelurilor de nutrienți și a sănătății digestive." },
-          "t4": { "name": "Terapie de Relaxare", "description": "Relaxare ghidată și tehnici de respirație pentru gestionarea stresului și anxietății." },
-          "t5": { "name": "Drenaj Limfatic", "description": "Tehnică de masaj blând pentru reducerea umflăturilor și susținerea circulației limfatice." }
-        }
+        "therapyIds": "immuneSupportTherapy,gentlePhysiotherapy,nutritionalRehabilitation,relaxationTherapy,lymphaticDrainage"
       }
     }
   },
@@ -499,6 +476,28 @@
     }
   },
   "therapies": {
+    "physiotherapy": { "name": "Fizioterapie", "description": "Exerciții țintite și terapie manuală pentru restabilirea mișcării și funcției." },
+    "balneotherapy": { "name": "Balneoterapie", "description": "Băi terapeutice cu ape minerale din surse naturale." },
+    "electrotherapy": { "name": "Electroterapie", "description": "Tehnici de stimulare electrică pentru reducerea durerii și accelerarea vindecării." },
+    "kinesiotherapy": { "name": "Kinetoterapie", "description": "Terapie bazată pe mișcare pentru îmbunătățirea mobilității și coordonării." },
+    "massageTherapy": { "name": "Masaj Terapeutic", "description": "Masaj terapeutic pentru relaxarea tensiunilor, îmbunătățirea circulației și susținerea recuperării." },
+    "functionalMedicineAssessment": { "name": "Evaluare de Medicină Funcțională", "description": "Abordare diagnostică cuprinzătoare pentru descoperirea dezechilibrelor hormonale și metabolice." },
+    "pelvicPhysiotherapy": { "name": "Fizioterapie Pelvină", "description": "Terapie specializată vizând disfuncția planșeului pelvin și gestionarea durerii." },
+    "stressReductionProgram": { "name": "Program de Reducere a Stresului", "description": "Tehnici ghidate incluzând exerciții de respirație și mindfulness pentru echilibru emoțional." },
+    "nutritionalCounselling": { "name": "Consiliere Nutrițională", "description": "Ghidare dietetică personalizată pentru susținerea sănătății hormonale și a fertilității." },
+    "cryotherapy": { "name": "Crioterapie", "description": "Expunere la frig a întregului corp pentru stimularea metabolismului, reducerea inflamației și îmbunătățirea recuperării." },
+    "ivNutrientTherapy": { "name": "Terapie cu Nutrienți IV", "description": "Administrare intravenoasă țintită de vitamine, minerale și antioxidanți." },
+    "biomarkerAnalysis": { "name": "Analiză Biomarkeri", "description": "Testare cuprinzătoare a sângelui și metabolismului pentru urmărirea vârstei biologice." },
+    "hyperbaricOxygenTherapy": { "name": "Terapie cu Oxigen Hiperbaric", "description": "Ședințe de oxigen sub presiune pentru accelerarea regenerării celulare." },
+    "infraredSauna": { "name": "Saună cu Infraroșu", "description": "Terapie cu căldură profundă pentru detoxifiere și sănătate cardiovasculară." },
+    "mudTherapy": { "name": "Terapie cu Nămol", "description": "Aplicarea de cataplasme cu nămol terapeutic pentru ameliorarea profundă a durerii și îmbunătățirea circulației." },
+    "hydrotherapy": { "name": "Hidroterapie", "description": "Exerciții în apă în piscine încălzite pentru reabilitare articulară cu impact redus." },
+    "antiInflammatoryNutrition": { "name": "Nutriție Antiinflamatoare", "description": "Protocoale dietetice concepute pentru reducerea inflamației sistemice în mod natural." },
+    "immuneSupportTherapy": { "name": "Terapie de Susținere Imunitară", "description": "Protocoale țintite pentru reconstruirea funcției imunitare după chimioterapie." },
+    "gentlePhysiotherapy": { "name": "Fizioterapie Blândă", "description": "Exerciții de intensitate redusă adaptate nivelului de energie post-tratament." },
+    "nutritionalRehabilitation": { "name": "Reabilitare Nutrițională", "description": "Planificare dietetică concentrată pe restabilirea nivelurilor de nutrienți și a sănătății digestive." },
+    "relaxationTherapy": { "name": "Terapie de Relaxare", "description": "Relaxare ghidată și tehnici de respirație pentru gestionarea stresului și anxietății." },
+    "lymphaticDrainage": { "name": "Drenaj Limfatic", "description": "Tehnică de masaj blând pentru reducerea umflăturilor și susținerea circulației limfatice." },
     "wellness": {
       "title": "Wellness & MedSpa",
       "subtitle": "Relaxare. Reîntinerire. Reînnoire.",
@@ -509,6 +508,11 @@
     "heroTitle": "Solicită o Programare",
     "heroSubtitle": "Începe-ți călătoria wellness",
     "heroDescription": "Fii printre primii care experimentează complexul nostru de biohacking. Spune-ne despre tine și te vom contacta personal.",
+    "callTitle": "Preferi să suni?",
+    "callDescription": "Vorbește direct cu echipa noastră pentru a-ți planifica sejurul.",
+    "callButton": "Sună Acum",
+    "callPhone": "+40 241 123 456",
+    "orDivider": "sau completează formularul de mai jos",
     "formTitle": "Spune-ne despre tine",
     "formSubtitle": "Completează detaliile de mai jos și echipa noastră te va contacta personal pentru a-ți planifica sejurul perfect.",
     "firstName": "Prenume",
@@ -876,6 +880,21 @@
         "q7": { "question": "Oferă complexul parcare?", "answer": "Da, parcarea este gratuită și disponibilă în incinta complexului." },
         "q8": { "question": "Pot vizita complexul înainte de a face o programare?", "answer": "Desigur! Vă așteptăm cu drag. Vă recomandăm să ne contactați telefonic în prealabil pentru a vă asigura că un membru al echipei este disponibil să vă ghideze." }
       }
+    }
+  },
+  "telemedicine": {
+    "title": "Consultație Telemedicină",
+    "pendingConfirmation": "Consultația dumneavoastră este programată dar nu este încă confirmată. Veți fi contactat telefonic pentru confirmare.",
+    "joinCall": "Intră în Consultație",
+    "joining": "Se conectează...",
+    "notYet": "Nu este disponibil încă",
+    "availableAt": "Butonul de acces disponibil la {time}",
+    "errors": {
+      "unauthorized": "Vă rugăm să vă autentificați pentru a accesa consultația.",
+      "not_found": "Consultația nu a fost găsită.",
+      "not_confirmed": "Consultația nu a fost încă confirmată.",
+      "outside_window": "Consultația nu este disponibilă în acest moment.",
+      "unknown": "A apărut o eroare neașteptată. Vă rugăm să încercați din nou."
     }
   }
 }

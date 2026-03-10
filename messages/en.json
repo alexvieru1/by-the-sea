@@ -20,6 +20,11 @@
       "subtitle": "Our specialized programs",
       "description": "Discover our comprehensive range of medical programs designed to restore, rejuvenate, and optimise your health."
     },
+    "therapies": {
+      "title": "Our Therapies",
+      "subtitle": "Therapeutic treatments",
+      "description": "Explore our comprehensive range of therapeutic treatments, each designed to support your journey to optimal health."
+    },
     "contact": {
       "title": "Contact Us",
       "subtitle": "We're here for you",
@@ -122,7 +127,9 @@
     }
   },
 "nav": {
+    "services": "Services",
     "medicalPrograms": "Medical Programs",
+    "therapies": "Therapies",
     "patientGuide": "Patient Guide",
     "contact": "Contact",
     "about": "About Us",
@@ -173,13 +180,7 @@
         "section2Text": "From initial assessment through to discharge, our multidisciplinary team guides you through every stage of rehabilitation with expertise and compassion.",
         "section2Text2": "Our seaside location provides the ideal environment for recovery — fresh air, natural light, and the therapeutic benefits of the Black Sea coast.",
         "therapiesTitle": "Included Therapies",
-        "therapies": {
-          "t1": { "name": "Physiotherapy", "description": "Targeted exercises and manual therapy to restore movement and function." },
-          "t2": { "name": "Balneotherapy", "description": "Therapeutic bathing using mineral-rich waters from natural sources." },
-          "t3": { "name": "Electrotherapy", "description": "Electrical stimulation techniques to reduce pain and accelerate healing." },
-          "t4": { "name": "Kinesiotherapy", "description": "Movement-based therapy designed to improve mobility and coordination." },
-          "t5": { "name": "Massage Therapy", "description": "Therapeutic massage to relieve tension, improve circulation, and support recovery." }
-        }
+        "therapyIds": "physiotherapy,balneotherapy,electrotherapy,kinesiotherapy,massageTherapy"
       }
     },
     "endometriosisInfertility": {
@@ -196,13 +197,7 @@
         "section2Text": "We go beyond managing symptoms to identify root causes — working with hormonal balance, inflammation reduction, and stress management as interconnected pathways to wellness.",
         "section2Text2": "Our compassionate team understands the emotional weight of these conditions and provides a supportive, judgement-free environment throughout your journey.",
         "therapiesTitle": "Included Therapies",
-        "therapies": {
-          "t1": { "name": "Functional Medicine Assessment", "description": "Comprehensive diagnostic approach to uncover underlying hormonal and metabolic imbalances." },
-          "t2": { "name": "Pelvic Physiotherapy", "description": "Specialised therapy targeting pelvic floor dysfunction and pain management." },
-          "t3": { "name": "Balneotherapy", "description": "Therapeutic mineral baths to reduce inflammation and promote relaxation." },
-          "t4": { "name": "Stress Reduction Program", "description": "Guided techniques including breathing exercises and mindfulness for emotional balance." },
-          "t5": { "name": "Nutritional Counselling", "description": "Personalised dietary guidance to support hormonal health and fertility." }
-        }
+        "therapyIds": "functionalMedicineAssessment,pelvicPhysiotherapy,balneotherapy,stressReductionProgram,nutritionalCounselling"
       }
     },
     "longevity": {
@@ -219,13 +214,7 @@
         "section2Text": "From cryotherapy to IV nutrient therapy, our regenerative protocols are designed to enhance cellular function, reduce oxidative stress, and support your body's natural repair mechanisms.",
         "section2Text2": "Regular monitoring and program adjustments ensure you're always progressing toward your optimal health benchmarks.",
         "therapiesTitle": "Included Therapies",
-        "therapies": {
-          "t1": { "name": "Cryotherapy", "description": "Whole-body cold exposure to boost metabolism, reduce inflammation, and enhance recovery." },
-          "t2": { "name": "IV Nutrient Therapy", "description": "Targeted intravenous delivery of vitamins, minerals, and antioxidants." },
-          "t3": { "name": "Biomarker Analysis", "description": "Comprehensive blood and metabolic testing to track your biological age." },
-          "t4": { "name": "Hyperbaric Oxygen Therapy", "description": "Pressurised oxygen sessions to accelerate cellular regeneration." },
-          "t5": { "name": "Infrared Sauna", "description": "Deep-penetrating heat therapy for detoxification and cardiovascular health." }
-        }
+        "therapyIds": "cryotherapy,ivNutrientTherapy,biomarkerAnalysis,hyperbaricOxygenTherapy,infraredSauna"
       }
     },
     "rheumatology": {
@@ -242,13 +231,7 @@
         "section2Text": "Romania's rich balneological heritage offers unique therapeutic resources. Our programs harness mineral-rich waters, therapeutic mud, and climate therapy backed by decades of clinical evidence.",
         "section2Text2": "Combined with physiotherapy and functional medicine, these natural treatments provide lasting relief beyond what medication alone can achieve.",
         "therapiesTitle": "Included Therapies",
-        "therapies": {
-          "t1": { "name": "Balneotherapy", "description": "Mineral-rich therapeutic baths to reduce joint inflammation and stiffness." },
-          "t2": { "name": "Mud Therapy", "description": "Application of therapeutic mud packs for deep pain relief and improved circulation." },
-          "t3": { "name": "Physiotherapy", "description": "Guided exercises to maintain joint mobility and muscular strength." },
-          "t4": { "name": "Hydrotherapy", "description": "Water-based exercises in heated pools for low-impact joint rehabilitation." },
-          "t5": { "name": "Anti-Inflammatory Nutrition", "description": "Dietary protocols designed to reduce systemic inflammation naturally." }
-        }
+        "therapyIds": "balneotherapy,mudTherapy,physiotherapy,hydrotherapy,antiInflammatoryNutrition"
       }
     },
     "postChemotherapy": {
@@ -265,13 +248,7 @@
         "section2Text": "Recovery from chemotherapy affects every aspect of wellbeing. Our integrative approach addresses physical fatigue, immune function, and emotional resilience as interconnected elements of healing.",
         "section2Text2": "In a peaceful seaside setting, surrounded by nature and supported by experienced professionals, you'll find the space to truly recover.",
         "therapiesTitle": "Included Therapies",
-        "therapies": {
-          "t1": { "name": "Immune Support Therapy", "description": "Targeted protocols to rebuild immune function after chemotherapy." },
-          "t2": { "name": "Gentle Physiotherapy", "description": "Low-intensity exercises adapted to post-treatment energy levels." },
-          "t3": { "name": "Nutritional Rehabilitation", "description": "Dietary planning focused on restoring nutrient levels and digestive health." },
-          "t4": { "name": "Relaxation Therapy", "description": "Guided relaxation and breathing techniques for stress and anxiety management." },
-          "t5": { "name": "Lymphatic Drainage", "description": "Gentle massage technique to reduce swelling and support lymphatic circulation." }
-        }
+        "therapyIds": "immuneSupportTherapy,gentlePhysiotherapy,nutritionalRehabilitation,relaxationTherapy,lymphaticDrainage"
       }
     }
   },
@@ -491,6 +468,28 @@
     }
   },
   "therapies": {
+    "physiotherapy": { "name": "Physiotherapy", "description": "Targeted exercises and manual therapy to restore movement and function." },
+    "balneotherapy": { "name": "Balneotherapy", "description": "Therapeutic bathing using mineral-rich waters from natural sources." },
+    "electrotherapy": { "name": "Electrotherapy", "description": "Electrical stimulation techniques to reduce pain and accelerate healing." },
+    "kinesiotherapy": { "name": "Kinesiotherapy", "description": "Movement-based therapy designed to improve mobility and coordination." },
+    "massageTherapy": { "name": "Massage Therapy", "description": "Therapeutic massage to relieve tension, improve circulation, and support recovery." },
+    "functionalMedicineAssessment": { "name": "Functional Medicine Assessment", "description": "Comprehensive diagnostic approach to uncover underlying hormonal and metabolic imbalances." },
+    "pelvicPhysiotherapy": { "name": "Pelvic Physiotherapy", "description": "Specialised therapy targeting pelvic floor dysfunction and pain management." },
+    "stressReductionProgram": { "name": "Stress Reduction Program", "description": "Guided techniques including breathing exercises and mindfulness for emotional balance." },
+    "nutritionalCounselling": { "name": "Nutritional Counselling", "description": "Personalised dietary guidance to support hormonal health and fertility." },
+    "cryotherapy": { "name": "Cryotherapy", "description": "Whole-body cold exposure to boost metabolism, reduce inflammation, and enhance recovery." },
+    "ivNutrientTherapy": { "name": "IV Nutrient Therapy", "description": "Targeted intravenous delivery of vitamins, minerals, and antioxidants." },
+    "biomarkerAnalysis": { "name": "Biomarker Analysis", "description": "Comprehensive blood and metabolic testing to track your biological age." },
+    "hyperbaricOxygenTherapy": { "name": "Hyperbaric Oxygen Therapy", "description": "Pressurised oxygen sessions to accelerate cellular regeneration." },
+    "infraredSauna": { "name": "Infrared Sauna", "description": "Deep-penetrating heat therapy for detoxification and cardiovascular health." },
+    "mudTherapy": { "name": "Mud Therapy", "description": "Application of therapeutic mud packs for deep pain relief and improved circulation." },
+    "hydrotherapy": { "name": "Hydrotherapy", "description": "Water-based exercises in heated pools for low-impact joint rehabilitation." },
+    "antiInflammatoryNutrition": { "name": "Anti-Inflammatory Nutrition", "description": "Dietary protocols designed to reduce systemic inflammation naturally." },
+    "immuneSupportTherapy": { "name": "Immune Support Therapy", "description": "Targeted protocols to rebuild immune function after chemotherapy." },
+    "gentlePhysiotherapy": { "name": "Gentle Physiotherapy", "description": "Low-intensity exercises adapted to post-treatment energy levels." },
+    "nutritionalRehabilitation": { "name": "Nutritional Rehabilitation", "description": "Dietary planning focused on restoring nutrient levels and digestive health." },
+    "relaxationTherapy": { "name": "Relaxation Therapy", "description": "Guided relaxation and breathing techniques for stress and anxiety management." },
+    "lymphaticDrainage": { "name": "Lymphatic Drainage", "description": "Gentle massage technique to reduce swelling and support lymphatic circulation." },
     "wellness": {
       "title": "Wellness & MedSpa",
       "subtitle": "Relax. Rejuvenate. Renew.",
@@ -501,6 +500,11 @@
     "heroTitle": "Request a Stay",
     "heroSubtitle": "Start your wellness journey",
     "heroDescription": "Be among the first to experience our biohacking complex. Tell us about yourself and we'll reach out personally.",
+    "callTitle": "Prefer to call?",
+    "callDescription": "Speak directly with our team to plan your stay.",
+    "callButton": "Call Now",
+    "callPhone": "+40 241 123 456",
+    "orDivider": "or fill in the form below",
     "formTitle": "Tell us about yourself",
     "formSubtitle": "Fill in the details below and our team will personally reach out to plan your perfect stay.",
     "firstName": "First Name",
@@ -868,6 +872,21 @@
         "q7": { "question": "Does the complex offer parking?", "answer": "Yes, free parking is available on the complex grounds." },
         "q8": { "question": "Can I visit the complex before booking?", "answer": "Of course! We'd love to have you. We recommend calling ahead to ensure a team member is available to show you around." }
       }
+    }
+  },
+  "telemedicine": {
+    "title": "Telemedicine Consultation",
+    "pendingConfirmation": "Your consultation is scheduled but not yet confirmed. You will be contacted by phone to confirm.",
+    "joinCall": "Join Consultation",
+    "joining": "Connecting...",
+    "notYet": "Not Available Yet",
+    "availableAt": "Join button available at {time}",
+    "errors": {
+      "unauthorized": "Please log in to access your consultation.",
+      "not_found": "Consultation not found.",
+      "not_confirmed": "Your consultation has not been confirmed yet.",
+      "outside_window": "The consultation is not available at this time.",
+      "unknown": "An unexpected error occurred. Please try again."
     }
   }
 }
