@@ -31,6 +31,7 @@ export default function LanguageSwitcher({ variant = 'light' }: LanguageSwitcher
         onClick={() => switchLocale('ro')}
         className={`
           group relative
+          cursor-pointer
           px-1.5 py-1
           transition-colors duration-400 ease-[cubic-bezier(0.25,0.8,0.25,1)]
           ${locale === 'ro' ? activeClass : inactiveClass}
@@ -53,6 +54,7 @@ export default function LanguageSwitcher({ variant = 'light' }: LanguageSwitcher
         onClick={() => switchLocale('en')}
         className={`
           group relative
+          cursor-pointer
           px-1.5 py-1
           transition-colors duration-400 ease-[cubic-bezier(0.25,0.8,0.25,1)]
           ${locale === 'en' ? activeClass : inactiveClass}

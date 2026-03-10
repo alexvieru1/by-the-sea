@@ -191,7 +191,7 @@ export default function FacilitiesSection() {
                   key={category}
                   type="button"
                   onClick={() => setActiveCategory(category)}
-                  className={`relative pb-3 text-sm font-medium transition-colors ${
+                  className={`relative pb-3 text-sm font-medium transition-colors cursor-pointer ${
                     activeCategory === category
                       ? "text-gray-900"
                       : "text-gray-400 hover:text-gray-600"
