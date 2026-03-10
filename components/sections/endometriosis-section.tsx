@@ -7,7 +7,7 @@ import PrimaryButton from "@/components/ui/primary-button";
 import { TextRoll } from "@/components/ui/text-roll";
 
 export default function EndometriosisSection() {
-  const t = useTranslations("endometriosis");
+  const t = useTranslations("medicalPrograms.endometriosisInfertility");
   const tCommon = useTranslations("common");
   const sectionRef = useRef<HTMLElement>(null);
   const containerRef = useRef<HTMLElement | null>(null);
@@ -65,7 +65,7 @@ export default function EndometriosisSection() {
                 {t("subtitle")}
               </motion.p>
 
-              <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic leading-tight text-white sm:text-5xl lg:text-6xl">
+              <h2 className="font-[family-name:var(--font-quicksand)] text-4xl font-thin leading-tight text-white sm:text-5xl lg:text-6xl">
                 {showText ? (
                   <TextRoll
                     duration={0.4}
@@ -120,7 +120,7 @@ export default function EndometriosisSection() {
               animate={{ opacity: showButton ? 1 : 0, y: showButton ? 0 : 20 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
             >
-              <PrimaryButton href="/therapies/endometriosis" variant="dark" size="xl" arrow>
+              <PrimaryButton href="/medical-programs/endometriosis-infertility" variant="dark" size="xl" arrow>
                 {tCommon("learnMore")}
               </PrimaryButton>
             </motion.div>

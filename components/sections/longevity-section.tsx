@@ -3,13 +3,13 @@ import ShowcaseSection from './showcase-section';
 export default function LongevitySection() {
   return (
     <ShowcaseSection
-      translationKey="longevity"
+      translationKey="medicalPrograms.longevity"
       imageSrc="/images/your_future.webp"
       imageAlt="Longevity therapy"
       cardBg="bg-[#798B6F]"
-      align="left"
+      align="right"
       ctaKey="learnMore"
-      ctaHref="/therapies/longevity"
+      ctaHref="/medical-programs/longevity"
       className="snap-section light-header-section"
       orbs={[
         {

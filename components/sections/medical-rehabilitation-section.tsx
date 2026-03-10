@@ -3,13 +3,13 @@ import ShowcaseSection from './showcase-section';
 export default function MedicalRehabilitationSection() {
   return (
     <ShowcaseSection
-      translationKey="medicalRehabilitation"
+      translationKey="medicalPrograms.medicalRehabilitation"
       imageSrc="/images/your_body.webp"
       imageAlt="Medical rehabilitation therapy"
       cardBg="bg-[#0097a7]"
       align="left"
       ctaKey="learnMore"
-      ctaHref="/therapies/medical-rehabilitation"
+      ctaHref="/medical-programs/medical-rehabilitation"
       className="snap-section"
       orbs={[
         {

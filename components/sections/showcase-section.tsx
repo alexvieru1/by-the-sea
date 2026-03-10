@@ -9,7 +9,7 @@ import { TextRoll } from '@/components/ui/text-roll';
 import Image from 'next/image';
 
 interface ShowcaseSectionProps {
-  translationKey: 'medicalRehabilitation' | 'longevity';
+  translationKey: string;
   imageSrc: string;
   imageAlt: string;
   cardBg: string;
