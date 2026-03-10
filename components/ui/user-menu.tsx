@@ -36,8 +36,8 @@ export default function UserMenu({ variant = 'dark' }: UserMenuProps) {
     .join('')
     .toUpperCase() || user.email?.[0]?.toUpperCase() || '?';
 
-  const textColor = variant === 'light' ? 'text-white' : 'text-gray-900';
-  const borderColor = variant === 'light' ? 'border-white/30' : 'border-gray-300';
+  const textColor = variant === 'light' ? 'text-white' : 'text-gray-950';
+  const borderColor = variant === 'light' ? 'border-white/30' : 'border-gray-400';
 
   return (
     <div className="relative" ref={menuRef}>

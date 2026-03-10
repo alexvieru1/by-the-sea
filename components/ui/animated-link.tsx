@@ -10,7 +10,7 @@ const animatedLinkVariants = cva(
     variants: {
       variant: {
         light: 'text-white/70 hover:text-white',
-        dark: 'text-gray-600 hover:text-gray-900',
+        dark: 'text-gray-800 hover:text-gray-950',
       },
     },
     defaultVariants: {
@@ -25,7 +25,7 @@ const underlineVariants = cva(
     variants: {
       variant: {
         light: 'bg-white',
-        dark: 'bg-gray-900',
+        dark: 'bg-gray-950',
       },
     },
     defaultVariants: {

@@ -10,7 +10,7 @@ export default function LongevitySection() {
       align="left"
       ctaKey="learnMore"
       ctaHref="/therapies/longevity"
-      className="snap-section"
+      className="snap-section light-header-section"
       orbs={[
         {
           size: 'h-64 w-64',

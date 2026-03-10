@@ -17,12 +17,12 @@ export default function LanguageSwitcher({ variant = 'light' }: LanguageSwitcher
     router.replace(pathname, { locale: newLocale });
   };
 
-  const activeClass = isLight ? 'font-medium text-white' : 'font-medium text-gray-900';
+  const activeClass = isLight ? 'font-medium text-white' : 'font-medium text-gray-950';
   const inactiveClass = isLight
     ? 'text-white/70 hover:text-white'
-    : 'text-gray-500 hover:text-gray-900';
-  const underlineColor = isLight ? 'bg-white' : 'bg-gray-900';
-  const dividerColor = isLight ? 'text-white/40' : 'text-gray-300';
+    : 'text-gray-800 hover:text-gray-950';
+  const underlineColor = isLight ? 'bg-white' : 'bg-gray-950';
+  const dividerColor = isLight ? 'text-white/40' : 'text-gray-400';
 
   return (
     <div className="flex items-center gap-1 text-sm">

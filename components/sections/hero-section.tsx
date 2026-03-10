@@ -59,7 +59,7 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="hero-section snap-section relative overflow-hidden bg-[#c5d5d8]"
+      className="light-header-section hero-section snap-section relative overflow-hidden bg-[#c5d5d8]"
     >
       {/* Video Background */}
       <div className="absolute inset-0">

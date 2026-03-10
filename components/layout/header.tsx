@@ -59,16 +59,35 @@ export default function Header() {
   const tCommon = useTranslations("common");
   const { user, loading: authLoading } = useAuth();
   const pathname = usePathname();
-  const isHomepage = pathname === "/";
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isInHero, setIsInHero] = useState(isHomepage);
+  const [isLightMode, setIsLightMode] = useState(false);
   const lastScrollY = useRef(0);
 
-  // Reset isInHero when navigating between pages
+  // Observe sections with .light-header-section to toggle light (white) navbar
   useEffect(() => {
-    setIsInHero(isHomepage);
-  }, [isHomepage]);
+    const sections = document.querySelectorAll(".light-header-section");
+    if (sections.length === 0) {
+      setIsLightMode(false);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Light mode if any flagged section intersects the top of the viewport
+        const isAnyVisible = entries.some((entry) => entry.isIntersecting);
+        setIsLightMode(isAnyVisible);
+      },
+      {
+        // Only the top strip where the header lives
+        rootMargin: "0px 0px -95% 0px",
+        threshold: 0,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, [pathname]);
 
   useEffect(() => {
     const mainElement = document.querySelector("main");
@@ -76,10 +95,6 @@ export default function Header() {
 
     const handleScroll = () => {
       const currentScrollY = mainElement.scrollTop;
-      const viewportHeight = window.innerHeight;
-
-      // Only use light (white) text when on the homepage and within the hero viewport
-      setIsInHero(isHomepage && currentScrollY < viewportHeight * 0.8);
 
       if (currentScrollY < lastScrollY.current || currentScrollY < 100) {
         setIsNavVisible(true);
@@ -90,12 +105,11 @@ export default function Header() {
       lastScrollY.current = currentScrollY;
     };
 
-    // Initial check
     handleScroll();
 
     mainElement.addEventListener("scroll", handleScroll, { passive: true });
     return () => mainElement.removeEventListener("scroll", handleScroll);
-  }, [isHomepage]);
+  }, []);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -125,9 +139,9 @@ export default function Header() {
     },
   ];
 
-  const colorVariant = isInHero ? "light" : "dark";
-  const textColor = isInHero ? "text-white" : "text-gray-900";
-  const hamburgerBg = isInHero ? "bg-white" : "bg-gray-900";
+  const colorVariant = isLightMode ? "light" : "dark";
+  const textColor = isLightMode ? "text-white" : "text-gray-950";
+  const hamburgerBg = isLightMode ? "bg-white" : "bg-gray-950";
 
   return (
     <>
@@ -262,7 +276,7 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className={cn(
                   "flex h-16 w-16 items-center justify-center transition-colors duration-300 lg:hidden",
-                  isInHero ? "bg-gray-800/90" : "bg-gray-100"
+                  isLightMode ? "bg-gray-800/90" : "bg-gray-100"
                 )}
                 aria-label="Toggle menu"
               >

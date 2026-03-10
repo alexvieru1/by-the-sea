@@ -97,7 +97,7 @@ export default function ContactPageContent() {
                   <ExternalLink size={14} />
                 </a>
                 <a
-                  href="https://facebook.com/vrajamariibythesea"
+                  href="https://www.facebook.com/profile.php?id=61574970605951"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-sm font-medium text-[#0097a7] transition-colors hover:text-[#00838f]"

@@ -92,6 +92,7 @@ function FacilityCard({
           className="relative z-10 hidden aspect-3/4 w-1/4 overflow-hidden md:block lg:absolute  lg:-top-8 lg:w-[35%]"
           style={{
             y: smallImgYMove,
+            willChange: "transform",
           }}
         >
           <motion.div
@@ -99,6 +100,7 @@ function FacilityCard({
             style={{
               y: smallImgY,
               scale: smallImgScale,
+              willChange: "transform",
             }}
           >
             <Image
@@ -118,6 +120,7 @@ function FacilityCard({
             style={{
               y: largeImgY,
               scale: largeImgScale,
+              willChange: "transform",
             }}
           >
             <Image
