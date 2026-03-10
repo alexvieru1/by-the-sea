@@ -4,41 +4,51 @@ import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import TransitionLink from '@/components/layout/transition-link';
+import ProgramContentSection from '@/components/sections/program-content-section';
+import ProgramTherapiesGrid from '@/components/sections/program-therapies-grid';
 
-const therapyMap: Record<string, { translationNamespace: string; translationKey: string; bg: string }> = {
+const therapyMap: Record<string, { translationNamespace: string; translationKey: string; bg: string; accentColor: string }> = {
   'medical-rehabilitation': {
     translationNamespace: 'medicalPrograms',
     translationKey: 'medicalRehabilitation',
     bg: 'bg-[#D2B88B]',
+    accentColor: '#D2B88B',
   },
   'endometriosis-infertility': {
     translationNamespace: 'medicalPrograms',
     translationKey: 'endometriosisInfertility',
     bg: 'bg-[#D2B88B]',
+    accentColor: '#D2B88B',
   },
   longevity: {
     translationNamespace: 'medicalPrograms',
     translationKey: 'longevity',
     bg: 'bg-[#0097a7]',
+    accentColor: '#0097a7',
   },
   rheumatology: {
     translationNamespace: 'medicalPrograms',
     translationKey: 'rheumatology',
     bg: 'bg-[#8FA3A8]',
+    accentColor: '#8FA3A8',
   },
   wellness: {
     translationNamespace: 'therapies',
     translationKey: 'wellness',
     bg: 'bg-[#BCA390]',
+    accentColor: '#BCA390',
   },
   'post-chemotherapy': {
     translationNamespace: 'medicalPrograms',
     translationKey: 'postChemotherapy',
     bg: 'bg-[#BCA390]',
+    accentColor: '#BCA390',
   },
 };
 
 const darkTextSlugs = new Set(['wellness']);
+
+const therapyKeys = ['t1', 't2', 't3', 't4', 't5'];
 
 export default function TherapyPageClient({ slug }: { slug: string }) {
   const therapy = therapyMap[slug];
@@ -53,6 +63,15 @@ export default function TherapyPageClient({ slug }: { slug: string }) {
   const title = t(`${prefix}title`);
   const description = t(`${prefix}description`);
   const subtitle = t(`${prefix}subtitle`);
+
+  const hasPageContent = t.has(`${prefix}page.section1Title`);
+
+  const therapies = therapyKeys
+    .filter((key) => t.has(`${prefix}page.therapies.${key}.name`))
+    .map((key) => ({
+      name: t(`${prefix}page.therapies.${key}.name`),
+      description: t(`${prefix}page.therapies.${key}.description`),
+    }));
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -98,30 +117,48 @@ export default function TherapyPageClient({ slug }: { slug: string }) {
         </div>
       </div>
 
-      {/* Coming Soon + CTA */}
-      <div className="px-6 py-20 lg:px-12 lg:py-32">
-        <div className="mx-auto max-w-4xl text-center">
-          <motion.div
-            className="mb-8 inline-flex items-center gap-2 border border-gray-200 bg-white px-6 py-3 shadow-sm"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#0097a7] opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#0097a7]" />
-            </span>
-            <span className="text-sm font-medium text-gray-900">
-              {tCommon('comingSoon')}
-            </span>
-          </motion.div>
+      {/* Content Sections */}
+      {hasPageContent && (
+        <>
+          <ProgramContentSection
+            photoSide="left"
+            imageSrc="/images/your_body.webp"
+            imageAlt={title}
+            subtitle={t(`${prefix}page.section1Subtitle`)}
+            title={t(`${prefix}page.section1Title`)}
+            texts={[
+              t(`${prefix}page.section1Text`),
+              ...(t.has(`${prefix}page.section1Text2`) ? [t(`${prefix}page.section1Text2`)] : []),
+            ]}
+          />
 
-          <motion.div
-            className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
+          <ProgramContentSection
+            photoSide="right"
+            imageSrc="/images/your_future.webp"
+            imageAlt={title}
+            subtitle={t(`${prefix}page.section2Subtitle`)}
+            title={t(`${prefix}page.section2Title`)}
+            texts={[
+              t(`${prefix}page.section2Text`),
+              ...(t.has(`${prefix}page.section2Text2`) ? [t(`${prefix}page.section2Text2`)] : []),
+            ]}
+          />
+        </>
+      )}
+
+      {/* Therapies Grid */}
+      {therapies.length > 0 && (
+        <ProgramTherapiesGrid
+          title={t(`${prefix}page.therapiesTitle`)}
+          therapies={therapies}
+          accentColor={therapy.accentColor}
+        />
+      )}
+
+      {/* CTAs */}
+      <div className="bg-white px-6 py-20 lg:px-12 lg:py-32">
+        <div className="mx-auto max-w-4xl text-center">
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <TransitionLink
               href="/medical-programs"
               className="inline-flex items-center gap-2 bg-gray-900 px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-gray-800"
@@ -137,7 +174,7 @@ export default function TherapyPageClient({ slug }: { slug: string }) {
               {tCommon('requestStay')}
               <ArrowRight className="h-4 w-4" />
             </TransitionLink>
-          </motion.div>
+          </div>
         </div>
       </div>
     </div>
