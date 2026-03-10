@@ -9,7 +9,8 @@ const HeroSection = dynamic(() => import('@/components/sections/hero-section'), 
 const MedicalRehabilitationSection = dynamic(() => import('@/components/sections/medical-rehabilitation-section'));
 const EndometriosisSection = dynamic(() => import('@/components/sections/endometriosis-section'));
 const LongevitySection = dynamic(() => import('@/components/sections/longevity-section'));
-const TherapiesPreview = dynamic(() => import('@/components/sections/therapies-preview'));
+const RheumatologySection = dynamic(() => import('@/components/sections/rheumatology-section'));
+const PostChemoSection = dynamic(() => import('@/components/sections/post-chemo-section'));
 const FacilitiesSection = dynamic(() => import('@/components/sections/facilities-section'));
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
@@ -22,7 +23,8 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <MedicalRehabilitationSection />
       <EndometriosisSection />
       <LongevitySection />
-      <TherapiesPreview />
+      <RheumatologySection />
+      <PostChemoSection />
       <FacilitiesSection />
     </>
   );
