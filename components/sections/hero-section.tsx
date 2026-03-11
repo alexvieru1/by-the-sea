@@ -89,7 +89,7 @@ export default function HeroSection() {
         <div className="max-w-2xl">
           {/* Headline */}
           <motion.h1
-            className="font-(family-name:--font-playfair) text-4xl font-normal italic leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl"
+            className="font-(family-name:--font-playfair) text-4xl leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}

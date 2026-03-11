@@ -48,51 +48,69 @@ export function TextRoll({
     },
   } as const;
 
+  const words = children.split(' ');
   const letters = children.split('');
+  const totalLetters = letters.length;
+
+  let charIndex = 0;
 
   return (
     <span className={`${className ?? ''} [perspective:10000px]`}>
-      {letters.map((letter, i) => {
+      {words.map((word, wordIdx) => {
+        const wordChars = word.split('');
+        const startIndex = charIndex;
+        charIndex += word.length + 1; // +1 for the space
+
         return (
-          <span
-            key={i}
-            className='relative inline-block [transform-style:preserve-3d] [width:auto]'
-            aria-hidden='true'
-          >
-            <motion.span
-              className='absolute inline-block [backface-visibility:hidden] [transform-origin:50%_25%]'
-              initial={
-                variants?.enter?.initial ?? defaultVariants.enter.initial
-              }
-              animate={
-                variants?.enter?.animate ?? defaultVariants.enter.animate
-              }
-              transition={{
-                ...transition,
-                duration,
-                delay: getEnterDelay(i),
-              }}
-            >
-              {letter === ' ' ? '\u00A0' : letter}
-            </motion.span>
-            <motion.span
-              className='absolute inline-block [backface-visibility:hidden] [transform-origin:50%_100%]'
-              initial={variants?.exit?.initial ?? defaultVariants.exit.initial}
-              animate={variants?.exit?.animate ?? defaultVariants.exit.animate}
-              transition={{
-                ...transition,
-                duration,
-                delay: getExitDelay(i),
-              }}
-              onAnimationComplete={
-                letters.length === i + 1 ? onAnimationComplete : undefined
-              }
-            >
-              {letter === ' ' ? '\u00A0' : letter}
-            </motion.span>
-            <span className='invisible'>
-              {letter === ' ' ? '\u00A0' : letter}
+          <span key={wordIdx}>
+            <span className='inline-flex whitespace-nowrap' aria-hidden='true'>
+              {wordChars.map((letter, letterIdx) => {
+                const i = startIndex + letterIdx;
+                const isLast = i === totalLetters - 1;
+                return (
+                  <span
+                    key={i}
+                    className='relative inline-block [transform-style:preserve-3d] [width:auto]'
+                  >
+                    <motion.span
+                      className='absolute inline-block [backface-visibility:hidden] [transform-origin:50%_25%]'
+                      initial={
+                        variants?.enter?.initial ?? defaultVariants.enter.initial
+                      }
+                      animate={
+                        variants?.enter?.animate ?? defaultVariants.enter.animate
+                      }
+                      transition={{
+                        ...transition,
+                        duration,
+                        delay: getEnterDelay(i),
+                      }}
+                    >
+                      {letter}
+                    </motion.span>
+                    <motion.span
+                      className='absolute inline-block [backface-visibility:hidden] [transform-origin:50%_100%]'
+                      initial={variants?.exit?.initial ?? defaultVariants.exit.initial}
+                      animate={variants?.exit?.animate ?? defaultVariants.exit.animate}
+                      transition={{
+                        ...transition,
+                        duration,
+                        delay: getExitDelay(i),
+                      }}
+                      onAnimationComplete={
+                        isLast ? onAnimationComplete : undefined
+                      }
+                    >
+                      {letter}
+                    </motion.span>
+                    <span className='invisible'>
+                      {letter}
+                    </span>
+                  </span>
+                );
+              })}
             </span>
+            {wordIdx < words.length - 1 && ' '}
           </span>
         );
       })}

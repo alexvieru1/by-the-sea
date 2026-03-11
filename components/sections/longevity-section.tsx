@@ -7,7 +7,7 @@ export default function LongevitySection() {
       imageSrc="/images/your_future.webp"
       imageAlt="Longevity therapy"
       cardBg="bg-[#798B6F]"
-      align="right"
+      align="left"
       ctaKey="learnMore"
       ctaHref="/medical-programs/longevity"
       className="snap-section light-header-section"

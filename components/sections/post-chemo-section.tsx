@@ -7,10 +7,10 @@ export default function PostChemoSection() {
       imageSrc="/images/your_future.webp"
       imageAlt="Post-chemotherapy rehabilitation"
       cardBg="bg-[#BCA390]"
-      align="right"
+      align="left"
       ctaKey="learnMore"
       ctaHref="/medical-programs/post-chemotherapy"
-      className="snap-section"
+      className="snap-section light-header-section"
       orbs={[
         {
           size: 'h-64 w-64',

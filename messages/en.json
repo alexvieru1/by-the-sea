@@ -458,11 +458,12 @@
         "confirmedTitle": "Booking Confirmed",
         "confirmedDescription": "Your booking has been confirmed! Please complete your initial evaluation form before your visit.",
         "confirmedAction": "Complete Evaluation",
-        "evaluatedTitle": "All Set",
-        "evaluatedDescription": "Your evaluation form has been submitted. We look forward to welcoming you.",
+        "evaluatedTitle": "Evaluation Complete",
+        "evaluatedDescription": "Your evaluation has been submitted. Our team will review it and schedule a telemedicine consultation with you.",
         "telemedicine": {
           "title": "Telemedicine Consultation",
-          "scheduled": "Scheduled with {doctor} on {date} at {time}",
+          "scheduled": "Consultation scheduled with {doctor} on {date} at {time}. You will be contacted by phone to confirm.",
+          "confirmed": "Your consultation with {doctor} is confirmed for {date} at {time}.",
           "action": "Join Consultation",
           "awaitingConfirmation": "Awaiting phone confirmation"
         }

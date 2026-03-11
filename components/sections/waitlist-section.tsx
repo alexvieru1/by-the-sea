@@ -6,6 +6,7 @@ import { motion } from 'motion/react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
+import { Phone } from 'lucide-react';
 import { romanianPhoneSchema } from '@/lib/validation/phone';
 import { submitWaitlist } from '@/app/[locale]/waitlist/actions';
 import { Link, useRouter } from '@/i18n/routing';
@@ -151,6 +152,33 @@ export default function WaitlistSection() {
 
         {/* Right side - Form */}
         <div className="flex flex-col justify-center px-8 py-16 lg:px-20 lg:w-1/2 bg-[#C4B5A5]">
+          {/* Call to book */}
+          <div className="mb-8 max-w-lg">
+            <h2 className="font-serif text-3xl sm:text-4xl italic font-light text-[#3A2F25] mb-2">
+              {t('callTitle')}
+            </h2>
+            <p className="text-[#4A3F35]/80 text-sm leading-relaxed mb-4">
+              {t('callDescription')}
+            </p>
+            <a
+              href={`tel:${t('callPhone').replace(/\s/g, '')}`}
+              className="inline-flex items-center gap-2 bg-[#3A2F25] text-white px-6 py-3 text-sm font-semibold hover:bg-[#2A1F15] transition-colors"
+            >
+              <Phone className="h-4 w-4" />
+              {t('callButton')} — {t('callPhone')}
+            </a>
+          </div>
+
+          {/* Divider */}
+          <div className="flex items-center gap-4 mb-8 max-w-lg">
+            <div className="flex-1 h-px bg-[#8B7D6E]/40" />
+            <span className="text-xs uppercase tracking-widest text-[#6B5B4E]">
+              {t('orDivider')}
+            </span>
+            <div className="flex-1 h-px bg-[#8B7D6E]/40" />
+          </div>
+
+          {/* Form */}
           <h2 className="font-serif text-3xl sm:text-4xl italic font-light text-[#3A2F25] mb-3">
             {t('formTitle')}
           </h2>

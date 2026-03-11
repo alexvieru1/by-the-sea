@@ -466,11 +466,12 @@
         "confirmedTitle": "Rezervare Confirmata",
         "confirmedDescription": "Rezervarea ta a fost confirmata! Te rugam sa completezi fisa de evaluare initiala inainte de vizita.",
         "confirmedAction": "Completeaza Evaluarea",
-        "evaluatedTitle": "Totul este in Regula",
-        "evaluatedDescription": "Fisa de evaluare a fost trimisa. Abia asteptam sa te primim.",
+        "evaluatedTitle": "Evaluare Completă",
+        "evaluatedDescription": "Evaluarea a fost trimisă. Echipa noastră o va analiza și va programa o consultație telemedicină cu dumneavoastră.",
         "telemedicine": {
           "title": "Consultație Telemedicină",
-          "scheduled": "Programată cu {doctor} pe {date} la {time}",
+          "scheduled": "Consultație programată cu {doctor} pe {date} la {time}. Veți fi contactat telefonic pentru confirmare.",
+          "confirmed": "Consultația cu {doctor} este confirmată pe {date} la {time}.",
           "action": "Intră în Consultație",
           "awaitingConfirmation": "Se așteaptă confirmarea telefonică"
         }

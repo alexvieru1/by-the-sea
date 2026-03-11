@@ -30,8 +30,9 @@ export default function WaitlistStatusBanner({ status, telemedicineBooking }: Wa
   const locale = useLocale();
 
   if (status === 'evaluated') {
-    return (
-      <>
+    // No telemedicine booking yet — show transitional "evaluation complete" message
+    if (!telemedicineBooking) {
+      return (
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -45,48 +46,54 @@ export default function WaitlistStatusBanner({ status, telemedicineBooking }: Wa
             </div>
           </div>
         </motion.div>
+      );
+    }
 
-        {telemedicineBooking && (() => {
-          const { dateStr, timeStr } = formatBookingDateTime(telemedicineBooking.scheduled_at, locale);
-          return (
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="mb-8 border border-[#0097a7]/20 bg-[#d8f0f2] p-5"
-            >
-              <div className="flex items-start gap-3">
-                <Video className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#0097a7]" />
-                <div>
-                  <p className="text-sm font-semibold text-gray-900">
-                    {t('telemedicine.title')}
-                  </p>
-                  <p className="mt-1 text-sm text-gray-700">
-                    {t('telemedicine.scheduled', {
-                      doctor: telemedicineBooking.doctor_name,
-                      date: dateStr,
-                      time: timeStr,
-                    })}
-                  </p>
-                  {telemedicineBooking.status === 'confirmed' ? (
-                    <Link
-                      href="/consultation"
-                      className="mt-3 inline-flex items-center gap-2 bg-[#0097a7] px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#00838f]"
-                    >
-                      {t('telemedicine.action')}
-                      <ArrowRight className="h-3.5 w-3.5" />
-                    </Link>
-                  ) : (
-                    <p className="mt-2 text-xs text-gray-500">
-                      {t('telemedicine.awaitingConfirmation')}
-                    </p>
-                  )}
-                </div>
-              </div>
-            </motion.div>
-          );
-        })()}
-      </>
+    // Telemedicine booking exists — show single contextual banner
+    const { dateStr, timeStr } = formatBookingDateTime(telemedicineBooking.scheduled_at, locale);
+    const isConfirmed = telemedicineBooking.status === 'confirmed';
+
+    return (
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="mb-8 border border-[#0097a7]/20 bg-[#d8f0f2] p-5"
+      >
+        <div className="flex items-start gap-3">
+          <Video className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#0097a7]" />
+          <div>
+            <p className="text-sm font-semibold text-gray-900">
+              {t('telemedicine.title')}
+            </p>
+            <p className="mt-1 text-sm text-gray-700">
+              {isConfirmed
+                ? t('telemedicine.confirmed', {
+                    doctor: telemedicineBooking.doctor_name,
+                    date: dateStr,
+                    time: timeStr,
+                  })
+                : t('telemedicine.scheduled', {
+                    doctor: telemedicineBooking.doctor_name,
+                    date: dateStr,
+                    time: timeStr,
+                  })}
+            </p>
+            {isConfirmed ? (
+              <Link
+                href="/consultation"
+                className="mt-3 inline-flex items-center gap-2 bg-[#0097a7] px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#00838f]"
+              >
+                {t('telemedicine.action')}
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            ) : (
+              <p className="mt-2 text-xs text-gray-500">
+                {t('telemedicine.awaitingConfirmation')}
+              </p>
+            )}
+          </div>
+        </div>
+      </motion.div>
     );
   }
 

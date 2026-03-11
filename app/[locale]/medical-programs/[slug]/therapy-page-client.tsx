@@ -48,8 +48,6 @@ const therapyMap: Record<string, { translationNamespace: string; translationKey:
 
 const darkTextSlugs = new Set(['wellness']);
 
-const therapyKeys = ['t1', 't2', 't3', 't4', 't5'];
-
 export default function TherapyPageClient({ slug }: { slug: string }) {
   const therapy = therapyMap[slug];
   const isDark = darkTextSlugs.has(slug);
@@ -57,6 +55,7 @@ export default function TherapyPageClient({ slug }: { slug: string }) {
   const mutedColor = isDark ? 'text-gray-700' : 'text-white/80';
 
   const t = useTranslations(therapy.translationNamespace);
+  const tTherapies = useTranslations('therapies');
   const tCommon = useTranslations('common');
   const prefix = therapy.translationKey ? `${therapy.translationKey}.` : '';
 
@@ -66,12 +65,13 @@ export default function TherapyPageClient({ slug }: { slug: string }) {
 
   const hasPageContent = t.has(`${prefix}page.section1Title`);
 
-  const therapies = therapyKeys
-    .filter((key) => t.has(`${prefix}page.therapies.${key}.name`))
-    .map((key) => ({
-      name: t(`${prefix}page.therapies.${key}.name`),
-      description: t(`${prefix}page.therapies.${key}.description`),
-    }));
+  const therapyIds = t.has(`${prefix}page.therapyIds`)
+    ? t(`${prefix}page.therapyIds`).split(',')
+    : [];
+  const therapies = therapyIds.map((id) => ({
+    name: tTherapies(`${id}.name`),
+    description: tTherapies(`${id}.description`),
+  }));
 
   return (
     <div className="min-h-screen bg-gray-50">

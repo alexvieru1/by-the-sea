@@ -5,8 +5,10 @@ import { useTranslations } from "next-intl";
 import { usePathname } from "@/i18n/routing";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
+import { ChevronDown } from "lucide-react";
 import TransitionLink from "./transition-link";
 import LanguageSwitcher from "./language-switcher";
+import NavDropdown from "./nav-dropdown";
 import AnimatedButton from "@/components/ui/animated-button";
 import AnimatedLink from "@/components/ui/animated-link";
 import SlicedText from "../ui/sliced-text";
@@ -61,29 +63,45 @@ export default function Header() {
   const pathname = usePathname();
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [isLightMode, setIsLightMode] = useState(false);
   const lastScrollY = useRef(0);
 
   // Observe sections with .light-header-section to toggle light (white) navbar
   useEffect(() => {
-    const sections = document.querySelectorAll(".light-header-section");
-    if (sections.length === 0) return;
-
     const observer = new IntersectionObserver(
       (entries) => {
-        // Light mode if any flagged section intersects the top of the viewport
         const isAnyVisible = entries.some((entry) => entry.isIntersecting);
         setIsLightMode(isAnyVisible);
       },
       {
-        // Only the top strip where the header lives
         rootMargin: "0px 0px -95% 0px",
         threshold: 0,
       }
     );
 
-    sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+    // Observe existing elements
+    const observe = () => {
+      const sections = document.querySelectorAll(".light-header-section");
+      if (sections.length === 0) {
+        setIsLightMode(false);
+      }
+      sections.forEach((section) => observer.observe(section));
+    };
+
+    observe();
+
+    // Watch for dynamically rendered .light-header-section elements
+    const mutationObserver = new MutationObserver(() => {
+      observer.disconnect();
+      observe();
+    });
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+    return () => {
+      observer.disconnect();
+      mutationObserver.disconnect();
+    };
   }, [pathname]);
 
   useEffect(() => {
@@ -113,15 +131,20 @@ export default function Header() {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
+      setMobileServicesOpen(false);
     }
     return () => {
       document.body.style.overflow = "";
     };
   }, [isMobileMenuOpen]);
 
+  const servicesDropdownItems = [
+    { href: "/medical-programs", label: t("medicalPrograms") },
+    { href: "/therapies", label: t("therapies") },
+  ];
+
   const navLinks = [
     { href: "/about", label: t("about") },
-    { href: "/medical-programs", label: t("medicalPrograms") },
     { href: "/patient-guide", label: t("patientGuide") },
     { href: "/other-info", label: t("otherInfo") },
     { href: "/gallery", label: t("gallery") },
@@ -129,7 +152,12 @@ export default function Header() {
   ];
 
   const mobileNavLinks = [
-    ...navLinks,
+    { href: "/about", label: t("about") },
+    { type: "dropdown" as const, label: t("services") },
+    { href: "/patient-guide", label: t("patientGuide") },
+    { href: "/other-info", label: t("otherInfo") },
+    { href: "/gallery", label: t("gallery") },
+    { href: "/contact", label: t("contact") },
     {
       href: user ? "/profile" : "/login",
       label: user ? t("profile") : t("login"),
@@ -197,7 +225,15 @@ export default function Header() {
               }}
               transition={{ duration: 0.3, ease: "easeOut" }}
             >
-              {navLinks.map((link) => (
+              <AnimatedLink href="/about" variant={colorVariant}>
+                {t("about")}
+              </AnimatedLink>
+              <NavDropdown
+                label={t("services")}
+                items={servicesDropdownItems}
+                variant={colorVariant}
+              />
+              {navLinks.filter((l) => l.href !== "/about").map((link) => (
                 <AnimatedLink
                   key={link.href}
                   href={link.href}
@@ -339,7 +375,7 @@ export default function Header() {
               <nav className="flex flex-1 flex-col justify-center px-10">
                 {mobileNavLinks.map((link, index) => (
                   <motion.div
-                    key={link.href}
+                    key={"href" in link ? link.href : link.label}
                     variants={linkAnimation}
                     initial="initial"
                     animate="enter"
@@ -347,13 +383,58 @@ export default function Header() {
                     custom={index}
                     className="border-b border-white/20 py-4"
                   >
-                    <TransitionLink
-                      href={link.href}
-                      className="font-(family-name:--font-playfair) text-3xl font-light italic text-white transition-opacity hover:opacity-70"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {link.label}
-                    </TransitionLink>
+                    {"type" in link && link.type === "dropdown" ? (
+                      <>
+                        <button
+                          type="button"
+                          onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+                          className="flex w-full items-center gap-3 font-(family-name:--font-playfair) text-3xl font-light italic text-white transition-opacity hover:opacity-70"
+                        >
+                          {link.label}
+                          <ChevronDown
+                            className={cn(
+                              "h-5 w-5 transition-transform duration-200",
+                              mobileServicesOpen && "rotate-180"
+                            )}
+                          />
+                        </button>
+                        <AnimatePresence>
+                          {mobileServicesOpen && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.3, ease: "easeInOut" }}
+                              className="overflow-hidden"
+                            >
+                              <div className="mt-3 flex flex-col pl-4">
+                                {servicesDropdownItems.map((item) => (
+                                  <TransitionLink
+                                    key={item.href}
+                                    href={item.href}
+                                    className="block py-2 text-xl text-white/70 transition-opacity hover:text-white"
+                                    onClick={() => {
+                                      setIsMobileMenuOpen(false);
+                                      setMobileServicesOpen(false);
+                                    }}
+                                  >
+                                    {item.label}
+                                  </TransitionLink>
+                                ))}
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </>
+                    ) : (
+                      <TransitionLink
+                        href={"href" in link ? link.href : "/"}
+                        className="font-(family-name:--font-playfair) text-3xl font-light italic text-white transition-opacity hover:opacity-70"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {link.label}
+                      </TransitionLink>
+                    )}
                   </motion.div>
                 ))}
               </nav>

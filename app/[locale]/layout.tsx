@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
-import { Geist, Playfair_Display } from 'next/font/google';
+import { Geist, Playfair_Display, Quicksand } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -24,7 +24,13 @@ const playfair = Playfair_Display({
   variable: '--font-playfair',
   subsets: ['latin'],
   weight: ['400'],
-  style: ['italic'],
+  style: ['italic', 'normal'],
+});
+
+const quicksand = Quicksand({
+  variable: '--font-quicksand',
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -58,7 +64,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${playfair.variable} antialiased`}
+        className={`${geistSans.variable} ${playfair.variable} ${quicksand.variable} antialiased`}
       >
         <PageLoader />
         <NextIntlClientProvider messages={messages}>

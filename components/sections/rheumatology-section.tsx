@@ -7,7 +7,7 @@ export default function RheumatologySection() {
       imageSrc="/images/your_body.webp"
       imageAlt="Rheumatology therapy"
       cardBg="bg-[#8FA3A8]"
-      align="left"
+      align="right"
       ctaKey="learnMore"
       ctaHref="/medical-programs/rheumatology"
       className="snap-section"
