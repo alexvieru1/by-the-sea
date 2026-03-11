@@ -36,6 +36,9 @@ export default function ConsultationClient({ booking }: { booking: Booking }) {
   const thirtyMinBefore = new Date(scheduledDate.getTime() - 30 * 60 * 1000);
   const canJoin = booking.status === 'confirmed' && now >= thirtyMinBefore;
 
+  const isMobile = typeof navigator !== 'undefined' &&
+    /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
   const handleJoin = async () => {
     setCallState('joining');
     setError('');
@@ -45,6 +48,13 @@ export default function ConsultationClient({ booking }: { booking: Booking }) {
     if ('error' in result) {
       setCallState('error');
       setError(result.error ?? 'unknown');
+      return;
+    }
+
+    if (isMobile) {
+      // iOS Safari blocks camera/mic in cross-origin iframes
+      // Redirect to JaaS room directly where permissions work natively
+      window.location.href = `https://8x8.vc/${result.appId}/${result.roomName}?jwt=${result.token}`;
       return;
     }
 
@@ -72,7 +82,7 @@ export default function ConsultationClient({ booking }: { booking: Booking }) {
   }
 
   return (
-    <section className="min-h-screen bg-[#F9FAFB] flex items-center justify-center px-4">
+    <section className="fixed inset-0 z-[100] bg-[#F9FAFB] flex items-center justify-center px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
