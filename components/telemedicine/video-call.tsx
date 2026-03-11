@@ -14,49 +14,61 @@ export default function VideoCall({ jwt, roomName, appId, onCallEnd }: VideoCall
   const apiRef = useRef<unknown>(null);
 
   useEffect(() => {
-    if (!containerRef.current || apiRef.current) return;
+    if (!containerRef.current) return;
 
-    const loadJitsi = async () => {
-      // Load the JaaS iframe API script
+    let cancelled = false;
+
+    const initApi = () => {
+      if (cancelled || apiRef.current || !containerRef.current) return;
+
+      // @ts-expect-error JitsiMeetExternalAPI is loaded via script
+      const api = new window.JitsiMeetExternalAPI('8x8.vc', {
+        roomName: `${appId}/${roomName}`,
+        jwt,
+        parentNode: containerRef.current,
+        configOverwrite: {
+          startWithAudioMuted: true,
+          prejoinPageEnabled: true,
+          disableDeepLinking: true,
+          lobby: { enabled: true },
+        },
+        interfaceConfigOverwrite: {
+          DISABLE_JOIN_LEAVE_NOTIFICATIONS: true,
+          SHOW_JITSI_WATERMARK: false,
+          SHOW_BRAND_WATERMARK: false,
+          TOOLBAR_BUTTONS: [
+            'microphone', 'camera', 'desktop', 'chat',
+            'fullscreen', 'hangup', 'tileview', 'settings',
+          ],
+        },
+      });
+
+      api.addListener('readyToClose', () => {
+        onCallEnd?.();
+      });
+
+      apiRef.current = api;
+    };
+
+    const existingScript = document.querySelector(
+      'script[src*="external_api.js"]'
+    );
+
+    // @ts-expect-error JitsiMeetExternalAPI may be loaded already
+    if (window.JitsiMeetExternalAPI) {
+      initApi();
+    } else if (existingScript) {
+      existingScript.addEventListener('load', initApi);
+    } else {
       const script = document.createElement('script');
       script.src = 'https://8x8.vc/vpaas-magic-cookie-default/external_api.js';
       script.async = true;
-      script.onload = () => {
-        // @ts-expect-error JitsiMeetExternalAPI is loaded via script
-        const api = new window.JitsiMeetExternalAPI('8x8.vc', {
-          roomName: `${appId}/${roomName}`,
-          jwt,
-          parentNode: containerRef.current,
-          configOverwrite: {
-            startWithAudioMuted: true,
-            prejoinPageEnabled: true,
-            disableDeepLinking: true,
-            lobby: { enabled: true },
-          },
-          interfaceConfigOverwrite: {
-            DISABLE_JOIN_LEAVE_NOTIFICATIONS: true,
-            SHOW_JITSI_WATERMARK: false,
-            SHOW_BRAND_WATERMARK: false,
-            TOOLBAR_BUTTONS: [
-              'microphone', 'camera', 'desktop', 'chat',
-              'fullscreen', 'hangup', 'tileview', 'settings',
-            ],
-          },
-        });
-
-        api.addListener('readyToClose', () => {
-          onCallEnd?.();
-        });
-
-        apiRef.current = api;
-      };
-
+      script.onload = initApi;
       document.head.appendChild(script);
-    };
-
-    loadJitsi();
+    }
 
     return () => {
+      cancelled = true;
       if (apiRef.current) {
         // @ts-expect-error dispose exists on the API
         apiRef.current.dispose();
@@ -68,7 +80,7 @@ export default function VideoCall({ jwt, roomName, appId, onCallEnd }: VideoCall
   return (
     <div
       ref={containerRef}
-      className="h-[calc(100vh-80px)] w-full"
+      className="h-screen w-full"
     />
   );
 }

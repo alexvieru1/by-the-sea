@@ -60,7 +60,7 @@ export default function ConsultationClient({ booking }: { booking: Booking }) {
 
   if (callState === 'in-call' && callData) {
     return (
-      <div className="min-h-screen bg-gray-900 pt-16">
+      <div className="fixed inset-0 z-[100] bg-gray-900">
         <VideoCall
           jwt={callData.token}
           roomName={callData.roomName}

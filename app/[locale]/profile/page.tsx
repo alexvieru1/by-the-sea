@@ -10,7 +10,7 @@ export interface TelemedicineBooking {
   id: string;
   doctor_name: string;
   scheduled_at: string;
-  status: 'scheduled' | 'confirmed';
+  status: 'scheduled' | 'confirmed' | 'completed';
 }
 
 export default async function ProfilePage({ params }: { params: Promise<{ locale: string }> }) {
@@ -33,8 +33,8 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
       .from('telemedicine_bookings')
       .select('id, doctor_name, scheduled_at, status')
       .eq('user_id', user.id)
-      .in('status', ['scheduled', 'confirmed'])
-      .order('scheduled_at', { ascending: true })
+      .in('status', ['scheduled', 'confirmed', 'completed'])
+      .order('scheduled_at', { ascending: false })
       .limit(1)
       .single(),
   ]);

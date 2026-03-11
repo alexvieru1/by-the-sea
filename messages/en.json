@@ -465,7 +465,10 @@
           "scheduled": "Consultation scheduled with {doctor} on {date} at {time}. You will be contacted by phone to confirm.",
           "confirmed": "Your consultation with {doctor} is confirmed for {date} at {time}.",
           "action": "Join Consultation",
-          "awaitingConfirmation": "Awaiting phone confirmation"
+          "awaitingConfirmation": "Awaiting phone confirmation",
+          "completedTitle": "Consultation Complete",
+          "completedDescription": "You're all set! We look forward to welcoming you. The next step is the advance payment for your stay.",
+          "advancePayment": "Advance Payment"
         }
       }
     },

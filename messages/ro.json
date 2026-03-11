@@ -473,7 +473,10 @@
           "scheduled": "Consultație programată cu {doctor} pe {date} la {time}. Veți fi contactat telefonic pentru confirmare.",
           "confirmed": "Consultația cu {doctor} este confirmată pe {date} la {time}.",
           "action": "Intră în Consultație",
-          "awaitingConfirmation": "Se așteaptă confirmarea telefonică"
+          "awaitingConfirmation": "Se așteaptă confirmarea telefonică",
+          "completedTitle": "Consultație Finalizată",
+          "completedDescription": "Totul este pregătit! Vă așteptăm cu drag să pășiți pragul complexului nostru. Următorul pas este achitarea avansului pentru sejur.",
+          "advancePayment": "Achită Avansul"
         }
       }
     },

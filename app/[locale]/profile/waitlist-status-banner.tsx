@@ -3,7 +3,7 @@
 import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'motion/react';
 import { Link } from '@/i18n/routing';
-import { Clock, CheckCircle, ArrowRight, Video } from 'lucide-react';
+import { Clock, CheckCircle, ArrowRight, Video, CreditCard } from 'lucide-react';
 import type { WaitlistStatus, TelemedicineBooking } from './page';
 
 interface WaitlistStatusBannerProps {
@@ -49,9 +49,42 @@ export default function WaitlistStatusBanner({ status, telemedicineBooking }: Wa
       );
     }
 
-    // Telemedicine booking exists — show single contextual banner
+    // Telemedicine booking exists — show contextual banner based on status
     const { dateStr, timeStr } = formatBookingDateTime(telemedicineBooking.scheduled_at, locale);
     const isConfirmed = telemedicineBooking.status === 'confirmed';
+    const isCompleted = telemedicineBooking.status === 'completed';
+
+    if (isCompleted) {
+      return (
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-8 border border-green-200 bg-green-50 p-5"
+        >
+          <div className="flex items-start gap-3">
+            <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-600" />
+            <div>
+              <p className="text-sm font-semibold text-green-900">
+                {t('telemedicine.completedTitle')}
+              </p>
+              <p className="mt-1 text-sm text-green-700">
+                {t('telemedicine.completedDescription')}
+              </p>
+              <a
+                href="https://epl.ro/q/NG5xvTdr93e58mNxhtRjTUUfX-xax-s="
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center gap-2 bg-[#0097a7] px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#00838f]"
+              >
+                <CreditCard className="h-3.5 w-3.5" />
+                {t('telemedicine.advancePayment')}
+                <ArrowRight className="h-3.5 w-3.5" />
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      );
+    }
 
     return (
       <motion.div
