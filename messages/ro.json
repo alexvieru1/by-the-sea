@@ -476,7 +476,13 @@
           "awaitingConfirmation": "Se așteaptă confirmarea telefonică",
           "completedTitle": "Consultație Finalizată",
           "completedDescription": "Totul este pregătit! Vă așteptăm cu drag să pășiți pragul complexului nostru. Următorul pas este achitarea avansului pentru sejur.",
-          "advancePayment": "Achită Avansul"
+          "advancePayment": "Achită Avansul",
+          "acceptBooking": "Acceptă Consultația",
+          "declineBooking": "Refuză Consultația",
+          "cancelBooking": "Anulează Consultația",
+          "cancelled": "Consultația a fost anulată.",
+          "tooLateToCancel": "Nu se poate anula cu mai puțin de 6 ore înainte de consultație.",
+          "awaitingYourConfirmation": "Vă rugăm să confirmați sau să refuzați consultația programată."
         }
       }
     },

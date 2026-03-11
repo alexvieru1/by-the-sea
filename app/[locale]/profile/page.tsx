@@ -10,7 +10,7 @@ export interface TelemedicineBooking {
   id: string;
   doctor_name: string;
   scheduled_at: string;
-  status: 'scheduled' | 'confirmed' | 'completed';
+  status: 'scheduled' | 'confirmed' | 'completed' | 'cancelled';
 }
 
 export default async function ProfilePage({ params }: { params: Promise<{ locale: string }> }) {
@@ -29,14 +29,27 @@ export default async function ProfilePage({ params }: { params: Promise<{ locale
   const [{ data: profile }, { data: evaluation }, { data: telemedicineBooking }] = await Promise.all([
     supabase.from('profiles').select('*').eq('id', user.id).single(),
     supabase.from('evaluation_forms').select('*').eq('user_id', user.id).single(),
+    // Prioritize active bookings over past/cancelled ones
     supabase
       .from('telemedicine_bookings')
       .select('id, doctor_name, scheduled_at, status')
       .eq('user_id', user.id)
-      .in('status', ['scheduled', 'confirmed', 'completed'])
+      .in('status', ['scheduled', 'confirmed'])
       .order('scheduled_at', { ascending: false })
       .limit(1)
-      .single(),
+      .single()
+      .then(async (activeResult) => {
+        if (activeResult.data) return activeResult;
+        // No active booking — fall back to most recent completed/cancelled
+        return supabase
+          .from('telemedicine_bookings')
+          .select('id, doctor_name, scheduled_at, status')
+          .eq('user_id', user.id)
+          .in('status', ['completed', 'cancelled'])
+          .order('scheduled_at', { ascending: false })
+          .limit(1)
+          .single();
+      }),
   ]);
 
   // Check profile.booking_confirmed first (source of truth)

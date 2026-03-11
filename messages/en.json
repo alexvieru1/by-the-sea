@@ -468,7 +468,13 @@
           "awaitingConfirmation": "Awaiting phone confirmation",
           "completedTitle": "Consultation Complete",
           "completedDescription": "You're all set! We look forward to welcoming you. The next step is the advance payment for your stay.",
-          "advancePayment": "Advance Payment"
+          "advancePayment": "Advance Payment",
+          "acceptBooking": "Accept Consultation",
+          "declineBooking": "Decline Consultation",
+          "cancelBooking": "Cancel Consultation",
+          "cancelled": "The consultation has been cancelled.",
+          "tooLateToCancel": "Cannot cancel less than 6 hours before the consultation.",
+          "awaitingYourConfirmation": "Please confirm or decline your scheduled consultation."
         }
       }
     },

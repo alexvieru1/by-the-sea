@@ -3,6 +3,40 @@
 import { createClient } from '@/lib/supabase/server';
 import { generateJaaSToken } from '@/lib/jaas/generate-token';
 
+export async function updateBookingStatus(bookingId: string, status: 'confirmed' | 'cancelled') {
+  const supabase = await createClient();
+  const { data: { user } } = await supabase.auth.getUser();
+  if (!user) return { error: 'unauthorized' };
+
+  const { data: booking } = await supabase
+    .from('telemedicine_bookings')
+    .select('id, user_id, scheduled_at, status')
+    .eq('id', bookingId)
+    .eq('user_id', user.id)
+    .single();
+
+  if (!booking) return { error: 'not_found' };
+
+  if (status === 'cancelled' && booking.status === 'confirmed') {
+    const scheduledAt = new Date(booking.scheduled_at).getTime();
+    const sixHoursBefore = scheduledAt - 6 * 60 * 60 * 1000;
+    if (Date.now() > sixHoursBefore) {
+      return { error: 'too_late_to_cancel' };
+    }
+  }
+
+  const { error, data } = await supabase
+    .from('telemedicine_bookings')
+    .update({ status })
+    .eq('id', bookingId)
+    .select();
+
+  if (error) return { error: error.message };
+  if (!data || data.length === 0) return { error: 'update_failed' };
+
+  return { success: true };
+}
+
 export async function getTelemedicineToken(bookingId: string) {
   const supabase = await createClient();
   const {
