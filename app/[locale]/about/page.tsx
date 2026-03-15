@@ -1,6 +1,5 @@
 import dynamic from 'next/dynamic';
-import { useTranslations } from 'next-intl';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import PageHero from '@/components/layout/page-hero';
 
 const AboutContent = dynamic(() => import('@/components/sections/about-content'));
@@ -9,16 +8,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const { locale } = await params;
   setRequestLocale(locale);
 
-  return <AboutPageInner />;
-}
-
-function AboutPageInner() {
-  const t = useTranslations('aboutContent');
+  const t = await getTranslations('pages.about');
 
   return (
-    <>
-      <PageHero title={t('title')} />
+    <div className="min-h-screen bg-gray-50">
+      <PageHero title={t('title')} subtitle={t('subtitle')} description={t('description')} />
       <AboutContent />
-    </>
+    </div>
   );
 }
