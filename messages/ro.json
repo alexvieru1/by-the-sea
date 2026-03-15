@@ -141,7 +141,7 @@
   "hero": {
     "title1": "Redescoperă echilibrul.",
     "title2": "În ritmul tău.",
-    "description": "Terapii integrate într-o experiență perzonalizată."
+    "description": "Acolo unde grija pentru sănătate întâlnește arta relaxării, începe adevărata experiență a stării de bine."
   },
   "dataPoints": {
     "title1": "Urmărește milioane de puncte de date.",
@@ -171,7 +171,30 @@
     "missionTitle": "Misiunea noastră",
     "missionDescription": "La Vraja Mării by The Sea, excelența în Recuperare Medicală, Medicină Fizică și Balneologie se întâlnește cu principiile Medicinei Funcționale pentru a oferi pacienților noștri un concept medical integrativ, unic în regiune.",
     "missionDescription-2": "Misiunea noastră este de a susține prin protocoale avansate de recuperare, tehnologii inovatoare și expertiză în Balneologie și Medicină Fizică.",
-    "missionDescription-3": "Nu tratăm doar simptomele, ci identificăm și corectăm cauzele profunde ale afecțiunilor cronice, pentru rezultate durabile și stare de bine generală."
+    "missionDescription-3": "Nu tratăm doar simptomele, ci identificăm și corectăm cauzele profunde ale afecțiunilor cronice, pentru rezultate durabile și stare de bine generală.",
+    "valuesTitle": "Valorile Noastre",
+    "values": {
+      "evidenceBased": {
+        "title": "Medicină bazată pe dovezi",
+        "description": "Fiecare protocol este fundamentat pe cele mai recente cercetări clinice."
+      },
+      "personalizedCare": {
+        "title": "Îngrijire personalizată",
+        "description": "Tratamente adaptate nevoilor și obiectivelor fiecărui pacient."
+      },
+      "natureHealing": {
+        "title": "Vindecare prin natură",
+        "description": "Marea, aerul și resursele naturale ca parteneri în procesul de recuperare."
+      },
+      "holisticApproach": {
+        "title": "Abordare holistică",
+        "description": "Tratăm persoana în ansamblu, nu doar simptomele."
+      }
+    },
+    "teamTitle": "Echipa Noastră",
+    "teamDescription": "Specialiști dedicați sănătății și recuperării tale",
+    "ctaTitle": "Fă primul pas către o viață mai sănătoasă",
+    "ctaDescription": "Echipa noastră te așteaptă pentru o evaluare personalizată și un plan de recuperare adaptat nevoilor tale."
   },
   "medicalPrograms": {
     "medicalRehabilitation": {

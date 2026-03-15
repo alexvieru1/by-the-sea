@@ -160,10 +160,41 @@
   },
   "aboutContent": {
     "title": "About Us",
-    "description": "Regular inspections are mandatory for cars on our roads, but in our healthcare system, we often wait until our bodies break down before taking action. So why not prioritise our health the same way?",
+    "description": "We live in a world of continuous transformation, where the accelerated pace, social pressures, and global instability challenge our health more than ever.",
+    "description-2": "In this context, recovery and restoring health become essential. They require an approach that places the person at the center of the process, to offer the possibility of living life to its fullest potential.",
+    "description-3": "Vraja Mării by The Sea was born from this need: to create a space where evidence-based medicine and the tranquility of the natural environment come together to support the deep restoration of the body and inner balance.",
+    "description-4": "Here, healing begins with calm, time, and attention.",
     "visionTitle": "Our Vision",
-    "visionDescription": "By equipping our doctors with the best tools to take care of tracking your health, our doctor led model of care provides a better experience for everyone.",
-    "missionTitle": "Our Mission"
+    "visionDescription": "We envision a medicine of the future that goes beyond treating symptoms, looking at the person as a whole.",
+    "visionDescription-2": "Vraja Mării by The Sea aims to become a benchmark in medical rehabilitation and integrative wellness, a place where science, empathy, and nature work together for recovery, prevention, and health optimization.",
+    "visionDescription-3": "We believe in a gentle, personalized, and conscious approach, adapted to the rhythm of each body.",
+    "missionTitle": "Our Mission",
+    "missionDescription": "At Vraja Mării by The Sea, excellence in Medical Rehabilitation, Physical Medicine, and Balneology meets the principles of Functional Medicine to offer our patients an integrative medical concept, unique in the region.",
+    "missionDescription-2": "Our mission is to support through advanced recovery protocols, innovative technologies, and expertise in Balneology and Physical Medicine.",
+    "missionDescription-3": "We don't just treat symptoms — we identify and correct the root causes of chronic conditions, for lasting results and overall well-being.",
+    "valuesTitle": "Our Values",
+    "values": {
+      "evidenceBased": {
+        "title": "Evidence-Based Medicine",
+        "description": "Every protocol is grounded in the latest clinical research."
+      },
+      "personalizedCare": {
+        "title": "Personalized Care",
+        "description": "Treatments tailored to each patient's needs and goals."
+      },
+      "natureHealing": {
+        "title": "Nature-Integrated Healing",
+        "description": "The sea, air, and natural resources as partners in recovery."
+      },
+      "holisticApproach": {
+        "title": "Holistic Approach",
+        "description": "We treat the whole person, not just symptoms."
+      }
+    },
+    "teamTitle": "Our Team",
+    "teamDescription": "Specialists dedicated to your health and recovery",
+    "ctaTitle": "Take the first step towards a healthier life",
+    "ctaDescription": "Our team is ready for a personalized assessment and a recovery plan tailored to your needs."
   },
   "medicalPrograms": {
     "medicalRehabilitation": {
