@@ -6,7 +6,7 @@ export default function MedicalRehabilitationSection() {
       translationKey="medicalPrograms.medicalRehabilitation"
       imageSrc="/images/your_body.webp"
       imageAlt="Medical rehabilitation therapy"
-      cardBg="bg-[#0097a7]"
+      cardBg="bg-[#002343]"
       align="left"
       ctaKey="learnMore"
       ctaHref="/medical-programs/medical-rehabilitation"
@@ -18,7 +18,7 @@ export default function MedicalRehabilitationSection() {
         },
         {
           size: 'h-48 w-48',
-          position: { bottom: '20%', right: '10%', background: 'radial-gradient(circle, rgba(240,112,96,0.15) 0%, transparent 70%)' },
+          position: { bottom: '20%', right: '10%', background: 'radial-gradient(circle, rgba(207,156,124,0.15) 0%, transparent 70%)' },
         },
       ]}
     />

@@ -156,7 +156,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, phoneRequi
   return (
     <div className="min-h-screen bg-gray-50">
       {showConsentModal && <ConsentModal isUpdate={!!hasOutdatedConsent} />}
-      <div className="relative overflow-hidden bg-[#c5d5d8] px-6 pb-20 pt-32 lg:px-12 lg:pb-32 lg:pt-40">
+      <div className="relative overflow-hidden bg-[#F2E4D1] px-6 pb-20 pt-32 lg:px-12 lg:pb-32 lg:pt-40">
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <motion.div
             className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-white/10 blur-3xl"
@@ -176,7 +176,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, phoneRequi
           </motion.p>
 
           <motion.h1
-            className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic text-gray-900 sm:text-5xl lg:text-6xl"
+            className="font-[family-name:var(--font-quicksand)] text-4xl font-thin text-gray-900 sm:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -217,7 +217,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, phoneRequi
                     id="firstName"
                     type="text"
                     {...register('firstName')}
-                    className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                    className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#002343]"
                   />
                 </div>
                 <div>
@@ -228,7 +228,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, phoneRequi
                     id="lastName"
                     type="text"
                     {...register('lastName')}
-                    className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                    className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#002343]"
                   />
                 </div>
               </div>
@@ -255,7 +255,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, phoneRequi
                   type="tel"
                   {...register('phone')}
                   placeholder="07XXXXXXXX"
-                  className={`w-full border bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7] ${
+                  className={`w-full border bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#002343] ${
                     completePhone && !profile?.phone ? 'border-amber-400' : 'border-gray-300'
                   }`}
                 />
@@ -273,7 +273,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, phoneRequi
                     id="county"
                     value={countyValue}
                     onChange={(e) => handleCountyChange(e.target.value)}
-                    className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                    className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#002343]"
                   >
                     <option value="">{t('selectCounty')}</option>
                     {counties.map((c) => (
@@ -291,7 +291,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, phoneRequi
                     id="city"
                     {...register('city')}
                     disabled={!countyValue}
-                    className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7] disabled:opacity-50"
+                    className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#002343] disabled:opacity-50"
                   >
                     <option value="">{t('selectCity')}</option>
                     {cities.map((c) => (
@@ -309,7 +309,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, phoneRequi
                   id="community"
                   type="checkbox"
                   {...register('isCommunityMember')}
-                  className="mt-1 h-4 w-4 border-gray-300 accent-[#0097a7]"
+                  className="mt-1 h-4 w-4 border-gray-300 accent-[#002343]"
                 />
                 <div>
                   <label htmlFor="community" className="text-sm font-medium text-gray-900 cursor-pointer">
@@ -334,7 +334,7 @@ export default function ProfileForm({ profile, email, waitlistStatus, phoneRequi
                         type="button"
                         onClick={handleReaccept}
                         disabled={isReaccepting}
-                        className="mt-2 bg-[#0097a7] px-4 py-2 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#00838f] disabled:opacity-50"
+                        className="mt-2 bg-[#002343] px-4 py-2 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#172C33] disabled:opacity-50"
                       >
                         {isReaccepting ? '...' : t('reaccept')}
                       </button>

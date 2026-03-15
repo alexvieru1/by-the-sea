@@ -68,7 +68,7 @@ interface EvaluationSummaryProps {
   evaluation: EvaluationData | null;
 }
 
-const sectionTitleClass = 'mb-3 text-xs font-semibold uppercase tracking-widest text-[#4a9ead]';
+const sectionTitleClass = 'mb-3 text-xs font-semibold uppercase tracking-widest text-[#002343]';
 const subsectionTitleClass = 'mb-2 mt-4 text-xs font-medium uppercase tracking-wider text-gray-400 first:mt-0';
 const valueClass = 'text-sm text-gray-900';
 const labelSmClass = 'text-xs uppercase tracking-wider text-gray-500';
@@ -242,7 +242,7 @@ export default function EvaluationSummary({ evaluation }: EvaluationSummaryProps
       {/* Communication */}
       <div className="mb-6">
         <div className="mb-3 flex items-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#4a9ead]">{t('stepLabel2')}</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#002343]">{t('stepLabel2')}</p>
           <ExpandToggle expanded={!!expandedSections.communication} onToggle={() => toggle('communication')} />
         </div>
         <div className="space-y-2">
@@ -268,7 +268,7 @@ export default function EvaluationSummary({ evaluation }: EvaluationSummaryProps
       {/* Medical History */}
       <div className="mb-6">
         <div className="mb-3 flex items-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#4a9ead]">{t('stepLabel3')}</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#002343]">{t('stepLabel3')}</p>
           <ExpandToggle expanded={!!expandedSections.medical} onToggle={() => toggle('medical')} />
         </div>
 
@@ -384,7 +384,7 @@ export default function EvaluationSummary({ evaluation }: EvaluationSummaryProps
       {/* Additional Info */}
       <div>
         <div className="mb-3 flex items-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-[#4a9ead]">{t('stepLabel4')}</p>
+          <p className="text-xs font-semibold uppercase tracking-widest text-[#002343]">{t('stepLabel4')}</p>
           <ExpandToggle expanded={!!expandedSections.additional} onToggle={() => toggle('additional')} />
         </div>
 

@@ -26,7 +26,7 @@ export default function StepPersonalData({ register, errors }: StepPersonalDataP
             id="medical_data_consent"
             type="checkbox"
             {...register('medical_data_consent')}
-            className="mt-1 h-4 w-4 border-gray-300 accent-[#0097a7]"
+            className="mt-1 h-4 w-4 border-gray-300 accent-[#002343]"
           />
           <div>
             <label

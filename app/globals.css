@@ -6,11 +6,12 @@
 
 :root {
 
-  /* Design System Colors */
-  --color-primary: #4a9ead;
-  --color-primary-dark: #3d8a98;
-  --color-hero-bg: #c5d5d8;
-  --color-scan-box: #d8e4e6;
+  /* Brand Colors */
+  --color-primary: #002343;
+  --color-primary-dark: #172C33;
+  --color-accent: #CF9C7C;
+  --color-hero-bg: #F2E4D1;
+  --color-neutral: #D1CCC7;
   --color-text-dark: #1a1a1a;
   --color-text-light: #6b7280;
   --color-text-muted: #9ca3af;
@@ -53,11 +54,12 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--color-primary);
   --color-primary-dark: var(--color-primary-dark);
+  --color-accent: var(--color-accent);
   --color-hero-bg: var(--color-hero-bg);
-  --color-scan-box: var(--color-scan-box);
+  --color-neutral: var(--color-neutral);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-serif: var(--font-playfair);
+  --font-serif: var(--font-quicksand);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);

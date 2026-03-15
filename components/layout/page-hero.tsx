@@ -15,7 +15,7 @@ export default function PageHero({
   title,
   subtitle,
   description,
-  bgColor = '#c5d5d8',
+  bgColor = '#F2E4D1',
   meta,
   children,
 }: PageHeroProps) {
@@ -39,7 +39,7 @@ export default function PageHero({
           }}
         />
         <motion.div
-          className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#0097a7]/10 blur-3xl"
+          className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#002343]/10 blur-3xl"
           animate={{
             x: [0, -20, 0],
             y: [0, 30, 0],
@@ -65,7 +65,7 @@ export default function PageHero({
         )}
 
         <motion.h1
-          className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic text-gray-900 sm:text-5xl lg:text-6xl"
+          className="font-[family-name:var(--font-quicksand)] text-4xl font-thin text-gray-900 sm:text-5xl lg:text-6xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}

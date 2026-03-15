@@ -16,7 +16,7 @@ import { inputClass, labelClass, errorClass } from '@/lib/form-styles';
 import YesNoField from '@/components/forms/yes-no-field';
 
 const sectionTitleClass =
-  'text-xs font-semibold uppercase tracking-widest text-[#4a9ead]';
+  'text-xs font-semibold uppercase tracking-widest text-[#002343]';
 
 function SectionHeader({
   title,

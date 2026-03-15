@@ -109,11 +109,11 @@ export default function EvaluationForm({ defaultValues }: EvaluationFormProps) {
         transition={{ duration: 0.5 }}
       >
         <div className="mb-6 flex justify-center">
-          <div className="flex h-16 w-16 items-center justify-center border-2 border-[#4a9ead] text-[#4a9ead]">
+          <div className="flex h-16 w-16 items-center justify-center border-2 border-[#002343] text-[#002343]">
             <Check className="h-8 w-8" strokeWidth={2} />
           </div>
         </div>
-        <h2 className="mb-3 font-[family-name:var(--font-playfair)] text-2xl font-normal italic text-gray-900">
+        <h2 className="mb-3 font-[family-name:var(--font-quicksand)] text-2xl font-thin text-gray-900">
           {t('successTitle')}
         </h2>
         <p className="mb-8 text-sm text-gray-600">{t('successDescription')}</p>
@@ -138,9 +138,9 @@ export default function EvaluationForm({ defaultValues }: EvaluationFormProps) {
               <div
                 className={`flex h-9 w-9 items-center justify-center border-2 text-xs font-semibold transition-colors ${
                   i < currentStep
-                    ? 'border-[#4a9ead] bg-[#4a9ead] text-white'
+                    ? 'border-[#002343] bg-[#002343] text-white'
                     : i === currentStep
-                      ? 'border-[#4a9ead] bg-white text-[#4a9ead]'
+                      ? 'border-[#002343] bg-white text-[#002343]'
                       : 'border-gray-300 bg-white text-gray-400'
                 }`}
               >
@@ -152,7 +152,7 @@ export default function EvaluationForm({ defaultValues }: EvaluationFormProps) {
               </div>
               <span
                 className={`mt-1.5 hidden h-8 w-16 text-center text-[10px] font-medium uppercase leading-tight tracking-wider sm:block ${
-                  i <= currentStep ? 'text-[#4a9ead]' : 'text-gray-400'
+                  i <= currentStep ? 'text-[#002343]' : 'text-gray-400'
                 }`}
               >
                 {label}
@@ -161,7 +161,7 @@ export default function EvaluationForm({ defaultValues }: EvaluationFormProps) {
             {i < TOTAL_STEPS - 1 && (
               <div
                 className={`mx-2 h-px w-8 sm:w-12 md:w-16 ${
-                  i < currentStep ? 'bg-[#4a9ead]' : 'bg-gray-300'
+                  i < currentStep ? 'bg-[#002343]' : 'bg-gray-300'
                 }`}
               />
             )}

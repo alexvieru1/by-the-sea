@@ -82,7 +82,7 @@ export default function ConsultationClient({ booking }: { booking: Booking }) {
   }
 
   return (
-    <section className="fixed inset-0 z-[100] bg-[#F9FAFB] flex items-center justify-center px-4">
+    <section className="fixed inset-0 z-[100] bg-[#F2E4D1] flex items-center justify-center px-4">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ export default function ConsultationClient({ booking }: { booking: Booking }) {
       >
         <div className="bg-white border border-gray-200 p-8">
           <div className="flex items-center gap-3 mb-6">
-            <Video className="h-6 w-6 text-[#0097a7]" />
+            <Video className="h-6 w-6 text-[#002343]" />
             <h1 className="text-xl font-semibold text-gray-900">
               {t('title')}
             </h1>
@@ -139,7 +139,7 @@ export default function ConsultationClient({ booking }: { booking: Booking }) {
           <button
             onClick={handleJoin}
             disabled={!canJoin || callState === 'joining'}
-            className="w-full bg-[#0097a7] text-white px-6 py-3.5 text-sm font-semibold hover:bg-[#00838f] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+            className="w-full bg-[#002343] text-white px-6 py-3.5 text-sm font-semibold hover:bg-[#172C33] transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             <Video className="h-4 w-4" />
             {callState === 'joining' ? t('joining') : canJoin ? t('joinCall') : t('notYet')}

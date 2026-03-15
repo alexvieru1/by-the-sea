@@ -3,7 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
 import { CheckCircle, ExternalLink } from 'lucide-react';
-import PlaceholderImage from '@/components/ui/placeholder-image';
+import ParallaxImage from '@/components/ui/parallax-image';
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -52,12 +52,12 @@ export default function PatientGuideContent() {
       <motion.section {...fadeInUp}>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-12 lg:py-28">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <PlaceholderImage label="Reception Area" src="/images/patient-guide/reception-area.webp" />
+            <ParallaxImage label="Reception Area" src="/images/patient-guide/reception-area.webp" />
             <div>
-              <p className="text-sm font-medium uppercase tracking-wider text-[#0097a7]">
+              <p className="text-sm font-medium uppercase tracking-wider text-[#002343]">
                 {t('admission.label')}
               </p>
-              <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900 sm:text-4xl">
+              <h2 className="mt-3 font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900 sm:text-4xl">
                 {t('admission.title')}
               </h2>
               <p className="mt-6 text-gray-700 leading-relaxed">
@@ -69,9 +69,9 @@ export default function PatientGuideContent() {
       </motion.section>
 
       {/* Section 2: Insurance Check CTA */}
-      <motion.section {...fadeInUp} className="bg-[#0097a7] px-6 py-16 lg:px-12 lg:py-20">
+      <motion.section {...fadeInUp} className="bg-[#002343] px-6 py-16 lg:px-12 lg:py-20 light-header-section">
         <div className="mx-auto max-w-4xl text-center">
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-white sm:text-4xl">
+          <h2 className="font-[family-name:var(--font-quicksand)] text-3xl font-thin text-white sm:text-4xl">
             {t('insuranceCheck.title')}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-white/90">
@@ -86,7 +86,7 @@ export default function PatientGuideContent() {
             href="https://siui.casan.ro/asigurati/"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 bg-white px-8 py-4 text-sm font-medium uppercase tracking-wider text-[#0097a7] transition-colors hover:bg-gray-100"
+            className="mt-8 inline-flex items-center gap-2 bg-white px-8 py-4 text-sm font-medium uppercase tracking-wider text-[#002343] transition-colors hover:bg-gray-100"
           >
             {t('insuranceCheck.cta')}
             <ExternalLink size={16} />
@@ -99,10 +99,10 @@ export default function PatientGuideContent() {
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-12 lg:py-28">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <div>
-              <p className="text-sm font-medium uppercase tracking-wider text-[#0097a7]">
+              <p className="text-sm font-medium uppercase tracking-wider text-[#002343]">
                 {t('documents.label')}
               </p>
-              <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900 sm:text-4xl">
+              <h2 className="mt-3 font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900 sm:text-4xl">
                 {t('documents.title')}
               </h2>
               <p className="mt-6 text-gray-700 leading-relaxed">
@@ -111,27 +111,27 @@ export default function PatientGuideContent() {
               <div className="mt-8 space-y-4">
                 {documentKeys.map((key) => (
                   <div key={key} className="flex items-start gap-3">
-                    <CheckCircle size={20} className="mt-0.5 shrink-0 text-[#0097a7]" />
+                    <CheckCircle size={20} className="mt-0.5 shrink-0 text-[#002343]" />
                     <span className="text-gray-700">{t(`documents.items.${key}`)}</span>
                   </div>
                 ))}
               </div>
             </div>
-            <PlaceholderImage label="Lobby" src="/images/patient-guide/lobby.webp" />
+            <ParallaxImage label="Lobby" src="/images/patient-guide/lobby.webp" />
           </div>
         </div>
       </motion.section>
 
       {/* Section 4: Your Stay */}
-      <motion.section {...fadeInUp} className="bg-[#f8f5f3]">
+      <motion.section {...fadeInUp} className="bg-[#F2E4D1]">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-12 lg:py-28">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <PlaceholderImage label="Treatment Room" src="/images/patient-guide/treatment-room.webp" />
+            <ParallaxImage label="Treatment Room" src="/images/patient-guide/treatment-room.webp" />
             <div>
-              <p className="text-sm font-medium uppercase tracking-wider text-[#0097a7]">
+              <p className="text-sm font-medium uppercase tracking-wider text-[#002343]">
                 {t('yourStay.label')}
               </p>
-              <h2 className="mt-3 font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900 sm:text-4xl">
+              <h2 className="mt-3 font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900 sm:text-4xl">
                 {t('yourStay.title')}
               </h2>
               <p className="mt-6 text-gray-700 leading-relaxed">
@@ -148,12 +148,12 @@ export default function PatientGuideContent() {
       {/* Section 5: Important Notices */}
       <motion.section {...fadeInUp}>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-12 lg:py-28">
-          <h2 className="text-center font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900 sm:text-4xl">
+          <h2 className="text-center font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900 sm:text-4xl">
             {t('notices.title')}
           </h2>
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {(['refusal', 'dailyVisit', 'discharge'] as const).map((key) => (
-              <div key={key} className="border-l-4 border-[#f07060] bg-white p-8">
+              <div key={key} className="border-l-4 border-[#CF9C7C] bg-white p-8">
                 <h3 className="mb-3 text-lg font-semibold text-gray-900">
                   {t(`notices.${key}.title`)}
                 </h3>
@@ -169,10 +169,10 @@ export default function PatientGuideContent() {
       {/* Section 6: Absolute Contraindications */}
       <motion.section {...fadeInUp}>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-12 lg:py-28">
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900 sm:text-4xl">
+          <h2 className="font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900 sm:text-4xl">
             {t('contraindications.absoluteTitle')}
           </h2>
-          <div className="mt-6 border-l-4 border-[#f07060] bg-[#f07060]/10 p-6">
+          <div className="mt-6 border-l-4 border-[#CF9C7C] bg-[#CF9C7C]/10 p-6">
             <p className="text-gray-800">
               {t('contraindications.absoluteWarning')}
             </p>
@@ -180,7 +180,7 @@ export default function PatientGuideContent() {
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             {absoluteKeys.map((key) => (
               <div key={key} className="flex items-start gap-3">
-                <span className="mt-2 h-2 w-2 shrink-0 bg-[#f07060]" style={{ borderRadius: '9999px' }} />
+                <span className="mt-2 h-2 w-2 shrink-0 bg-[#CF9C7C]" style={{ borderRadius: '9999px' }} />
                 <span className="text-gray-700">{t(`contraindications.absolute.${key}`)}</span>
               </div>
             ))}
@@ -189,12 +189,12 @@ export default function PatientGuideContent() {
       </motion.section>
 
       {/* Section 7: Photo Divider */}
-      <PlaceholderImage label="Sea View" className="h-64 lg:h-96" src="/images/patient-guide/sea-view.webp" />
+      <ParallaxImage label="Sea View" className="h-64 lg:h-96" src="/images/patient-guide/sea-view.webp" y={['-50%', '50%']}/>
 
       {/* Section 8: Relative Contraindications */}
       <motion.section {...fadeInUp}>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-12 lg:py-28">
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900 sm:text-4xl">
+          <h2 className="font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900 sm:text-4xl">
             {t('contraindications.relativeTitle')}
           </h2>
           <div className="mt-6 border-l-4 border-amber-400 bg-amber-50 p-6">
@@ -225,9 +225,9 @@ export default function PatientGuideContent() {
       </motion.section>
 
       {/* Section 9: Closing Note */}
-      <section className="bg-[#c5d5d8] px-6 py-20 lg:px-12 lg:py-28">
+      <section className="bg-[#F2E4D1] px-6 py-20 lg:px-12 lg:py-28">
         <motion.div {...fadeInUp} className="mx-auto max-w-3xl text-center">
-          <p className="font-[family-name:var(--font-playfair)] text-2xl font-normal italic leading-relaxed text-gray-800 sm:text-3xl">
+          <p className="font-[family-name:var(--font-quicksand)] text-2xl font-thin leading-relaxed text-gray-800 sm:text-3xl">
             {t('closingNote')}
           </p>
         </motion.div>

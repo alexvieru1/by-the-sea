@@ -6,7 +6,7 @@ export default function LongevitySection() {
       translationKey="medicalPrograms.longevity"
       imageSrc="/images/your_future.webp"
       imageAlt="Longevity therapy"
-      cardBg="bg-[#798B6F]"
+      cardBg="bg-[#002343]"
       align="left"
       ctaKey="learnMore"
       ctaHref="/medical-programs/longevity"
@@ -18,7 +18,7 @@ export default function LongevitySection() {
         },
         {
           size: 'h-48 w-48',
-          position: { bottom: '25%', left: '15%', background: 'radial-gradient(circle, rgba(0,151,167,0.15) 0%, transparent 70%)' },
+          position: { bottom: '25%', left: '15%', background: 'radial-gradient(circle, rgba(0,35,67,0.15) 0%, transparent 70%)' },
         },
       ]}
     />

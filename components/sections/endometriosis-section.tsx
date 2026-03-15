@@ -51,7 +51,7 @@ export default function EndometriosisSection() {
         <div className="order-1 flex items-center justify-end bg-[#C7B39A] px-6 py-14 lg:order-2 lg:w-1/2 lg:px-0 lg:py-0">
           <div className="flex flex-col items-end">
             <motion.div
-              className="w-[90vw] max-w-2xl bg-[#B19C82] px-8 py-10 shadow-2xl sm:px-12 sm:py-14 lg:px-16 lg:py-16"
+              className="w-[90vw] max-w-2xl bg-[#CF9C7C] px-8 py-10 shadow-2xl sm:px-12 sm:py-14 lg:px-16 lg:py-16"
               initial={{ x: 800 }}
               animate={{ x: showBox ? 0 : 800 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}

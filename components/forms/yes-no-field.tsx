@@ -31,7 +31,7 @@ export default function YesNoField({
               {...register(id)}
               className="peer sr-only !fixed"
             />
-            <span className="inline-block border border-gray-300 px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-gray-500 transition-colors peer-checked:border-[#4a9ead] peer-checked:bg-[#4a9ead] peer-checked:text-white">
+            <span className="inline-block border border-gray-300 px-3 py-1.5 text-xs font-medium uppercase tracking-wider text-gray-500 transition-colors peer-checked:border-[#002343] peer-checked:bg-[#002343] peer-checked:text-white">
               {tYes}
             </span>
           </label>

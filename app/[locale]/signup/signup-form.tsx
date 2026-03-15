@@ -167,10 +167,10 @@ export default function SignupForm() {
   if (success) {
     return (
       <div className="min-h-screen bg-gray-50">
-        <div className="relative overflow-hidden bg-[#c5d5d8] px-6 pb-20 pt-32 lg:px-12 lg:pb-32 lg:pt-40">
+        <div className="relative overflow-hidden bg-[#F2E4D1] px-6 pb-20 pt-32 lg:px-12 lg:pb-32 lg:pt-40">
           <div className="relative mx-auto max-w-4xl text-center">
             <motion.h1
-              className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic text-gray-900 sm:text-5xl lg:text-6xl"
+              className="font-[family-name:var(--font-quicksand)] text-4xl font-thin text-gray-900 sm:text-5xl lg:text-6xl"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
@@ -204,7 +204,7 @@ export default function SignupForm() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="relative overflow-hidden bg-[#c5d5d8] px-6 pb-20 pt-32 lg:px-12 lg:pb-32 lg:pt-40">
+      <div className="relative overflow-hidden bg-[#F2E4D1] px-6 pb-20 pt-32 lg:px-12 lg:pb-32 lg:pt-40">
         {/* Background decoration */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <motion.div
@@ -213,7 +213,7 @@ export default function SignupForm() {
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
           />
           <motion.div
-            className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#0097a7]/10 blur-3xl"
+            className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#002343]/10 blur-3xl"
             animate={{ x: [0, -20, 0], y: [0, 30, 0] }}
             transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
           />
@@ -230,7 +230,7 @@ export default function SignupForm() {
           </motion.p>
 
           <motion.h1
-            className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic text-gray-900 sm:text-5xl lg:text-6xl"
+            className="font-[family-name:var(--font-quicksand)] text-4xl font-thin text-gray-900 sm:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -296,7 +296,7 @@ export default function SignupForm() {
                   id="firstName"
                   type="text"
                   {...register("firstName")}
-                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#002343]"
                 />
                 {errors.firstName && (
                   <p className="mt-1 text-xs text-red-600">
@@ -315,7 +315,7 @@ export default function SignupForm() {
                   id="lastName"
                   type="text"
                   {...register("lastName")}
-                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#002343]"
                 />
                 {errors.lastName && (
                   <p className="mt-1 text-xs text-red-600">
@@ -337,7 +337,7 @@ export default function SignupForm() {
                 type="email"
                 {...register("email")}
                 readOnly={!!lockedEmail}
-                className={`w-full border border-gray-300 px-4 py-3 text-sm outline-none transition-colors focus:border-[#0097a7] ${
+                className={`w-full border border-gray-300 px-4 py-3 text-sm outline-none transition-colors focus:border-[#002343] ${
                   lockedEmail
                     ? "bg-gray-100 text-gray-500"
                     : "bg-white text-gray-900"
@@ -366,7 +366,7 @@ export default function SignupForm() {
                 {...register("phone")}
                 readOnly={!!lockedPhone}
                 placeholder="07XXXXXXXX"
-                className={`w-full border border-gray-300 px-4 py-3 text-sm outline-none transition-colors focus:border-[#0097a7] ${
+                className={`w-full border border-gray-300 px-4 py-3 text-sm outline-none transition-colors focus:border-[#002343] ${
                   lockedPhone
                     ? "bg-gray-100 text-gray-500"
                     : "bg-white text-gray-900"
@@ -395,7 +395,7 @@ export default function SignupForm() {
                   id="county"
                   value={countyValue}
                   onChange={(e) => handleCountyChange(e.target.value)}
-                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#002343]"
                 >
                   <option value="">{t("selectCounty")}</option>
                   {counties.map((c) => (
@@ -416,7 +416,7 @@ export default function SignupForm() {
                   id="city"
                   {...register("city")}
                   disabled={!countyValue}
-                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7] disabled:opacity-50"
+                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#002343] disabled:opacity-50"
                 >
                   <option value="">{t("selectCity")}</option>
                   {cities.map((c) => (
@@ -440,7 +440,7 @@ export default function SignupForm() {
                   id="signup-password"
                   type="password"
                   {...register("password")}
-                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#002343]"
                 />
                 {errors.password && (
                   <p className="mt-1 text-xs text-red-600">
@@ -459,7 +459,7 @@ export default function SignupForm() {
                   id="confirmPassword"
                   type="password"
                   {...register("confirmPassword")}
-                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                  className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#002343]"
                 />
                 {errors.confirmPassword && (
                   <p className="mt-1 text-xs text-red-600">
@@ -475,7 +475,7 @@ export default function SignupForm() {
                 id="community"
                 type="checkbox"
                 {...register("isCommunityMember")}
-                className="mt-1 h-4 w-4 border-gray-300 accent-[#0097a7]"
+                className="mt-1 h-4 w-4 border-gray-300 accent-[#002343]"
               />
               <div>
                 <label
@@ -496,7 +496,7 @@ export default function SignupForm() {
                 id="hasBookingConfirmed"
                 type="checkbox"
                 {...register("hasBookingConfirmed")}
-                className="mt-1 h-4 w-4 border-gray-300 accent-[#0097a7]"
+                className="mt-1 h-4 w-4 border-gray-300 accent-[#002343]"
               />
               <div>
                 <label
@@ -517,7 +517,7 @@ export default function SignupForm() {
                 id="gdprConsent"
                 type="checkbox"
                 {...register("gdprConsent")}
-                className="mt-1 h-4 w-4 border-gray-300 accent-[#0097a7]"
+                className="mt-1 h-4 w-4 border-gray-300 accent-[#002343]"
               />
               <div>
                 <label
@@ -527,7 +527,7 @@ export default function SignupForm() {
                   {t("gdprConsent")}{" "}
                   <TransitionLink
                     href="/privacy"
-                    className="font-medium text-[#0097a7] underline-offset-4 hover:underline"
+                    className="font-medium text-[#002343] underline-offset-4 hover:underline"
 
                   >
                     {t("gdprLink")}
@@ -547,7 +547,7 @@ export default function SignupForm() {
                 id="termsAccepted"
                 type="checkbox"
                 {...register("termsAccepted")}
-                className="mt-1 h-4 w-4 border-gray-300 accent-[#0097a7]"
+                className="mt-1 h-4 w-4 border-gray-300 accent-[#002343]"
               />
               <div>
                 <label
@@ -557,7 +557,7 @@ export default function SignupForm() {
                   {t("termsConsent")}{" "}
                   <TransitionLink
                     href="/terms"
-                    className="font-medium text-[#0097a7] underline-offset-4 hover:underline"
+                    className="font-medium text-[#002343] underline-offset-4 hover:underline"
 
                   >
                     {t("termsLink")}
@@ -595,7 +595,7 @@ export default function SignupForm() {
             {t("hasAccount")}{" "}
             <TransitionLink
               href="/login"
-              className="font-medium text-[#0097a7] underline-offset-4 hover:underline"
+              className="font-medium text-[#002343] underline-offset-4 hover:underline"
             >
               {t("logIn")}
             </TransitionLink>

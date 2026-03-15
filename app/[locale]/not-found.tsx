@@ -19,14 +19,14 @@ export default function NotFound() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <span className="font-[family-name:var(--font-playfair)] text-[150px] font-normal italic leading-none text-gray-200 sm:text-[200px]">
+          <span className="font-[family-name:var(--font-quicksand)] text-[150px] font-thin leading-none text-gray-200 sm:text-[200px]">
             {t('code')}
           </span>
         </motion.div>
 
         {/* Title */}
         <motion.h1
-          className="font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900 sm:text-4xl"
+          className="font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900 sm:text-4xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}

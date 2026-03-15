@@ -136,7 +136,7 @@ function FacilityCard({
 
       {/* Facility info */}
       <div className="mt-6 lg:mt-8">
-        <h3 className="font-(family-name:--font-playfair) text-2xl font-normal italic text-gray-900 lg:text-3xl">
+        <h3 className="font-(family-name:--font-quicksand) text-2xl font-thin text-gray-900 lg:text-3xl">
           {t(`${category}.${facilityKey}.name`)}
         </h3>
         <p className="mt-2 text-sm text-gray-600 lg:text-base">
@@ -179,7 +179,7 @@ export default function FacilitiesSection() {
 
           {/* Title, description, and tabs */}
           <div className="max-w-2xl">
-            <h2 className="font-(family-name:--font-playfair) text-4xl font-normal italic text-gray-900 lg:text-5xl">
+            <h2 className="font-(family-name:--font-quicksand) text-4xl font-thin text-gray-900 lg:text-5xl">
               {t("title")}
             </h2>
             <p className="mt-4 text-gray-600 lg:text-lg">{t("description")}</p>

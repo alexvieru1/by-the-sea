@@ -266,10 +266,10 @@ export default function Header() {
             <div className="hidden lg:block">
               <AnimatedButton
                 href="/book"
-                bgColor="#C6A979"
+                bgColor="#CF9C7C"
                 textColor="#ffffff"
                 hoverTextColor="#ffffff"
-                borderColor="#7B5F42"
+                borderColor="#002343"
                 initialText={tCommon("bookScan")}
                 hoverText={tCommon("bookScanHover")}
                 className="px-10 py-7"
@@ -287,7 +287,7 @@ export default function Header() {
             >
               <TransitionLink
                 href="/book"
-                className="flex h-16 items-center bg-[#C2A87A] px-6 text-sm font-medium uppercase tracking-wider text-white"
+                className="flex h-16 items-center bg-[#CF9C7C] px-6 text-sm font-medium uppercase tracking-wider text-white"
               >
                 {tCommon("bookScan")}
               </TransitionLink>
@@ -388,7 +388,7 @@ export default function Header() {
                         <button
                           type="button"
                           onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                          className="flex w-full items-center gap-3 font-(family-name:--font-playfair) text-3xl font-light italic text-white transition-opacity hover:opacity-70"
+                          className="flex w-full items-center gap-3 font-(family-name:--font-quicksand) text-3xl font-light italic text-white transition-opacity hover:opacity-70"
                         >
                           {link.label}
                           <ChevronDown
@@ -429,7 +429,7 @@ export default function Header() {
                     ) : (
                       <TransitionLink
                         href={"href" in link ? link.href : "/"}
-                        className="font-(family-name:--font-playfair) text-3xl font-light italic text-white transition-opacity hover:opacity-70"
+                        className="font-(family-name:--font-quicksand) text-3xl font-light italic text-white transition-opacity hover:opacity-70"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         {link.label}

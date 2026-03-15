@@ -8,8 +8,8 @@ import { cn } from '@/lib/utils';
 const offers = [
   {
     key: 'offer1',
-    bg: 'bg-[#0097a7]',
-    gradient: 'from-[#00838f] to-[#0097a7]',
+    bg: 'bg-[#002343]',
+    gradient: 'from-[#172C33] to-[#002343]',
     textColor: 'text-white',
     mutedColor: 'text-white/70',
     btnBg: 'bg-white text-gray-900 hover:bg-white/90',
@@ -17,8 +17,8 @@ const offers = [
   },
   {
     key: 'offer2',
-    bg: 'bg-[#BCA390]',
-    gradient: 'from-[#FFF8D8] to-[#BCA390]',
+    bg: 'bg-[#CF9C7C]',
+    gradient: 'from-[#F2E4D1] to-[#CF9C7C]',
     textColor: 'text-white',
     mutedColor: 'text-white/70',
     btnBg: 'bg-white text-gray-900 hover:bg-white/90',
@@ -26,8 +26,8 @@ const offers = [
   },
   {
     key: 'offer3',
-    bg: 'bg-[#e8d8d4]',
-    gradient: 'from-[#d4bfb8] to-[#e8d8d4]',
+    bg: 'bg-[#D1CCC7]',
+    gradient: 'from-[#D1CCC7] to-[#D1CCC7]',
     textColor: 'text-gray-900',
     mutedColor: 'text-gray-600',
     btnBg: 'bg-gray-900 text-white hover:bg-gray-800',
@@ -35,8 +35,8 @@ const offers = [
   },
   {
     key: 'offer4',
-    bg: 'bg-[#c5d5d8]',
-    gradient: 'from-[#a8c4c9] to-[#c5d5d8]',
+    bg: 'bg-[#F2E4D1]',
+    gradient: 'from-[#F2E4D1] to-[#F2E4D1]',
     textColor: 'text-gray-900',
     mutedColor: 'text-gray-600',
     btnBg: 'bg-gray-900 text-white hover:bg-gray-800',
@@ -89,7 +89,7 @@ export default function OffersGrid() {
               </p>
 
               <h2
-                className={cn("font-[family-name:var(--font-playfair)] text-3xl font-normal italic sm:text-4xl lg:text-5xl", offer.textColor)}
+                className={cn("font-[family-name:var(--font-quicksand)] text-3xl font-thin sm:text-4xl lg:text-5xl", offer.textColor)}
               >
                 {t(`${offer.key}.title`)}
               </h2>

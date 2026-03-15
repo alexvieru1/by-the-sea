@@ -6,7 +6,7 @@ export default function PostChemoSection() {
       translationKey="medicalPrograms.postChemotherapy"
       imageSrc="/images/your_future.webp"
       imageAlt="Post-chemotherapy rehabilitation"
-      cardBg="bg-[#BCA390]"
+      cardBg="bg-[#CF9C7C]"
       align="left"
       ctaKey="learnMore"
       ctaHref="/medical-programs/post-chemotherapy"
@@ -18,7 +18,7 @@ export default function PostChemoSection() {
         },
         {
           size: 'h-48 w-48',
-          position: { bottom: '22%', right: '12%', background: 'radial-gradient(circle, rgba(188,163,144,0.15) 0%, transparent 70%)' },
+          position: { bottom: '22%', right: '12%', background: 'radial-gradient(circle, rgba(207,156,124,0.15) 0%, transparent 70%)' },
         },
       ]}
     />

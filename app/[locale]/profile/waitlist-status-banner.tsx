@@ -104,7 +104,7 @@ export default function WaitlistStatusBanner({ status, telemedicineBooking }: Wa
                 href="https://epl.ro/q/NG5xvTdr93e58mNxhtRjTUUfX-xax-s="
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-3 inline-flex items-center gap-2 bg-[#0097a7] px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#00838f]"
+                className="mt-3 inline-flex items-center gap-2 bg-[#002343] px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#172C33]"
               >
                 <CreditCard className="h-3.5 w-3.5" />
                 {t('telemedicine.advancePayment')}
@@ -175,7 +175,7 @@ export default function WaitlistStatusBanner({ status, telemedicineBooking }: Wa
                   type="button"
                   onClick={() => handleStatusUpdate('confirmed')}
                   disabled={updating}
-                  className="inline-flex items-center gap-2 bg-[#0097a7] px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#00838f] disabled:opacity-50"
+                  className="inline-flex items-center gap-2 bg-[#002343] px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#172C33] disabled:opacity-50"
                 >
                   {t('telemedicine.acceptBooking')}
                 </button>
@@ -204,10 +204,10 @@ export default function WaitlistStatusBanner({ status, telemedicineBooking }: Wa
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-8 border border-[#0097a7]/20 bg-[#d8f0f2] p-5"
+          className="mb-8 border border-[#002343]/20 bg-[#F2E4D1] p-5"
         >
           <div className="flex items-start gap-3">
-            <Video className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#0097a7]" />
+            <Video className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#002343]" />
             <div>
               <p className="text-sm font-semibold text-gray-900">
                 {t('telemedicine.title')}
@@ -229,7 +229,7 @@ export default function WaitlistStatusBanner({ status, telemedicineBooking }: Wa
               <div className="mt-3 flex items-center gap-3">
                 <Link
                   href="/consultation"
-                  className="inline-flex items-center gap-2 bg-[#0097a7] px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#00838f]"
+                  className="inline-flex items-center gap-2 bg-[#002343] px-6 py-3 text-xs font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#172C33]"
                 >
                   {t('telemedicine.action')}
                   <ArrowRight className="h-3.5 w-3.5" />
@@ -257,10 +257,10 @@ export default function WaitlistStatusBanner({ status, telemedicineBooking }: Wa
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        className="mb-8 border border-[#0097a7]/20 bg-[#d8f0f2] p-5"
+        className="mb-8 border border-[#002343]/20 bg-[#F2E4D1] p-5"
       >
         <div className="flex items-start gap-3">
-          <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#0097a7]" />
+          <CheckCircle className="mt-0.5 h-5 w-5 flex-shrink-0 text-[#002343]" />
           <div>
             <p className="text-sm font-semibold text-gray-900">{t('confirmedTitle')}</p>
             <p className="mt-1 text-sm text-gray-700">{t('confirmedDescription')}</p>

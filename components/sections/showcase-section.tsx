@@ -124,7 +124,7 @@ export default function ShowcaseSection({
               {t('subtitle')}
             </motion.p>
 
-            <h2 className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic leading-tight text-white sm:text-5xl lg:text-6xl">
+            <h2 className="font-[family-name:var(--font-quicksand)] text-4xl font-thin leading-tight text-white sm:text-5xl lg:text-6xl">
               {showText ? (
                 <TextRoll
                   duration={0.4}

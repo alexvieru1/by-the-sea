@@ -23,7 +23,7 @@ export default function GallerySection({ category, images }: GallerySectionProps
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900 sm:text-4xl lg:text-5xl">
+          <h2 className="font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900 sm:text-4xl lg:text-5xl">
             {t('name')}
           </h2>
           <p className="mt-3 max-w-2xl text-base text-gray-600 lg:text-lg">

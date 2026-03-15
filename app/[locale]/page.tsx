@@ -3,7 +3,7 @@ import { setRequestLocale } from 'next-intl/server';
 
 const HeroSection = dynamic(() => import('@/components/sections/hero-section'), {
   loading: () => (
-    <section className="hero-section snap-section relative overflow-hidden bg-[#c5d5d8]" />
+    <section className="hero-section snap-section relative overflow-hidden bg-[#F2E4D1]" />
   ),
 });
 const MedicalRehabilitationSection = dynamic(() => import('@/components/sections/medical-rehabilitation-section'));

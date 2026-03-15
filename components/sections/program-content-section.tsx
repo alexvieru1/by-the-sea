@@ -36,7 +36,7 @@ export default function ProgramContentSection({
   });
 
   const imageScale = useTransform(scrollYProgress, [0, 1], [1.1, 1]);
-  const imageY = useTransform(scrollYProgress, [0, 1], ['-5%', '5%']);
+  const imageY = useTransform(scrollYProgress, [0, 1], ['-20%', '20%']);
 
   const photoContent = (
     <div className="relative aspect-[3/4] w-full overflow-hidden lg:aspect-auto lg:h-full lg:min-h-[600px]">
@@ -67,7 +67,7 @@ export default function ProgramContentSection({
           {subtitle}
         </motion.p>
         <motion.h2
-          className="font-[family-name:var(--font-playfair)] text-3xl font-normal italic leading-tight text-gray-900 sm:text-4xl lg:text-5xl"
+          className="font-[family-name:var(--font-quicksand)] text-3xl font-thin leading-tight text-gray-900 sm:text-4xl lg:text-5xl"
           initial={{ opacity: 0, y: 15 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.1 }}

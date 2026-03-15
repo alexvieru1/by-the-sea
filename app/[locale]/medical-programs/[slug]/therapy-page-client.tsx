@@ -11,38 +11,38 @@ const therapyMap: Record<string, { translationNamespace: string; translationKey:
   'medical-rehabilitation': {
     translationNamespace: 'medicalPrograms',
     translationKey: 'medicalRehabilitation',
-    bg: 'bg-[#D2B88B]',
-    accentColor: '#D2B88B',
+    bg: 'bg-[#CF9C7C]',
+    accentColor: '#CF9C7C',
   },
   'endometriosis-infertility': {
     translationNamespace: 'medicalPrograms',
     translationKey: 'endometriosisInfertility',
-    bg: 'bg-[#D2B88B]',
-    accentColor: '#D2B88B',
+    bg: 'bg-[#CF9C7C]',
+    accentColor: '#CF9C7C',
   },
   longevity: {
     translationNamespace: 'medicalPrograms',
     translationKey: 'longevity',
-    bg: 'bg-[#0097a7]',
-    accentColor: '#0097a7',
+    bg: 'bg-[#002343]',
+    accentColor: '#002343',
   },
   rheumatology: {
     translationNamespace: 'medicalPrograms',
     translationKey: 'rheumatology',
-    bg: 'bg-[#8FA3A8]',
-    accentColor: '#8FA3A8',
+    bg: 'bg-[#D1CCC7]',
+    accentColor: '#D1CCC7',
   },
   wellness: {
     translationNamespace: 'therapies',
     translationKey: 'wellness',
-    bg: 'bg-[#BCA390]',
-    accentColor: '#BCA390',
+    bg: 'bg-[#CF9C7C]',
+    accentColor: '#CF9C7C',
   },
   'post-chemotherapy': {
     translationNamespace: 'medicalPrograms',
     translationKey: 'postChemotherapy',
-    bg: 'bg-[#BCA390]',
-    accentColor: '#BCA390',
+    bg: 'bg-[#CF9C7C]',
+    accentColor: '#CF9C7C',
   },
 };
 
@@ -98,7 +98,7 @@ export default function TherapyPageClient({ slug }: { slug: string }) {
           )}
 
           <motion.h1
-            className={`font-[family-name:var(--font-playfair)] text-4xl font-normal italic sm:text-5xl lg:text-6xl ${textColor}`}
+            className={`font-[family-name:var(--font-quicksand)] text-4xl font-thin sm:text-5xl lg:text-6xl ${textColor}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}

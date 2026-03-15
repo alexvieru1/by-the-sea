@@ -70,7 +70,7 @@ export default function LoginForm() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="relative overflow-hidden bg-[#c5d5d8] px-6 pb-20 pt-32 lg:px-12 lg:pb-32 lg:pt-40">
+      <div className="relative overflow-hidden bg-[#F2E4D1] px-6 pb-20 pt-32 lg:px-12 lg:pb-32 lg:pt-40">
         {/* Background decoration */}
         <div className="pointer-events-none absolute inset-0 overflow-hidden">
           <motion.div
@@ -79,7 +79,7 @@ export default function LoginForm() {
             transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }}
           />
           <motion.div
-            className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#0097a7]/10 blur-3xl"
+            className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#002343]/10 blur-3xl"
             animate={{ x: [0, -20, 0], y: [0, 30, 0] }}
             transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
           />
@@ -96,7 +96,7 @@ export default function LoginForm() {
           </motion.p>
 
           <motion.h1
-            className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic text-gray-900 sm:text-5xl lg:text-6xl"
+            className="font-[family-name:var(--font-quicksand)] text-4xl font-thin text-gray-900 sm:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -161,7 +161,7 @@ export default function LoginForm() {
                 type="email"
                 {...register('email')}
                 placeholder={t('emailPlaceholder')}
-                className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#002343]"
               />
               {errors.email && (
                 <p className="mt-1 text-xs text-red-600">{t('error.invalidEmail')}</p>
@@ -180,7 +180,7 @@ export default function LoginForm() {
                 type="password"
                 {...register('password')}
                 placeholder={t('passwordPlaceholder')}
-                className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#0097a7]"
+                className="w-full border border-gray-300 bg-white px-4 py-3 text-sm text-gray-900 outline-none transition-colors focus:border-[#002343]"
               />
             </div>
 
@@ -208,7 +208,7 @@ export default function LoginForm() {
             {t('noAccount')}{' '}
             <TransitionLink
               href="/signup"
-              className="font-medium text-[#0097a7] underline-offset-4 hover:underline"
+              className="font-medium text-[#002343] underline-offset-4 hover:underline"
             >
               {t('signUp')}
             </TransitionLink>

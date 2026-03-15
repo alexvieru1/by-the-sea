@@ -32,8 +32,8 @@ export default function PlaceholderPage({ translationKey }: PlaceholderPageProps
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#0097a7] opacity-75" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#0097a7]" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#002343] opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-[#002343]" />
             </span>
             <span className="text-sm font-medium text-gray-900">
               {tCommon('comingSoon')}

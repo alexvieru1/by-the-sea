@@ -52,7 +52,7 @@ export default function TherapiesContent() {
       <ProgramTherapiesGrid
         title={t('title')}
         therapies={therapies}
-        accentColor="#0097a7"
+        accentColor="#002343"
       />
 
       {/* CTAs */}

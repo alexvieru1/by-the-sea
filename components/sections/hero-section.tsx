@@ -59,7 +59,7 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="light-header-section hero-section snap-section relative overflow-hidden bg-[#c5d5d8]"
+      className="light-header-section hero-section snap-section relative overflow-hidden bg-[#F2E4D1]"
     >
       {/* Video Background */}
       <div className="absolute inset-0">
@@ -89,7 +89,7 @@ export default function HeroSection() {
         <div className="max-w-2xl">
           {/* Headline */}
           <motion.h1
-            className="font-(family-name:--font-playfair) text-4xl leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl"
+            className="font-(family-name:--font-quicksand) font-thin text-4xl leading-[1.1] tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}

@@ -10,7 +10,7 @@ export default function FooterSection() {
   const { user } = useAuth();
 
   return (
-    <footer className="bg-[#f5f5f0]">
+    <footer className="bg-[#F2E4D1]">
       <div className="mx-auto max-w-7xl px-6 lg:px-0">
         {/* Main Footer Content - Full width flex container */}
         <div className="flex flex-col lg:flex-row">
@@ -141,26 +141,30 @@ export default function FooterSection() {
             {/* Bottom Bar */}
             <div className="mt-20 flex flex-col items-start justify-between gap-4 border-t border-gray-300/50 pt-8 sm:flex-row sm:items-center">
               {/* Copyright and Legal TransitionLinks */}
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-gray-500">
+              <div className="text-sm text-gray-500">
                 <span>{t('copyright')}</span>
-                <TransitionLink
-                  href="/cookies"
-                  className="transition-colors hover:text-gray-900"
-                >
-                  {t('cookieNotice')}
-                </TransitionLink>
-                <TransitionLink
-                  href="/privacy"
-                  className="transition-colors hover:text-gray-900"
-                >
-                  {t('privacyPolicy')}
-                </TransitionLink>
-                <TransitionLink
-                  href="/terms"
-                  className="transition-colors hover:text-gray-900"
-                >
-                  {t('termsOfService')}
-                </TransitionLink>
+                <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1">
+                  <TransitionLink
+                    href="/cookies"
+                    className="transition-colors hover:text-gray-900"
+                  >
+                    {t('cookieNotice')}
+                  </TransitionLink>
+                  <span>⏺</span>
+                  <TransitionLink
+                    href="/privacy"
+                    className="transition-colors hover:text-gray-900"
+                  >
+                    {t('privacyPolicy')}
+                  </TransitionLink>
+                  <span>⏺</span>
+                  <TransitionLink
+                    href="/terms"
+                    className="transition-colors hover:text-gray-900"
+                  >
+                    {t('termsOfService')}
+                  </TransitionLink>
+                </div>
               </div>
 
               {/* Country Selector */}
@@ -173,8 +177,8 @@ export default function FooterSection() {
 
           {/* Right side - Support Card (extends full height) */}
           <div className="lg:w-[340px] xl:w-[380px]">
-            <div className="flex h-full min-h-[400px] flex-col bg-[#a8c5c8] p-8 lg:p-10">
-              <h3 className="font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900">
+            <div className="flex h-full min-h-[400px] flex-col bg-[#D1CCC7] p-8 lg:p-10">
+              <h3 className="font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900">
                 {t('getSupport')}
               </h3>
               <div className="mt-8 space-y-2">
@@ -191,7 +195,7 @@ export default function FooterSection() {
                   {t('phone')}
                 </a>
               </div>
-              <p className="mt-auto text-sm text-gray-700">
+              <p className="mt-4 text-sm text-gray-700 lg:mt-2">
                 {t('hours')}
               </p>
             </div>

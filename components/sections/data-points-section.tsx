@@ -104,10 +104,10 @@ export default function DataPointsSection() {
         className="mb-8 px-6 pt-28 text-center lg:px-12 lg:pt-48"
         style={{ opacity: titleOpacity, y: titleY }}
       >
-        <h2 className="font-(family-name:--font-playfair) text-3xl font-normal italic leading-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl">
+        <h2 className="font-(family-name:--font-quicksand) text-3xl font-thin leading-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl">
           {t('title1')}
           <br />
-          <span className="text-[#7eb8c4]">{t('title2')}</span>
+          <span className="text-[#CF9C7C]">{t('title2')}</span>
         </h2>
       </motion.div>
 
@@ -149,7 +149,7 @@ export default function DataPointsSection() {
             <div
               className="absolute h-full w-full animate-wave-slower blur-[80px]"
               style={{
-                background: 'linear-gradient(180deg, transparent 0%, transparent 25%, rgba(0,165,201,0.08) 50%, transparent 75%, transparent 100%)',
+                background: 'linear-gradient(180deg, transparent 0%, transparent 25%, rgba(0,35,67,0.08) 50%, transparent 75%, transparent 100%)',
               }}
             />
           </div>
@@ -179,7 +179,7 @@ export default function DataPointsSection() {
               }}
             >
               <div className="flex items-center gap-2 whitespace-nowrap rounded-full border border-gray-200 bg-white px-4 py-2 shadow-sm">
-                <span className="inline-flex h-2 w-2 rounded-full bg-[#00a5c9]" />
+                <span className="inline-flex h-2 w-2 rounded-full bg-[#002343]" />
                 <span className="text-xs font-medium tracking-wider text-gray-900">
                   {t(`labels.${key}`)}
                 </span>
@@ -212,7 +212,7 @@ export default function DataPointsSection() {
               }}
             >
               <div className="flex items-center gap-1.5 whitespace-nowrap rounded-full border border-gray-200 bg-white px-3 py-1.5 shadow-sm">
-                <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#00a5c9]" />
+                <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#002343]" />
                 <span className="text-[10px] font-medium tracking-wider text-gray-900">
                   {t(`labels.${key}`)}
                 </span>

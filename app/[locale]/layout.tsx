@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import dynamic from 'next/dynamic';
-import { Geist, Playfair_Display, Quicksand } from 'next/font/google';
+import { Geist, Quicksand } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -18,13 +18,6 @@ const FooterSection = dynamic(() => import('@/components/sections/footer-section
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
-});
-
-const playfair = Playfair_Display({
-  variable: '--font-playfair',
-  subsets: ['latin'],
-  weight: ['400'],
-  style: ['italic', 'normal'],
 });
 
 const quicksand = Quicksand({
@@ -64,7 +57,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   return (
     <html lang={locale}>
       <body
-        className={`${geistSans.variable} ${playfair.variable} ${quicksand.variable} antialiased`}
+        className={`${geistSans.variable} ${quicksand.variable} antialiased`}
       >
         <PageLoader />
         <NextIntlClientProvider messages={messages}>

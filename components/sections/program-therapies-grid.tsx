@@ -26,7 +26,7 @@ export default function ProgramTherapiesGrid({
     <section ref={ref} className="bg-gray-50 px-6 py-20 lg:px-12 lg:py-32">
       <div className="mx-auto max-w-6xl">
         <motion.h2
-          className="font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900 sm:text-4xl lg:text-5xl"
+          className="font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900 sm:text-4xl lg:text-5xl"
           initial={{ opacity: 0, y: 15 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}

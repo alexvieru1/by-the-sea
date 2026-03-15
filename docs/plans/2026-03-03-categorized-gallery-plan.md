@@ -263,7 +263,7 @@ const GallerySection = forwardRef<HTMLElement, GallerySectionProps>(
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="font-[family-name:var(--font-playfair)] text-3xl font-normal italic text-gray-900 sm:text-4xl lg:text-5xl">
+            <h2 className="font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900 sm:text-4xl lg:text-5xl">
               {t('name')}
             </h2>
             <p className="mt-3 max-w-2xl text-base text-gray-600 lg:text-lg">
@@ -434,7 +434,7 @@ export default function GalleryPageClient() {
             {t('subtitle')}
           </motion.p>
           <motion.h1
-            className="font-[family-name:var(--font-playfair)] text-4xl font-normal italic text-gray-900 sm:text-5xl lg:text-6xl"
+            className="font-[family-name:var(--font-quicksand)] text-4xl font-thin text-gray-900 sm:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}

@@ -100,7 +100,7 @@ function ProgramCard({
             {subtitle}
           </p>
 
-          <h2 className="font-(family-name:--font-playfair) text-3xl font-normal italic text-white sm:text-4xl lg:text-5xl">
+          <h2 className="font-(family-name:--font-quicksand) text-3xl font-thin text-white sm:text-4xl lg:text-5xl">
             {title}
           </h2>
 

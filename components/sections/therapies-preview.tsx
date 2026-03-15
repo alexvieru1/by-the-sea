@@ -11,7 +11,7 @@ const therapies = [
     key: 'infertility',
     slug: 'infertility',
     image: '/images/therapies/infertility.webp',
-    bg: 'bg-[#0097a7]',
+    bg: 'bg-[#002343]',
     textColor: 'text-white',
     mutedColor: 'text-white/70',
   },
@@ -19,7 +19,7 @@ const therapies = [
     key: 'rheumatology',
     slug: 'rheumatology',
     image: '/images/therapies/rheumatology.webp',
-    bg: 'bg-[#BCA390]',
+    bg: 'bg-[#CF9C7C]',
     textColor: 'text-white',
     mutedColor: 'text-white/70',
   },
@@ -27,7 +27,7 @@ const therapies = [
     key: 'wellness',
     slug: 'wellness',
     image: '/images/therapies/wellness.webp',
-    bg: 'bg-[#e8d8d4]',
+    bg: 'bg-[#D1CCC7]',
     textColor: 'text-gray-900',
     mutedColor: 'text-gray-600',
   },
@@ -35,7 +35,7 @@ const therapies = [
     key: 'postChemotherapy',
     slug: 'post-chemotherapy',
     image: '/images/therapies/post-chemotherapy.webp',
-    bg: 'bg-[#c5d5d8]',
+    bg: 'bg-[#F2E4D1]',
     textColor: 'text-gray-900',
     mutedColor: 'text-gray-600',
   },
@@ -79,7 +79,7 @@ export default function TherapiesPreview() {
             </p>
 
             <h3
-              className={`font-[family-name:var(--font-playfair)] text-2xl font-normal italic sm:text-3xl ${therapy.textColor}`}
+              className={`font-[family-name:var(--font-quicksand)] text-2xl font-thin sm:text-3xl ${therapy.textColor}`}
             >
               {t(`${therapy.key}.title`)}
             </h3>
