@@ -123,7 +123,7 @@ export default function WaitlistSection() {
         <p className="text-sm uppercase tracking-widest text-[#8B7D6E] mb-4">
           {t('heroSubtitle')}
         </p>
-        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl italic font-light text-gray-900 mb-6">
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl  font-light text-gray-900 mb-6">
           {t('heroTitle')}
         </h1>
         <p className="text-lg text-gray-600 leading-relaxed">
@@ -154,7 +154,7 @@ export default function WaitlistSection() {
         <div className="flex flex-col justify-center px-8 py-16 lg:px-20 lg:w-1/2 bg-[#C4B5A5]">
           {/* Call to book */}
           <div className="mb-8 max-w-lg">
-            <h2 className="font-serif text-3xl sm:text-4xl italic font-light text-[#3A2F25] mb-2">
+            <h2 className="font-serif text-3xl sm:text-4xl  font-light text-[#3A2F25] mb-2">
               {t('callTitle')}
             </h2>
             <p className="text-[#4A3F35]/80 text-sm leading-relaxed mb-4">
@@ -179,7 +179,7 @@ export default function WaitlistSection() {
           </div>
 
           {/* Form */}
-          <h2 className="font-serif text-3xl sm:text-4xl italic font-light text-[#3A2F25] mb-3">
+          <h2 className="font-serif text-3xl sm:text-4xl  font-light text-[#3A2F25] mb-3">
             {t('formTitle')}
           </h2>
           <p className="text-[#4A3F35]/80 text-sm leading-relaxed mb-8">

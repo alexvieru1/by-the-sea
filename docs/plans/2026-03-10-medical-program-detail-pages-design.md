@@ -10,7 +10,7 @@ Keep current hero from `therapy-page-client.tsx` — colored background with ani
 
 ### Section 2: Photo Left / Text Right
 - **Left (50%):** Portrait image inside overflow-hidden container with parallax depth effect (same `useScroll` + `useTransform` pattern from showcase-section.tsx — image scales from 1.1→1 and translates Y on scroll)
-- **Right (50%):** Small caps subtitle label, heading (Playfair italic), 2-3 paragraphs of body text
+- **Right (50%):** Small caps subtitle label, heading (Playfair ), 2-3 paragraphs of body text
 - White background, generous padding
 - Mobile: stacked (image on top, text below)
 

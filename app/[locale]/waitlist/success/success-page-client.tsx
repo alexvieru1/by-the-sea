@@ -34,7 +34,7 @@ export default function SuccessPageClient({ isLoggedIn, email, firstName, lastNa
       >
         <CheckCircle className="h-16 w-16 text-[#6B5B4E] mx-auto mb-6" />
 
-        <h1 className="font-serif text-3xl sm:text-4xl italic font-light text-gray-900 mb-4">
+        <h1 className="font-serif text-3xl sm:text-4xl  font-light text-gray-900 mb-4">
           {t('title')}
         </h1>
 

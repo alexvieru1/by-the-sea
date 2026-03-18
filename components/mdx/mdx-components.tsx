@@ -43,7 +43,7 @@ export const policyMdxComponents: MDXComponents = {
   hr: () => <hr className="my-8 border-gray-200" />,
   blockquote: (props) => (
     <blockquote
-      className="my-6 border-l-4 border-[#002343] pl-4 italic text-gray-600"
+      className="my-6 border-l-4 border-[#002343] pl-4  text-gray-600"
       {...props}
     />
   ),

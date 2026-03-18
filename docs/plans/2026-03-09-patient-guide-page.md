@@ -25,7 +25,7 @@ Client component (needs motion animations). Props:
 - `meta?: string` (for policy version line)
 - `children?: React.ReactNode` (for extra content below description)
 
-Matches existing hero pattern: animated blobs, staggered fade-in text, Playfair italic h1.
+Matches existing hero pattern: animated blobs, staggered fade-in text, Playfair  h1.
 
 **Step 2: Commit**
 
