@@ -123,6 +123,12 @@ main {
   height: 100vh;
   height: 100dvh;
   overscroll-behavior: contain;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+main::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 /* Safari/iOS scroll snap - use proximity to prevent scroll trapping */

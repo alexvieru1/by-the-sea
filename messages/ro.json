@@ -141,7 +141,7 @@
   "hero": {
     "title1": "Acolo unde grija pentru sănătate întâlnește arta relaxării,",
     "title2": "începe adevărata experiență a stării de bine",
-    "description": "Vraja Mării by the Sea - un complex de recuperare medicală și wellness la cele mai înalte standarde"
+    "description": "Vraja Mării by the Sea - complex de recuperare medicală și wellness la cele mai înalte standarde"
   },
   "dataPoints": {
     "title1": "Urmărește milioane de puncte de date.",
@@ -767,7 +767,7 @@
       "description": "Internarea pacienților (pensionari, salariați, copii, neasigurați) se face după o prealabilă programare obținută fie telefonic, fie prin prezentarea la recepție, confirmată de colegii noștri de la Rezervări și operată în sistemul nostru după achitarea prealabilă a avansului."
     },
     "insuranceCheck": {
-      "title": "Verifică calitatea de asigurat",
+      "title": "Verifică-ți calitatea de asigurat",
       "description": "Puteți verifica singur calitatea dumneavoastră de asigurat, precum și situația cardului dumneavoastră de sănătate, accesând link-ul de mai jos și introducând Codul Numeric Personal (CNP-ul)",
       "warning": "Dacă la această verificare există neconcordanțe față de situația dumneavoastră (spre exemplu, figurați ca fiind neasigurat, cardul figurează ca fiind emis și dumneavoastră nu ați intrat în posesia lui etc.), vă rugăm să rezolvați situația anterior sosirii la noi, astfel încât să puteți utiliza biletul de trimitere (în caz contrar, serviciile noastre vor putea fi accesate doar contra cost).",
       "cta": "Verifică pe CNAS"
@@ -899,8 +899,8 @@
       "phone": "+40 241 123 456",
       "email": "contact@complexvrajamarii.ro",
       "address": "Aleea Mercur Nr.2, Eforie Sud, România",
-      "hours": "Luni – Vineri: 09:00 – 18:00",
-      "hoursSaturday": "Sâmbătă: 09:00 – 14:00",
+      "hours": "Luni – Vineri: 08:30 – 16:30",
+      "hoursSaturday": "Sâmbătă: 08:30 – 16:30",
       "hoursSunday": "Duminică: Închis"
     },
     "social": {

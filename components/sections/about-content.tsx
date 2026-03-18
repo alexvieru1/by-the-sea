@@ -123,7 +123,7 @@ export default function AboutContent() {
       </motion.section>
 
       {/* Section 5: Team */}
-      <section className="bg-[#F2E4D1]">
+      {/* <section className="bg-[#F2E4D1]">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-12 lg:py-28">
           <div className="text-center">
             <h2 className="font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900 sm:text-4xl">
@@ -147,11 +147,11 @@ export default function AboutContent() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Section 6: Timeline (commented out — awaiting management decision) */}
-      {/*
-      <motion.section {...fadeInUp}>
+      
+      {/* <motion.section {...fadeInUp}>
         <div className="mx-auto max-w-4xl px-6 py-20 lg:px-12 lg:py-28">
           <h2 className="text-center font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900 sm:text-4xl">
             Timeline Title
@@ -160,8 +160,8 @@ export default function AboutContent() {
             <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-[#D1CCC7]" />
           </div>
         </div>
-      </motion.section>
-      */}
+      </motion.section> */}
+     
 
       {/* Section 7: CTA */}
       <section className="bg-[#002343] px-6 py-20 lg:px-12 lg:py-28 light-header-section">
@@ -173,7 +173,7 @@ export default function AboutContent() {
             {t('ctaDescription')}
           </p>
           <TransitionLink
-            href="/waitlist"
+            href="/book"
             className="mt-8 inline-flex items-center gap-2 bg-white px-8 py-4 text-sm font-medium uppercase tracking-wider text-[#002343] transition-colors hover:bg-gray-100"
           >
             {tCommon('requestStay')}

@@ -4,9 +4,9 @@ export default function MedicalRehabilitationSection() {
   return (
     <VideoShowcaseSection
       translationKey="medicalPrograms.medicalRehabilitation"
-      videoSrc="/videos/medical-rehabilitation.mp4"
+      videoSrc="/videos/recup-med.mp4"
       cardBg="bg-[#002343]"
-      sectionBg="bg-[#C9B49F]"
+      sectionBg="bg-[#F0E3D4]"
       videoSide="right"
       ctaHref="/medical-programs/medical-rehabilitation"
     />

@@ -545,7 +545,7 @@ Replace the Coming Soon section with:
         {tCommon('allPrograms')}
       </TransitionLink>
       <TransitionLink
-        href="/waitlist"
+        href="/book"
         className="inline-flex items-center gap-2 border border-gray-900 bg-transparent px-8 py-4 text-sm font-medium uppercase tracking-wider text-gray-900 transition-colors hover:bg-gray-900 hover:text-white"
       >
         {tCommon('requestStay')}

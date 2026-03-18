@@ -7,7 +7,7 @@ export default function PostChemoSection() {
       videoSrc="/videos/post-chemo.mp4"
       cardBg="bg-[#CF9C7C]"
       sectionBg="bg-[#D8E1D6]"
-      videoSide="left"
+      videoSide="right"
       ctaHref="/medical-programs/post-chemotherapy"
     />
   );

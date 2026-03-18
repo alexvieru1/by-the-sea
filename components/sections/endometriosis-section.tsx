@@ -4,9 +4,9 @@ export default function EndometriosisSection() {
   return (
     <VideoShowcaseSection
       translationKey="medicalPrograms.endometriosisInfertility"
-      videoSrc="/videos/endometriosis_gradient.mp4"
+      videoSrc="/videos/endometrioza.mp4"
       cardBg="bg-[#CF9C7C]"
-      sectionBg="bg-[#C7B39A]"
+      sectionBg="bg-[#f2e4d1]"
       videoSide="left"
       ctaHref="/medical-programs/endometriosis-infertility"
     />

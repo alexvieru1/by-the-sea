@@ -305,7 +305,7 @@ export default function AboutContent() {
             {t('ctaDescription')}
           </p>
           <TransitionLink
-            href="/waitlist"
+            href="/book"
             className="mt-8 inline-flex items-center gap-2 bg-white px-8 py-4 text-sm font-medium uppercase tracking-wider text-[#002343] transition-colors hover:bg-gray-100"
           >
             {tCommon('requestStay')}
