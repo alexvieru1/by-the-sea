@@ -139,9 +139,9 @@
     "otherInfo": "Other Information"
   },
 "hero": {
-    "title1": "Rediscover balance.",
-    "title2": "At your own pace.",
-    "description": "Personalized programs, expertise in Physical Medicine and Balneology, advanced technologies, and genuine care for people."
+    "title1": "Where healthcare meets the art of relaxation,",
+    "title2": "the true experience of well-being begins",
+    "description": "Vraja Mării by the Sea — a medical recovery and wellness complex at the highest standards"
   },
   "dataPoints": {
     "title1": "Track millions of data points.",
@@ -160,10 +160,10 @@
   },
   "aboutContent": {
     "title": "About Us",
-    "description": "We live in a world of continuous transformation, where the accelerated pace, social pressures, and global instability challenge our health more than ever.",
-    "description-2": "In this context, recovery and restoring health become essential. They require an approach that places the person at the center of the process, to offer the possibility of living life to its fullest potential.",
-    "description-3": "Vraja Mării by The Sea was born from this need: to create a space where evidence-based medicine and the tranquility of the natural environment come together to support the deep restoration of the body and inner balance.",
-    "description-4": "Here, healing begins with calm, time, and attention.",
+    "description": "The experience offered is designed as a complete journey toward balance, where healthcare intertwines harmoniously with moments of relaxation and indulgence. Within a setting inspired by the tranquility of the sea and the energy of nature, every day becomes an invitation to revitalize and rediscover inner well-being and equilibrium.",
+    "description-2": "The sea view, the peaceful rhythm of the days, and the attention paid to every detail create a setting where recovery becomes a pleasant experience and rest takes on a new dimension. Thus, every stay is transformed into time dedicated to restoration, where health, comfort, and elegance unite to offer a revitalization experience that exceeds your expectations.",
+    "description-3": "In this setting, health care, a relaxing atmosphere, and the elegance of the spaces intertwine to create an experience that exceeds expectations. Every service, every therapy, and every moment spent here is part of a standard of excellence dedicated to well-being and complete revitalization.",
+    "description-4": "Thus, the stay becomes more than just a simple visit—it becomes an experience where quality, peace, and attention to every guest define the true meaning of hospitality.",
     "visionTitle": "Our Vision",
     "visionDescription": "We envision a medicine of the future that goes beyond treating symptoms, looking at the person as a whole.",
     "visionDescription-2": "Vraja Mării by The Sea aims to become a benchmark in medical rehabilitation and integrative wellness, a place where science, empathy, and nature work together for recovery, prevention, and health optimization.",
@@ -201,6 +201,7 @@
       "title": "Medical Rehabilitation",
       "subtitle": "Rebuild. Restore. Recover.",
       "description": "Advanced rehabilitation protocols combining physiotherapy, balneology, and regenerative medicine for post-surgical, post-injury, and chronic condition recovery.",
+      "shortDescription": "Advanced rehabilitation protocols for post-surgical, post-injury, and chronic condition recovery.",
       "page": {
         "section1Subtitle": "Our Approach",
         "section1Title": "Evidence-Based Recovery",
@@ -211,13 +212,14 @@
         "section2Text": "From initial assessment through to discharge, our multidisciplinary team guides you through every stage of rehabilitation with expertise and compassion.",
         "section2Text2": "Our seaside location provides the ideal environment for recovery — fresh air, natural light, and the therapeutic benefits of the Black Sea coast.",
         "therapiesTitle": "Included Therapies",
-        "therapyIds": "physiotherapy,balneotherapy,electrotherapy,kinesiotherapy,massageTherapy"
+        "therapyIds": "magnetotherapy,mudWraps,laserTherapy,electrostimulation,decontractingMassage,ultrasoundTherapy,mudBath,tecarTherapy,kinesiotherapy"
       }
     },
     "endometriosisInfertility": {
       "title": "Endometriosis & Infertility",
       "subtitle": "Understand. Nurture. Thrive.",
       "description": "Living with endometriosis or facing fertility challenges means navigating pain, uncertainty, and often feeling unheard. Our integrative protocols combine functional medicine, physiotherapy, and balneology to help restore comfort, hormonal balance, and quality of life.",
+      "shortDescription": "Integrative protocols to restore comfort, hormonal balance, and quality of life.",
       "page": {
         "section1Subtitle": "Understanding Your Body",
         "section1Title": "Integrative Care for Complex Conditions",
@@ -228,13 +230,14 @@
         "section2Text": "We go beyond managing symptoms to identify root causes — working with hormonal balance, inflammation reduction, and stress management as interconnected pathways to wellness.",
         "section2Text2": "Our compassionate team understands the emotional weight of these conditions and provides a supportive, judgement-free environment throughout your journey.",
         "therapiesTitle": "Included Therapies",
-        "therapyIds": "functionalMedicineAssessment,pelvicPhysiotherapy,balneotherapy,stressReductionProgram,nutritionalCounselling"
+        "therapyIds": "mudWraps,mudBath,magnetotherapy,kinesiotherapy,decontractingMassage"
       }
     },
     "longevity": {
       "title": "Longevity",
       "subtitle": "Optimise. Regenerate. Flourish.",
       "description": "Aging well isn't about turning back the clock — it's about giving your body the tools to thrive. Our longevity programs blend advanced diagnostics, cryotherapy, and regenerative therapies designed uniquely for you.",
+      "shortDescription": "Advanced diagnostics and regenerative therapies to help you age well, on your own terms.",
       "page": {
         "section1Subtitle": "Science of Aging Well",
         "section1Title": "Optimise Your Biological Age",
@@ -245,13 +248,14 @@
         "section2Text": "From cryotherapy to IV nutrient therapy, our regenerative protocols are designed to enhance cellular function, reduce oxidative stress, and support your body's natural repair mechanisms.",
         "section2Text2": "Regular monitoring and program adjustments ensure you're always progressing toward your optimal health benchmarks.",
         "therapiesTitle": "Included Therapies",
-        "therapyIds": "cryotherapy,ivNutrientTherapy,biomarkerAnalysis,hyperbaricOxygenTherapy,infraredSauna"
+        "therapyIds": "tecarTherapy,laserTherapy,decontractingMassage,kinesiotherapy,magnetotherapy,mudBath"
       }
     },
     "rheumatology": {
       "title": "Rheumatology",
       "subtitle": "Ease. Strengthen. Move.",
       "description": "Specialised rheumatology programs combining balneotherapy, physiotherapy, and functional medicine to manage autoimmune and inflammatory conditions — reducing pain and restoring mobility.",
+      "shortDescription": "Balneotherapy, physiotherapy, and functional medicine to reduce pain and restore mobility.",
       "page": {
         "section1Subtitle": "Living Without Limits",
         "section1Title": "Managing Autoimmune Conditions",
@@ -262,13 +266,14 @@
         "section2Text": "Romania's rich balneological heritage offers unique therapeutic resources. Our programs harness mineral-rich waters, therapeutic mud, and climate therapy backed by decades of clinical evidence.",
         "section2Text2": "Combined with physiotherapy and functional medicine, these natural treatments provide lasting relief beyond what medication alone can achieve.",
         "therapiesTitle": "Included Therapies",
-        "therapyIds": "balneotherapy,mudTherapy,physiotherapy,hydrotherapy,antiInflammatoryNutrition"
+        "therapyIds": "mudWraps,mudBath,magnetotherapy,electrostimulation,ultrasoundTherapy,kinesiotherapy,decontractingMassage,tecarTherapy"
       }
     },
     "postChemotherapy": {
       "title": "Post-Chemotherapy Rehabilitation",
       "subtitle": "Support. Recover. Heal.",
       "description": "Compassionate integrative care designed to support patients after chemotherapy — managing side effects, restoring vitality, and nurturing recovery.",
+      "shortDescription": "Integrative care to manage side effects and restore vitality after chemotherapy.",
       "page": {
         "section1Subtitle": "Recovery After Treatment",
         "section1Title": "Restoring Vitality",
@@ -279,7 +284,7 @@
         "section2Text": "Recovery from chemotherapy affects every aspect of wellbeing. Our integrative approach addresses physical fatigue, immune function, and emotional resilience as interconnected elements of healing.",
         "section2Text2": "In a peaceful seaside setting, surrounded by nature and supported by experienced professionals, you'll find the space to truly recover.",
         "therapiesTitle": "Included Therapies",
-        "therapyIds": "immuneSupportTherapy,gentlePhysiotherapy,nutritionalRehabilitation,relaxationTherapy,lymphaticDrainage"
+        "therapyIds": "decontractingMassage,kinesiotherapy,magnetotherapy,mudBath,laserTherapy"
       }
     }
   },
@@ -515,28 +520,51 @@
     }
   },
   "therapies": {
-    "physiotherapy": { "name": "Physiotherapy", "description": "Targeted exercises and manual therapy to restore movement and function." },
-    "balneotherapy": { "name": "Balneotherapy", "description": "Therapeutic bathing using mineral-rich waters from natural sources." },
-    "electrotherapy": { "name": "Electrotherapy", "description": "Electrical stimulation techniques to reduce pain and accelerate healing." },
-    "kinesiotherapy": { "name": "Kinesiotherapy", "description": "Movement-based therapy designed to improve mobility and coordination." },
-    "massageTherapy": { "name": "Massage Therapy", "description": "Therapeutic massage to relieve tension, improve circulation, and support recovery." },
-    "functionalMedicineAssessment": { "name": "Functional Medicine Assessment", "description": "Comprehensive diagnostic approach to uncover underlying hormonal and metabolic imbalances." },
-    "pelvicPhysiotherapy": { "name": "Pelvic Physiotherapy", "description": "Specialised therapy targeting pelvic floor dysfunction and pain management." },
-    "stressReductionProgram": { "name": "Stress Reduction Program", "description": "Guided techniques including breathing exercises and mindfulness for emotional balance." },
-    "nutritionalCounselling": { "name": "Nutritional Counselling", "description": "Personalised dietary guidance to support hormonal health and fertility." },
-    "cryotherapy": { "name": "Cryotherapy", "description": "Whole-body cold exposure to boost metabolism, reduce inflammation, and enhance recovery." },
-    "ivNutrientTherapy": { "name": "IV Nutrient Therapy", "description": "Targeted intravenous delivery of vitamins, minerals, and antioxidants." },
-    "biomarkerAnalysis": { "name": "Biomarker Analysis", "description": "Comprehensive blood and metabolic testing to track your biological age." },
-    "hyperbaricOxygenTherapy": { "name": "Hyperbaric Oxygen Therapy", "description": "Pressurised oxygen sessions to accelerate cellular regeneration." },
-    "infraredSauna": { "name": "Infrared Sauna", "description": "Deep-penetrating heat therapy for detoxification and cardiovascular health." },
-    "mudTherapy": { "name": "Mud Therapy", "description": "Application of therapeutic mud packs for deep pain relief and improved circulation." },
-    "hydrotherapy": { "name": "Hydrotherapy", "description": "Water-based exercises in heated pools for low-impact joint rehabilitation." },
-    "antiInflammatoryNutrition": { "name": "Anti-Inflammatory Nutrition", "description": "Dietary protocols designed to reduce systemic inflammation naturally." },
-    "immuneSupportTherapy": { "name": "Immune Support Therapy", "description": "Targeted protocols to rebuild immune function after chemotherapy." },
-    "gentlePhysiotherapy": { "name": "Gentle Physiotherapy", "description": "Low-intensity exercises adapted to post-treatment energy levels." },
-    "nutritionalRehabilitation": { "name": "Nutritional Rehabilitation", "description": "Dietary planning focused on restoring nutrient levels and digestive health." },
-    "relaxationTherapy": { "name": "Relaxation Therapy", "description": "Guided relaxation and breathing techniques for stress and anxiety management." },
-    "lymphaticDrainage": { "name": "Lymphatic Drainage", "description": "Gentle massage technique to reduce swelling and support lymphatic circulation." },
+    "magnetotherapy": {
+      "name": "Magnetotherapy",
+      "description": "Therapeutic magnetic fields to reduce pain, stimulate circulation, and support tissue regeneration.",
+      "longDescription": "Magnetotherapy is a modern therapy in the field of medical recovery, where magnetic fields become subtle instruments that support the body's natural healing mechanisms. Through their delicate action, they help reduce pain and inflammation, stimulate circulation, and support tissue regeneration processes.\n\nThe procedure is often recommended for musculoskeletal conditions — from arthrosis and lower back pain to post-traumatic recovery stages — where it can provide real support in restoring functionality.\n\nThrough its gentle, nearly imperceptible yet deeply relaxing effect, magnetotherapy becomes a discreet ally in the recovery process, accompanying the patient on the path to regaining mobility and well-being."
+    },
+    "mudWraps": {
+      "name": "Sapropelic mud wraps",
+      "description": "Therapeutic mud from Lake Techirghiol with anti-inflammatory, detoxifying, and deeply relaxing properties.",
+      "longDescription": "Sapropelic mud wraps are among nature's most treasured gifts in recovery therapy. Enriched with minerals and bioactive substances, this mud with remarkable properties acts gently on the body, offering anti-inflammatory, detoxifying, and deeply relaxing effects on the muscles.\n\nThe procedure is especially recommended for rheumatic conditions, joint and muscle pain, spondylosis, or lower back pain, as well as during post-traumatic recovery stages. At the same time, it stimulates circulation and contributes to deep relaxation that encompasses the entire body.\n\nThrough its soothing warmth and the therapeutic properties drawn from the depths of Lake Techirghiol, the mud offers not only relief for the body but also a state of balance and well-being that envelops the entire organism."
+    },
+    "laserTherapy": {
+      "name": "Laser therapy",
+      "description": "Therapeutic light to stimulate cellular regeneration, reduce inflammation, and diminish pain.",
+      "longDescription": "Laser therapy represents one of the most refined technologies used in modern medical recovery, acting delicately at the cellular level to stimulate the body's natural regeneration processes. Therapeutic light penetrates deep into the tissues, supporting their restoration, reducing inflammation, and contributing to pain reduction in a safe, precise, and controlled manner.\n\nIntegrated into a personalised treatment plan, laser therapy becomes a valuable support in the recovery process, accelerating healing and gradually restoring joint mobility and physical comfort. Through its biostimulatory effect, it activates the body's natural mechanisms, promoting tissue regeneration and improving local circulation.\n\nThe procedure is frequently used for musculoskeletal conditions, muscle or tendon injuries, joint pain, and post-traumatic recovery stages. Through its precise and non-invasive technology, laser therapy adds efficiency to recovery treatments, transforming the healing process into a faster, gentler, and more harmonious journey for the body."
+    },
+    "electrostimulation": {
+      "name": "Electrostimulation",
+      "description": "Fine electrical impulses to reactivate muscles, reduce pain, and improve circulation.",
+      "longDescription": "Electrostimulation is a modern technique that harnesses fine electrical impulses to reactivate and support the natural strength of the muscles. Through carefully controlled signals, muscles are stimulated to contract in a manner similar to natural movements, thus contributing to regaining tone and functionality.\n\nThis delicate yet effective method helps stimulate weakened muscles, reduce inflammation and pain, and improve local circulation. At the same time, it supports the body's recovery processes, often being integrated into rehabilitation programmes following trauma or periods of immobilisation.\n\nCarried out under carefully controlled conditions and adapted to each patient's needs, electrostimulation harmoniously complements personalised treatment plans. Through its gentle rhythm and deep action on the muscles, this therapy becomes a valuable support on the path to regaining mobility, strength, and physical balance."
+    },
+    "decontractingMassage": {
+      "name": "Decontracting massage",
+      "description": "Therapeutic massage to release muscle tension, stimulate circulation, and induce deep relaxation.",
+      "longDescription": "Decontracting massage is one of the oldest and most refined forms of therapy dedicated to the body's balance. Through precise gestures and controlled pressure, the therapist helps the muscles release accumulated tension and overcome local rigidity or blockages that may appear as a result of effort, stress, or incorrect posture.\n\nBy stimulating circulation and tissue oxygenation, massage promotes toxin elimination and supports the body's natural regeneration processes. Muscles gradually regain their elasticity, and the body rediscovers its sense of lightness and freedom of movement.\n\nBeyond its physical benefits, decontracting massage also has a profound dimension of emotional balance. The calm rhythm of the manoeuvres contributes to stress reduction, soothes the nervous system, and induces a state of deep relaxation where mind and body find a natural harmony.\n\nThus, caring for the muscles becomes more than a gesture of comfort: it is an investment in long-term health, vitality, and the well-being that allows us to move and live with greater freedom and balance."
+    },
+    "ultrasoundTherapy": {
+      "name": "Ultrasound therapy",
+      "description": "High-frequency sound vibrations to relax muscles, reduce inflammation, and regenerate tissues.",
+      "longDescription": "Ultrasound therapy is an expression of modern technology, a delicate procedure that works silently, deep within the tissues, where the body finds its natural resources for recovery. Through high-frequency sound vibrations, invisible and imperceptible, therapeutic energy penetrates deeply and activates the subtle mechanisms of regeneration.\n\nUnder the action of these fine waves, tense muscles begin to relax, circulation intensifies, and inflammatory processes gradually diminish. Tissues are thus stimulated to recover, and the body rediscovers its balance and mobility.\n\nGentle, non-invasive, and profoundly effective, ultrasound therapy is often integrated into recovery programmes for muscular and joint conditions or post-traumatic recovery periods. Through its action, this procedure becomes a silent ally of healing, accompanying the body in its natural process of regeneration and restoring, step by step, the harmony of movement and well-being."
+    },
+    "mudBath": {
+      "name": "Mud bath",
+      "description": "A regeneration ritual with mineral-rich mud for detoxification, deep relaxation, and revitalisation.",
+      "longDescription": "The mud bath is one of the most precious experiences offered by natural therapies, a true ritual of pampering and regeneration for body and mind. In the velvety warmth of mineral-rich mud, the body begins to unwind, and accumulated tensions melt slowly, giving way to a profound state of relaxation and balance.\n\nIts therapeutic properties act delicately on the skin and tissues, stimulating circulation, nourishing the body with valuable minerals, and supporting natural revitalisation processes. Every moment spent in this bath becomes an experience of reconnecting with nature's energy, where the body recharges and the senses calm.\n\nThus, the mud bath transforms into a genuine spa ritual, where health care blends harmoniously with the pleasure of relaxation. The result is a profound state of well-being, a sensation of vitality and freshness that reflects throughout the entire body."
+    },
+    "tecarTherapy": {
+      "name": "TECAR therapy",
+      "description": "Therapeutic energy transferred deep into tissues for regeneration, muscle relaxation, and pain reduction.",
+      "longDescription": "TECAR therapy is a modern recovery experience where technology and the body's natural intelligence work together to restore balance and vitality. Through therapeutic energy transferred deep into the tissues, this procedure activates natural regeneration mechanisms, supporting the body to recover in a harmonious and efficient way.\n\nThe subtle warmth generated within the tissues stimulates cellular metabolism and local circulation, promoting muscle relaxation, pain reduction, and accelerating recovery processes. Thus, the body gradually rediscovers its natural rhythm of healing, and mobility and physical comfort return naturally.\n\nIntegrated into a personalised recovery programme and carried out under the careful guidance of specialists, TECAR therapy transforms the healing process into a refined experience of revitalisation. It is a procedure that combines the precision of modern technology with deep care for health, providing the body with the support needed to regain strength, freedom of movement, and well-being."
+    },
+    "kinesiotherapy": {
+      "name": "Kinesiotherapy",
+      "description": "Personalised exercises to restore mobility, strength, and body balance.",
+      "longDescription": "Kinesiotherapy is the art of rediscovering movement and body balance. Through carefully chosen exercises adapted to each need, this form of therapy transforms movement into a delicate yet powerful instrument of recovery and revitalisation. Each exercise is a sure step towards regaining mobility, strength, and confidence in one's own body.\n\nUnder the guidance of specialists, kinesiotherapy programmes are designed to support the body's natural recovery processes, correct muscular imbalances, and restore freedom of movement to the joints. Gradually, the body rediscovers its harmony, and movement returns naturally, without pain or limitations.\n\nMore than a recovery method, kinesiotherapy is an invitation to reconnect with your own body. At your own pace, progressively, it restores vitality, supports long-term health, and transforms each stage of recovery into a process of rediscovering balance and well-being."
+    },
     "wellness": {
       "title": "Wellness & MedSpa",
       "subtitle": "Relax. Rejuvenate. Renew.",

@@ -1,13 +1,13 @@
 {
   "common": {
     "bookScan": "Programează-te",
-    "bookScanHover": "Începe Acum",
-    "learnMore": "Afla Mai Multe",
+    "bookScanHover": "Începe acum",
+    "learnMore": "Află mai multe",
     "getDirections": "Indicatii",
-    "backHome": "Înapoi Acasă",
+    "backHome": "Înapoi acasă",
     "comingSoon": "În curând",
-    "allPrograms": "Toate Programele",
-    "requestStay": "Solicită o Programare"
+    "allPrograms": "Toate programele",
+    "requestStay": "Solicită o programare"
   },
   "notFound": {
     "title": "Pagină negăsită",
@@ -16,12 +16,12 @@
   },
   "pages": {
     "medicalPrograms": {
-      "title": "Programe Medicale",
+      "title": "Programe medicale",
       "subtitle": "Programele noastre specializate",
       "description": "Descoperă gama noastră cuprinzătoare de programe medicale menite să restaureze, regenereze și optimizeze sănătatea ta."
     },
     "therapies": {
-      "title": "Terapiile Noastre",
+      "title": "Terapiile noastre",
       "subtitle": "Tratamente terapeutice",
       "description": "Explorează gama noastră cuprinzătoare de tratamente terapeutice, fiecare conceput pentru a-ți susține călătoria către o sănătate optimă."
     },
@@ -31,12 +31,12 @@
       "description": "Echipa noastră de suport este dedicată să te ajute cu orice întrebare sau nelămurire."
     },
     "about": {
-      "title": "Despre Noi",
+      "title": "Despre noi",
       "subtitle": "Misiunea noastră",
       "description": "Vraja Mării by the Sea este un complex de biohacking dedicat optimizării sănătății și bunăstării tale."
     },
     "book": {
-      "title": "Solicită o Programare",
+      "title": "Solicită o programare",
       "subtitle": "Începe-ți călătoria wellness",
       "description": "Spune-ne despre tine și echipa noastră te va contacta personal pentru a-ți crea experiența wellness perfectă."
     },
@@ -56,27 +56,27 @@
       "description": "Accesează-ți contul pentru a vedea programările și istoricul tău."
     },
     "faq": {
-      "title": "Întrebări Frecvente",
+      "title": "Întrebări frecvente",
       "subtitle": "Răspunsuri la întrebările tale",
       "description": "Găsește răspunsuri la cele mai comune întrebări despre serviciile noastre."
     },
     "cookies": {
-      "title": "Politica Cookie",
+      "title": "Politica cookie",
       "subtitle": "Informații despre cookie-uri",
       "description": "Află cum folosim cookie-urile pentru a-ți îmbunătăți experiența pe site."
     },
     "privacy": {
-      "title": "Politica de Confidențialitate",
+      "title": "Politica de confidențialitate",
       "subtitle": "Protejăm datele tale",
       "description": "Află cum colectăm, folosim și protejăm informațiile tale personale."
     },
     "terms": {
-      "title": "Termeni și Condiții",
+      "title": "Termeni și condiții",
       "subtitle": "Regulile de utilizare",
       "description": "Citește termenii și condițiile de utilizare a serviciilor noastre."
     },
     "patientGuide": {
-      "title": "Ghidul Pacientului",
+      "title": "Ghidul pacientului",
       "subtitle": "Pregătește-te pentru vizită",
       "description": "Tot ce trebuie să știi înainte, în timpul și după sejurul tău — de la ce să aduci până la ce să te aștepți."
     },
@@ -98,17 +98,17 @@
           "description": "Restaurantul nostru servește preparate hrănitoare din ingrediente locale, create să completeze călătoria ta wellness."
         },
         "fitnessRoom": {
-          "name": "Sala de Fitness",
+          "name": "Sala de fitness",
           "description": "Un spațiu de fitness complet echipat pentru a-ți menține rutina de exerciții în timpul sejurului."
         },
         "relaxationAreas": {
-          "name": "Zone de Relaxare",
+          "name": "Zone de relaxare",
           "description": "Spații liniștite din tot complexul, concepute pentru odihnă, reflecție și relaxare între tratamente."
         }
       }
     },
     "otherInfo": {
-      "title": "Alte Informații",
+      "title": "Alte informații",
       "subtitle": "Detalii utile",
       "description": "Informații suplimentare despre serviciile noastre, politici și tot ce trebuie să știi înainte de vizita ta."
     },
@@ -128,20 +128,20 @@
   },
 "nav": {
     "services": "Servicii",
-    "medicalPrograms": "Programe Medicale",
+    "medicalPrograms": "Programe medicale",
     "therapies": "Terapii",
-    "patientGuide": "Ghidul Pacientului",
+    "patientGuide": "Ghidul pacientului",
     "contact": "Contact",
-    "about": "Despre Noi",
+    "about": "Despre noi",
     "login": "Autentificare",
-    "profile": "Profilul Meu",
+    "profile": "Profilul meu",
     "gallery": "Galerie",
-    "otherInfo": "Alte Informații"
+    "otherInfo": "Alte informații"
   },
   "hero": {
-    "title1": "Redescoperă echilibrul.",
-    "title2": "În ritmul tău.",
-    "description": "Acolo unde grija pentru sănătate întâlnește arta relaxării, începe adevărata experiență a stării de bine."
+    "title1": "Acolo unde grija pentru sănătate întâlnește arta relaxării,",
+    "title2": "începe adevărata experiență a stării de bine",
+    "description": "Vraja Mării by the Sea - un complex de recuperare medicală și wellness la cele mai înalte standarde"
   },
   "dataPoints": {
     "title1": "Urmărește milioane de puncte de date.",
@@ -160,10 +160,10 @@
   },
   "aboutContent": {
     "title": "Despre noi",
-    "description": "Trăim într-o lume aflată într-o transformare continuă, în care ritmul accelerat, presiunile sociale și instabilitatea globală ne solicită sănătatea mai mult ca oricând.",
-    "description-2": "În acest context, recuperarea și restabilirea stării de sănătate devin esențiale. Ele necesită o abordare care pune omul în centrul procesului, pentru a îi oferi posibilitatea să își trăiască viața la potențialul său maxim.",
-    "description-3": "Vraja Mării by The Sea s-a născut din această nevoie: aceea de a crea un spațiu unde medicina bazată pe dovezi și liniștea mediului natural se întâlnesc pentru a susține refacerea profundă a corpului și a echilibrului interior.",
-    "description-4": "Aici, vindecarea începe cu calm, timp și atenție.",
+    "description": "Experiența oferită este gândită ca o călătorie completă către echilibru, în care grija pentru sănătate se împletește armonios cu momentele de relaxare și răsfăț. Într-un cadru inspirat de liniștea mării și de energia naturii, fiecare zi devine o invitație la revitalizare, la redescoperirea stării de bine și a echilibrului interior.",
+    "description-2": "Priveliștea mării, ritmul liniștit al zilelor și atenția acordată fiecărui detaliu creează un cadru în care recuperarea devine o experiență plăcută, iar odihna capătă o nouă dimensiune. Astfel, fiecare ședere se transformă într-un timp dedicat refacerii, în care sănătatea, confortul și eleganța se reunesc pentru a oferi o experiență de revitalizare la standarde care îți depășesc așteptările.",
+    "description-3": "În acest cadru, grija pentru sănătate, atmosfera relaxantă și eleganța spațiilor se împletesc pentru a crea o experiență care depășește așteptările. Fiecare serviciu, fiecare terapie și fiecare moment petrecut aici sunt parte dintr-un standard al excelenței, dedicat stării de bine și revitalizării complete.",
+    "description-4": "Astfel, șederea devine mai mult decât un simplu sejur — devine o experiență în care calitatea, liniștea și atenția pentru fiecare oaspete definesc adevăratul sens al ospitalității.",
     "visionTitle": "Viziunea noastră",
     "visionDescription": "Ne imaginăm o medicină a viitorului care nu se limitează la tratarea simptomelor, ci privește omul în ansamblul său.",
     "visionDescription-2": "Vraja Mării by The Sea își propune să devină un reper în recuperarea medicală și wellness integrativ, un loc unde știința, empatia și natura lucrează împreună pentru refacere, prevenție și optimizarea stării de sănătate.",
@@ -172,7 +172,7 @@
     "missionDescription": "La Vraja Mării by The Sea, excelența în Recuperare Medicală, Medicină Fizică și Balneologie se întâlnește cu principiile Medicinei Funcționale pentru a oferi pacienților noștri un concept medical integrativ, unic în regiune.",
     "missionDescription-2": "Misiunea noastră este de a susține prin protocoale avansate de recuperare, tehnologii inovatoare și expertiză în Balneologie și Medicină Fizică.",
     "missionDescription-3": "Nu tratăm doar simptomele, ci identificăm și corectăm cauzele profunde ale afecțiunilor cronice, pentru rezultate durabile și stare de bine generală.",
-    "valuesTitle": "Valorile Noastre",
+    "valuesTitle": "Valorile noastre",
     "values": {
       "evidenceBased": {
         "title": "Medicină bazată pe dovezi",
@@ -191,95 +191,100 @@
         "description": "Tratăm persoana în ansamblu, nu doar simptomele."
       }
     },
-    "teamTitle": "Echipa Noastră",
+    "teamTitle": "Echipa noastră",
     "teamDescription": "Specialiști dedicați sănătății și recuperării tale",
     "ctaTitle": "Fă primul pas către o viață mai sănătoasă",
     "ctaDescription": "Echipa noastră te așteaptă pentru o evaluare personalizată și un plan de recuperare adaptat nevoilor tale."
   },
   "medicalPrograms": {
     "medicalRehabilitation": {
-      "title": "Recuperare Medicală",
+      "title": "Recuperare medicală",
       "subtitle": "Reconstruiește. Restaurează. Recuperează.",
       "description": "Protocoale avansate de reabilitare care combină fizioterapia, balneologia și medicina regenerativă pentru recuperarea post-chirurgicală, post-traumatică și a afecțiunilor cronice.",
+      "shortDescription": "Protocoale avansate de reabilitare pentru recuperarea post-chirurgicală, post-traumatică și a afecțiunilor cronice.",
       "page": {
-        "section1Subtitle": "Abordarea Noastră",
-        "section1Title": "Recuperare Bazată pe Dovezi",
+        "section1Subtitle": "Abordarea noastră",
+        "section1Title": "Recuperare bazată pe dovezi",
         "section1Text": "Programele noastre de recuperare medicală sunt construite pe cele mai recente cercetări clinice, combinând tehnici tradiționale de fizioterapie cu medicina regenerativă de ultimă generație.",
         "section1Text2": "Fiecare plan de tratament este personalizat de echipa noastră de specialiști, asigurând rezultate optime de recuperare adaptate condiției și obiectivelor dumneavoastră.",
-        "section2Subtitle": "Călătoria Ta",
-        "section2Title": "Un Drum Către Forță Reînnoită",
+        "section2Subtitle": "Călătoria ta",
+        "section2Title": "Un drum către forță reînnoită",
         "section2Text": "De la evaluarea inițială până la externare, echipa noastră multidisciplinară vă ghidează prin fiecare etapă a recuperării cu expertiză și compasiune.",
         "section2Text2": "Locația noastră la malul mării oferă mediul ideal pentru recuperare — aer proaspăt, lumină naturală și beneficiile terapeutice ale coastei Mării Negre.",
-        "therapiesTitle": "Terapii Incluse",
-        "therapyIds": "physiotherapy,balneotherapy,electrotherapy,kinesiotherapy,massageTherapy"
+        "therapiesTitle": "Terapii incluse",
+        "therapyIds": "magnetotherapy,mudWraps,laserTherapy,electrostimulation,decontractingMassage,ultrasoundTherapy,mudBath,tecarTherapy,kinesiotherapy"
       }
     },
     "endometriosisInfertility": {
-      "title": "Endometrioză & Infertilitate",
+      "title": "Endometrioză & infertilitate",
       "subtitle": "Înțelege. Hrănește. Prosperă.",
       "description": "A trăi cu endometrioză sau a te confrunta cu provocări de fertilitate înseamnă a naviga prin durere, incertitudine și adesea sentimentul că nu ești ascultată. Protocoalele noastre integrative combină medicina funcțională, fizioterapia și balneologia pentru a-ți reda confortul, echilibrul hormonal și calitatea vieții.",
+      "shortDescription": "Protocoale integrative pentru confort, echilibru hormonal și calitatea vieții în endometrioză și infertilitate.",
       "page": {
-        "section1Subtitle": "Înțelegerea Corpului Tău",
-        "section1Title": "Îngrijire Integrativă pentru Afecțiuni Complexe",
+        "section1Subtitle": "Înțelegerea corpului tău",
+        "section1Title": "Îngrijire integrativă pentru afecțiuni complexe",
         "section1Text": "Endometrioza și infertilitatea necesită o abordare holistică ce adresează atât simptomele fizice, cât și starea emoțională a fiecărei paciente.",
         "section1Text2": "Protocoalele noastre combină diagnosticarea prin medicină funcțională cu tratamente bazate pe dovezi, creând un plan cuprinzător unic pentru nevoile dumneavoastră.",
-        "section2Subtitle": "Suport și Vindecare",
-        "section2Title": "Dincolo de Gestionarea Simptomelor",
+        "section2Subtitle": "Suport și vindecare",
+        "section2Title": "Dincolo de gestionarea simptomelor",
         "section2Text": "Mergem dincolo de gestionarea simptomelor pentru a identifica cauzele profunde — lucrând cu echilibrul hormonal, reducerea inflamației și gestionarea stresului ca și căi interconectate către bunăstare.",
         "section2Text2": "Echipa noastră compătimitoare înțelege greutatea emoțională a acestor afecțiuni și oferă un mediu de susținere, fără judecăți, pe tot parcursul călătoriei dumneavoastră.",
-        "therapiesTitle": "Terapii Incluse",
-        "therapyIds": "functionalMedicineAssessment,pelvicPhysiotherapy,balneotherapy,stressReductionProgram,nutritionalCounselling"
+        "therapiesTitle": "Terapii incluse",
+        "therapyIds": "mudWraps,mudBath,magnetotherapy,kinesiotherapy,decontractingMassage"
       }
     },
     "longevity": {
       "title": "Longevitate",
       "subtitle": "Optimizează. Regenerează. Înflorește.",
       "description": "A îmbătrâni frumos nu înseamnă a întoarce timpul înapoi — înseamnă a oferi corpului tău instrumentele necesare pentru a prospera. Programele noastre de longevitate îmbină diagnosticarea avansată, crioterapia și terapiile regenerative, proiectate unic pentru tine.",
+      "shortDescription": "Diagnosticare avansată și terapii regenerative pentru a îmbătrâni frumos, în propriii termeni.",
       "page": {
-        "section1Subtitle": "Știința Îmbătrânirii Sănătoase",
-        "section1Title": "Optimizează-ți Vârsta Biologică",
+        "section1Subtitle": "Știința îmbătrânirii sănătoase",
+        "section1Title": "Optimizează-ți vârsta biologică",
         "section1Text": "Programele noastre de longevitate combină diagnosticarea avansată cu terapii regenerative pentru a vă ajuta să îmbătrâniți în propriii termeni — proactiv, nu reactiv.",
         "section1Text2": "Prin analiza cuprinzătoare a biomarkerilor și intervenții personalizate, creăm o foaie de parcurs pentru vitalitate susținută și performanță optimă.",
-        "section2Subtitle": "Protocoale Regenerative",
-        "section2Title": "Deblochează Potențialul Corpului Tău",
+        "section2Subtitle": "Protocoale regenerative",
+        "section2Title": "Deblochează potențialul corpului tău",
         "section2Text": "De la crioterapie la terapia cu nutrienți IV, protocoalele noastre regenerative sunt concepute pentru a îmbunătăți funcția celulară, a reduce stresul oxidativ și a susține mecanismele naturale de reparare ale corpului.",
         "section2Text2": "Monitorizarea regulată și ajustările programului asigură că progresați mereu către parametrii optimi de sănătate.",
-        "therapiesTitle": "Terapii Incluse",
-        "therapyIds": "cryotherapy,ivNutrientTherapy,biomarkerAnalysis,hyperbaricOxygenTherapy,infraredSauna"
+        "therapiesTitle": "Terapii incluse",
+        "therapyIds": "tecarTherapy,laserTherapy,decontractingMassage,kinesiotherapy,magnetotherapy,mudBath"
       }
     },
     "rheumatology": {
       "title": "Reumatologie",
       "subtitle": "Ameliorează. Întărește. Mișcă.",
       "description": "Programe specializate de reumatologie care combină balneoterapia, fizioterapia și medicina funcțională pentru gestionarea afecțiunilor autoimune și inflamatorii — reducând durerea și restabilind mobilitatea.",
+      "shortDescription": "Balneoterapie, fizioterapie și medicină funcțională pentru reducerea durerii și restabilirea mobilității.",
       "page": {
-        "section1Subtitle": "Viață Fără Limite",
-        "section1Title": "Gestionarea Afecțiunilor Autoimune",
+        "section1Subtitle": "Viață fără limite",
+        "section1Title": "Gestionarea afecțiunilor autoimune",
         "section1Text": "Afecțiunile reumatice și autoimune necesită îngrijire specializată și continuă. Programele noastre combină tradițiile balneologice dovedite cu medicina funcțională modernă.",
         "section1Text2": "Ne concentrăm pe reducerea inflamației, gestionarea durerii și restabilirea mobilității — pentru a vă putea întoarce la activitățile care contează cel mai mult.",
-        "section2Subtitle": "Vindecare Naturală",
-        "section2Title": "Puterea Balneoterapiei",
+        "section2Subtitle": "Vindecare naturală",
+        "section2Title": "Puterea balneoterapiei",
         "section2Text": "Bogatul patrimoniu balneologic al României oferă resurse terapeutice unice. Programele noastre valorifică apele minerale, nămolul terapeutic și climatoterapia, susținute de decenii de dovezi clinice.",
         "section2Text2": "Combinate cu fizioterapia și medicina funcțională, aceste tratamente naturale oferă ameliorare de durată dincolo de ceea ce poate realiza doar medicația.",
-        "therapiesTitle": "Terapii Incluse",
-        "therapyIds": "balneotherapy,mudTherapy,physiotherapy,hydrotherapy,antiInflammatoryNutrition"
+        "therapiesTitle": "Terapii incluse",
+        "therapyIds": "mudWraps,mudBath,magnetotherapy,electrostimulation,ultrasoundTherapy,kinesiotherapy,decontractingMassage,tecarTherapy"
       }
     },
     "postChemotherapy": {
-      "title": "Reabilitare Post Chimioterapie",
+      "title": "Reabilitare post chimioterapie",
       "subtitle": "Susținere. Reabilitare. Vindecare.",
       "description": "Îngrijire integrativă plină de compasiune, concepută să sprijine pacienții după chimioterapie — gestionând efectele secundare, restaurând vitalitatea și susținând recuperarea.",
+      "shortDescription": "Îngrijire integrativă pentru gestionarea efectelor secundare și restaurarea vitalității după chimioterapie.",
       "page": {
-        "section1Subtitle": "Recuperare După Tratament",
-        "section1Title": "Restabilirea Vitalității",
+        "section1Subtitle": "Recuperare după tratament",
+        "section1Title": "Restabilirea vitalității",
         "section1Text": "Călătoria nu se termină odată cu chimioterapia. Reabilitarea noastră post-tratament se concentrează pe reconstruirea forței, gestionarea efectelor secundare persistente și susținerea întoarcerii corpului la echilibru.",
         "section1Text2": "Fiecare program este adaptat cu grijă la istoricul tratamentului și condiția actuală, asigurând o cale sigură și eficientă către energie reînnoită.",
-        "section2Subtitle": "Îngrijire Plină de Compasiune",
-        "section2Title": "Vindecarea Corpului și a Minții",
+        "section2Subtitle": "Îngrijire plină de compasiune",
+        "section2Title": "Vindecarea corpului și a minții",
         "section2Text": "Recuperarea după chimioterapie afectează fiecare aspect al bunăstării. Abordarea noastră integrativă adresează oboseala fizică, funcția imunitară și reziliența emoțională ca elemente interconectate ale vindecării.",
         "section2Text2": "Într-un cadru liniștit la malul mării, înconjurat de natură și susținut de profesioniști experimentați, veți găsi spațiul pentru a vă recupera cu adevărat.",
-        "therapiesTitle": "Terapii Incluse",
-        "therapyIds": "immuneSupportTherapy,gentlePhysiotherapy,nutritionalRehabilitation,relaxationTherapy,lymphaticDrainage"
+        "therapiesTitle": "Terapii incluse",
+        "therapyIds": "decontractingMassage,kinesiotherapy,magnetotherapy,mudBath,laserTherapy"
       }
     }
   },
@@ -295,12 +300,12 @@
       "title": "Compară-te cu semenii tăi"
     },
     "trackChange": {
-      "label": "Urmărește Schimbarea",
+      "label": "Urmărește schimbarea",
       "title": "Îmbunătățește-ți valorile în timp"
     }
   },
   "facilities": {
-    "label": "Facilitățile Noastre",
+    "label": "Facilitățile noastre",
     "title": "Facilitățile Vraja Mării",
     "description": "Descoperă facilitățile noastre de clasă mondială, proiectate pentru călătoria ta completă de wellness, de la relaxare la recuperare.",
     "categories": {
@@ -311,63 +316,63 @@
     },
     "wellness": {
       "saltRoom": {
-        "name": "Camera de Sare",
+        "name": "Camera de sare",
         "description": "Ședințe terapeutice de haloterapie într-un mediu pristine infuzat cu sare"
       },
       "finnishSauna": {
-        "name": "Sauna Finlandeză",
+        "name": "Sauna finlandeză",
         "description": "Sauna tradițională pe lemne cu experiență autentică finlandeză"
       },
       "relaxationPool": {
-        "name": "Piscină de Relaxare",
+        "name": "Piscină de relaxare",
         "description": "Piscină minerală încălzită cu vedere panoramică la mare"
       }
     },
     "recovery": {
       "cryotherapy": {
-        "name": "Camera de Crioterapie",
+        "name": "Camera de crioterapie",
         "description": "Crioterapie avansată pentru întregul corp pentru recuperare rapidă"
       },
       "infraredSauna": {
-        "name": "Sauna cu Infraroșu",
+        "name": "Sauna cu infraroșu",
         "description": "Terapie cu căldură infraroșie pentru detoxifiere profundă"
       },
       "iceBath": {
-        "name": "Baie cu Gheață",
+        "name": "Baie cu gheață",
         "description": "Terapie de imersie la rece pentru reducerea inflamației"
       }
     },
     "therapy": {
       "massageRoom": {
-        "name": "Sala de Masaj",
+        "name": "Sala de masaj",
         "description": "Camere private de tratament pentru masaje terapeutice și de relaxare"
       },
       "physiotherapy": {
-        "name": "Centru de Fizioterapie",
+        "name": "Centru de fizioterapie",
         "description": "Reabilitare și terapie de mișcare condusă de experți"
       },
       "floatationTank": {
-        "name": "Capsula de Flotare",
+        "name": "Capsula de flotare",
         "description": "Capsule de deprivare senzorială pentru meditație profundă și recuperare"
       }
     },
     "dining": {
       "restaurant": {
-        "name": "Restaurant cu Vedere la Mare",
+        "name": "Restaurant cu vedere la mare",
         "description": "Bucătărie de la fermă la masă cu panorame uimitoare ale Mării Negre"
       },
       "juiceBar": {
-        "name": "Bar de Sucuri Vitality",
+        "name": "Bar de sucuri Vitality",
         "description": "Sucuri proaspăt stoarse și elixiruri de wellness"
       },
       "terrace": {
-        "name": "Terasa Apusului",
+        "name": "Terasa apusului",
         "description": "Lounge in aer liber perfect pentru relaxare seara"
       }
     }
   },
   "testimonials": {
-    "label": "Membrii Nostri"
+    "label": "Membrii noștri"
   },
   "media": {
     "title": "Aparitii media"
@@ -396,13 +401,13 @@
       }
     },
     "signup": {
-      "title": "Creează Cont",
+      "title": "Creează cont",
       "subtitle": "Alătură-te comunității Vraja Mării",
       "firstName": "Prenume",
       "lastName": "Nume",
       "email": "Email",
       "password": "Parolă",
-      "confirmPassword": "Confirmă Parola",
+      "confirmPassword": "Confirmă parola",
       "phone": "Telefon",
       "phonePlaceholder": "+40 7XX XXX XXX",
       "county": "Județ",
@@ -414,12 +419,12 @@
       "hasBookingConfirmed": "Am deja o rezervare confirmată",
       "hasBookingConfirmedDescription": "Bifează dacă ai confirmat deja o rezervare telefonic sau cu echipa noastră de la recepție",
       "gdprConsent": "Sunt de acord cu prelucrarea datelor personale conform",
-      "gdprLink": "Politicii de Confidențialitate",
+      "gdprLink": "Politicii de confidențialitate",
       "gdprRequired": "Trebuie să accepți politica de confidențialitate pentru a crea un cont",
       "termsConsent": "Accept",
-      "termsLink": "Termenii și Condițiile",
+      "termsLink": "Termenii și condițiile",
       "termsRequired": "Trebuie să accepți termenii și condițiile pentru a crea un cont",
-      "submit": "Creează Cont",
+      "submit": "Creează cont",
       "hasAccount": "Ai deja cont?",
       "logIn": "Autentifică-te",
       "orContinueWith": "sau continuă cu",
@@ -436,9 +441,9 @@
       }
     },
     "profile": {
-      "title": "Profilul Meu",
+      "title": "Profilul meu",
       "subtitle": "Gestionează-ți contul",
-      "personalInfo": "Informații Personale",
+      "personalInfo": "Informații personale",
       "firstName": "Prenume",
       "lastName": "Nume",
       "email": "Email",
@@ -450,59 +455,59 @@
       "communityMember": "Membru Comunitatea Vraja Mării",
       "communityDescription": "Sunt de acord să primesc email-uri de marketing, oferte speciale și noutăți exclusive",
       "consentsTitle": "Consimțăminte",
-      "gdprStatus": "Consimțământ Politica de Confidențialitate",
-      "termsStatus": "Termeni și Condiții",
-      "medicalConsentStatus": "Consimțământ Date Medicale",
-      "marketingConsentDate": "Consimțământ Marketing",
+      "gdprStatus": "Consimțământ politica de confidențialitate",
+      "termsStatus": "Termeni și condiții",
+      "medicalConsentStatus": "Consimțământ date medicale",
+      "marketingConsentDate": "Consimțământ marketing",
       "acceptedOn": "Acceptat la {date}",
       "consentVersion": "Versiunea politicii: {version}",
-      "revokeGdpr": "Revocă Consimțământul",
+      "revokeGdpr": "Revocă consimțământul",
       "revokeGdprWarning": "Revocarea consimțământului înseamnă că nu putem procesa datele tale. Funcțiile de evaluare și rezervare vor fi dezactivate.",
-      "revokeGdprConfirm": "Confirmă Revocarea",
+      "revokeGdprConfirm": "Confirmă revocarea",
       "revokeGdprCancel": "Anulează",
       "gdprRevoked": "Ai revocat consimțământul pentru prelucrarea datelor. Unele funcții sunt dezactivate.",
-      "reaccept": "Re-acceptă Consimțămintele",
-      "consentModalTitle": "Consimțământ Necesar",
+      "reaccept": "Re-acceptă consimțămintele",
+      "consentModalTitle": "Consimțământ necesar",
       "consentModalDescription": "Pentru a utiliza serviciile noastre, trebuie să accepți următoarele:",
-      "consentUpdateTitle": "Actualizare Politici",
+      "consentUpdateTitle": "Actualizare politici",
       "consentUpdateDescription": "Politicile noastre au fost actualizate. Te rugăm să revizuiești și să accepți versiunile cele mai recente pentru a continua utilizarea serviciilor noastre.",
-      "acceptAndContinue": "Acceptă și Continuă",
+      "acceptAndContinue": "Acceptă și continuă",
       "gdprConsent": "Sunt de acord cu prelucrarea datelor personale conform",
-      "gdprLink": "Politicii de Confidențialitate",
+      "gdprLink": "Politicii de confidențialitate",
       "termsConsent": "Accept",
-      "termsLink": "Termenii și Condițiile",
+      "termsLink": "Termenii și condițiile",
       "gdprRequired": "Trebuie să accepți politica de confidențialitate",
       "termsRequired": "Trebuie să accepți termenii și condițiile",
       "invalidPhone": "Te rugăm să introduci un număr de mobil valid (07XXXXXXXX)",
       "phoneRequiredTitle": "Număr de telefon necesar",
       "phoneRequiredDescription": "Te rugăm să adaugi numărul de telefon pentru a-ți conecta contul cu rezervarea.",
-      "save": "Salvează Modificările",
+      "save": "Salvează modificările",
       "signOut": "Deconectare",
       "saved": "Modificările au fost salvate.",
       "error": "Nu s-au putut salva modificările.",
       "waitlistStatus": {
-        "noneTitle": "Începe-ți Călătoria",
+        "noneTitle": "Începe-ți călătoria",
         "noneDescription": "Solicită o programare și echipa noastră te va contacta personal.",
-        "noneAction": "Solicită o Programare",
-        "pendingTitle": "Cerere Primită",
+        "noneAction": "Solicită o programare",
+        "pendingTitle": "Cerere primită",
         "pendingDescription": "Am primit cererea ta! Un membru al echipei noastre te va contacta în curând pentru a discuta despre sejurul tău și a confirma rezervarea.",
-        "confirmedTitle": "Rezervare Confirmata",
+        "confirmedTitle": "Rezervare confirmată",
         "confirmedDescription": "Rezervarea ta a fost confirmata! Te rugam sa completezi fisa de evaluare initiala inainte de vizita.",
-        "confirmedAction": "Completeaza Evaluarea",
-        "evaluatedTitle": "Evaluare Completă",
+        "confirmedAction": "Completează evaluarea",
+        "evaluatedTitle": "Evaluare completă",
         "evaluatedDescription": "Evaluarea a fost trimisă. Echipa noastră o va analiza și va programa o consultație telemedicină cu dumneavoastră.",
         "telemedicine": {
-          "title": "Consultație Telemedicină",
+          "title": "Consultație telemedicină",
           "scheduled": "Consultație programată cu {doctor} pe {date} la {time}. Veți fi contactat telefonic pentru confirmare.",
           "confirmed": "Consultația cu {doctor} este confirmată pe {date} la {time}.",
-          "action": "Intră în Consultație",
+          "action": "Intră în consultație",
           "awaitingConfirmation": "Se așteaptă confirmarea telefonică",
-          "completedTitle": "Consultație Finalizată",
+          "completedTitle": "Consultație finalizată",
           "completedDescription": "Totul este pregătit! Vă așteptăm cu drag să pășiți pragul complexului nostru. Următorul pas este achitarea avansului pentru sejur.",
-          "advancePayment": "Achită Avansul",
-          "acceptBooking": "Acceptă Consultația",
-          "declineBooking": "Refuză Consultația",
-          "cancelBooking": "Anulează Consultația",
+          "advancePayment": "Achită avansul",
+          "acceptBooking": "Acceptă consultația",
+          "declineBooking": "Refuză consultația",
+          "cancelBooking": "Anulează consultația",
           "cancelled": "Consultația a fost anulată.",
           "tooLateToCancel": "Nu se poate anula cu mai puțin de 6 ore înainte de consultație.",
           "awaitingYourConfirmation": "Vă rugăm să confirmați sau să refuzați consultația programată."
@@ -510,33 +515,56 @@
       }
     },
     "userMenu": {
-      "profile": "Profilul Meu",
+      "profile": "Profilul meu",
       "signOut": "Deconectare"
     }
   },
   "therapies": {
-    "physiotherapy": { "name": "Fizioterapie", "description": "Exerciții țintite și terapie manuală pentru restabilirea mișcării și funcției." },
-    "balneotherapy": { "name": "Balneoterapie", "description": "Băi terapeutice cu ape minerale din surse naturale." },
-    "electrotherapy": { "name": "Electroterapie", "description": "Tehnici de stimulare electrică pentru reducerea durerii și accelerarea vindecării." },
-    "kinesiotherapy": { "name": "Kinetoterapie", "description": "Terapie bazată pe mișcare pentru îmbunătățirea mobilității și coordonării." },
-    "massageTherapy": { "name": "Masaj Terapeutic", "description": "Masaj terapeutic pentru relaxarea tensiunilor, îmbunătățirea circulației și susținerea recuperării." },
-    "functionalMedicineAssessment": { "name": "Evaluare de Medicină Funcțională", "description": "Abordare diagnostică cuprinzătoare pentru descoperirea dezechilibrelor hormonale și metabolice." },
-    "pelvicPhysiotherapy": { "name": "Fizioterapie Pelvină", "description": "Terapie specializată vizând disfuncția planșeului pelvin și gestionarea durerii." },
-    "stressReductionProgram": { "name": "Program de Reducere a Stresului", "description": "Tehnici ghidate incluzând exerciții de respirație și mindfulness pentru echilibru emoțional." },
-    "nutritionalCounselling": { "name": "Consiliere Nutrițională", "description": "Ghidare dietetică personalizată pentru susținerea sănătății hormonale și a fertilității." },
-    "cryotherapy": { "name": "Crioterapie", "description": "Expunere la frig a întregului corp pentru stimularea metabolismului, reducerea inflamației și îmbunătățirea recuperării." },
-    "ivNutrientTherapy": { "name": "Terapie cu Nutrienți IV", "description": "Administrare intravenoasă țintită de vitamine, minerale și antioxidanți." },
-    "biomarkerAnalysis": { "name": "Analiză Biomarkeri", "description": "Testare cuprinzătoare a sângelui și metabolismului pentru urmărirea vârstei biologice." },
-    "hyperbaricOxygenTherapy": { "name": "Terapie cu Oxigen Hiperbaric", "description": "Ședințe de oxigen sub presiune pentru accelerarea regenerării celulare." },
-    "infraredSauna": { "name": "Saună cu Infraroșu", "description": "Terapie cu căldură profundă pentru detoxifiere și sănătate cardiovasculară." },
-    "mudTherapy": { "name": "Terapie cu Nămol", "description": "Aplicarea de cataplasme cu nămol terapeutic pentru ameliorarea profundă a durerii și îmbunătățirea circulației." },
-    "hydrotherapy": { "name": "Hidroterapie", "description": "Exerciții în apă în piscine încălzite pentru reabilitare articulară cu impact redus." },
-    "antiInflammatoryNutrition": { "name": "Nutriție Antiinflamatoare", "description": "Protocoale dietetice concepute pentru reducerea inflamației sistemice în mod natural." },
-    "immuneSupportTherapy": { "name": "Terapie de Susținere Imunitară", "description": "Protocoale țintite pentru reconstruirea funcției imunitare după chimioterapie." },
-    "gentlePhysiotherapy": { "name": "Fizioterapie Blândă", "description": "Exerciții de intensitate redusă adaptate nivelului de energie post-tratament." },
-    "nutritionalRehabilitation": { "name": "Reabilitare Nutrițională", "description": "Planificare dietetică concentrată pe restabilirea nivelurilor de nutrienți și a sănătății digestive." },
-    "relaxationTherapy": { "name": "Terapie de Relaxare", "description": "Relaxare ghidată și tehnici de respirație pentru gestionarea stresului și anxietății." },
-    "lymphaticDrainage": { "name": "Drenaj Limfatic", "description": "Tehnică de masaj blând pentru reducerea umflăturilor și susținerea circulației limfatice." },
+    "magnetotherapy": {
+      "name": "Magnetoterapie",
+      "description": "Câmpuri magnetice terapeutice pentru diminuarea durerii, stimularea circulației și regenerarea țesuturilor.",
+      "longDescription": "Magnetoterapia este o terapie modernă din sfera recuperării medicale, în care câmpurile magnetice devin instrumente subtile ce sprijină mecanismele naturale de vindecare ale organismului. Prin acțiunea lor delicată, acestea contribuie la diminuarea durerii și a inflamației, stimulează circulația și susțin procesele de regenerare ale țesuturilor.\n\nProcedura este adesea recomandată în afecțiunile aparatului locomotor – de la artroze și lombalgii până la etapele de recuperare după traumatisme – unde poate aduce un sprijin real în refacerea funcționalității.\n\nPrin efectul său blând, aproape imperceptibil, dar profund relaxant, magnetoterapia se transformă într-un aliat discret al procesului de recuperare, însoțind pacientul pe drumul către redobândirea mobilității și a stării de bine."
+    },
+    "mudWraps": {
+      "name": "Împachetări cu nămol sapropelic",
+      "description": "Nămol terapeutic din lacul Techirghiol cu proprietăți antiinflamatoare, detoxifiante și profund relaxante.",
+      "longDescription": "Împachetările cu nămol sapropelic se numără printre cele mai prețuite daruri ale naturii în terapia de recuperare. Îmbogățit cu minerale și substanțe bioactive, acest nămol cu proprietăți remarcabile acționează blând asupra organismului, având efecte antiinflamatoare, detoxifiante și profund relaxante pentru musculatură.\n\nProcedura este recomandată în special în cazul afecțiunilor reumatismale, al durerilor articulare și musculare, al spondilozei sau lombalgiilor, dar și în etapele de recuperare după traumatisme. În același timp, stimulează circulația și contribuie la o relaxare profundă, care cuprinde întregul organism.\n\nPrin căldura sa liniștitoare și prin capacitățile terapeutice pe care le poartă din adâncurile lacului Techirghiol, nămolul oferă nu doar alinare pentru trup, ci și o stare de echilibru și bine care învăluie întreg corpul."
+    },
+    "laserTherapy": {
+      "name": "Terapie laser",
+      "description": "Lumină terapeutică pentru stimularea regenerării celulare, reducerea inflamației și diminuarea durerii.",
+      "longDescription": "Terapia laser reprezintă una dintre cele mai rafinate tehnologii utilizate în recuperarea medicală modernă, acționând delicat la nivel celular pentru a stimula procesele naturale de regenerare ale organismului. Lumina terapeutică pătrunde în profunzimea țesuturilor, susținând refacerea acestora, reducând inflamația și contribuind la diminuarea durerii într-un mod sigur, precis și controlat.\n\nIntegrată într-un plan personalizat de tratament, terapia laser devine un sprijin valoros în procesul de recuperare, accelerând vindecarea și redând treptat mobilitatea articulațiilor și confortul fizic. Prin efectul său biostimulator, aceasta activează mecanismele naturale ale organismului, favorizând regenerarea țesuturilor și îmbunătățind circulația locală.\n\nProcedura este frecvent utilizată în afecțiuni ale aparatului locomotor, în leziuni musculare sau tendinoase, în dureri articulare ori în etapele de recuperare după traumatisme. Prin tehnologia sa precisă și noninvazivă, terapia laser aduce un plus de eficiență tratamentelor de recuperare, transformând procesul vindecării într-un parcurs mai rapid, mai blând și mai armonios pentru organism."
+    },
+    "electrostimulation": {
+      "name": "Electrostimulare",
+      "description": "Impulsuri electrice fine pentru reactivarea musculaturii, diminuarea durerii și îmbunătățirea circulației.",
+      "longDescription": "Electrostimularea este o tehnică modernă care valorifică impulsurile electrice fine pentru a reactiva și susține forța naturală a musculaturii. Prin semnale atent controlate, mușchii sunt stimulați să se contracte într-un mod asemănător mișcărilor naturale, contribuind astfel la redobândirea tonusului și a funcționalității.\n\nAceastă metodă delicată, dar eficientă, ajută la stimularea musculaturii slăbite, la diminuarea inflamației și a durerii și la îmbunătățirea circulației locale. În același timp, susține procesele de refacere ale organismului, fiind adesea integrată în programele de recuperare după traumatisme sau perioade de imobilizare.\n\nRealizată în condiții atent controlate și adaptată nevoilor fiecărui pacient, electrostimularea completează armonios planurile de tratament personalizate. Prin ritmul său blând și acțiunea profundă asupra musculaturii, această terapie devine un sprijin valoros pe drumul către recâștigarea mobilității, a forței și a echilibrului fizic."
+    },
+    "decontractingMassage": {
+      "name": "Masaj decontracturant",
+      "description": "Masaj terapeutic pentru eliberarea tensiunilor musculare, stimularea circulației și relaxare profundă.",
+      "longDescription": "Masajul decontracturant este una dintre cele mai vechi și mai rafinate forme de terapie dedicate echilibrului corpului. Prin gesturi precise și presiuni controlate, terapeutul ajută musculatura să elibereze tensiunile acumulate și să depășească rigiditatea sau blocajele locale care pot apărea în urma efortului, stresului sau posturii incorecte.\n\nPrin stimularea circulației și a oxigenării țesuturilor, masajul favorizează eliminarea toxinelor și susține procesele naturale de regenerare ale organismului. Mușchii își redobândesc treptat elasticitatea, iar corpul își recâștigă senzația de ușurință și libertate în mișcare.\n\nDincolo de beneficiile sale fizice, masajul decontracturant are și o profundă dimensiune de echilibru emoțional. Ritmul calm al manevrelor contribuie la reducerea stresului, liniștește sistemul nervos și induce o stare de relaxare profundă, în care mintea și corpul se regăsesc într-o armonie firească.\n\nAstfel, grija pentru musculatură devine mai mult decât un gest de confort: este o investiție în sănătatea pe termen lung, în vitalitate și în starea de bine care ne permite să ne mișcăm și să trăim cu mai multă libertate, în echilibru."
+    },
+    "ultrasoundTherapy": {
+      "name": "Terapie cu ultrasunete",
+      "description": "Vibrații sonore de înaltă frecvență pentru relaxarea musculaturii, reducerea inflamației și regenerarea țesuturilor.",
+      "longDescription": "Terapia cu ultrasunete este o expresie a tehnologiei moderne, o procedură delicată care lucrează în tăcere, în adâncul țesuturilor, acolo unde organismul își regăsește resursele naturale de refacere. Prin vibrații sonore de înaltă frecvență, invizibile și imperceptibile, energia terapeutică pătrunde profund și activează mecanismele subtile ale regenerării.\n\nSub acțiunea acestor unde fine, musculatura tensionată începe să se relaxeze, circulația se intensifică, iar procesele inflamatorii se diminuează treptat. Țesuturile sunt astfel stimulate să se refacă, iar corpul își redescoperă echilibrul și mobilitatea.\n\nBlândă, non-invazivă și profund eficientă, terapia cu ultrasunete este adesea integrată în programele de recuperare dedicate afecțiunilor musculare și articulare sau perioadelor de refacere după traumatisme. Prin acțiunea sa, această procedură devine un sprijin tăcut al vindecării, însoțind organismul în procesul său firesc de regenerare și redând, pas cu pas, armonia mișcării și starea de bine."
+    },
+    "mudBath": {
+      "name": "Baie cu nămol",
+      "description": "Ritual de regenerare cu nămol bogat în minerale pentru detoxifiere, relaxare profundă și revitalizare.",
+      "longDescription": "Baia cu nămol este una dintre cele mai prețioase experiențe oferite de terapiile naturale, un adevărat ritual de răsfăț și regenerare pentru trup și minte. În căldura catifelată a nămolului bogat în minerale, corpul începe să se destindă, iar tensiunile acumulate se topesc lent, lăsând loc unei stări profunde de relaxare și echilibru.\n\nProprietățile sale terapeutice acționează delicat asupra pielii și țesuturilor, stimulând circulația, hrănind organismul cu minerale valoroase și susținând procesele naturale de revitalizare. Fiecare moment petrecut în această baie devine o experiență de reconectare cu energia naturii, în care corpul se reîncarcă, iar simțurile se liniștesc.\n\nAstfel, baia cu nămol se transformă într-un veritabil ritual spa, în care grija pentru sănătate se împletește armonios cu plăcerea relaxării. Rezultatul este o stare profundă de bine, o senzație de vitalitate și prospețime care se reflectă în întregul organism."
+    },
+    "tecarTherapy": {
+      "name": "Terapie TECAR",
+      "description": "Energie terapeutică transferată în profunzimea țesuturilor pentru regenerare, relaxare musculară și reducerea durerii.",
+      "longDescription": "Terapia TECAR este o experiență modernă de recuperare în care tehnologia și inteligența naturală a corpului lucrează împreună pentru a reda echilibrul și vitalitatea organismului. Prin intermediul energiei terapeutice transferate în profunzimea țesuturilor, această procedură activează mecanismele naturale de regenerare, sprijinind corpul să se refacă într-un mod armonios și eficient.\n\nCăldura subtilă generată în interiorul țesuturilor stimulează metabolismul celular și circulația locală, favorizând relaxarea musculaturii, reducerea durerii și accelerarea proceselor de refacere. Astfel, organismul își regăsește treptat ritmul firesc al vindecării, iar mobilitatea și confortul fizic revin în mod natural.\n\nIntegrată într-un program personalizat de recuperare și realizată sub îndrumarea atentă a specialiștilor, terapia TECAR transformă procesul vindecării într-o experiență rafinată de revitalizare. Este o procedură care îmbină precizia tehnologiei moderne cu grija profundă pentru sănătate, oferind corpului sprijinul necesar pentru a-și redobândi forța, libertatea mișcării și starea de bine."
+    },
+    "kinesiotherapy": {
+      "name": "Kinetoterapie",
+      "description": "Exerciții personalizate pentru redobândirea mobilității, a forței și a echilibrului corpului.",
+      "longDescription": "Kinetoterapia este arta redescoperirii mișcării și a echilibrului corpului. Prin exerciții atent alese și adaptate fiecărei nevoi, această formă de terapie transformă mișcarea într-un instrument delicat, dar puternic, de refacere și revitalizare. Fiecare exercițiu este un pas sigur către redobândirea mobilității, a forței și a încrederii în propriul corp.\n\nSub îndrumarea specialiștilor, programele de kinetoterapie sunt concepute pentru a susține procesele naturale de recuperare ale organismului, pentru a corecta dezechilibrele musculare și pentru a reda articulațiilor libertatea mișcării. Treptat, corpul își regăsește armonia, iar mișcarea revine firesc, fără durere și fără limitări.\n\nMai mult decât o metodă de recuperare, kinetoterapia este o invitație la reconectarea cu propriul corp. În propriul ritm, progresiv, redă vitalitatea, susține sănătatea pe termen lung și transformă fiecare etapă a recuperării într-un proces de redescoperire a echilibrului și a stării de bine."
+    },
     "wellness": {
       "title": "Wellness & MedSpa",
       "subtitle": "Relaxare. Reîntinerire. Reînnoire.",
@@ -544,12 +572,12 @@
     }
   },
   "waitlist": {
-    "heroTitle": "Solicită o Programare",
+    "heroTitle": "Solicită o programare",
     "heroSubtitle": "Începe-ți călătoria wellness",
     "heroDescription": "Fii printre primii care experimentează complexul nostru de biohacking. Spune-ne despre tine și te vom contacta personal.",
     "callTitle": "Preferi să suni?",
     "callDescription": "Vorbește direct cu echipa noastră pentru a-ți planifica sejurul.",
-    "callButton": "Sună Acum",
+    "callButton": "Sună acum",
     "callPhone": "+40 241 123 456",
     "orDivider": "sau completează formularul de mai jos",
     "formTitle": "Spune-ne despre tine",
@@ -577,13 +605,13 @@
     },
     "offersInterest": "Oferte de interes",
     "offers": {
-      "recovery": "Pachet Recuperare",
-      "endometriosis": "Wellness Endometrioză"
+      "recovery": "Pachet recuperare",
+      "endometriosis": "Wellness endometrioză"
     },
     "gdprLabel": "Sunt de acord cu prelucrarea datelor personale conform",
-    "gdprLink": "Politicii de Confidențialitate",
+    "gdprLink": "Politicii de confidențialitate",
     "gdprRequired": "Trebuie să accepți politica de confidențialitate",
-    "submit": "Trimite Cererea",
+    "submit": "Trimite cererea",
     "required": "Acest câmp este obligatoriu",
     "invalidEmail": "Adresa de email nu este validă",
     "successTitle": "Am primit cererea ta!",
@@ -595,9 +623,9 @@
     "success": {
       "title": "Cerere primită!",
       "description": "Mulțumim pentru interesul tău! Un membru al echipei noastre te va contacta personal pentru a discuta despre sejurul tău.",
-      "createAccount": "Creează un Cont",
+      "createAccount": "Creează un cont",
       "createAccountDescription": "Creează un cont pentru a urmări statusul cererii tale și a completa fișa de evaluare.",
-      "backHome": "Înapoi Acasă",
+      "backHome": "Înapoi acasă",
       "alreadyHaveAccount": "Ai deja un cont?",
       "login": "Autentifică-te"
     }
@@ -605,18 +633,18 @@
   "footer": {
     "cta": "Fa primul pas pentru a fi cu un pas inaintea sanatatii tale",
     "company": "Companie",
-    "about": "Despre Noi",
+    "about": "Despre noi",
     "members": "Membri",
     "follow": "Urmărește-ne",
-    "healthCentres": "Centre de Sănătate",
+    "healthCentres": "Centre de sănătate",
     "careers": "Cariere",
     "pressRoom": "Presă",
-    "cookieNotice": "Politica Cookie",
-    "privacyPolicy": "Politica de Confidentialitate",
-    "termsOfService": "Termeni si Conditii",
+    "cookieNotice": "Politica cookie",
+    "privacyPolicy": "Politica de confidențialitate",
+    "termsOfService": "Termeni și condiții",
     "login": "Autentificare",
-    "myAccount": "Contul Meu",
-    "faq": "Întrebări Frecvente",
+    "myAccount": "Contul meu",
+    "faq": "Întrebări frecvente",
     "instagram": "Instagram",
     "facebook": "Facebook",
     "getSupport": "Contactează-ne",
@@ -631,24 +659,24 @@
     }
   },
   "evaluation": {
-    "title": "Fișă Evaluare Inițială",
-    "subtitle": "Evaluare Medicală",
-    "stepLabel1": "Date Personale",
+    "title": "Fișă evaluare inițială",
+    "subtitle": "Evaluare medicală",
+    "stepLabel1": "Date personale",
     "stepLabel2": "Comunicare",
-    "stepLabel3": "Istoric Medical",
-    "stepLabel4": "Informații Suplimentare",
+    "stepLabel3": "Istoric medical",
+    "stepLabel4": "Informații suplimentare",
     "yes": "Da",
     "no": "Nu",
     "none": "Niciuna",
     "back": "Înapoi",
     "next": "Următorul",
-    "submit": "Trimite Fișa",
+    "submit": "Trimite fișa",
     "submitError": "A apărut o eroare. Încearcă din nou.",
     "successTitle": "Fișa a fost trimisă!",
     "successDescription": "Evaluarea ta inițială a fost salvată cu succes. Poți vizualiza răspunsurile în profilul tău.",
-    "goToProfile": "Mergi la Profil",
+    "goToProfile": "Mergi la profil",
     "noEvaluation": "Nu ai completat încă fișa de evaluare inițială.",
-    "fillEvaluation": "Completează Fișa",
+    "fillEvaluation": "Completează fișa",
     "edit": "Editează",
     "noConditions": "Nicio afecțiune raportată",
     "errors": {
@@ -658,9 +686,9 @@
       "firstName": "Prenume",
       "lastName": "Nume",
       "age": "Vârstă",
-      "dateOfBirth": "Data Nașterii",
+      "dateOfBirth": "Data nașterii",
       "profession": "Profesie",
-      "bloodType": "Grupa Sanguină / Rh",
+      "bloodType": "Grupa sanguină / Rh",
       "bloodTypeUnknown": "Necunoscută",
       "weight": "Greutate (kg)",
       "height": "Înălțime (cm)"
@@ -708,7 +736,7 @@
       "recentBleeding": "Sângerare recentă",
       "anemia": "Anemie",
       "hivInfection": "Infecție HIV",
-      "other": "Alte Afecțiuni",
+      "other": "Alte afecțiuni",
       "spinalProblems": "Probleme ale coloanei vertebrale",
       "kidneyDisease": "Boli renale",
       "thyroidDisease": "Boli tiroidiene",
@@ -734,19 +762,19 @@
   },
   "patientGuide": {
     "admission": {
-      "label": "Ghidul Pacientului",
-      "title": "Procesul de Internare",
+      "label": "Ghidul pacientului",
+      "title": "Procesul de internare",
       "description": "Internarea pacienților (pensionari, salariați, copii, neasigurați) se face după o prealabilă programare obținută fie telefonic, fie prin prezentarea la recepție, confirmată de colegii noștri de la Rezervări și operată în sistemul nostru după achitarea prealabilă a avansului."
     },
     "insuranceCheck": {
-      "title": "Verifică Calitatea de Asigurat",
+      "title": "Verifică calitatea de asigurat",
       "description": "Puteți verifica singur calitatea dumneavoastră de asigurat, precum și situația cardului dumneavoastră de sănătate, accesând link-ul de mai jos și introducând Codul Numeric Personal (CNP-ul)",
       "warning": "Dacă la această verificare există neconcordanțe față de situația dumneavoastră (spre exemplu, figurați ca fiind neasigurat, cardul figurează ca fiind emis și dumneavoastră nu ați intrat în posesia lui etc.), vă rugăm să rezolvați situația anterior sosirii la noi, astfel încât să puteți utiliza biletul de trimitere (în caz contrar, serviciile noastre vor putea fi accesate doar contra cost).",
       "cta": "Verifică pe CNAS"
     },
     "documents": {
       "label": "Pregătire",
-      "title": "Documente Necesare",
+      "title": "Documente necesare",
       "description": "Pentru a evita situații neplăcute, vă rugăm să aduceți toate documentele necesare internării dumneavoastră:",
       "items": {
         "referral": "Bilet de trimitere către RECUPERARE MEDICALĂ",
@@ -756,19 +784,19 @@
       }
     },
     "yourStay": {
-      "label": "Experiența Ta",
-      "title": "Sejurul Tău",
+      "label": "Experiența ta",
+      "title": "Sejurul tău",
       "p1": "Odată sosit, vă veți adresa la recepția Marea Neagră pentru întocmirea documentației necesare șederii dumneavoastră și semnarea contractului de prestări servicii medicale, repartizarea camerei conform programării și planificarea consultului medical de specialitate în vederea stabilirii planului de tratament.",
       "p2": "Acesta este înscris pe o fișă individuală de tratament, cu care veți fi preluați de serviciul programări – planificări proceduri, unde vor fi trecute orele de efectuare. Zilnic, după efectuarea tratamentului, veți preda fișa de tratament la recepția bazei de tratament, urmând să o luați a doua zi, la începerea tratamentului."
     },
     "notices": {
-      "title": "Informații Importante",
+      "title": "Informații importante",
       "refusal": {
-        "title": "Dreptul de Refuz",
+        "title": "Dreptul de refuz",
         "description": "Ne rezervăm dreptul de a refuza internarea/de a externa pacienții care prezintă afecțiuni nedeclarate incompatibile cu tratamentul de recuperare medicală, precum și pacienții care nu își onorează obligațiile de conduită și/sau financiare specificate în contract/obligații pacient."
       },
       "dailyVisit": {
-        "title": "Vizita Medicală Zilnică",
+        "title": "Vizita medicală zilnică",
         "description": "Prezența în cameră și colaborarea cu echipa noastră pentru efectuarea vizitei medicale zilnice este obligatorie. În cameră aveți la dispoziție numărul de telefon la care puteți contacta personalul medical de gardă, indiferent de oră, pentru orice aspect legat de starea dumneavoastră de sănătate."
       },
       "discharge": {
@@ -777,7 +805,7 @@
       }
     },
     "contraindications": {
-      "absoluteTitle": "Contraindicații Absolute",
+      "absoluteTitle": "Contraindicații absolute",
       "absoluteWarning": "Pacienților care prezintă cel puțin una dintre contraindicații nu le este recomandat tratamentul cu internare!",
       "absolute": {
         "pacemaker": "Stimulator cardiac – pacemaker",
@@ -795,7 +823,7 @@
         "dialysis": "Pacienți cu dializă renală și/sau insuficiență renală cronică stadiul III/IV",
         "childrenUnder4": "Copii < 4 ani"
       },
-      "relativeTitle": "Contraindicații Relative",
+      "relativeTitle": "Contraindicații relative",
       "relativeNote": "Pacienții care prezintă cel puțin una dintre contraindicațiile relative se vor prezenta la internare cu actele medicale și, numai la indicația/aviz scris al medicului curant (neurolog / cardiolog / oncolog / nefrolog), vor fi înștiințați că tratamentul va fi limitat și adaptat patologiei asociate.",
       "relative": {
         "cardiac": {
@@ -867,7 +895,7 @@
   "contact": {
     "info": {
       "label": "Contact",
-      "title": "Informații de Contact",
+      "title": "Informații de contact",
       "phone": "+40 241 123 456",
       "email": "contact@complexvrajamarii.ro",
       "address": "Aleea Mercur Nr.2, Eforie Sud, România",
@@ -882,14 +910,14 @@
     },
     "directions": {
       "label": "Locație",
-      "title": "Cum Ajungi",
+      "title": "Cum ajungi",
       "fromConstanta": "Din Constanța: ~30 min cu mașina pe DN39 spre sud, direcția Eforie.",
       "fromBucharest": "Din București: ~3h pe A2 spre Constanța, apoi DN39 spre Eforie Sud.",
       "train": "Cu trenul: Gara Eforie Sud (CFR) — la aproximativ 10 minute de mers pe jos.",
       "parking": "Parcare gratuită disponibilă în incinta complexului."
     },
     "form": {
-      "title": "Trimite-ne un Mesaj",
+      "title": "Trimite-ne un mesaj",
       "description": "Completează formularul de mai jos și te vom contacta cât mai curând.",
       "name": "Nume complet",
       "email": "Email",
@@ -903,12 +931,12 @@
       },
       "message": "Mesaj",
       "messagePlaceholder": "Scrie mesajul tău aici...",
-      "submit": "Trimite Mesajul",
+      "submit": "Trimite mesajul",
       "success": "Mesajul a fost trimis! Te vom contacta în curând.",
       "error": "A apărut o eroare. Te rugăm să încerci din nou."
     },
     "faq": {
-      "title": "Întrebări Frecvente",
+      "title": "Întrebări frecvente",
       "items": {
         "q1": { "question": "Cum pot face o programare?", "answer": "Poți solicita o programare completând formularul de pe site sau sunând la numărul nostru de telefon. Echipa noastră te va contacta pentru confirmare." },
         "q2": { "question": "Ce trebuie să aduc la internare?", "answer": "Ai nevoie de: biletul de trimitere către Recuperare Medicală, cardul de sănătate, cartea de identitate și adeverința de salariat sau ultimul cupon de pensie (pentru asigurații OPSNAJ). Detalii complete în Ghidul Pacientului." },
@@ -922,9 +950,9 @@
     }
   },
   "telemedicine": {
-    "title": "Consultație Telemedicină",
+    "title": "Consultație telemedicină",
     "pendingConfirmation": "Consultația dumneavoastră este programată dar nu este încă confirmată. Veți fi contactat telefonic pentru confirmare.",
-    "joinCall": "Intră în Consultație",
+    "joinCall": "Intră în consultație",
     "joining": "Se conectează...",
     "notYet": "Nu este disponibil încă",
     "availableAt": "Butonul de acces disponibil la {time}",

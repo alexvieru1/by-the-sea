@@ -63,7 +63,9 @@ function ProgramCard({
   const prefix = `${programKey}.`;
   const title = t(`${prefix}title`);
   const subtitle = t(`${prefix}subtitle`);
-  const description = t(`${prefix}description`);
+  const description = t.has(`${prefix}shortDescription`)
+    ? t(`${prefix}shortDescription`)
+    : t(`${prefix}description`);
 
   const therapyIds = t.has(`${prefix}page.therapyIds`)
     ? t(`${prefix}page.therapyIds`).split(',')
