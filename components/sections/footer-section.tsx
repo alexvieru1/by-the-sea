@@ -41,10 +41,10 @@ export default function FooterSection() {
                   </li>
                   <li>
                     <TransitionLink
-                      href="/careers"
+                      href="/stays"
                       className="text-sm text-gray-500 transition-colors hover:text-gray-900"
                     >
-                      {t('careers')}
+                      {t('stays')}
                     </TransitionLink>
                   </li>
                   <li>

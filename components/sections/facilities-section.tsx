@@ -3,36 +3,29 @@
 import { useRef, useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { motion, useScroll, useTransform } from "motion/react";
-import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
-// Facility data structure with image pairs
+// Facility data structure with image pairs (images 31–46)
 const facilitiesData = {
-  wellness: [
-    { key: "saltRoom", smallImg: 1, largeImg: 2 },
-    { key: "finnishSauna", smallImg: 3, largeImg: 4 },
-    { key: "relaxationPool", smallImg: 5, largeImg: 6 },
+  relaxation: [
+    { key: "fitnessRoom", smallImg: 31, largeImg: 32 },
+    { key: "seaBeach", smallImg: 33, largeImg: 34 },
+    { key: "lakeBeach", smallImg: 35, largeImg: 36 },
+    { key: "relaxationArea", smallImg: 37, largeImg: 38 },
   ],
-  recovery: [
-    { key: "cryotherapy", smallImg: 7, largeImg: 8 },
-    { key: "infraredSauna", smallImg: 9, largeImg: 10 },
-    { key: "iceBath", smallImg: 11, largeImg: 12 },
+  events: [
+    { key: "conferenceRoom", smallImg: 39, largeImg: 40 },
   ],
-  therapy: [
-    { key: "massageRoom", smallImg: 13, largeImg: 14 },
-    { key: "physiotherapy", smallImg: 15, largeImg: 16 },
-    { key: "floatationTank", smallImg: 17, largeImg: 18 },
-  ],
-  dining: [
-    { key: "restaurant", smallImg: 19, largeImg: 20 },
-    { key: "juiceBar", smallImg: 21, largeImg: 22 },
-    { key: "terrace", smallImg: 23, largeImg: 24 },
+  gastronomy: [
+    { key: "restaurant", smallImg: 41, largeImg: 42 },
+    { key: "healthyMenus", smallImg: 43, largeImg: 44 },
+    { key: "specialtyCoffee", smallImg: 45, largeImg: 46 },
   ],
 };
 
 type CategoryKey = keyof typeof facilitiesData;
 
-const categories: CategoryKey[] = ["wellness", "recovery", "therapy", "dining"];
+const categories: CategoryKey[] = ["relaxation", "events", "gastronomy"];
 
 function getImagePath(num: number): string {
   return `/images/gallery/vraja_marii_by_the_sea_eforie_sud_${num}.webp`;
@@ -53,7 +46,6 @@ function FacilityCard({
   scrollContainerRef: React.RefObject<HTMLElement | null>;
 }) {
   const t = useTranslations("facilities");
-  const tCommon = useTranslations("common");
   const cardRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
@@ -89,7 +81,7 @@ function FacilityCard({
       <div className="relative flex items-end gap-4 md:block lg:gap-0">
         {/* Small image - hidden on mobile, positioned top-left overlapping on lg */}
         <motion.div
-          className="relative z-10 hidden aspect-3/4 w-1/4 overflow-hidden md:block lg:absolute  lg:-top-8 lg:w-[35%]"
+          className="relative z-10 hidden aspect-3/4 w-1/4 overflow-hidden md:block lg:absolute lg:-top-8 lg:w-[35%]"
           style={{
             y: smallImgYMove,
             willChange: "transform",
@@ -142,13 +134,6 @@ function FacilityCard({
         <p className="mt-2 text-sm text-gray-600 lg:text-base">
           {t(`${category}.${facilityKey}.description`)}
         </p>
-        <a
-          href="#"
-          className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-gray-900 transition-colors hover:text-gray-600"
-        >
-          {tCommon("learnMore")}
-          <ArrowUpRight className="h-4 w-4" />
-        </a>
       </div>
     </div>
   );
@@ -156,7 +141,7 @@ function FacilityCard({
 
 export default function FacilitiesSection() {
   const t = useTranslations("facilities");
-  const [activeCategory, setActiveCategory] = useState<CategoryKey>("wellness");
+  const [activeCategory, setActiveCategory] = useState<CategoryKey>("relaxation");
   const scrollContainerRef = useRef<HTMLElement | null>(null);
   const [isClient, setIsClient] = useState(false);
 
@@ -168,7 +153,7 @@ export default function FacilitiesSection() {
   }, []);
 
   return (
-    <section className=" bg-gray-50 py-20 lg:py-32">
+    <section className="bg-gray-50 py-20 lg:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-12">
         {/* Header */}
         <div className="mb-12 flex flex-col gap-8 lg:mb-16 lg:flex-row lg:items-start lg:justify-between">

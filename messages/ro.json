@@ -40,10 +40,10 @@
       "subtitle": "Începe-ți călătoria wellness",
       "description": "Spune-ne despre tine și echipa noastră te va contacta personal pentru a-ți crea experiența wellness perfectă."
     },
-    "careers": {
-      "title": "Cariere",
-      "subtitle": "Alătură-te echipei noastre",
-      "description": "Căutăm persoane pasionate de sănătate și wellness care vor să facă diferența."
+    "stays": {
+      "title": "Sejururi planificate",
+      "subtitle": "Calendar sejururi 2026",
+      "description": "Consultă calendarul sejururilor noastre planificate pentru anul 2026. Fiecare sejur are o durată de 14 zile."
     },
     "press": {
       "title": "Presă",
@@ -307,67 +307,48 @@
   "facilities": {
     "label": "Facilitățile noastre",
     "title": "Facilitățile Vraja Mării",
-    "description": "Descoperă facilitățile noastre de clasă mondială, proiectate pentru călătoria ta completă de wellness, de la relaxare la recuperare.",
+    "description": "Descoperă spațiile noastre concepute pentru relaxare, evenimente și o gastronomie care susține sănătatea.",
     "categories": {
-      "wellness": "Wellness",
-      "recovery": "Relaxare",
-      "therapy": "Events",
-      "dining": "Gastronomie"
+      "relaxation": "Relaxare",
+      "events": "Events",
+      "gastronomy": "Gastronomie"
     },
-    "wellness": {
-      "saltRoom": {
-        "name": "Camera de sare",
-        "description": "Ședințe terapeutice de haloterapie într-un mediu pristine infuzat cu sare"
+    "relaxation": {
+      "fitnessRoom": {
+        "name": "Sală de fitness",
+        "description": "Spațiu modern dotat cu echipamente de ultimă generație pentru antrenamente personalizate și menținerea formei fizice."
       },
-      "finnishSauna": {
-        "name": "Sauna finlandeză",
-        "description": "Sauna tradițională pe lemne cu experiență autentică finlandeză"
+      "seaBeach": {
+        "name": "Plajă amenajată la mare",
+        "description": "Plajă privată cu șezlonguri și umbrelă, unde sunetul valurilor și aerul marin completează experiența de relaxare."
       },
-      "relaxationPool": {
-        "name": "Piscină de relaxare",
-        "description": "Piscină minerală încălzită cu vedere panoramică la mare"
+      "lakeBeach": {
+        "name": "Plajă amenajată la lac",
+        "description": "Un colț de liniște pe malul lacului Techirghiol, ideal pentru relaxare și băi terapeutice în aer liber."
+      },
+      "relaxationArea": {
+        "name": "Zonă de relaxare",
+        "description": "Spațiu dedicat momentelor de liniște, cu ambient calm și confortabil, perfect pentru refacerea dintre proceduri."
       }
     },
-    "recovery": {
-      "cryotherapy": {
-        "name": "Camera de crioterapie",
-        "description": "Crioterapie avansată pentru întregul corp pentru recuperare rapidă"
-      },
-      "infraredSauna": {
-        "name": "Sauna cu infraroșu",
-        "description": "Terapie cu căldură infraroșie pentru detoxifiere profundă"
-      },
-      "iceBath": {
-        "name": "Baie cu gheață",
-        "description": "Terapie de imersie la rece pentru reducerea inflamației"
+    "events": {
+      "conferenceRoom": {
+        "name": "Sală de conferințe",
+        "description": "Sală de conferințe complet echipată pentru evenimente corporate, workshopuri și seminarii într-un cadru inspirant la malul mării."
       }
     },
-    "therapy": {
-      "massageRoom": {
-        "name": "Sala de masaj",
-        "description": "Camere private de tratament pentru masaje terapeutice și de relaxare"
-      },
-      "physiotherapy": {
-        "name": "Centru de fizioterapie",
-        "description": "Reabilitare și terapie de mișcare condusă de experți"
-      },
-      "floatationTank": {
-        "name": "Capsula de flotare",
-        "description": "Capsule de deprivare senzorială pentru meditație profundă și recuperare"
-      }
-    },
-    "dining": {
+    "gastronomy": {
       "restaurant": {
         "name": "Restaurant cu vedere la mare",
-        "description": "Bucătărie de la fermă la masă cu panorame uimitoare ale Mării Negre"
+        "description": "Preparate gătite cu ingrediente locale, savurate cu priveliștea Mării Negre ca fundal."
       },
-      "juiceBar": {
-        "name": "Bar de sucuri Vitality",
-        "description": "Sucuri proaspăt stoarse și elixiruri de wellness"
+      "healthyMenus": {
+        "name": "Meniuri care susțin sănătatea",
+        "description": "Opțiuni alimentare concepute de nutriționiști pentru a completa programele terapeutice și a susține recuperarea."
       },
-      "terrace": {
-        "name": "Terasa apusului",
-        "description": "Lounge in aer liber perfect pentru relaxare seara"
+      "specialtyCoffee": {
+        "name": "Cafea de specialitate",
+        "description": "Cafea de specialitate preparată cu grijă, perfect pentru o pauză revigorantă între proceduri."
       }
     }
   },
@@ -630,6 +611,26 @@
       "login": "Autentifică-te"
     }
   },
+  "stays": {
+    "stay": "Sejur",
+    "selectMonth": "Alege luna",
+    "wedTrack": "Seria Miercuri",
+    "thuTrack": "Seria Joi",
+    "duration": "14 zile",
+    "staysSingular": "sejur",
+    "staysPlural": "sejururi",
+    "clearSelection": "Resetează selecția",
+    "infoNote": "Fiecare sejur are o durată de 14 zile. Pentru detalii suplimentare despre disponibilitate și prețuri, vă rugăm să ne contactați.",
+    "days": {
+      "mon": "Lu",
+      "tue": "Ma",
+      "wed": "Mi",
+      "thu": "Jo",
+      "fri": "Vi",
+      "sat": "Sâ",
+      "sun": "Du"
+    }
+  },
   "footer": {
     "cta": "Fa primul pas pentru a fi cu un pas inaintea sanatatii tale",
     "company": "Companie",
@@ -637,7 +638,7 @@
     "members": "Membri",
     "follow": "Urmărește-ne",
     "healthCentres": "Centre de sănătate",
-    "careers": "Cariere",
+    "stays": "Sejururi",
     "pressRoom": "Presă",
     "cookieNotice": "Politica cookie",
     "privacyPolicy": "Politica de confidențialitate",
@@ -650,7 +651,7 @@
     "getSupport": "Contactează-ne",
     "email": "contact@complexvrajamarii.ro",
     "phone": "+40 241 123 456",
-    "hours": "Luni - Vineri 9:00 - 18:00",
+    "hours": "Luni - Sâmbătă 8:30 - 16:30",
     "copyright": "© 2026 Vraja Mării by the Sea. Toate drepturile rezervate.",
     "country": "Romania",
     "locations": {

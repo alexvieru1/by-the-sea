@@ -40,10 +40,10 @@
       "subtitle": "Start your wellness journey",
       "description": "Tell us about yourself and our team will personally reach out to craft your perfect wellness experience."
     },
-    "careers": {
-      "title": "Careers",
-      "subtitle": "Join our team",
-      "description": "We're looking for passionate individuals in health and wellness who want to make a difference."
+    "stays": {
+      "title": "Scheduled Stays",
+      "subtitle": "2026 Stay Calendar",
+      "description": "Browse our scheduled stays calendar for 2026. Each stay lasts 14 days."
     },
     "press": {
       "title": "Press Room",
@@ -307,67 +307,48 @@
   "facilities": {
     "label": "Our Facilities",
     "title": "Vraja Mării Facilities",
-    "description": "Discover our world-class facilities designed for your complete wellness journey, from relaxation to recovery.",
+    "description": "Discover our spaces designed for relaxation, events, and cuisine that supports your health.",
     "categories": {
-      "wellness": "Wellness",
-      "recovery": "Recovery",
-      "therapy": "Therapy",
-      "dining": "Dining"
+      "relaxation": "Relaxation",
+      "events": "Events",
+      "gastronomy": "Gastronomy"
     },
-    "wellness": {
-      "saltRoom": {
-        "name": "Salt Room",
-        "description": "Therapeutic halotherapy sessions in a pristine salt-infused environment"
+    "relaxation": {
+      "fitnessRoom": {
+        "name": "Fitness room",
+        "description": "A modern space equipped with state-of-the-art equipment for personalised workouts and staying in shape."
       },
-      "finnishSauna": {
-        "name": "Finnish Sauna",
-        "description": "Traditional wood-fired sauna with authentic Finnish experience"
+      "seaBeach": {
+        "name": "Private sea beach",
+        "description": "A private beach with sun loungers and umbrellas, where the sound of waves and sea air complete the relaxation experience."
       },
-      "relaxationPool": {
-        "name": "Relaxation Pool",
-        "description": "Heated mineral pool with panoramic sea views"
+      "lakeBeach": {
+        "name": "Private lake beach",
+        "description": "A peaceful corner on the shores of Lake Techirghiol, ideal for relaxation and therapeutic open-air bathing."
+      },
+      "relaxationArea": {
+        "name": "Relaxation area",
+        "description": "A dedicated space for quiet moments with a calm, comfortable ambiance — perfect for unwinding between treatments."
       }
     },
-    "recovery": {
-      "cryotherapy": {
-        "name": "Cryotherapy Chamber",
-        "description": "Advanced whole-body cryotherapy for rapid recovery"
-      },
-      "infraredSauna": {
-        "name": "Infrared Sauna",
-        "description": "Deep-penetrating infrared heat therapy for detoxification"
-      },
-      "iceBath": {
-        "name": "Ice Bath",
-        "description": "Cold immersion therapy for inflammation reduction"
+    "events": {
+      "conferenceRoom": {
+        "name": "Conference room",
+        "description": "A fully equipped conference room for corporate events, workshops, and seminars in an inspiring seaside setting."
       }
     },
-    "therapy": {
-      "massageRoom": {
-        "name": "Massage Suite",
-        "description": "Private treatment rooms for therapeutic and relaxation massages"
-      },
-      "physiotherapy": {
-        "name": "Physiotherapy Centre",
-        "description": "Expert-led rehabilitation and movement therapy"
-      },
-      "floatationTank": {
-        "name": "Floatation Tank",
-        "description": "Sensory deprivation pods for deep meditation and recovery"
-      }
-    },
-    "dining": {
+    "gastronomy": {
       "restaurant": {
-        "name": "Sea View Restaurant",
-        "description": "Farm-to-table cuisine with stunning Black Sea panoramas"
+        "name": "Sea view restaurant",
+        "description": "Dishes prepared with local ingredients, enjoyed with the Black Sea as a backdrop."
       },
-      "juiceBar": {
-        "name": "Vitality Juice Bar",
-        "description": "Fresh-pressed juices and wellness elixirs"
+      "healthyMenus": {
+        "name": "Health-supporting menus",
+        "description": "Nutritionist-designed meal options to complement therapeutic programmes and support recovery."
       },
-      "terrace": {
-        "name": "Sunset Terrace",
-        "description": "Open-air lounge perfect for evening relaxation"
+      "specialtyCoffee": {
+        "name": "Specialty coffee",
+        "description": "Carefully crafted specialty coffee, perfect for a refreshing break between treatments."
       }
     }
   },
@@ -630,6 +611,26 @@
       "login": "Log In"
     }
   },
+  "stays": {
+    "stay": "Stay",
+    "selectMonth": "Select month",
+    "wedTrack": "Wednesday Series",
+    "thuTrack": "Thursday Series",
+    "duration": "14 days",
+    "staysSingular": "stay",
+    "staysPlural": "stays",
+    "clearSelection": "Clear selection",
+    "infoNote": "Each stay lasts 14 days. For additional details about availability and pricing, please contact us.",
+    "days": {
+      "mon": "Mo",
+      "tue": "Tu",
+      "wed": "We",
+      "thu": "Th",
+      "fri": "Fr",
+      "sat": "Sa",
+      "sun": "Su"
+    }
+  },
   "footer": {
     "cta": "Take the first step in getting ahead of your health",
     "company": "Company",
@@ -637,7 +638,7 @@
     "members": "Members",
     "follow": "Follow",
     "healthCentres": "Health Centres",
-    "careers": "Careers",
+    "stays": "Stays",
     "pressRoom": "Press Room",
     "cookieNotice": "Cookie Notice",
     "privacyPolicy": "Privacy Policy",
@@ -650,7 +651,7 @@
     "getSupport": "Contact Us",
     "email": "contact@complexvrajamarii.ro",
     "phone": "+40 241 123 456",
-    "hours": "Monday - Friday 9am - 6pm",
+    "hours": "Monday - Saturday 8:30am - 4:30pm",
     "copyright": "© 2026 Vraja Mării by the Sea. All rights reserved.",
     "country": "Romania",
     "locations": {

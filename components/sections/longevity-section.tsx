@@ -4,9 +4,9 @@ export default function LongevitySection() {
   return (
     <VideoShowcaseSection
       translationKey="medicalPrograms.longevity"
-      videoSrc="/videos/longevitate.mp4"
+      videoSrc="/videos/longevity.mp4"
       cardBg="bg-[#002343]"
-      sectionBg="bg-[#F2E5D4]"
+      sectionBg="bg-[#E3CEB2]"
       videoSide="right"
       ctaHref="/medical-programs/longevity"
     />
