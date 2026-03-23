@@ -1,14 +1,15 @@
-import VideoShowcaseSection from './video-showcase-section';
+import ShowcaseSection from './showcase-section';
 
 export default function RheumatologySection() {
   return (
-    <VideoShowcaseSection
+    <ShowcaseSection
       translationKey="medicalPrograms.rheumatology"
-      videoSrc="/videos/rheumatology.mp4"
+      imageSrc="/images/homepage-sections/reumatologie2.webp"
+      imageAlt="Rheumatology"
       cardBg="bg-[#D1CCC7]"
-      sectionBg="bg-[#FCF0BA]"
-      videoSide="left"
+      align="right"
       ctaHref="/medical-programs/rheumatology"
+      orbs={[]}
     />
   );
 }

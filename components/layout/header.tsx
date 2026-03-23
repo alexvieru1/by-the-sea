@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from "motion/react";
 import { ChevronDown } from "lucide-react";
 import TransitionLink from "./transition-link";
 import LanguageSwitcher from "./language-switcher";
-import NavDropdown from "./nav-dropdown";
+import NavDropdown, { NavDropdownStrip } from "./nav-dropdown";
 import AnimatedButton from "@/components/ui/animated-button";
 import AnimatedLink from "@/components/ui/animated-link";
 import SlicedText from "../ui/sliced-text";
@@ -61,11 +61,11 @@ export default function Header() {
   const tCommon = useTranslations("common");
   const { user, loading: authLoading } = useAuth();
   const pathname = usePathname();
-  const [isNavVisible, setIsNavVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const [isLightMode, setIsLightMode] = useState(false);
-  const lastScrollY = useRef(0);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   // Observe sections with .light-header-section to toggle light (white) navbar
   useEffect(() => {
@@ -104,33 +104,13 @@ export default function Header() {
     };
   }, [pathname]);
 
-  useEffect(() => {
-    const mainElement = document.querySelector("main");
-    if (!mainElement) return;
-
-    const handleScroll = () => {
-      const currentScrollY = mainElement.scrollTop;
-
-      if (currentScrollY < lastScrollY.current || currentScrollY < 100) {
-        setIsNavVisible(true);
-      } else if (currentScrollY > lastScrollY.current && currentScrollY > 100) {
-        setIsNavVisible(false);
-      }
-
-      lastScrollY.current = currentScrollY;
-    };
-
-    handleScroll();
-
-    mainElement.addEventListener("scroll", handleScroll, { passive: true });
-    return () => mainElement.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setMobileServicesOpen(false);
     }
     return () => {
@@ -170,19 +150,15 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50">
-        <nav className="flex items-start justify-between lg:items-center">
+      <header
+        className={cn(
+          "fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-colors duration-300",
+          isLightMode ? "bg-black/25" : "bg-white/40"
+        )}
+      >
+        <nav className="flex items-center justify-between">
           {/* Logo - Desktop */}
-          <motion.div
-            className="hidden items-center gap-8 pr-6 lg:flex"
-            initial={{ opacity: 1, y: 0 }}
-            animate={{
-              opacity: isNavVisible ? 1 : 0,
-              y: isNavVisible ? 0 : -10,
-              pointerEvents: isNavVisible ? "auto" : "none",
-            }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-          >
+          <div className="hidden items-center gap-8 pr-6 lg:flex">
             <TransitionLink href="/" className="shrink-0 px-6 py-5 lg:px-10">
               <SlicedText
                 text="VRΛJΛ MΛRII"
@@ -190,19 +166,10 @@ export default function Header() {
                 splitSpacing={3}
               />
             </TransitionLink>
-          </motion.div>
+          </div>
 
-          {/* Logo - Mobile (slides left on scroll down) */}
-          <motion.div
-            className="flex items-center lg:hidden"
-            initial={{ opacity: 1, x: 0 }}
-            animate={{
-              opacity: isNavVisible ? 1 : 0,
-              x: isNavVisible ? 0 : -100,
-              pointerEvents: isNavVisible ? "auto" : "none",
-            }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-          >
+          {/* Logo - Mobile */}
+          <div className="flex items-center lg:hidden">
             <TransitionLink href="/" className="shrink-0 px-4 py-4">
               <SlicedText
                 text="VRΛJΛ MΛRII"
@@ -210,28 +177,26 @@ export default function Header() {
                 splitSpacing={2}
               />
             </TransitionLink>
-          </motion.div>
+          </div>
 
           {/* Right side: Nav links + CTA Button grouped together */}
           <div className="flex items-center">
-            {/* Desktop Navigation - hides/shows based on scroll */}
-            <motion.div
-              className="hidden items-center gap-8 pr-6 lg:flex"
-              initial={{ opacity: 1, y: 0 }}
-              animate={{
-                opacity: isNavVisible ? 1 : 0,
-                y: isNavVisible ? 0 : -10,
-                pointerEvents: isNavVisible ? "auto" : "none",
-              }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-            >
+            {/* Desktop Navigation */}
+            <div className="hidden items-center gap-8 pr-6 lg:flex">
               <AnimatedLink href="/about" variant={colorVariant}>
                 {t("about")}
               </AnimatedLink>
               <NavDropdown
                 label={t("services")}
-                items={servicesDropdownItems}
                 variant={colorVariant}
+                isExpanded={isServicesOpen}
+                onHoverStart={() => {
+                  if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
+                  setIsServicesOpen(true);
+                }}
+                onHoverEnd={() => {
+                  servicesTimeoutRef.current = setTimeout(() => setIsServicesOpen(false), 500);
+                }}
               />
               {navLinks.filter((l) => l.href !== "/about").map((link) => (
                 <AnimatedLink
@@ -242,7 +207,7 @@ export default function Header() {
                   {link.label}
                 </AnimatedLink>
               ))}
-            </motion.div>
+            </div>
 
             {/* Language Switcher - always visible on desktop */}
             <div className="hidden pr-6 lg:block">
@@ -276,34 +241,18 @@ export default function Header() {
               />
             </div>
 
-            {/* Mobile: CTA Button (slides right when hamburger hides) */}
-            <motion.div
-              className="lg:hidden"
-              initial={{ x: 0 }}
-              animate={{
-                x: isNavVisible ? 0 : 64, // 64px = hamburger width (w-16)
-              }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-            >
+            {/* Mobile: CTA Button */}
+            <div className="lg:hidden">
               <TransitionLink
                 href="/book"
                 className="flex h-16 items-center bg-[#CF9C7C] px-6 text-sm font-medium uppercase tracking-wider text-white"
               >
                 {tCommon("bookScan")}
               </TransitionLink>
-            </motion.div>
+            </div>
 
-            {/* Mobile: Menu Button (slides right on scroll down) */}
-            <motion.div
-              className="flex items-center lg:hidden"
-              initial={{ opacity: 1, x: 0 }}
-              animate={{
-                opacity: isNavVisible ? 1 : 0,
-                x: isNavVisible ? 0 : 100,
-                pointerEvents: isNavVisible ? "auto" : "none",
-              }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-            >
+            {/* Mobile: Menu Button */}
+            <div className="flex items-center lg:hidden">
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -339,9 +288,23 @@ export default function Header() {
                   />
                 </div>
               </button>
-            </motion.div>
+            </div>
           </div>
         </nav>
+
+        {/* Full-width services dropdown strip */}
+        <NavDropdownStrip
+          items={servicesDropdownItems}
+          isOpen={isServicesOpen}
+          variant={colorVariant}
+          onMouseEnter={() => {
+            if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
+            setIsServicesOpen(true);
+          }}
+          onMouseLeave={() => {
+            servicesTimeoutRef.current = setTimeout(() => setIsServicesOpen(false), 300);
+          }}
+        />
       </header>
 
       {/* Mobile Menu with Sliding Stairs Effect */}
@@ -388,7 +351,7 @@ export default function Header() {
                         <button
                           type="button"
                           onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
-                          className="flex w-full items-center gap-3 font-(family-name:--font-quicksand) text-3xl font-light italic text-white transition-opacity hover:opacity-70"
+                          className="flex w-full items-center gap-3 font-(family-name:--font-quicksand) text-3xl font-light text-white transition-opacity hover:opacity-70"
                         >
                           {link.label}
                           <ChevronDown
@@ -429,7 +392,7 @@ export default function Header() {
                     ) : (
                       <TransitionLink
                         href={"href" in link ? link.href : "/"}
-                        className="font-(family-name:--font-quicksand) text-3xl font-light italic text-white transition-opacity hover:opacity-70"
+                        className="font-(family-name:--font-quicksand) text-3xl font-light text-white transition-opacity hover:opacity-70"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         {link.label}

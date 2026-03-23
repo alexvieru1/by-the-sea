@@ -37,7 +37,7 @@ export default function AboutContent() {
       <motion.section {...fadeInUp}>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-12 lg:py-28">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <ParallaxImage label="About Vraja Marii" src="/images/about/intro-1.webp" />
+            <ParallaxImage label="About Vraja Marii" src="/images/about/about-1.webp" />
             <div>
               <p className="text-gray-700 leading-relaxed">
                 {t('description')}
@@ -62,7 +62,7 @@ export default function AboutContent() {
                 {t('description-4')}
               </p>
             </div>
-            <ParallaxImage label="Seaside Healing" src="/images/about/intro-2.webp" />
+            <ParallaxImage label="Seaside Healing" src="/images/about/about-2.webp" />
           </div>
         </div>
       </motion.section>

@@ -270,7 +270,7 @@
       }
     },
     "postChemotherapy": {
-      "title": "Reabilitare post chimioterapie",
+      "title": "Recuperare post intervenții majore",
       "subtitle": "Susținere. Reabilitare. Vindecare.",
       "description": "Îngrijire integrativă plină de compasiune, concepută să sprijine pacienții după chimioterapie — gestionând efectele secundare, restaurând vitalitatea și susținând recuperarea.",
       "shortDescription": "Îngrijire integrativă pentru gestionarea efectelor secundare și restaurarea vitalității după chimioterapie.",
@@ -311,7 +311,7 @@
     "categories": {
       "relaxation": "Relaxare",
       "events": "Events",
-      "gastronomy": "Gastronomie"
+      "gastronomy": "Restaurant"
     },
     "relaxation": {
       "fitnessRoom": {
@@ -323,7 +323,7 @@
         "description": "Plajă privată cu șezlonguri și umbrelă, unde sunetul valurilor și aerul marin completează experiența de relaxare."
       },
       "lakeBeach": {
-        "name": "Plajă amenajată la lac",
+        "name": "Plajă amenajată pe Lacul Techirghiol",
         "description": "Un colț de liniște pe malul lacului Techirghiol, ideal pentru relaxare și băi terapeutice în aer liber."
       },
       "relaxationArea": {
@@ -649,8 +649,8 @@
     "instagram": "Instagram",
     "facebook": "Facebook",
     "getSupport": "Contactează-ne",
-    "email": "contact@complexvrajamarii.ro",
-    "phone": "+40 241 123 456",
+    "email": "bythesea@complexvrajamarii.ro",
+    "phone": "(0341) 520 000",
     "hours": "Luni - Sâmbătă 8:30 - 16:30",
     "copyright": "© 2026 Vraja Mării by the Sea. Toate drepturile rezervate.",
     "country": "Romania",
@@ -897,8 +897,8 @@
     "info": {
       "label": "Contact",
       "title": "Informații de contact",
-      "phone": "+40 241 123 456",
-      "email": "contact@complexvrajamarii.ro",
+      "phone": "(0341) 520 000",
+      "email": "bythesea@complexvrajamarii.ro",
       "address": "Aleea Mercur Nr.2, Eforie Sud, România",
       "hours": "Luni – Vineri: 08:30 – 16:30",
       "hoursSaturday": "Sâmbătă: 08:30 – 16:30",

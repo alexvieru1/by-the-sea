@@ -12,31 +12,31 @@ const programs = [
   {
     key: 'medicalRehabilitation',
     slug: 'medical-rehabilitation',
-    image: '/images/your_body.webp',
+    image: '/images/medical-programs/medical-rehabilitation.webp',
     gridClass: 'lg:col-span-2',
   },
   {
     key: 'endometriosisInfertility',
     slug: 'endometriosis-infertility',
-    image: '/images/therapies/infertility.webp',
+    image: '/images/medical-programs/endometrioza.webp',
     gridClass: 'lg:col-span-1',
   },
   {
     key: 'longevity',
     slug: 'longevity',
-    image: '/images/your_future.webp',
+    image: '/images/medical-programs/longevity.webp',
     gridClass: 'lg:col-span-1',
   },
   {
     key: 'rheumatology',
     slug: 'rheumatology',
-    image: '/images/therapies/rheumatology.webp',
+    image: '/images/medical-programs/rheumatology.webp',
     gridClass: 'lg:col-span-2',
   },
   {
     key: 'postChemotherapy',
     slug: 'post-chemotherapy',
-    image: '/images/therapies/post-chemotherapy.webp',
+    image: '/images/medical-programs/post-chemo.webp',
     gridClass: 'lg:col-span-3',
   },
 ];
@@ -62,10 +62,6 @@ function ProgramCard({
 
   const prefix = `${programKey}.`;
   const title = t(`${prefix}title`);
-  const subtitle = t(`${prefix}subtitle`);
-  const description = t.has(`${prefix}shortDescription`)
-    ? t(`${prefix}shortDescription`)
-    : t(`${prefix}description`);
 
   const therapyIds = t.has(`${prefix}page.therapyIds`)
     ? t(`${prefix}page.therapyIds`).split(',')
@@ -98,17 +94,9 @@ function ProgramCard({
 
         {/* Content */}
         <div className="relative flex h-full min-h-[400px] flex-col justify-end p-6 lg:min-h-[500px] lg:p-10">
-          <p className="mb-2 text-xs font-medium uppercase tracking-wider text-white/60">
-            {subtitle}
-          </p>
-
           <h2 className="font-(family-name:--font-quicksand) text-3xl font-thin text-white sm:text-4xl lg:text-5xl">
             {title}
           </h2>
-
-          <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/70 lg:text-base">
-            {description}
-          </p>
 
           {therapyNames.length > 0 && (
             <p className="mt-4 text-xs text-white/50 lg:text-sm">

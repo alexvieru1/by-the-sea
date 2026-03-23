@@ -14,7 +14,7 @@ interface PolicyContent {
 }
 
 export function getPolicyContent(
-  type: 'privacy' | 'terms',
+  type: 'privacy' | 'terms' | 'cookies',
   locale: string
 ): PolicyContent {
   const filePath = path.join(

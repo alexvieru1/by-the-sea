@@ -1,14 +1,15 @@
-import VideoShowcaseSection from './video-showcase-section';
+import ShowcaseSection from './showcase-section';
 
 export default function PostChemoSection() {
   return (
-    <VideoShowcaseSection
+    <ShowcaseSection
       translationKey="medicalPrograms.postChemotherapy"
-      videoSrc="/videos/post-chemo.mp4"
+      imageSrc="/images/medical-programs/rheumatology.webp"
+      imageAlt="Post-Chemotherapy Recovery"
       cardBg="bg-[#CF9C7C]"
-      sectionBg="bg-[#D8E1D6]"
-      videoSide="right"
+      align="left"
       ctaHref="/medical-programs/post-chemotherapy"
+      orbs={[]}
     />
   );
 }

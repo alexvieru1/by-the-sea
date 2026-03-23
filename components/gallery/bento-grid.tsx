@@ -13,22 +13,24 @@ const orientationClasses: Record<string, string> = {
 
 interface BentoGridProps {
   images: GalleryImage[];
+  onImageClick?: (index: number) => void;
 }
 
-export default function BentoGrid({ images }: BentoGridProps) {
+export default function BentoGrid({ images, onImageClick }: BentoGridProps) {
   return (
     <div className="grid auto-rows-[200px] grid-flow-dense grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
       {images.map((image, i) => (
         <motion.div
           key={image.id}
           className={cn(
-            'group relative overflow-hidden',
+            'group relative cursor-pointer overflow-hidden',
             orientationClasses[image.orientation] ?? orientationClasses.square
           )}
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.4, delay: (i % 4) * 0.05 }}
+          onClick={() => onImageClick?.(i)}
         >
           <Image
             src={image.src}

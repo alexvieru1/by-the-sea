@@ -23,16 +23,36 @@ const CATEGORIES: GalleryCategory[] = [
   'relaxationAreas',
 ];
 
-const ORIENTATIONS: ImageOrientation[] = ['landscape', 'portrait', 'square'];
+// 10-image pattern that fills a complete 4-col bento grid rectangle
+const CATEGORY_PATTERN: ImageOrientation[] = [
+  'portrait', 'landscape', 'square',
+  'square', 'portrait', 'landscape',
+  'square', 'square', 'landscape', 'square',
+];
 
-// Placeholder distribution — reassign images and orientations later
-export const GALLERY_IMAGES: GalleryImage[] = Array.from({ length: 46 }, (_, i) => ({
-  id: i + 1,
-  src: `/images/gallery/vraja_marii_by_the_sea_eforie_sud_${i + 1}.webp`,
-  alt: `Vraja Mării by the Sea - Image ${i + 1}`,
-  category: CATEGORIES[i % CATEGORIES.length],
-  orientation: ORIENTATIONS[(i * 7 + 3) % ORIENTATIONS.length],
-}));
+const IMAGES_PER_CATEGORY = 10;
+
+function buildGalleryImages(): GalleryImage[] {
+  const images: GalleryImage[] = [];
+
+  for (let catIdx = 0; catIdx < CATEGORIES.length; catIdx++) {
+    const category = CATEGORIES[catIdx];
+    for (let j = 0; j < IMAGES_PER_CATEGORY; j++) {
+      const globalIndex = catIdx + j * CATEGORIES.length;
+      images.push({
+        id: globalIndex + 1,
+        src: `/images/gallery/vraja_marii_by_the_sea_eforie_sud_${globalIndex + 1}.webp`,
+        alt: `Vraja Mării by the Sea - Image ${globalIndex + 1}`,
+        category,
+        orientation: CATEGORY_PATTERN[j],
+      });
+    }
+  }
+
+  return images;
+}
+
+export const GALLERY_IMAGES: GalleryImage[] = buildGalleryImages();
 
 export const GALLERY_CATEGORIES = CATEGORIES;
 

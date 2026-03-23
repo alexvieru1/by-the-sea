@@ -158,7 +158,7 @@ export default function ContactPageContent() {
               </div>
             </div>
             {/* Placeholder image */}
-            <ParallaxImage label="Building Entrance" src="/images/contact/building-entrance.webp" />
+            <ParallaxImage label="Building Entrance" src="/images/contact/building-entrance-2.webp" />
           </div>
         </div>
       </motion.section>

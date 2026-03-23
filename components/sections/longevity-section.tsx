@@ -1,14 +1,15 @@
-import VideoShowcaseSection from './video-showcase-section';
+import ShowcaseSection from './showcase-section';
 
 export default function LongevitySection() {
   return (
-    <VideoShowcaseSection
+    <ShowcaseSection
       translationKey="medicalPrograms.longevity"
-      videoSrc="/videos/longevity.mp4"
+      imageSrc="/images/homepage-sections/longevitate.webp"
+      imageAlt="Longevity"
       cardBg="bg-[#002343]"
-      sectionBg="bg-[#E3CEB2]"
-      videoSide="right"
+      align="left"
       ctaHref="/medical-programs/longevity"
+      orbs={[]}
     />
   );
 }

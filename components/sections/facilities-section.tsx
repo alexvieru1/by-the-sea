@@ -8,28 +8,24 @@ import Image from "next/image";
 // Facility data structure with image pairs (images 31–46)
 const facilitiesData = {
   relaxation: [
-    { key: "fitnessRoom", smallImg: 31, largeImg: 32 },
-    { key: "seaBeach", smallImg: 33, largeImg: 34 },
-    { key: "lakeBeach", smallImg: 35, largeImg: 36 },
-    { key: "relaxationArea", smallImg: 37, largeImg: 38 },
+    { key: "fitnessRoom", smallImg: "/images/facilities/fitness-room-flex.webp", largeImg: "/images/facilities/fitness-room-large.webp" },
+    { key: "seaBeach", smallImg: "/images/facilities/sea-beach.webp", largeImg: "/images/facilities/sea-beach-large.webp" },
+    { key: "lakeBeach", smallImg: "/images/facilities/lake-beach.webp", largeImg: "/images/facilities/lake-beach-large.webp" },
+    { key: "relaxationArea", smallImg: "/images/facilities/relaxation-area-placeholder.webp", largeImg: "/images/facilities/relaxation-area-placeholder-large.webp" },
   ],
   events: [
-    { key: "conferenceRoom", smallImg: 39, largeImg: 40 },
+    { key: "conferenceRoom", smallImg: "/images/facilities/conference-room-2.webp", largeImg: "/images/facilities/conference-room-large.webp" },
   ],
   gastronomy: [
-    { key: "restaurant", smallImg: 41, largeImg: 42 },
-    { key: "healthyMenus", smallImg: 43, largeImg: 44 },
-    { key: "specialtyCoffee", smallImg: 45, largeImg: 46 },
+    { key: "restaurant", smallImg: "/images/facilities/restaurant.webp", largeImg: "/images/facilities/restaurant-large.webp" },
+    { key: "healthyMenus", smallImg: "/images/facilities/healthy-menus.webp", largeImg: "/images/facilities/healthy-menus-large.webp" },
+    // { key: "specialtyCoffee", smallImg: "/images/facilities/specialty-coffee.webp", largeImg: "/images/facilities/specialty-coffee-large.webp" },
   ],
 };
 
 type CategoryKey = keyof typeof facilitiesData;
 
 const categories: CategoryKey[] = ["relaxation", "events", "gastronomy"];
-
-function getImagePath(num: number): string {
-  return `/images/gallery/vraja_marii_by_the_sea_eforie_sud_${num}.webp`;
-}
 
 // Individual facility card with parallax
 function FacilityCard({
@@ -40,8 +36,8 @@ function FacilityCard({
   scrollContainerRef,
 }: {
   facilityKey: string;
-  smallImg: number;
-  largeImg: number;
+  smallImg: string;
+  largeImg: string;
   category: string;
   scrollContainerRef: React.RefObject<HTMLElement | null>;
 }) {
@@ -96,7 +92,7 @@ function FacilityCard({
             }}
           >
             <Image
-              src={getImagePath(smallImg)}
+              src={smallImg}
               alt={t(`${category}.${facilityKey}.name`)}
               fill
               sizes="(max-width: 768px) 0px, 35vw"
@@ -116,7 +112,7 @@ function FacilityCard({
             }}
           >
             <Image
-              src={getImagePath(largeImg)}
+              src={largeImg}
               alt={t(`${category}.${facilityKey}.name`)}
               fill
               sizes="(max-width: 768px) 100vw, 72vw"

@@ -1,14 +1,15 @@
-import VideoShowcaseSection from './video-showcase-section';
+import ShowcaseSection from './showcase-section';
 
 export default function MedicalRehabilitationSection() {
   return (
-    <VideoShowcaseSection
+    <ShowcaseSection
       translationKey="medicalPrograms.medicalRehabilitation"
-      videoSrc="/videos/medical-rehabilitation.mp4"
+      imageSrc="/images/medical-programs/medical-rehabilitation.webp"
+      imageAlt="Medical Rehabilitation"
       cardBg="bg-[#002343]"
-      sectionBg="bg-[#C6B19C]"
-      videoSide="right"
+      align="left"
       ctaHref="/medical-programs/medical-rehabilitation"
+      orbs={[]}
     />
   );
 }

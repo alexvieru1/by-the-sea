@@ -126,7 +126,7 @@ export default function PatientGuideContent() {
       <motion.section {...fadeInUp} className="bg-[#F2E4D1]">
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-12 lg:py-28">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <ParallaxImage label="Treatment Room" src="/images/patient-guide/treatment-room.webp" />
+            <ParallaxImage label="Treatment Room" src="/images/patient-guide/treatment-room-2.webp" />
             <div>
               <p className="text-sm font-medium uppercase tracking-wider text-[#002343]">
                 {t('yourStay.label')}
@@ -167,7 +167,7 @@ export default function PatientGuideContent() {
       </motion.section>
 
       {/* Section 6: Absolute Contraindications */}
-      <motion.section {...fadeInUp}>
+      {/* <motion.section {...fadeInUp}>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-12 lg:py-28">
           <h2 className="font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900 sm:text-4xl">
             {t('contraindications.absoluteTitle')}
@@ -186,7 +186,7 @@ export default function PatientGuideContent() {
             ))}
           </div>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* Section 7: Photo Divider */}
       <ParallaxImage label="Sea View" className="h-64 lg:h-96" src="/images/patient-guide/sea-view.webp" y={['-50%', '50%']}/>

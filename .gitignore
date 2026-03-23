@@ -40,6 +40,9 @@ yarn-error.log*
 *.mov
 *.MOV
 
+# word documents (legal originals - never commit)
+/docs/word-documents/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
