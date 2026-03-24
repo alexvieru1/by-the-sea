@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: '%s | Vraja Mării by the Sea',
     default: 'Vraja Mării by the Sea',
   },
-  description: 'Complex de biohacking dedicat optimizării sănătății și bunăstării tale.',
+  description: 'Complex de recuperare medicală și wellness dedicat optimizării sănătății și bunăstării tale.',
   metadataBase: new URL('https://complexvrajamarii.ro'),
   openGraph: {
     siteName: 'Vraja Mării by the Sea',

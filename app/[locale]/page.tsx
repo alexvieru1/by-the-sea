@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pages.about' });
   return {
-    title: { absolute: 'Vraja Mării by the Sea — Complex de Biohacking' },
+    title: { absolute: 'Vraja Mării by the Sea — Recuperare Medicală & Wellness' },
     description: t('description'),
   };
 }
