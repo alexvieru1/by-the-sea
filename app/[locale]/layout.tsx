@@ -37,6 +37,11 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: 'Vraja Mării by the Sea',
     type: 'website',
+    images: [{ url: '/opengraph-image.jpg', width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/twitter-image.jpg'],
   },
 };
 
