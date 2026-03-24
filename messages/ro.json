@@ -14,6 +14,11 @@
     "description": "Ne pare rău, pagina pe care o cauți nu există sau a fost mutată.",
     "code": "404"
   },
+  "error": {
+    "title": "A apărut o eroare",
+    "description": "Ne cerem scuze pentru inconveniență. Te rugăm să încerci din nou.",
+    "retry": "Încearcă din nou"
+  },
   "pages": {
     "medicalPrograms": {
       "title": "Programe medicale",
@@ -272,17 +277,17 @@
     "postChemotherapy": {
       "title": "Recuperare post intervenții majore",
       "subtitle": "Susținere. Reabilitare. Vindecare.",
-      "description": "Îngrijire integrativă plină de compasiune, concepută să sprijine pacienții după chimioterapie — gestionând efectele secundare, restaurând vitalitatea și susținând recuperarea.",
-      "shortDescription": "Îngrijire integrativă pentru gestionarea efectelor secundare și restaurarea vitalității după chimioterapie.",
+      "description": "Îngrijire integrativă dedicată pacienților care se recuperează după intervenții chirurgicale majore, accidente sau alte proceduri medicale complexe — restaurând mobilitatea, forța și vitalitatea.",
+      "shortDescription": "Program complet de reabilitare pentru recuperarea după intervenții chirurgicale majore, accidente și proceduri medicale complexe.",
       "page": {
-        "section1Subtitle": "Recuperare după tratament",
-        "section1Title": "Restabilirea vitalității",
-        "section1Text": "Călătoria nu se termină odată cu chimioterapia. Reabilitarea noastră post-tratament se concentrează pe reconstruirea forței, gestionarea efectelor secundare persistente și susținerea întoarcerii corpului la echilibru.",
-        "section1Text2": "Fiecare program este adaptat cu grijă la istoricul tratamentului și condiția actuală, asigurând o cale sigură și eficientă către energie reînnoită.",
-        "section2Subtitle": "Îngrijire plină de compasiune",
-        "section2Title": "Vindecarea corpului și a minții",
-        "section2Text": "Recuperarea după chimioterapie afectează fiecare aspect al bunăstării. Abordarea noastră integrativă adresează oboseala fizică, funcția imunitară și reziliența emoțională ca elemente interconectate ale vindecării.",
-        "section2Text2": "Într-un cadru liniștit la malul mării, înconjurat de natură și susținut de profesioniști experimentați, veți găsi spațiul pentru a vă recupera cu adevărat.",
+        "section1Subtitle": "Reabilitare post-intervenție",
+        "section1Title": "Restabilirea funcționalității",
+        "section1Text": "Recuperarea după o intervenție majoră necesită un program personalizat și multidisciplinar. Echipa noastră se concentrează pe recâștigarea mobilității, reconstruirea forței musculare și gestionarea durerii pentru o revenire sigură la viața activă.",
+        "section1Text2": "Fiecare program este adaptat cu grijă la tipul intervenției, stadiul de recuperare și obiectivele individuale ale pacientului.",
+        "section2Subtitle": "Îngrijire multidisciplinară",
+        "section2Title": "Recuperare completă, pas cu pas",
+        "section2Text": "Reabilitarea post-intervenție implică mai mult decât vindecarea fizică. Abordarea noastră integrativă combină fizioterapia, balneoterapia și suportul psihologic pentru o recuperare armonioasă.",
+        "section2Text2": "Într-un cadru liniștit la malul mării, înconjurat de natură și susținut de profesioniști experimentați, veți găsi spațiul ideal pentru a vă recupera complet.",
         "therapiesTitle": "Terapii incluse",
         "therapyIds": "decontractingMassage,kinesiotherapy,magnetotherapy,mudBath,laserTherapy"
       }
@@ -584,10 +589,13 @@
       "november": "Noiembrie",
       "december": "Decembrie"
     },
-    "offersInterest": "Oferte de interes",
-    "offers": {
-      "recovery": "Pachet recuperare",
-      "endometriosis": "Wellness endometrioză"
+    "programsInterest": "Programe medicale de interes",
+    "programs": {
+      "medicalRehabilitation": "Recuperare medicală",
+      "endometriosisInfertility": "Endometrioză & Infertilitate",
+      "longevity": "Longevitate",
+      "rheumatology": "Reumatologie",
+      "postChemotherapy": "Recuperare post intervenții majore"
     },
     "gdprLabel": "Sunt de acord cu prelucrarea datelor personale conform",
     "gdprLink": "Politicii de confidențialitate",
@@ -655,9 +663,17 @@
     "copyright": "© 2026 Vraja Mării by the Sea. Toate drepturile rezervate.",
     "country": "Romania",
     "locations": {
-      "constanta": "Vraja Mării in City",
-      "eforie": "Complex Vraja Mării"
+      "park": "Vraja Mării by the Park",
+      "city": "Vraja Mării in City",
+      "lake": "Vraja Mării by the Lake"
     }
+  },
+  "cookieConsent": {
+    "message": "Folosim cookie-uri pentru a-ți îmbunătăți experiența pe site. Cookie-urile esențiale sunt necesare pentru funcționarea site-ului, iar cele opționale ne ajută să analizăm traficul.",
+    "learnMore": "Află mai multe",
+    "acceptAll": "Acceptă toate",
+    "essentialOnly": "Doar esențiale",
+    "manageCookies": "Gestionează cookie-uri"
   },
   "evaluation": {
     "title": "Fișă evaluare inițială",

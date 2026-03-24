@@ -1,8 +1,14 @@
+import type { Metadata } from 'next';
 import { createClient } from '@/lib/supabase/server';
 import { redirect } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import ProfileForm from './profile-form';
 import EvaluationSummary from './evaluation-summary';
+
+export const metadata: Metadata = {
+  title: 'Profilul meu',
+  robots: { index: false },
+};
 
 export type WaitlistStatus = 'none' | 'pending' | 'confirmed' | 'evaluated';
 

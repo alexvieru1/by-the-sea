@@ -1,9 +1,17 @@
 import { createClient } from '@/lib/supabase/server';
 import { redirect } from 'next/navigation';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import EvaluationPageClient from './evaluation-page-client';
 
-export default async function EvaluationPage({ params }: { params: Promise<{ locale: string }> }) {
+type Props = { params: Promise<{ locale: string }> };
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'evaluation' });
+  return { title: t('title'), robots: { index: false } };
+}
+
+export default async function EvaluationPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 

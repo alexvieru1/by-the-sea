@@ -4,7 +4,19 @@ import PageHero from '@/components/layout/page-hero';
 
 const AboutContent = dynamic(() => import('@/components/sections/about-content'));
 
-export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
+type Props = { params: Promise<{ locale: string }> };
+
+export function generateStaticParams() {
+  return [{ locale: 'ro' }, { locale: 'en' }];
+}
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'pages.about' });
+  return { title: t('title'), description: t('description') };
+}
+
+export default async function AboutPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 

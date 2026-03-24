@@ -9,7 +9,8 @@ import {
   useEffect,
   ReactNode,
 } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { usePathname as useNextPathname } from 'next/navigation';
+import { useRouter } from '@/i18n/routing';
 
 interface TransitionContextType {
   isTransitioning: boolean;
@@ -36,7 +37,7 @@ export function TransitionProvider({ children }: TransitionProviderProps) {
   const [pendingHref, setPendingHref] = useState<string | null>(null);
   const waitingForRoute = useRef(false);
   const router = useRouter();
-  const pathname = usePathname();
+  const pathname = useNextPathname();
 
   // When the pathname changes after navigation, dismiss the overlay
   useEffect(() => {

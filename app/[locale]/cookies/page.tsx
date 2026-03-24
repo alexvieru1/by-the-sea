@@ -1,8 +1,20 @@
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
 import PolicyPageLayout from '@/components/layout/policy-page-layout';
 import { getPolicyContent } from '@/lib/policies';
 
-export default async function CookiesPage({ params }: { params: Promise<{ locale: string }> }) {
+type Props = { params: Promise<{ locale: string }> };
+
+export function generateStaticParams() {
+  return [{ locale: 'ro' }, { locale: 'en' }];
+}
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'pages.cookies' });
+  return { title: t('title'), description: t('description') };
+}
+
+export default async function CookiesPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 

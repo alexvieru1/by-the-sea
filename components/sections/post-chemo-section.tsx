@@ -5,7 +5,7 @@ export default function PostChemoSection() {
     <ShowcaseSection
       translationKey="medicalPrograms.postChemotherapy"
       imageSrc="/images/medical-programs/rheumatology.webp"
-      imageAlt="Post-Chemotherapy Recovery"
+      imageAlt="Recuperare post intervenții majore"
       cardBg="bg-[#CF9C7C]"
       align="left"
       ctaHref="/medical-programs/post-chemotherapy"

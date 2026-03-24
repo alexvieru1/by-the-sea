@@ -2,7 +2,19 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import PageHero from '@/components/layout/page-hero';
 import PatientGuideContent from '@/components/sections/patient-guide-content';
 
-export default async function PatientGuidePage({ params }: { params: Promise<{ locale: string }> }) {
+type Props = { params: Promise<{ locale: string }> };
+
+export function generateStaticParams() {
+  return [{ locale: 'ro' }, { locale: 'en' }];
+}
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'pages.patientGuide' });
+  return { title: t('title'), description: t('description') };
+}
+
+export default async function PatientGuidePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 

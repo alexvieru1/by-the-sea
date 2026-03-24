@@ -12,7 +12,13 @@ import { submitWaitlist } from '@/app/[locale]/waitlist/actions';
 import { Link, useRouter } from '@/i18n/routing';
 import Image from 'next/image';
 
-const offerKeys = ['recovery', 'endometriosis'] as const;
+const programKeys = [
+  'medicalRehabilitation',
+  'endometriosisInfertility',
+  'longevity',
+  'rheumatology',
+  'postChemotherapy',
+] as const;
 
 function getAvailableMonths(t: (key: string) => string) {
   const now = new Date();
@@ -275,17 +281,17 @@ export default function WaitlistSection() {
 
             <fieldset>
               <legend className="block text-sm text-[#4A3F35] mb-3">
-                {t('offersInterest')}
+                {t('programsInterest')}
               </legend>
               <div className="space-y-2.5">
-                {offerKeys.map((key) => (
+                {programKeys.map((key) => (
                   <label
                     key={key}
-                    htmlFor={`waitlist-offer-${key}`}
+                    htmlFor={`waitlist-program-${key}`}
                     className="flex items-center gap-3 cursor-pointer group"
                   >
                     <input
-                      id={`waitlist-offer-${key}`}
+                      id={`waitlist-program-${key}`}
                       type="checkbox"
                       checked={selectedOffers.includes(key)}
                       onChange={(e) => handleOfferToggle(key, e.target.checked)}
@@ -315,7 +321,7 @@ export default function WaitlistSection() {
                       )}
                     </div>
                     <span className="text-sm text-[#3A2F25]">
-                      {t(`offers.${key}`)}
+                      {t(`programs.${key}`)}
                     </span>
                   </label>
                 ))}

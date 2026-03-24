@@ -4,9 +4,11 @@ import { useTranslations } from 'next-intl';
 import { Globe } from 'lucide-react';
 import TransitionLink from '@/components/layout/transition-link';
 import { useAuth } from '@/components/providers/auth-provider';
+import { resetConsent } from '@/components/cookie-consent';
 
 export default function FooterSection() {
   const t = useTranslations('footer');
+  const tCookie = useTranslations('cookieConsent');
   const { user } = useAuth();
 
   return (
@@ -91,7 +93,7 @@ export default function FooterSection() {
                 <ul className="space-y-3">
                   <li>
                     <a
-                      href="https://instagram.com"
+                      href="https://instagram.com/vrajamariibythesea"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-gray-500 transition-colors hover:text-gray-900"
@@ -101,7 +103,7 @@ export default function FooterSection() {
                   </li>
                   <li>
                     <a
-                      href="https://facebook.com"
+                      href="https://www.facebook.com/profile.php?id=61574970605951"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-sm text-gray-500 transition-colors hover:text-gray-900"
@@ -119,20 +121,34 @@ export default function FooterSection() {
                 </h3>
                 <ul className="space-y-3">
                   <li>
-                    <TransitionLink
-                      href="/locations/constanta"
+                    <a
+                      href="https://complexvrajamarii.ro"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-sm text-gray-500 transition-colors hover:text-gray-900"
                     >
-                      {t('locations.constanta')}
-                    </TransitionLink>
+                      {t('locations.park')}
+                    </a>
                   </li>
                   <li>
-                    <TransitionLink
-                      href="/locations/eforie"
+                    <a
+                      href="https://constanta.complexvrajamarii.ro/"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-sm text-gray-500 transition-colors hover:text-gray-900"
                     >
-                      {t('locations.eforie')}
-                    </TransitionLink>
+                      {t('locations.city')}
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://complexvrajamarii.ro/vraja-marii-by-the-lake/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-gray-500 transition-colors hover:text-gray-900"
+                    >
+                      {t('locations.lake')}
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -164,6 +180,14 @@ export default function FooterSection() {
                   >
                     {t('termsOfService')}
                   </TransitionLink>
+                  <span>⏺</span>
+                  <button
+                    type="button"
+                    onClick={resetConsent}
+                    className="transition-colors hover:text-gray-900"
+                  >
+                    {tCookie('manageCookies')}
+                  </button>
                 </div>
               </div>
 

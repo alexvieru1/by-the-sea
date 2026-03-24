@@ -1,4 +1,4 @@
 export const POLICY_VERSIONS = {
-  gdpr: '06/03/2026',
-  terms: '06/03/2026',
+  gdpr: '24/03/2026',
+  terms: '24/03/2026',
 } as const;

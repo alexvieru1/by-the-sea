@@ -14,6 +14,11 @@
     "description": "Sorry, the page you are looking for doesn't exist or has been moved.",
     "code": "404"
   },
+  "error": {
+    "title": "Something went wrong",
+    "description": "We apologize for the inconvenience. Please try again.",
+    "retry": "Try again"
+  },
   "pages": {
     "medicalPrograms": {
       "title": "Medical Programs",
@@ -270,19 +275,19 @@
       }
     },
     "postChemotherapy": {
-      "title": "Post-Chemotherapy Rehabilitation",
+      "title": "Post-Major Intervention Recovery",
       "subtitle": "Support. Recover. Heal.",
-      "description": "Compassionate integrative care designed to support patients after chemotherapy — managing side effects, restoring vitality, and nurturing recovery.",
-      "shortDescription": "Integrative care to manage side effects and restore vitality after chemotherapy.",
+      "description": "Integrative care dedicated to patients recovering from major surgeries, accidents, or complex medical procedures — restoring mobility, strength, and vitality.",
+      "shortDescription": "Comprehensive rehabilitation program for recovery after major surgeries, accidents, and complex medical procedures.",
       "page": {
-        "section1Subtitle": "Recovery After Treatment",
-        "section1Title": "Restoring Vitality",
-        "section1Text": "The journey doesn't end with chemotherapy. Our post-treatment rehabilitation focuses on rebuilding strength, managing lingering side effects, and supporting your body's return to balance.",
-        "section1Text2": "Each program is carefully adapted to your treatment history and current condition, ensuring a safe and effective path to renewed energy.",
-        "section2Subtitle": "Compassionate Care",
-        "section2Title": "Healing Body and Mind",
-        "section2Text": "Recovery from chemotherapy affects every aspect of wellbeing. Our integrative approach addresses physical fatigue, immune function, and emotional resilience as interconnected elements of healing.",
-        "section2Text2": "In a peaceful seaside setting, surrounded by nature and supported by experienced professionals, you'll find the space to truly recover.",
+        "section1Subtitle": "Post-Intervention Rehabilitation",
+        "section1Title": "Restoring Functionality",
+        "section1Text": "Recovery after a major intervention requires a personalised, multidisciplinary program. Our team focuses on regaining mobility, rebuilding muscle strength, and managing pain for a safe return to an active life.",
+        "section1Text2": "Each program is carefully adapted to the type of intervention, recovery stage, and the patient's individual goals.",
+        "section2Subtitle": "Multidisciplinary Care",
+        "section2Title": "Complete Recovery, Step by Step",
+        "section2Text": "Post-intervention rehabilitation involves more than physical healing. Our integrative approach combines physiotherapy, balneotherapy, and psychological support for harmonious recovery.",
+        "section2Text2": "In a peaceful seaside setting, surrounded by nature and supported by experienced professionals, you'll find the ideal space to fully recover.",
         "therapiesTitle": "Included Therapies",
         "therapyIds": "decontractingMassage,kinesiotherapy,magnetotherapy,mudBath,laserTherapy"
       }
@@ -584,10 +589,13 @@
       "november": "November",
       "december": "December"
     },
-    "offersInterest": "Offers of interest",
-    "offers": {
-      "recovery": "Recovery Package",
-      "endometriosis": "Endometriosis Wellness"
+    "programsInterest": "Medical programs of interest",
+    "programs": {
+      "medicalRehabilitation": "Medical Rehabilitation",
+      "endometriosisInfertility": "Endometriosis & Infertility",
+      "longevity": "Longevity",
+      "rheumatology": "Rheumatology",
+      "postChemotherapy": "Post-Major Intervention Recovery"
     },
     "gdprLabel": "I agree to the processing of my personal data according to the",
     "gdprLink": "Privacy Policy",
@@ -655,9 +663,17 @@
     "copyright": "© 2026 Vraja Mării by the Sea. All rights reserved.",
     "country": "Romania",
     "locations": {
-      "constanta": "Vraja Mării in City",
-      "eforie": "Vraja Mării Complex"
+      "park": "Vraja Mării by the Park",
+      "city": "Vraja Mării in City",
+      "lake": "Vraja Mării by the Lake"
     }
+  },
+  "cookieConsent": {
+    "message": "We use cookies to improve your experience on our site. Essential cookies are necessary for the site to function, while optional cookies help us analyse traffic.",
+    "learnMore": "Learn more",
+    "acceptAll": "Accept all",
+    "essentialOnly": "Essential only",
+    "manageCookies": "Manage cookies"
   },
   "evaluation": {
     "title": "Initial Evaluation Form",

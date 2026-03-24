@@ -12,6 +12,7 @@ import '../globals.css';
 
 const PageLoader = dynamic(() => import('@/components/layout/page-loader'));
 const PageTransition = dynamic(() => import('@/components/layout/page-transition'));
+const CookieConsent = dynamic(() => import('@/components/cookie-consent'));
 
 const FooterSection = dynamic(() => import('@/components/sections/footer-section'));
 
@@ -27,8 +28,16 @@ const quicksand = Quicksand({
 });
 
 export const metadata: Metadata = {
-  title: 'Vraja Marii by the Sea',
-  description: 'Bio-hacking complex website',
+  title: {
+    template: '%s | Vraja Mării by the Sea',
+    default: 'Vraja Mării by the Sea',
+  },
+  description: 'Complex de biohacking dedicat optimizării sănătății și bunăstării tale.',
+  metadataBase: new URL('https://complexvrajamarii.ro'),
+  openGraph: {
+    siteName: 'Vraja Mării by the Sea',
+    type: 'website',
+  },
 };
 
 interface RootLayoutProps {
@@ -70,6 +79,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
               {children}
               <FooterSection />
             </main>
+            <CookieConsent />
           </TransitionProvider>
         </NextIntlClientProvider>
       </body>

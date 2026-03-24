@@ -1,5 +1,20 @@
 import dynamic from 'next/dynamic';
-import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale, getTranslations } from 'next-intl/server';
+
+type Props = { params: Promise<{ locale: string }> };
+
+export function generateStaticParams() {
+  return [{ locale: 'ro' }, { locale: 'en' }];
+}
+
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'pages.about' });
+  return {
+    title: { absolute: 'Vraja Mării by the Sea — Complex de Biohacking' },
+    description: t('description'),
+  };
+}
 
 const HeroSection = dynamic(() => import('@/components/sections/hero-section'), {
   loading: () => (
@@ -13,7 +28,7 @@ const RheumatologySection = dynamic(() => import('@/components/sections/rheumato
 const PostChemoSection = dynamic(() => import('@/components/sections/post-chemo-section'));
 const FacilitiesSection = dynamic(() => import('@/components/sections/facilities-section'));
 
-export default async function Home({ params }: { params: Promise<{ locale: string }> }) {
+export default async function Home({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
 

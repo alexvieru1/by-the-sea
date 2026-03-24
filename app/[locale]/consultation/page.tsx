@@ -1,7 +1,13 @@
+import type { Metadata } from 'next';
 import { createClient } from '@/lib/supabase/server';
 import { redirect } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 import ConsultationClient from './consultation-client';
+
+export const metadata: Metadata = {
+  title: 'Consultație',
+  robots: { index: false },
+};
 
 export default async function ConsultationPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
