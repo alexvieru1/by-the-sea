@@ -24,32 +24,10 @@ export default function PageHero({
       className="relative overflow-hidden px-6 pb-20 pt-32 lg:px-12 lg:pb-32 lg:pt-40"
       style={{ backgroundColor: bgColor }}
     >
-      {/* Background decoration */}
+      {/* Background decoration — static orbs (animated blur-3xl causes GPU thrashing on Safari iOS) */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <motion.div
-          className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-white/10 blur-3xl"
-          animate={{
-            x: [0, 30, 0],
-            y: [0, -20, 0],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
-        <motion.div
-          className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#002343]/10 blur-3xl"
-          animate={{
-            x: [0, -20, 0],
-            y: [0, 30, 0],
-          }}
-          transition={{
-            duration: 12,
-            repeat: Infinity,
-            ease: 'easeInOut',
-          }}
-        />
+        <div className="absolute -right-20 -top-20 h-96 w-96 rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute -bottom-32 -left-20 h-80 w-80 rounded-full bg-[#002343]/10 blur-3xl" />
       </div>
 
       <div className="relative mx-auto max-w-4xl text-center">

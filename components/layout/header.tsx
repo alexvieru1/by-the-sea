@@ -245,7 +245,7 @@ export default function Header() {
             <div className="lg:hidden">
               <TransitionLink
                 href="/book"
-                className="flex h-16 items-center bg-[#CF9C7C] px-6 text-sm font-medium uppercase tracking-wider text-white"
+                className="flex h-16 items-center bg-[#CF9C7C] px-6 text-xs font-medium uppercase tracking-wider text-white"
               >
                 {tCommon("bookScan")}
               </TransitionLink>
