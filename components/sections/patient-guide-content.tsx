@@ -137,6 +137,14 @@ export default function PatientGuideContent() {
               <p className="mt-6 text-gray-700 leading-relaxed">
                 {t('yourStay.p1')}
               </p>
+              <ul className="mt-4 space-y-2 text-gray-700">
+                {(['documents', 'contract', 'room', 'consultation'] as const).map((key) => (
+                  <li key={key} className="flex items-start gap-2">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 bg-[#CF9C7C]" />
+                    <span className="leading-relaxed">{t(`yourStay.steps.${key}`)}</span>
+                  </li>
+                ))}
+              </ul>
               <p className="mt-4 text-gray-700 leading-relaxed">
                 {t('yourStay.p2')}
               </p>

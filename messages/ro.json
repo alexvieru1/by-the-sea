@@ -146,7 +146,7 @@
   "hero": {
     "title1": "Acolo unde grija pentru sănătate întâlnește arta relaxării,",
     "title2": "începe adevărata experiență a stării de bine",
-    "description": "Vraja Mării by the Sea - complex de recuperare medicală și wellness la cele mai înalte standarde"
+    "description": "Vraja Mării by the Sea - complex de recuperare medicală și wellness la standarde care îți depășesc așteptările"
   },
   "dataPoints": {
     "title1": "Urmărește milioane de puncte de date.",
@@ -868,8 +868,14 @@
     "yourStay": {
       "label": "Experiența ta",
       "title": "Sejurul tău",
-      "p1": "Odată sosit, vă veți adresa la recepția Marea Neagră pentru întocmirea documentației necesare șederii dumneavoastră și semnarea contractului de prestări servicii medicale, repartizarea camerei conform programării și planificarea consultului medical de specialitate în vederea stabilirii planului de tratament.",
-      "p2": "Acesta este înscris pe o fișă individuală de tratament, cu care veți fi preluați de serviciul programări – planificări proceduri, unde vor fi trecute orele de efectuare. Zilnic, după efectuarea tratamentului, veți preda fișa de tratament la recepția bazei de tratament, urmând să o luați a doua zi, la începerea tratamentului."
+      "p1": "La momentul sosirii, vă rugăm să vă adresați recepției pentru parcurgerea etapelor necesare:",
+      "steps": {
+        "documents": "Întocmirea documentelor de ședere",
+        "contract": "Semnarea contractului de servicii medicale",
+        "room": "Repartizarea camerei conform programării",
+        "consultation": "Stabilirea consultului de specialitate — definirea planului de tratament"
+      },
+      "p2": "Planul va fi consemnat într-o fișă individuală, pe care o veți prezenta la serviciul de programări pentru organizarea procedurilor. După efectuarea tratamentului zilnic, fișa se lasă la recepția bazei de tratament, urmând a fi ridicată în ziua următoare."
     },
     "notices": {
       "title": "Informații importante",

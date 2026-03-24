@@ -146,7 +146,7 @@
 "hero": {
     "title1": "Where healthcare meets the art of relaxation,",
     "title2": "the true experience of well-being begins",
-    "description": "Vraja Mării by the Sea — a medical recovery and wellness complex at the highest standards"
+    "description": "Vraja Mării by the Sea – a medical recovery and wellness complex with standards that exceed your expectations."
   },
   "dataPoints": {
     "title1": "Track millions of data points.",
@@ -868,8 +868,14 @@
     "yourStay": {
       "label": "Your Experience",
       "title": "Your Stay",
-      "p1": "Upon arrival, you will check in at the Marea Neagră reception to complete the necessary documentation for your stay and sign the medical services contract, receive your room assignment according to your booking, and schedule your specialist medical consultation to establish your treatment plan.",
-      "p2": "This is recorded on an individual treatment form, with which you will be directed to the scheduling and procedure planning service, where your treatment times will be assigned. Daily, after completing your treatment, you will hand in the treatment form at the treatment center reception, and collect it the following day at the start of your treatment."
+      "p1": "Upon arrival, please proceed to the reception to complete the following steps:",
+      "steps": {
+        "documents": "Completion of residence documents",
+        "contract": "Signing the medical services contract",
+        "room": "Room assignment according to your booking",
+        "consultation": "Scheduling the specialist consultation — defining your treatment plan"
+      },
+      "p2": "The plan will be recorded on an individual form, which you will present at the scheduling service for organising your procedures. After completing your daily treatment, the form is left at the treatment centre reception and collected the following day."
     },
     "notices": {
       "title": "Important Information",
