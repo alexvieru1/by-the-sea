@@ -11,7 +11,7 @@ const facilitiesData = {
     { key: "fitnessRoom", smallImg: "/images/facilities/fitness-room-flex.webp", largeImg: "/images/facilities/fitness-room-large.webp" },
     { key: "seaBeach", smallImg: "/images/facilities/sea-beach.webp", largeImg: "/images/facilities/sea-beach-large.webp" },
     { key: "lakeBeach", smallImg: "/images/facilities/lake-beach.webp", largeImg: "/images/facilities/lake-beach-large.webp" },
-    { key: "relaxationArea", smallImg: "/images/facilities/relaxation-area-placeholder.webp", largeImg: "/images/facilities/relaxation-area-placeholder-large.webp" },
+    { key: "relaxationArea", smallImg: "/images/facilities/relaxation-area.webp", largeImg: "/images/facilities/relaxation-area-large.webp" },
   ],
   events: [
     { key: "conferenceRoom", smallImg: "/images/facilities/conference-room-2.webp", largeImg: "/images/facilities/conference-room-large.webp" },

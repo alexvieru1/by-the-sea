@@ -33,12 +33,12 @@
     "contact": {
       "title": "Contact Us",
       "subtitle": "We're here for you",
-      "description": "Our support team is dedicated to help you with any questions or concerns."
+      "description": "Our team is dedicated to help you with any questions or concerns."
     },
     "about": {
       "title": "About Us",
       "subtitle": "Our mission",
-      "description": "Vraja Mării by the Sea is a biohacking complex dedicated to optimizing your health and wellbeing."
+      "description": "Vraja Mării by the Sea is a modern complex dedicated to health, recovery, and physical and mental balance."
     },
     "book": {
       "title": "Request a Stay",
@@ -92,7 +92,7 @@
       "categories": {
         "juniorSuite": {
           "name": "Junior Suite",
-          "description": "Spacious apartment-style suites with a separate bedroom and living area featuring an expandable couch — ideal for extended wellness stays."
+          "description": "Spacious apartment-style suites with a separate bedroom and living area featuring an expandable couch, ideal for extended wellness stays."
         },
         "twinRoom": {
           "name": "Twin Room",
@@ -217,7 +217,7 @@
         "section2Text": "From initial assessment through to discharge, our multidisciplinary team guides you through every stage of rehabilitation with expertise and compassion.",
         "section2Text2": "Our seaside location provides the ideal environment for recovery — fresh air, natural light, and the therapeutic benefits of the Black Sea coast.",
         "therapiesTitle": "Included Therapies",
-        "therapyIds": "magnetotherapy,mudWraps,laserTherapy,electrostimulation,decontractingMassage,ultrasoundTherapy,mudBath,tecarTherapy,kinesiotherapy"
+        "therapyIds": "laserTherapy,electrostimulation,ultrasoundTherapy,magnetotherapy,shortwaveTherapy,tecarTherapy,deepOscillation,pressotherapy,kinesiotherapy,therapeuticMassage,galvanicBaths,mudWraps,paraffinWraps,mudBath"
       }
     },
     "endometriosisInfertility": {
@@ -235,13 +235,13 @@
         "section2Text": "We go beyond managing symptoms to identify root causes — working with hormonal balance, inflammation reduction, and stress management as interconnected pathways to wellness.",
         "section2Text2": "Our compassionate team understands the emotional weight of these conditions and provides a supportive, judgement-free environment throughout your journey.",
         "therapiesTitle": "Included Therapies",
-        "therapyIds": "mudWraps,mudBath,magnetotherapy,kinesiotherapy,decontractingMassage"
+        "therapyIds": "magnetotherapy,laserTherapy,painReliefElectrotherapy,deepOscillation,pressotherapy,kinesiotherapy,therapeuticMassage,herbalBaths,vichyShower,tecarTherapy,emsella"
       }
     },
     "longevity": {
       "title": "Longevity",
       "subtitle": "Optimise. Regenerate. Flourish.",
-      "description": "Aging well isn't about turning back the clock — it's about giving your body the tools to thrive. Our longevity programs blend advanced diagnostics, cryotherapy, and regenerative therapies designed uniquely for you.",
+      "description": "Aging well isn't about turning back the clock, it's about giving your body the tools to thrive. Our longevity programs blend advanced diagnostics, cryotherapy, and regenerative therapies designed uniquely for you.",
       "shortDescription": "Advanced diagnostics and regenerative therapies to help you age well, on your own terms.",
       "page": {
         "section1Subtitle": "Science of Aging Well",
@@ -253,13 +253,13 @@
         "section2Text": "From cryotherapy to IV nutrient therapy, our regenerative protocols are designed to enhance cellular function, reduce oxidative stress, and support your body's natural repair mechanisms.",
         "section2Text2": "Regular monitoring and program adjustments ensure you're always progressing toward your optimal health benchmarks.",
         "therapiesTitle": "Included Therapies",
-        "therapyIds": "tecarTherapy,laserTherapy,decontractingMassage,kinesiotherapy,magnetotherapy,mudBath"
+        "therapyIds": "pressotherapy,magnetotherapy,therapeuticMassage,herbalBaths,vichyShower,infraredMask,ozoneSauna,ozoneTherapy,deepOscillation"
       }
     },
     "rheumatology": {
       "title": "Rheumatology",
       "subtitle": "Ease. Strengthen. Move.",
-      "description": "Specialised rheumatology programs combining balneotherapy, physiotherapy, and functional medicine to manage autoimmune and inflammatory conditions — reducing pain and restoring mobility.",
+      "description": "Specialised rheumatology programs combining balneotherapy, physiotherapy, and functional medicine to manage autoimmune and inflammatory conditions, reducing pain and restoring mobility.",
       "shortDescription": "Balneotherapy, physiotherapy, and functional medicine to reduce pain and restore mobility.",
       "page": {
         "section1Subtitle": "Living Without Limits",
@@ -271,13 +271,13 @@
         "section2Text": "Romania's rich balneological heritage offers unique therapeutic resources. Our programs harness mineral-rich waters, therapeutic mud, and climate therapy backed by decades of clinical evidence.",
         "section2Text2": "Combined with physiotherapy and functional medicine, these natural treatments provide lasting relief beyond what medication alone can achieve.",
         "therapiesTitle": "Included Therapies",
-        "therapyIds": "mudWraps,mudBath,magnetotherapy,electrostimulation,ultrasoundTherapy,kinesiotherapy,decontractingMassage,tecarTherapy"
+        "therapyIds": "laserTherapy,electrostimulation,ultrasoundTherapy,magnetotherapy,shortwaveTherapy,tecarTherapy,deepOscillation,pressotherapy,kinesiotherapy,therapeuticMassage,mudWraps,paraffinWraps,mudBath,galvanicBaths,herbalBaths,vichyShower,infraredMask,ozoneTherapy,ozoneSauna"
       }
     },
     "postChemotherapy": {
       "title": "Post-Major Intervention Recovery",
       "subtitle": "Support. Recover. Heal.",
-      "description": "Integrative care dedicated to patients recovering from major surgeries, accidents, or complex medical procedures — restoring mobility, strength, and vitality.",
+      "description": "Integrative care dedicated to patients recovering from major surgeries, accidents, or complex medical procedures, restoring mobility, strength, and vitality.",
       "shortDescription": "Comprehensive rehabilitation program for recovery after major surgeries, accidents, and complex medical procedures.",
       "page": {
         "section1Subtitle": "Post-Intervention Rehabilitation",
@@ -289,7 +289,7 @@
         "section2Text": "Post-intervention rehabilitation involves more than physical healing. Our integrative approach combines physiotherapy, balneotherapy, and psychological support for harmonious recovery.",
         "section2Text2": "In a peaceful seaside setting, surrounded by nature and supported by experienced professionals, you'll find the ideal space to fully recover.",
         "therapiesTitle": "Included Therapies",
-        "therapyIds": "decontractingMassage,kinesiotherapy,magnetotherapy,mudBath,laserTherapy"
+        "therapyIds": "pressotherapy,deepOscillation,magnetotherapy,kinesiotherapy,therapeuticMassage,herbalBaths,vichyShower,ozoneTherapy"
       }
     }
   },
@@ -550,6 +550,71 @@
       "name": "Kinesiotherapy",
       "description": "Personalised exercises to restore mobility, strength, and body balance.",
       "longDescription": "Kinesiotherapy is the art of rediscovering movement and body balance. Through carefully chosen exercises adapted to each need, this form of therapy transforms movement into a delicate yet powerful instrument of recovery and revitalisation. Each exercise is a sure step towards regaining mobility, strength, and confidence in one's own body.\n\nUnder the guidance of specialists, kinesiotherapy programmes are designed to support the body's natural recovery processes, correct muscular imbalances, and restore freedom of movement to the joints. Gradually, the body rediscovers its harmony, and movement returns naturally, without pain or limitations.\n\nMore than a recovery method, kinesiotherapy is an invitation to reconnect with your own body. At your own pace, progressively, it restores vitality, supports long-term health, and transforms each stage of recovery into a process of rediscovering balance and well-being."
+    },
+    "shortwaveTherapy": {
+      "name": "Shortwave therapy",
+      "description": "High-frequency electromagnetic waves that penetrate deep into tissues to reduce inflammation and relieve pain.",
+      "longDescription": "Shortwave therapy is a well-established method in modern physiotherapy that uses high-frequency electromagnetic waves to generate therapeutic heat deep within the tissues. This subtle, invisible, and precisely controlled energy reaches areas where other forms of treatment cannot penetrate, activating the body's natural healing processes.\n\nThrough its deep thermal effect, shortwave therapy stimulates vasodilation and local circulation, helping to reduce inflammation, alleviate muscle spasms, and diminish pain. Tissues thus receive an increased supply of oxygen and nutrients, which accelerates regeneration and the restoration of functionality.\n\nFrequently recommended for rheumatic conditions, chronic joint pain, and post-traumatic recovery stages, shortwave therapy integrates harmoniously into rehabilitation protocols, offering patients a gentle, effective, and deeply comforting treatment."
+    },
+    "deepOscillation": {
+      "name": "Deep Oscillation",
+      "description": "Deep electrostatic oscillations to reduce oedema, relieve pain, and accelerate tissue regeneration.",
+      "longDescription": "Deep Oscillation is an innovative therapy that uses a pulsed electrostatic field to generate deep, gentle, and rhythmic oscillations within the body's tissues. Unlike other forms of mechanical therapy, these oscillations penetrate deeply — up to eight centimetres — acting on the skin, connective tissue, muscles, and even the lymphatic system.\n\nThe therapeutic effect is remarkable: oedema is reduced, pain is alleviated, and inflammatory processes are attenuated in a delicate yet profoundly effective manner. Tissues become more supple, lymphatic circulation improves, and the body activates its natural regeneration mechanisms.\n\nDue to its non-invasive nature and excellent tolerability, Deep Oscillation is indicated for both post-surgical and post-traumatic recovery, as well as chronic inflammatory conditions. It is a therapy that combines cutting-edge technology with deep respect for the body's natural rhythm, transforming each session into a moment of quiet and profound healing."
+    },
+    "pressotherapy": {
+      "name": "Pressotherapy",
+      "description": "Sequential pneumatic compression to stimulate lymphatic drainage, reduce oedema, and improve circulation.",
+      "longDescription": "Pressotherapy is an elegant therapeutic procedure that uses sequential pneumatic compression to stimulate lymphatic drainage and improve venous circulation. Through specialised cuffs, controlled waves of pressure propagate rhythmically along the limbs, mimicking and amplifying the natural pumping mechanism of the lymphatic system.\n\nThis gentle yet systematic action helps eliminate fluid retention, reduce oedema, and detoxify the body. The sensation is one of progressive relief, as if the legs or arms were being freed from an invisible burden, gradually rediscovering their lightness and vitality.\n\nRecommended both in medical recovery — post-surgical, post-traumatic, or for chronic venous conditions — and as a wellness procedure for revitalisation and relaxation, pressotherapy delivers profound benefits in a comfortable and pleasant manner. It is the therapy that transforms circulatory care into a complete renewal experience."
+    },
+    "therapeuticMassage": {
+      "name": "Therapeutic massage",
+      "description": "Specialised massage techniques to relieve pain, reduce muscle tension, and restore body balance.",
+      "longDescription": "Therapeutic massage is a profound form of body care in which the therapist's experienced hands become instruments of healing and rebalancing. Unlike relaxation massage, therapeutic massage precisely targets affected areas, using specialised techniques to alleviate pain, reduce muscle tension, and restore normal tissue function.\n\nThrough manoeuvres adapted to each need — from deep pressure to joint mobilisation and myofascial techniques — the therapist works on the muscular and fascial layers, releasing accumulated blockages and stimulating local circulation. The result is a progressive improvement in discomfort, greater freedom of movement, and a state of well-being that radiates throughout the entire body.\n\nIntegrated into medical recovery programmes, therapeutic massage becomes an essential pillar of restoration, harmoniously complementing other procedures and providing the body with the human touch that accelerates healing. It is a therapy where science and empathy meet, transforming each session into a concrete step towards health and balance."
+    },
+    "galvanicBaths": {
+      "name": "Galvanic baths",
+      "description": "Hydrotherapy with galvanic currents to stimulate circulation, relieve joint pain, and reduce inflammation.",
+      "longDescription": "Galvanic baths represent a refined form of hydrotherapy in which water becomes the medium for transmitting low-intensity galvanic currents, creating a unique therapeutic experience. In this symbiosis between water and gentle electrical energy, the body receives deep stimulation that promotes vasodilation, improves peripheral circulation, and helps reduce inflammatory processes.\n\nThe procedure takes place in a setting of maximum safety and comfort, with currents carefully dosed to provide optimal therapeutic effects without any discomfort. The patient experiences a pleasant sensation of warmth and relaxation, while at a deeper level, tissues benefit from improved oxygenation and stimulated metabolic processes.\n\nParticularly recommended for rheumatic conditions, arthrosis, polyarthritis, and circulatory disorders, galvanic baths are part of the classic balneotherapy arsenal, having demonstrated their efficacy over decades of clinical practice. By combining natural elements with controlled technology, they offer a healing pathway that fully respects the body's rhythm and needs."
+    },
+    "paraffinWraps": {
+      "name": "Paraffin wraps",
+      "description": "Thermal paraffin applications to ease joint stiffness, reduce pain, and deeply hydrate the skin.",
+      "longDescription": "Paraffin wraps are a delicate and deeply comforting thermal therapy in which the uniform and prolonged warmth of melted paraffin becomes a healing instrument for stiff joints, tense muscles, and dehydrated skin. The thin layer of paraffin envelops the treated area like a warm cocoon, sealing in therapeutic heat and allowing its slow and even penetration deep into the tissues.\n\nBeneath this protective blanket, joints gradually regain flexibility, pain diminishes, and local circulation intensifies. The skin benefits from intensive hydration, becoming more supple and velvety. The combined effect — thermal, anti-inflammatory, and cosmetic — makes this therapy one of the most appreciated complementary procedures in medical recovery.\n\nParticularly recommended for rheumatic conditions, arthrosis, post-traumatic sequelae, and joint stiffness, paraffin therapy integrates harmoniously into rehabilitation protocols, adding comfort and efficiency. It is a procedure that combines simplicity with effectiveness, giving the body exactly what it needs: warmth, care, and time for recovery."
+    },
+    "painReliefElectrotherapy": {
+      "name": "Pain-relief electrotherapy",
+      "description": "Specialised therapeutic currents to block pain signals and stimulate the body's natural endorphin production.",
+      "longDescription": "Pain-relief electrotherapy is a precision procedure in which low and medium-frequency electrical currents are used with the specific purpose of alleviating pain, acting at both peripheral and central levels. Through careful modulation of electrical parameters, this therapy intervenes in pain transmission mechanisms, reducing nociceptive signals and stimulating the body's natural endorphin production — the body's own painkillers.\n\nThe procedure is personalised for each patient, with the intensity and frequency of currents adjusted according to the type of pain, its location, and the individual response. The analgesic effect sets in progressively, bringing relief in a natural way, without side effects and without the need for additional medication.\n\nFrequently used for chronic pain, neuralgias, musculoskeletal conditions, and post-operative recovery stages, pain-relief electrotherapy represents a valuable therapeutic alternative and an essential component of modern pain management protocols. Through its targeted and efficient approach, it offers patients the possibility of regaining comfort and quality of life."
+    },
+    "herbalBaths": {
+      "name": "Herbal baths",
+      "description": "Aromatic hydrotherapy with medicinal plant extracts for deep relaxation, anti-inflammatory effects, and nervous system balance.",
+      "longDescription": "Herbal baths represent one of the most harmonious forms of hydrotherapy, where nature's healing power unites with the therapeutic effect of warm water in a profoundly restorative experience. Medicinal plant extracts — carefully selected for their anti-inflammatory, calming, and revitalising properties — dissolve in the bath water, creating a therapeutic environment that envelops the entire body.\n\nAs aromatic vapours soothe the mind and balance the nervous system, the plants' active principles are absorbed through the skin, gently acting on tense muscles, painful joints, and peripheral circulation. The effect is twofold: physical, through alleviating discomfort and stimulating regeneration, and emotional, through inducing a profound state of calm and inner balance.\n\nRecommended both in medical recovery programmes and as wellness rituals for stress reduction and revitalisation, herbal baths bring the traditional wisdom of phytotherapy back to the forefront. It is an experience that reminds us that sometimes the most powerful remedies come from nature's simplest gifts."
+    },
+    "vichyShower": {
+      "name": "Vichy shower",
+      "description": "Multi-jet hydrotherapy with warm water for muscle relaxation, circulation stimulation, and complete revitalisation.",
+      "longDescription": "The Vichy shower is an exceptional hydrotherapeutic experience in which multiple fine jets of warm water simultaneously cascade along the entire body, creating an enveloping sensation of therapeutic rain. The patient lies comfortably on a special table while the jets — carefully adjusted in temperature, pressure, and angle — gently massage the muscles and stimulate circulation from head to toe.\n\nThe therapeutic effect is profound and multifaceted: tense muscles relax under the constant action of warm water, peripheral circulation intensifies, and the nervous system is progressively calmed. The overall sensation is one of total surrender, of releasing accumulated tensions and reconnecting with a fundamental state of well-being.\n\nIntegrated into recovery and wellness programmes, the Vichy shower harmoniously complements other therapeutic procedures, preparing the body for subsequent treatments or concluding a day of therapy with a note of perfect relaxation. It is a procedure that transforms the simple act of contact with water into an art of healing and revitalisation."
+    },
+    "emsella": {
+      "name": "Emsella",
+      "description": "Non-invasive electromagnetic technology for pelvic floor muscle toning and reproductive function improvement.",
+      "longDescription": "Emsella represents a cutting-edge innovation in non-invasive therapy, using high-intensity focused electromagnetic technology to stimulate and tone the pelvic floor muscles. During a comfortable session, in which the patient remains fully clothed, the device generates thousands of supramaximal muscle contractions, restoring neuromuscular control and strengthening the pelvic support structures.\n\nIn the context of fertility programmes, Emsella brings valuable benefits by improving pelvic circulation, toning the muscles that support the reproductive organs, and creating a more physiologically favourable environment for conception. The procedure also helps reduce pelvic muscle tension and alleviate pain associated with gynaecological conditions.\n\nDue to its completely non-invasive, painless nature and zero recovery time, Emsella integrates naturally into complex therapeutic protocols, offering patients a modern and comfortable way to support their pelvic health. It is a therapy that combines discretion with effectiveness, always respecting the comfort and dignity of each patient."
+    },
+    "infraredMask": {
+      "name": "Infrared mask",
+      "description": "Infrared light therapy to stimulate cellular regeneration, detoxification, and deep skin revitalisation.",
+      "longDescription": "The infrared mask is a modern phototherapy procedure in which infrared light — invisible to the eye yet profoundly beneficial to the body — is applied to the face and neck to stimulate natural cellular regeneration processes. The luminous energy gently penetrates the deeper layers of the skin, activating collagen production, stimulating microcirculation, and accelerating toxin elimination.\n\nUnder the gentle action of infrared light, the skin regains its luminosity and elasticity, fine lines are softened, and overall tone improves visibly. Beyond the aesthetic benefits, the procedure helps reduce inflammation, alleviate facial tension, and induce deep relaxation that is reflected in one's expression and general state of well-being.\n\nIntegrated into longevity and wellness programmes, the infrared mask becomes a ritual of rejuvenation and revitalisation that goes beyond simple cosmetics. It is an invitation to self-care at a deeper level, where skin health reflects inner balance and the vitality of the entire organism."
+    },
+    "ozoneSauna": {
+      "name": "Ozone sauna",
+      "description": "Combined sauna and ozone therapy for intensive detoxification, cellular oxygenation, and immune system stimulation.",
+      "longDescription": "The ozone sauna is an advanced therapeutic procedure that combines the beneficial effects of heat with the remarkable properties of medical ozone, creating a powerful experience of detoxification and revitalisation. In the special cabin, the body is simultaneously exposed to heat that opens the pores and ozone that penetrates through the skin, oxygenating tissues at a cellular level.\n\nThis dual action — thermal and biochemical — intensely stimulates circulation, accelerates toxin elimination, strengthens the immune system, and supports the body's metabolic processes. Ozone, the triatomic form of oxygen, brings a significant energy boost to the cells, helping to combat chronic fatigue, oxidative stress, and degenerative processes.\n\nRecommended in longevity, detoxification, and integrated wellness programmes, the ozone sauna offers benefits that are felt at a profound level: increased vitality, strengthened immunity, and a sensation of inner cleansing. It is the therapy that reminds us that true health begins at the cellular level, where oxygen becomes the driving force of life."
+    },
+    "ozoneTherapy": {
+      "name": "Ozone therapy",
+      "description": "Medical ozone therapy to stimulate cellular oxygenation, modulate immunity, and combat chronic inflammatory processes.",
+      "longDescription": "Ozone therapy is an advanced form of medical therapy that harnesses the unique properties of ozone — the activated form of oxygen — to stimulate the body's natural healing mechanisms. Through the controlled administration of medical ozone, cells receive a powerful energetic impulse, tissue oxygenation intensifies, and chronic inflammatory processes are modulated and attenuated.\n\nAt a biochemical level, ozone therapy activates the body's antioxidant enzymes, improves microcirculation, and stimulates the immune system. The effects are multiple and profound: from pain and inflammation reduction to accelerated wound healing, combating chronic fatigue, and supporting natural detoxification processes.\n\nIntegrated into recovery, rheumatology, and longevity programmes, ozone therapy adds significant therapeutic value to treatment protocols, supporting the body in its fight against degenerative and inflammatory processes. It is a therapy that views health from a cellular perspective, providing each cell with exactly what it needs to function at optimal capacity: oxygen, energy, and balance."
     },
     "wellness": {
       "title": "Wellness & MedSpa",
@@ -840,7 +905,7 @@
         "dialysis": "Patients on renal dialysis and/or with stage III/IV chronic kidney failure",
         "childrenUnder4": "Children under 4 years old"
       },
-      "relativeTitle": "Relative Contraindications",
+      "relativeTitle": "Contraindications",
       "relativeNote": "Patients who present at least one of the relative contraindications must bring their medical records at admission and, only upon written recommendation/approval from their attending physician (neurologist / cardiologist / oncologist / nephrologist), will be informed that the treatment will be limited and adapted to their associated pathology.",
       "relative": {
         "cardiac": {

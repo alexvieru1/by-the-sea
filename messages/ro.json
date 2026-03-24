@@ -6,7 +6,7 @@
     "getDirections": "Indicatii",
     "backHome": "Înapoi acasă",
     "comingSoon": "În curând",
-    "allPrograms": "Toate programele",
+    "allPrograms": "Înapoi",
     "requestStay": "Solicită o programare"
   },
   "notFound": {
@@ -33,12 +33,12 @@
     "contact": {
       "title": "Contactează-ne",
       "subtitle": "Suntem aici pentru tine",
-      "description": "Echipa noastră de suport este dedicată să te ajute cu orice întrebare sau nelămurire."
+      "description": "Echipa noastră este dedicată să te ajute cu orice întrebare sau nelămurire."
     },
     "about": {
       "title": "Despre noi",
       "subtitle": "Misiunea noastră",
-      "description": "Vraja Mării by the Sea este un complex de biohacking dedicat optimizării sănătății și bunăstării tale."
+      "description": "Vraja Mării by the Sea este un complex modern orientat către sănătate, recuperare și echilibru fizic și mental."
     },
     "book": {
       "title": "Solicită o programare",
@@ -92,7 +92,7 @@
       "categories": {
         "juniorSuite": {
           "name": "Junior Suite",
-          "description": "Suite spațioase tip apartament cu dormitor separat și zonă de living cu canapea extensibilă — ideale pentru sejururi wellness prelungite."
+          "description": "Suite spațioase tip apartament cu dormitor separat și zonă de living cu canapea extensibilă, ideale pentru sejururi wellness prelungite."
         },
         "twinRoom": {
           "name": "Cameră Twin",
@@ -217,7 +217,7 @@
         "section2Text": "De la evaluarea inițială până la externare, echipa noastră multidisciplinară vă ghidează prin fiecare etapă a recuperării cu expertiză și compasiune.",
         "section2Text2": "Locația noastră la malul mării oferă mediul ideal pentru recuperare — aer proaspăt, lumină naturală și beneficiile terapeutice ale coastei Mării Negre.",
         "therapiesTitle": "Terapii incluse",
-        "therapyIds": "magnetotherapy,mudWraps,laserTherapy,electrostimulation,decontractingMassage,ultrasoundTherapy,mudBath,tecarTherapy,kinesiotherapy"
+        "therapyIds": "laserTherapy,electrostimulation,ultrasoundTherapy,magnetotherapy,shortwaveTherapy,tecarTherapy,deepOscillation,pressotherapy,kinesiotherapy,therapeuticMassage,galvanicBaths,mudWraps,paraffinWraps,mudBath"
       }
     },
     "endometriosisInfertility": {
@@ -235,13 +235,13 @@
         "section2Text": "Mergem dincolo de gestionarea simptomelor pentru a identifica cauzele profunde — lucrând cu echilibrul hormonal, reducerea inflamației și gestionarea stresului ca și căi interconectate către bunăstare.",
         "section2Text2": "Echipa noastră compătimitoare înțelege greutatea emoțională a acestor afecțiuni și oferă un mediu de susținere, fără judecăți, pe tot parcursul călătoriei dumneavoastră.",
         "therapiesTitle": "Terapii incluse",
-        "therapyIds": "mudWraps,mudBath,magnetotherapy,kinesiotherapy,decontractingMassage"
+        "therapyIds": "magnetotherapy,laserTherapy,painReliefElectrotherapy,deepOscillation,pressotherapy,kinesiotherapy,therapeuticMassage,herbalBaths,vichyShower,tecarTherapy,emsella"
       }
     },
     "longevity": {
       "title": "Longevitate",
       "subtitle": "Optimizează. Regenerează. Înflorește.",
-      "description": "A îmbătrâni frumos nu înseamnă a întoarce timpul înapoi — înseamnă a oferi corpului tău instrumentele necesare pentru a prospera. Programele noastre de longevitate îmbină diagnosticarea avansată, crioterapia și terapiile regenerative, proiectate unic pentru tine.",
+      "description": "A îmbătrâni frumos nu înseamnă a întoarce timpul înapoi, înseamnă a oferi corpului tău instrumentele necesare pentru a prospera. Programele noastre de longevitate îmbină diagnosticarea avansată, crioterapia și terapiile regenerative, proiectate unic pentru tine.",
       "shortDescription": "Diagnosticare avansată și terapii regenerative pentru a îmbătrâni frumos, în propriii termeni.",
       "page": {
         "section1Subtitle": "Știința îmbătrânirii sănătoase",
@@ -253,13 +253,13 @@
         "section2Text": "De la crioterapie la terapia cu nutrienți IV, protocoalele noastre regenerative sunt concepute pentru a îmbunătăți funcția celulară, a reduce stresul oxidativ și a susține mecanismele naturale de reparare ale corpului.",
         "section2Text2": "Monitorizarea regulată și ajustările programului asigură că progresați mereu către parametrii optimi de sănătate.",
         "therapiesTitle": "Terapii incluse",
-        "therapyIds": "tecarTherapy,laserTherapy,decontractingMassage,kinesiotherapy,magnetotherapy,mudBath"
+        "therapyIds": "pressotherapy,magnetotherapy,therapeuticMassage,herbalBaths,vichyShower,infraredMask,ozoneSauna,ozoneTherapy,deepOscillation"
       }
     },
     "rheumatology": {
       "title": "Reumatologie",
       "subtitle": "Ameliorează. Întărește. Mișcă.",
-      "description": "Programe specializate de reumatologie care combină balneoterapia, fizioterapia și medicina funcțională pentru gestionarea afecțiunilor autoimune și inflamatorii — reducând durerea și restabilind mobilitatea.",
+      "description": "Programe specializate de reumatologie care combină balneoterapia, fizioterapia și medicina funcțională pentru gestionarea afecțiunilor autoimune și inflamatorii, reducând durerea și restabilind mobilitatea.",
       "shortDescription": "Balneoterapie, fizioterapie și medicină funcțională pentru reducerea durerii și restabilirea mobilității.",
       "page": {
         "section1Subtitle": "Viață fără limite",
@@ -271,13 +271,13 @@
         "section2Text": "Bogatul patrimoniu balneologic al României oferă resurse terapeutice unice. Programele noastre valorifică apele minerale, nămolul terapeutic și climatoterapia, susținute de decenii de dovezi clinice.",
         "section2Text2": "Combinate cu fizioterapia și medicina funcțională, aceste tratamente naturale oferă ameliorare de durată dincolo de ceea ce poate realiza doar medicația.",
         "therapiesTitle": "Terapii incluse",
-        "therapyIds": "mudWraps,mudBath,magnetotherapy,electrostimulation,ultrasoundTherapy,kinesiotherapy,decontractingMassage,tecarTherapy"
+        "therapyIds": "laserTherapy,electrostimulation,ultrasoundTherapy,magnetotherapy,shortwaveTherapy,tecarTherapy,deepOscillation,pressotherapy,kinesiotherapy,therapeuticMassage,mudWraps,paraffinWraps,mudBath,galvanicBaths,herbalBaths,vichyShower,infraredMask,ozoneTherapy,ozoneSauna"
       }
     },
     "postChemotherapy": {
       "title": "Recuperare post intervenții majore",
       "subtitle": "Susținere. Reabilitare. Vindecare.",
-      "description": "Îngrijire integrativă dedicată pacienților care se recuperează după intervenții chirurgicale majore, accidente sau alte proceduri medicale complexe — restaurând mobilitatea, forța și vitalitatea.",
+      "description": "Program conceput pentru susținerea recuperării organismului după intervenții chirurgicale majore și tratamente medicale solicitante, inclusiv tratamente oncologice.",
       "shortDescription": "Program complet de reabilitare pentru recuperarea după intervenții chirurgicale majore, accidente și proceduri medicale complexe.",
       "page": {
         "section1Subtitle": "Reabilitare post-intervenție",
@@ -289,7 +289,7 @@
         "section2Text": "Reabilitarea post-intervenție implică mai mult decât vindecarea fizică. Abordarea noastră integrativă combină fizioterapia, balneoterapia și suportul psihologic pentru o recuperare armonioasă.",
         "section2Text2": "Într-un cadru liniștit la malul mării, înconjurat de natură și susținut de profesioniști experimentați, veți găsi spațiul ideal pentru a vă recupera complet.",
         "therapiesTitle": "Terapii incluse",
-        "therapyIds": "decontractingMassage,kinesiotherapy,magnetotherapy,mudBath,laserTherapy"
+        "therapyIds": "pressotherapy,deepOscillation,magnetotherapy,kinesiotherapy,therapeuticMassage,herbalBaths,vichyShower,ozoneTherapy"
       }
     }
   },
@@ -550,6 +550,71 @@
       "name": "Kinetoterapie",
       "description": "Exerciții personalizate pentru redobândirea mobilității, a forței și a echilibrului corpului.",
       "longDescription": "Kinetoterapia este arta redescoperirii mișcării și a echilibrului corpului. Prin exerciții atent alese și adaptate fiecărei nevoi, această formă de terapie transformă mișcarea într-un instrument delicat, dar puternic, de refacere și revitalizare. Fiecare exercițiu este un pas sigur către redobândirea mobilității, a forței și a încrederii în propriul corp.\n\nSub îndrumarea specialiștilor, programele de kinetoterapie sunt concepute pentru a susține procesele naturale de recuperare ale organismului, pentru a corecta dezechilibrele musculare și pentru a reda articulațiilor libertatea mișcării. Treptat, corpul își regăsește armonia, iar mișcarea revine firesc, fără durere și fără limitări.\n\nMai mult decât o metodă de recuperare, kinetoterapia este o invitație la reconectarea cu propriul corp. În propriul ritm, progresiv, redă vitalitatea, susține sănătatea pe termen lung și transformă fiecare etapă a recuperării într-un proces de redescoperire a echilibrului și a stării de bine."
+    },
+    "shortwaveTherapy": {
+      "name": "Terapie cu unde scurte",
+      "description": "Unde electromagnetice de înaltă frecvență care pătrund în profunzimea țesuturilor pentru reducerea inflamației și ameliorarea durerii.",
+      "longDescription": "Terapia cu unde scurte este o metodă consacrată în fizioterapia modernă, care utilizează unde electromagnetice de înaltă frecvență pentru a genera căldură terapeutică în profunzimea țesuturilor. Această energie subtilă, invizibilă și controlată cu precizie, ajunge acolo unde alte forme de tratament nu pot pătrunde, activând procesele naturale de vindecare ale organismului.\n\nPrin efectul termic profund, undele scurte stimulează vasodilatația și circulația locală, contribuind la reducerea inflamației, ameliorarea spasmelor musculare și diminuarea durerii. Țesuturile primesc astfel un aport crescut de oxigen și nutrienți, ceea ce accelerează regenerarea și restabilirea funcționalității.\n\nRecomandată frecvent în afecțiunile reumatice, durerile articulare cronice și în etapele de recuperare post-traumatică, terapia cu unde scurte se integrează armonios în protocoalele de reabilitare, oferind pacientului un tratament blând, eficient și profund reconfortant."
+    },
+    "deepOscillation": {
+      "name": "Deep Oscillation",
+      "description": "Oscilații electrostatice profunde pentru reducerea edemelor, ameliorarea durerii și accelerarea regenerării tisulare.",
+      "longDescription": "Deep Oscillation este o terapie inovatoare care utilizează un câmp electrostatic pulsatil pentru a genera oscilații profunde, blânde și ritmice în țesuturile corpului. Spre deosebire de alte forme de terapie mecanică, aceste oscilații pătrund adânc — până la opt centimetri — acționând asupra pielii, țesutului conjunctiv, musculaturii și chiar a sistemului limfatic.\n\nEfectul terapeutic este remarcabil: edemele se reduc, durerea se ameliorează, iar procesele inflamatorii sunt atenuate într-un mod delicat, dar profund eficient. Țesuturile devin mai suple, circulația limfatică se îmbunătățește, iar organismul își activează mecanismele naturale de regenerare.\n\nPrin caracterul său non-invaziv și extrem de bine tolerat, Deep Oscillation este indicată atât în recuperarea post-chirurgicală și post-traumatică, cât și în afecțiunile cronice inflamatorii. Este o terapie care îmbină tehnologia de ultimă generație cu respectul profund pentru ritmul natural al corpului, transformând fiecare ședință într-un moment de vindecare liniștită și profundă."
+    },
+    "pressotherapy": {
+      "name": "Presoterapie",
+      "description": "Compresie pneumatică secvențială pentru stimularea drenajului limfatic, reducerea edemelor și îmbunătățirea circulației.",
+      "longDescription": "Presoterapia este o procedură terapeutică elegantă care utilizează compresia pneumatică secvențială pentru a stimula drenajul limfatic și a îmbunătăți circulația venoasă. Prin intermediul unor manșete speciale, unde de presiune controlate se propagă ritmic de-a lungul membrelor, mimând și amplificând mecanismul natural de pompare al sistemului limfatic.\n\nAceastă acțiune blândă, dar sistematică, contribuie la eliminarea retenției de lichide, la reducerea edemelor și la detoxifierea organismului. Senzația este una de ușurare progresivă, ca și cum picioarele sau brațele ar fi eliberate de o povară invizibilă, redescoperindu-și treptat ușurința și vitalitatea.\n\nRecomandată atât în recuperarea medicală — post-chirurgical, post-traumatic sau în afecțiunile venoase cronice — cât și ca procedură de wellness pentru revitalizare și relaxare, presoterapia oferă beneficii profunde într-un mod confortabil și plăcut. Este terapia care transformă grija pentru circulație într-o experiență de reînnoire completă."
+    },
+    "therapeuticMassage": {
+      "name": "Masaj terapeutic",
+      "description": "Tehnici specializate de masaj pentru ameliorarea durerii, reducerea tensiunilor musculare și restabilirea echilibrului corporal.",
+      "longDescription": "Masajul terapeutic este o formă de îngrijire profundă a corpului, în care mâinile experimentate ale terapeutului devin instrumente de vindecare și reechilibrare. Spre deosebire de masajul de relaxare, masajul terapeutic se adresează cu precizie zonelor afectate, utilizând tehnici specializate pentru a ameliora durerea, a reduce tensiunile musculare și a restabili funcționalitatea normală a țesuturilor.\n\nPrin manevre adaptate fiecărei nevoi — de la presiuni profunde la mobilizări articulare și tehnici miofasciale — terapeutul lucrează asupra straturilor musculare și fasciale, eliberând blocajele acumulate și stimulând circulația locală. Rezultatul este o ameliorare progresivă a disconfortului, o mai mare libertate în mișcare și o stare de bine care se propagă în întregul organism.\n\nIntegrat în programele de recuperare medicală, masajul terapeutic devine un pilon esențial al refacerii, completând armonios celelalte proceduri și oferind corpului acel contact uman care accelerează vindecarea. Este o terapie în care știința și empatia se întâlnesc, transformând fiecare ședință într-un pas concret către sănătate și echilibru."
+    },
+    "galvanicBaths": {
+      "name": "Băi galvanice",
+      "description": "Hidroterapie cu curenți galvanici pentru stimularea circulației, ameliorarea durerilor articulare și reducerea inflamației.",
+      "longDescription": "Băile galvanice reprezintă o formă rafinată de hidroterapie în care apa devine mediul de transmitere al curenților galvanici de joasă intensitate, creând o experiență terapeutică unică. În această simbioză între apă și energie electrică blândă, organismul primește o stimulare profundă care favorizează vasodilatația, îmbunătățește circulația periferică și contribuie la reducerea proceselor inflamatorii.\n\nProcedura se desfășoară într-un cadru de maximă siguranță și confort, curenții fiind atent dozați pentru a oferi efecte terapeutice optime fără niciun disconfort. Pacientul experimentează o senzație plăcută de căldură și relaxare, în timp ce la nivel profund, țesuturile beneficiază de o oxigenare îmbunătățită și de stimularea proceselor metabolice.\n\nRecomandate în special în afecțiunile reumatice, artrozele, poliartritele și tulburările circulatorii, băile galvanice fac parte din arsenalul clasic al balneoterapiei, demonstrându-și eficacitatea de-a lungul deceniilor de practică clinică. Prin îmbinarea elementelor naturale cu tehnologia controlată, acestea oferă o cale de vindecare care respectă întru totul ritmul și nevoile organismului."
+    },
+    "paraffinWraps": {
+      "name": "Împachetări cu parafină",
+      "description": "Aplicații termice cu parafină pentru ameliorarea rigidității articulare, reducerea durerii și hidratarea profundă a pielii.",
+      "longDescription": "Împachetările cu parafină sunt o terapie termică delicată și profund reconfortantă, în care căldura uniformă și prelungită a parafinei topite devine un instrument de vindecare pentru articulațiile rigide, musculatura tensionată și pielea deshidratată. Stratul fin de parafină învelește zona tratată ca un cocon cald, sigilând căldura terapeutică și permițând penetrarea sa lentă și uniformă în profunzimea țesuturilor.\n\nSub această pătură protectoare, articulațiile își recapătă treptat flexibilitatea, durerea se diminuează, iar circulația locală se intensifică. Pielea beneficiază de o hidratare intensă, devenind mai suplă și mai catifelată. Efectul combinat — termic, antiinflamator și cosmetic — face din această terapie una dintre cele mai apreciate proceduri complementare în recuperarea medicală.\n\nRecomandată în special în afecțiunile reumatice, artroze, sequele post-traumatice și în rigiditatea articulară, terapia cu parafină se integrează armonios în protocoalele de reabilitare, aducând un plus de confort și eficiență. Este o procedură care îmbină simplitatea cu eficacitatea, oferind corpului exact ceea ce are nevoie: căldură, grijă și timp pentru refacere."
+    },
+    "painReliefElectrotherapy": {
+      "name": "Electroterapie antialgică",
+      "description": "Curenți terapeutici specializați pentru blocarea semnalelor de durere și stimularea producției naturale de endorfine.",
+      "longDescription": "Electroterapia antialgică este o procedură de precizie în care curenții electrici de joasă și medie frecvență sunt utilizați cu scopul specific de a ameliora durerea, acționând atât la nivel periferic, cât și central. Prin modularea atentă a parametrilor electrici, această terapie intervine asupra mecanismelor de transmitere a durerii, reducând semnalele nociceptive și stimulând producția naturală de endorfine — analgezicele proprii ale organismului.\n\nProcedura este personalizată pentru fiecare pacient, intensitatea și frecvența curenților fiind ajustate în funcție de tipul durerii, localizarea acesteia și răspunsul individual. Efectul analgezic se instalează progresiv, aducând ameliorare într-un mod natural, fără efecte secundare și fără necesitatea medicației suplimentare.\n\nUtilizată frecvent în dureri cronice, nevralgii, afecțiuni musculo-scheletice și în etapele de recuperare post-operatorie, electroterapia antialgică reprezintă o alternativă terapeutică valoroasă și o componentă esențială a protocoalelor moderne de management al durerii. Prin abordarea sa țintită și eficientă, oferă pacienților posibilitatea de a-și recâștiga confortul și calitatea vieții."
+    },
+    "herbalBaths": {
+      "name": "Băi cu plante",
+      "description": "Hidroterapie aromatică cu extracte din plante medicinale pentru relaxare profundă, efecte antiinflamatoare și echilibrare a sistemului nervos.",
+      "longDescription": "Băile cu plante reprezintă una dintre cele mai armonioase forme de hidroterapie, în care puterea vindecătoare a naturii se unește cu efectul terapeutic al apei calde într-o experiență profund restauratoare. Extractele din plante medicinale — atent selecționate pentru proprietățile lor antiinflamatoare, calmante și revitalizante — se dizolvă în apa băii, creând un mediu terapeutic care învăluie întregul corp.\n\nÎn timp ce aburii aromați liniștesc mintea și echilibrează sistemul nervos, principiile active ale plantelor sunt absorbite prin piele, acționând blând asupra musculaturii tensionate, articulațiilor dureroase și circulației periferice. Efectul este dublu: fizic, prin ameliorarea disconfortului și stimularea regenerării, și emoțional, prin inducerea unei stări profunde de calm și echilibru interior.\n\nRecomandate atât în programele de recuperare medicală, cât și ca ritualuri de wellness pentru reducerea stresului și revitalizare, băile cu plante readuc în centrul atenției înțelepciunea tradițională a fitoterapiei. Este o experiență care ne amintește că, uneori, cele mai puternice remedii vin din cele mai simple daruri ale naturii."
+    },
+    "vichyShower": {
+      "name": "Duș Vichy",
+      "description": "Hidroterapie cu jet multiplu de apă caldă pentru relaxarea musculaturii, stimularea circulației și revitalizare completă.",
+      "longDescription": "Dușul Vichy este o experiență hidroterapeutică de excepție, în care mai multe jeturi fine de apă caldă cad simultan de-a lungul întregului corp, creând o senzație enveloppantă de ploaie terapeutică. Pacientul este întins confortabil pe o masă specială, în timp ce jeturile — atent reglate ca temperatură, presiune și unghi — masează delicat musculatura și stimulează circulația de la cap până la picioare.\n\nEfectul terapeutic este profund și multilateral: musculatura tensionată se relaxează sub acțiunea constantă a apei calde, circulația periferică se intensifică, iar sistemul nervos este calmat progresiv. Senzația generală este una de abandon total, de eliberare a tensiunilor acumulate și de reconectare cu o stare de bine fundamentală.\n\nIntegrat în programele de recuperare și wellness, dușul Vichy completează armonios celelalte proceduri terapeutice, pregătind corpul pentru tratamentele ulterioare sau încheind o zi de terapie cu o notă de relaxare desăvârșită. Este o procedură care transformă simplul act al contactului cu apa într-o artă a vindecării și a revitalizării."
+    },
+    "emsella": {
+      "name": "Emsella",
+      "description": "Tehnologie electromagnetică non-invazivă pentru tonifierea musculaturii pelvine și îmbunătățirea funcției reproductive.",
+      "longDescription": "Emsella reprezintă o inovație de vârf în terapia non-invazivă, utilizând tehnologia electromagnetică focalizată de înaltă intensitate pentru a stimula și tonifica musculatura planșeului pelvin. Într-o ședință confortabilă, în care pacientul rămâne complet îmbrăcat, dispozitivul generează mii de contracții musculare supramaximale, restabilind controlul neuromuscular și întărind structurile de susținere ale bazinului.\n\nÎn contextul programelor de infertilitate, Emsella aduce beneficii valoroase prin îmbunătățirea circulației pelvine, tonifierea musculaturii care susține organele reproductive și crearea unui mediu fiziologic mai favorabil concepției. Procedura contribuie totodată la reducerea tensiunilor musculare din zona pelviană și la ameliorarea durerilor asociate afecțiunilor ginecologice.\n\nPrin caracterul său complet non-invaziv, nedureros și lipsit de timp de recuperare, Emsella se integrează firesc în protocoalele terapeutice complexe, oferind pacientelor o cale modernă și confortabilă de a-și susține sănătatea pelviană. Este o terapie care îmbină discretia cu eficiența, respectând în permanență confortul și demnitatea fiecărei paciente."
+    },
+    "infraredMask": {
+      "name": "Mască infraroșu",
+      "description": "Terapie cu lumină infraroșie pentru stimularea regenerării celulare, detoxifiere și revitalizarea profundă a pielii.",
+      "longDescription": "Masca infraroșu este o procedură modernă de fototerapie în care lumina infraroșie — invizibilă ochiului, dar profund benefică organismului — este aplicată asupra feței și gâtului pentru a stimula procesele naturale de regenerare celulară. Energia luminoasă pătrunde delicat în straturile profunde ale pielii, activând producția de colagen, stimulând microcirculația și accelerând eliminarea toxinelor.\n\nSub acțiunea blândă a luminii infraroșii, pielea își recapătă luminozitatea și elasticitatea, ridurile fine se atenuează, iar tonusul general se îmbunătățește vizibil. Dincolo de beneficiile estetice, procedura contribuie la reducerea inflamației, la ameliorarea tensiunilor faciale și la o relaxare profundă care se reflectă în expresia și starea generală de bine.\n\nIntegrată în programele de longevitate și wellness, masca infraroșu devine un ritual de întinerire și revitalizare care depășește simpla cosmetică. Este o invitație la grija pentru sine la un nivel mai profund, unde sănătatea pielii reflectă echilibrul interior și vitalitatea întregului organism."
+    },
+    "ozoneSauna": {
+      "name": "Sauna cu ozon",
+      "description": "Terapie combinată de saună și ozon pentru detoxifiere intensă, oxigenare celulară și stimularea sistemului imunitar.",
+      "longDescription": "Sauna cu ozon este o procedură terapeutică avansată care combină efectele benefice ale căldurii cu proprietățile remarcabile ale ozonului medical, creând o experiență puternică de detoxifiere și revitalizare. În cabina specială, corpul este expus simultan la căldura care deschide porii și la ozonul care pătrunde prin piele, oxigenând țesuturile la nivel celular.\n\nAceastă dublă acțiune — termică și biochimică — stimulează intens circulația, accelerează eliminarea toxinelor, întărește sistemul imunitar și susține procesele metabolice ale organismului. Ozonul, forma triatomică a oxigenului, aduce un plus semnificativ de energie celulelor, contribuind la combaterea oboselii cronice, a stresului oxidativ și a proceselor degenerative.\n\nRecomandată în programele de longevitate, detoxifiere și wellness integrat, sauna cu ozon oferă beneficii care se resimt la nivel profund: o stare de vitalitate crescută, o imunitate întărită și o senzație de curățare interioară. Este terapia care ne amintește că adevărata sănătate începe la nivel celular, acolo unde oxigenul devine forța motrice a vieții."
+    },
+    "ozoneTherapy": {
+      "name": "Ozonoterapie",
+      "description": "Terapie cu ozon medical pentru stimularea oxigenării celulare, modularea imunității și combaterea proceselor inflamatorii cronice.",
+      "longDescription": "Ozonoterapia este o formă avansată de terapie medicală care valorifică proprietățile unice ale ozonului — forma activată a oxigenului — pentru a stimula mecanismele naturale de vindecare ale organismului. Prin administrarea controlată a ozonului medical, celulele primesc un impuls energetic puternic, oxigenarea țesuturilor se intensifică, iar procesele inflamatorii cronice sunt modulate și atenuate.\n\nLa nivel biochimic, ozonoterapia activează enzimele antioxidante ale organismului, îmbunătățește microcirculația și stimulează sistemul imunitar. Efectele sunt multiple și profunde: de la reducerea durerii și a inflamației, la accelerarea vindecării rănilor, combaterea oboselii cronice și susținerea proceselor de detoxifiere naturală.\n\nIntegrată în programele de recuperare, reumatologie și longevitate, ozonoterapia aduce un plus terapeutic semnificativ protocoalelor de tratament, susținând organismul în lupta sa cu procesele degenerative și inflamatorii. Este o terapie care privește sănătatea din perspectiva celulară, oferind fiecărei celule exact ceea ce are nevoie pentru a funcționa la capacitate optimă: oxigen, energie și echilibru."
     },
     "wellness": {
       "title": "Wellness & MedSpa",
@@ -840,7 +905,7 @@
         "dialysis": "Pacienți cu dializă renală și/sau insuficiență renală cronică stadiul III/IV",
         "childrenUnder4": "Copii < 4 ani"
       },
-      "relativeTitle": "Contraindicații relative",
+      "relativeTitle": "Contraindicații",
       "relativeNote": "Pacienții care prezintă cel puțin una dintre contraindicațiile relative se vor prezenta la internare cu actele medicale și, numai la indicația/aviz scris al medicului curant (neurolog / cardiolog / oncolog / nefrolog), vor fi înștiințați că tratamentul va fi limitat și adaptat patologiei asociate.",
       "relative": {
         "cardiac": {

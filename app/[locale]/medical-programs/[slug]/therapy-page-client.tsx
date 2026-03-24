@@ -7,42 +7,63 @@ import TransitionLink from '@/components/layout/transition-link';
 import ProgramContentSection from '@/components/sections/program-content-section';
 import ProgramTherapiesGrid from '@/components/sections/program-therapies-grid';
 
-const therapyMap: Record<string, { translationNamespace: string; translationKey: string; bg: string; accentColor: string }> = {
+interface ProgramConfig {
+  translationNamespace: string;
+  translationKey: string;
+  bg: string;
+  accentColor: string;
+  image1: string;
+  image2: string;
+}
+
+const therapyMap: Record<string, ProgramConfig> = {
   'medical-rehabilitation': {
     translationNamespace: 'medicalPrograms',
     translationKey: 'medicalRehabilitation',
     bg: 'bg-[#CF9C7C]',
     accentColor: '#CF9C7C',
+    image1: '/images/programs/medical-rehabilitation-1.webp',
+    image2: '/images/programs/medical-rehabilitation-2.webp',
   },
   'endometriosis-infertility': {
     translationNamespace: 'medicalPrograms',
     translationKey: 'endometriosisInfertility',
     bg: 'bg-[#CF9C7C]',
     accentColor: '#CF9C7C',
+    image1: '/images/programs/endometriosis-infertility-1.webp',
+    image2: '/images/programs/endometriosis-infertility-2.webp',
   },
   longevity: {
     translationNamespace: 'medicalPrograms',
     translationKey: 'longevity',
     bg: 'bg-[#002343]',
     accentColor: '#002343',
+    image1: '/images/programs/longevity-1.webp',
+    image2: '/images/programs/longevity-2.webp',
   },
   rheumatology: {
     translationNamespace: 'medicalPrograms',
     translationKey: 'rheumatology',
     bg: 'bg-[#D1CCC7]',
     accentColor: '#D1CCC7',
+    image1: '/images/programs/rheumatology-1.webp',
+    image2: '/images/programs/rheumatology-2.webp',
   },
   wellness: {
     translationNamespace: 'therapies',
     translationKey: 'wellness',
     bg: 'bg-[#CF9C7C]',
     accentColor: '#CF9C7C',
+    image1: '/images/programs/wellness-1.webp',
+    image2: '/images/programs/wellness-2.webp',
   },
   'post-chemotherapy': {
     translationNamespace: 'medicalPrograms',
     translationKey: 'postChemotherapy',
     bg: 'bg-[#CF9C7C]',
     accentColor: '#CF9C7C',
+    image1: '/images/programs/post-chemotherapy-1.webp',
+    image2: '/images/programs/post-chemotherapy-2.webp',
   },
 };
 
@@ -122,7 +143,7 @@ export default function TherapyPageClient({ slug }: { slug: string }) {
         <>
           <ProgramContentSection
             photoSide="left"
-            imageSrc="/images/your_body.webp"
+            imageSrc={therapy.image1}
             imageAlt={title}
             subtitle={t(`${prefix}page.section1Subtitle`)}
             title={t(`${prefix}page.section1Title`)}
@@ -134,7 +155,7 @@ export default function TherapyPageClient({ slug }: { slug: string }) {
 
           <ProgramContentSection
             photoSide="right"
-            imageSrc="/images/your_future.webp"
+            imageSrc={therapy.image2}
             imageAlt={title}
             subtitle={t(`${prefix}page.section2Subtitle`)}
             title={t(`${prefix}page.section2Title`)}

@@ -172,7 +172,7 @@ export default function ShowcaseSection({
             transition={{ duration: 0.5, ease: 'easeOut' }}
           >
             <PrimaryButton href={ctaHref} variant="dark" size="xl" arrow>
-              {tCommon(ctaKey ?? 'bookScan')}
+              {tCommon(ctaKey ?? 'learnMore')}
             </PrimaryButton>
           </motion.div>
         </div>

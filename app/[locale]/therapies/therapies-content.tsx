@@ -17,6 +17,19 @@ const allTherapyIds = [
   'mudBath',
   'tecarTherapy',
   'kinesiotherapy',
+  'shortwaveTherapy',
+  'deepOscillation',
+  'pressotherapy',
+  'therapeuticMassage',
+  'galvanicBaths',
+  'paraffinWraps',
+  'painReliefElectrotherapy',
+  'herbalBaths',
+  'vichyShower',
+  'emsella',
+  'infraredMask',
+  'ozoneSauna',
+  'ozoneTherapy',
 ];
 
 const COLUMNS = { sm: 2, lg: 3 };
