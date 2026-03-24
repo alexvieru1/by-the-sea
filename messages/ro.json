@@ -291,11 +291,6 @@
         "therapiesTitle": "Terapii incluse",
         "therapyIds": "pressotherapy,deepOscillation,magnetotherapy,kinesiotherapy,therapeuticMassage,herbalBaths,vichyShower,ozoneTherapy"
       }
-    },
-    "wellness": {
-      "title": "Wellness & MedSpa",
-      "subtitle": "Relaxare. Reîntinerire. Reînnoire.",
-      "description": "Experiențe premium de wellness care îmbină masajul terapeutic, hidroterapia și tratamentele estetice într-un cadru liniștit la malul mării."
     }
   },
   "buildData": {

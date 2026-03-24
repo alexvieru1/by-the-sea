@@ -291,11 +291,6 @@
         "therapiesTitle": "Included Therapies",
         "therapyIds": "pressotherapy,deepOscillation,magnetotherapy,kinesiotherapy,therapeuticMassage,herbalBaths,vichyShower,ozoneTherapy"
       }
-    },
-    "wellness": {
-      "title": "Wellness & MedSpa",
-      "subtitle": "Relax. Rejuvenate. Renew.",
-      "description": "Premium wellness experiences blending therapeutic massage, hydrotherapy, and aesthetic treatments in a serene seaside setting."
     }
   },
   "buildData": {
