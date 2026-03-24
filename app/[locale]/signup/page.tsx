@@ -10,7 +10,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'signup' });
+  const t = await getTranslations({ locale, namespace: 'auth.signup' });
   return { title: t('title'), description: t('subtitle') };
 }
 
