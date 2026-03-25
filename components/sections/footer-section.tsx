@@ -166,21 +166,21 @@ export default function FooterSection() {
                   >
                     {t('cookieNotice')}
                   </TransitionLink>
-                  <span>⏺</span>
+                  <span aria-hidden="true" className="text-[6px]">●</span>
                   <TransitionLink
                     href="/privacy"
                     className="transition-colors hover:text-gray-900"
                   >
                     {t('privacyPolicy')}
                   </TransitionLink>
-                  <span>⏺</span>
+                  <span aria-hidden="true" className="text-[6px]">●</span>
                   <TransitionLink
                     href="/terms"
                     className="transition-colors hover:text-gray-900"
                   >
                     {t('termsOfService')}
                   </TransitionLink>
-                  <span>⏺</span>
+                  <span aria-hidden="true" className="text-[6px]">●</span>
                   <button
                     type="button"
                     onClick={resetConsent}
@@ -196,6 +196,21 @@ export default function FooterSection() {
                 <Globe className="h-4 w-4" />
                 <span>{t('country')}</span>
               </div>
+            </div>
+
+            {/* Legal Compliance Bar */}
+            <div className="flex flex-col items-start justify-between gap-4 border-t border-gray-300/50 pt-6 pb-2 sm:flex-row sm:items-center">
+              <p className="text-xs text-gray-400">
+                ASCLEPIOS S.R.L. — CUI: 1864633 — Reg. Com.: J1992000693137
+              </p>
+              <a
+                href="https://anpc.ro/ce-este-sal/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-gray-400 underline decoration-gray-300 underline-offset-2 transition-colors hover:text-gray-600"
+              >
+                ANPC — SAL
+              </a>
             </div>
           </div>
 

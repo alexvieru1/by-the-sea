@@ -1,4 +1,24 @@
 import type { MDXComponents } from 'mdx/types';
+import type { ReactNode } from 'react';
+
+function getTextContent(children: ReactNode): string {
+  if (typeof children === 'string') return children;
+  if (typeof children === 'number') return String(children);
+  if (Array.isArray(children)) return children.map(getTextContent).join('');
+  if (children && typeof children === 'object' && 'props' in children) {
+    return getTextContent((children as { props: { children?: ReactNode } }).props.children);
+  }
+  return '';
+}
+
+function slugify(text: string): string {
+  return text
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '');
+}
 
 export const policyMdxComponents: MDXComponents = {
   h1: (props) => (
@@ -7,18 +27,30 @@ export const policyMdxComponents: MDXComponents = {
       {...props}
     />
   ),
-  h2: (props) => (
-    <h2
-      className="mb-4 mt-12 text-sm font-medium uppercase tracking-wider text-[#002343]"
-      {...props}
-    />
-  ),
-  h3: (props) => (
-    <h3
-      className="mb-3 mt-8 text-lg font-semibold text-gray-900"
-      {...props}
-    />
-  ),
+  h2: ({ children, ...props }) => {
+    const id = slugify(getTextContent(children));
+    return (
+      <h2
+        id={id}
+        className="mb-4 mt-12 scroll-mt-32 text-sm font-medium uppercase tracking-wider text-[#002343]"
+        {...props}
+      >
+        {children}
+      </h2>
+    );
+  },
+  h3: ({ children, ...props }) => {
+    const id = slugify(getTextContent(children));
+    return (
+      <h3
+        id={id}
+        className="mb-3 mt-8 scroll-mt-32 text-sm font-semibold text-gray-900"
+        {...props}
+      >
+        {children}
+      </h3>
+    );
+  },
   p: (props) => (
     <p className="mb-4 text-base leading-relaxed text-gray-700" {...props} />
   ),
