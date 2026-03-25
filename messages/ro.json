@@ -43,7 +43,7 @@
     "book": {
       "title": "Solicită o programare",
       "subtitle": "Începe-ți călătoria wellness",
-      "description": "Spune-ne despre tine și echipa noastră te va contacta personal pentru a-ți crea experiența wellness perfectă."
+      "description": "Spune-ne despre tine și echipa noastră te va contacta pentru a-ți crea experiența wellness perfectă."
     },
     "stays": {
       "title": "Sejururi planificate",
@@ -325,7 +325,7 @@
       },
       "seaBeach": {
         "name": "Plajă amenajată la mare",
-        "description": "Plajă privată cu șezlonguri și umbrelă, unde sunetul valurilor și aerul marin completează experiența de relaxare."
+        "description": "Plajă privată cu șezlonguri și umbrele, unde sunetul valurilor și aerul marin completează experiența de relaxare."
       },
       "lakeBeach": {
         "name": "Plajă amenajată pe Lacul Techirghiol",
@@ -473,7 +473,7 @@
       "error": "Nu s-au putut salva modificările.",
       "waitlistStatus": {
         "noneTitle": "Începe-ți călătoria",
-        "noneDescription": "Solicită o programare și echipa noastră te va contacta personal.",
+        "noneDescription": "Solicită o programare și echipa noastră te va contacta.",
         "noneAction": "Solicită o programare",
         "pendingTitle": "Cerere primită",
         "pendingDescription": "Am primit cererea ta! Un membru al echipei noastre te va contacta în curând pentru a discuta despre sejurul tău și a confirma rezervarea.",
@@ -629,10 +629,10 @@
     "callTitle": "Preferi să suni?",
     "callDescription": "Vorbește direct cu echipa noastră pentru a-ți planifica sejurul.",
     "callButton": "Sună acum",
-    "callPhone": "+40 241 123 456",
+    "callPhone": "+40 341 520 000",
     "orDivider": "sau completează formularul de mai jos",
     "formTitle": "Spune-ne despre tine",
-    "formSubtitle": "Completează detaliile de mai jos și echipa noastră te va contacta personal pentru a-ți planifica sejurul perfect.",
+    "formSubtitle": "Completează detaliile de mai jos și echipa noastră te va contacta pentru a-ți planifica sejurul perfect.",
     "firstName": "Prenume",
     "lastName": "Nume",
     "email": "Email",
@@ -669,14 +669,14 @@
     "required": "Acest câmp este obligatoriu",
     "invalidEmail": "Adresa de email nu este validă",
     "successTitle": "Am primit cererea ta!",
-    "successDescription": "Un membru al echipei noastre te va contacta personal pentru a discuta despre sejurul tău.",
+    "successDescription": "Un membru al echipei noastre te va contacta pentru a discuta despre sejurul tău.",
     "alreadyRegistered": "Această adresă de email este deja înscrisă pe lista de așteptare.",
     "phoneAlreadyRegistered": "Acest număr de telefon este deja înscris pe lista de așteptare.",
     "invalidPhone": "Te rugăm să introduci un număr de mobil valid (07XXXXXXXX)",
     "errorGeneric": "A apărut o eroare. Te rugăm să încerci din nou.",
     "success": {
       "title": "Cerere primită!",
-      "description": "Mulțumim pentru interesul tău! Un membru al echipei noastre te va contacta personal pentru a discuta despre sejurul tău.",
+      "description": "Mulțumim pentru interesul tău! Un membru al echipei noastre te va contacta pentru a discuta despre sejurul tău.",
       "createAccount": "Creează un cont",
       "createAccountDescription": "Creează un cont pentru a urmări statusul cererii tale și a completa fișa de evaluare.",
       "backHome": "Înapoi acasă",
