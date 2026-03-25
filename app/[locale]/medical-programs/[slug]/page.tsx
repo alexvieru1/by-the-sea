@@ -7,7 +7,7 @@ const validSlugs = [
   'endometriosis-infertility',
   'longevity',
   'rheumatology',
-  'post-chemotherapy',
+  'post-intervention-recovery',
 ] as const;
 
 const slugToKey: Record<string, string> = {
@@ -15,7 +15,7 @@ const slugToKey: Record<string, string> = {
   'endometriosis-infertility': 'endometriosisInfertility',
   'longevity': 'longevity',
   'rheumatology': 'rheumatology',
-  'post-chemotherapy': 'postChemotherapy',
+  'post-intervention-recovery': 'postChemotherapy',
 };
 
 const validSlugSet = new Set<string>(validSlugs);

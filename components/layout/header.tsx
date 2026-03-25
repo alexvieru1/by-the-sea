@@ -15,30 +15,30 @@ import SlicedText from "../ui/sliced-text";
 import UserMenu from "@/components/ui/user-menu";
 import { useAuth } from "@/components/providers/auth-provider";
 
-// Sliding stairs animation variants
-const stairsEase = [0.33, 1, 0.68, 1] as const;
+// Menu animation variants
+const menuEase = [0.33, 1, 0.68, 1] as const;
 
-const stairAnimation = {
-  initial: { height: 0 },
-  enter: (i: number) => ({
-    height: "100%",
-    transition: { duration: 0.5, delay: 0.05 * i, ease: stairsEase },
-  }),
-  exit: (i: number) => ({
-    height: 0,
-    transition: { duration: 0.3, delay: 0.05 * i, ease: stairsEase },
-  }),
+const menuPanelAnimation = {
+  initial: { clipPath: "inset(0 0 100% 0)" },
+  enter: {
+    clipPath: "inset(0 0 0% 0)",
+    transition: { duration: 0.5, ease: menuEase },
+  },
+  exit: {
+    clipPath: "inset(0 0 100% 0)",
+    transition: { duration: 0.35, ease: menuEase },
+  },
 };
 
 const menuContentAnimation = {
   initial: { opacity: 0 },
   enter: {
     opacity: 1,
-    transition: { duration: 0.5, delay: 0.3, ease: stairsEase },
+    transition: { duration: 0.4, delay: 0.25, ease: menuEase },
   },
   exit: {
     opacity: 0,
-    transition: { duration: 0.2, ease: stairsEase },
+    transition: { duration: 0.15, ease: menuEase },
   },
 };
 
@@ -47,12 +47,12 @@ const linkAnimation = {
   enter: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: 0.4 + i * 0.1, ease: stairsEase },
+    transition: { duration: 0.5, delay: 0.3 + i * 0.08, ease: menuEase },
   }),
   exit: {
     opacity: 0,
     y: 10,
-    transition: { duration: 0.2, ease: stairsEase },
+    transition: { duration: 0.15, ease: menuEase },
   },
 };
 
@@ -245,7 +245,7 @@ export default function Header() {
             <div className="lg:hidden">
               <TransitionLink
                 href="/book"
-                className="flex h-16 items-center bg-[#CF9C7C] px-6 text-xs font-medium uppercase tracking-wider text-white"
+                className="flex h-16 items-center whitespace-nowrap bg-[#CF9C7C] px-6 text-xs font-medium uppercase tracking-wider text-white"
               >
                 {tCommon("bookScan")}
               </TransitionLink>
@@ -307,24 +307,18 @@ export default function Header() {
         />
       </header>
 
-      {/* Mobile Menu with Sliding Stairs Effect */}
+      {/* Mobile Menu */}
       <AnimatePresence mode="wait">
         {isMobileMenuOpen && (
           <>
-            {/* Sliding Stairs Background */}
-            <div className="pointer-events-none fixed inset-0 z-40 flex lg:hidden">
-              {[...Array(5)].map((_, index) => (
-                <motion.div
-                  key={index}
-                  className="h-full w-[20vw] origin-top bg-gray-500"
-                  variants={stairAnimation}
-                  initial="initial"
-                  animate="enter"
-                  exit="exit"
-                  custom={4 - index}
-                />
-              ))}
-            </div>
+            {/* Wipe Background */}
+            <motion.div
+              className="pointer-events-none fixed inset-0 z-40 bg-[#002343] lg:hidden"
+              variants={menuPanelAnimation}
+              initial="initial"
+              animate="enter"
+              exit="exit"
+            />
 
             {/* Menu Content */}
             <motion.div

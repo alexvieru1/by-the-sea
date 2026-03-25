@@ -867,7 +867,7 @@
     },
     "yourStay": {
       "label": "Experiența ta",
-      "title": "Sejurul tău",
+      "title": "Programul terapeutic",
       "p1": "La momentul sosirii, vă rugăm să vă adresați recepției pentru parcurgerea etapelor necesare:",
       "steps": {
         "documents": "Întocmirea documentelor de ședere",
@@ -891,6 +891,32 @@
         "title": "Externarea",
         "description": "Externarea implică obligatoriu utilizarea cardului de sănătate; omiterea acestui pas atrage nedecontarea cazului și suportarea integrală a costurilor de către pacient."
       }
+    },
+    "rights": {
+      "title": "Drepturile și obligațiile pacientului",
+      "rightsLabel": "Drepturi",
+      "rightsItems": {
+        "informed": "Să fiți informat complet și corect asupra diagnosticului, tratamentului propus, alternativelor, riscurilor și prognosticului afecțiunii dumneavoastră",
+        "consent": "Să vă exprimați liber consimțământul sau refuzul pentru orice procedură medicală, după ce ați fost informat corespunzător",
+        "confidentiality": "Să beneficiați de confidențialitatea tuturor datelor medicale și personale, conform legislației în vigoare",
+        "privacy": "Să vi se respecte intimitatea și demnitatea pe toată durata sejurului și a tratamentelor",
+        "secondOpinion": "Să solicitați o a doua opinie medicală, în orice moment al tratamentului",
+        "complain": "Să formulați sesizări și reclamații cu privire la serviciile primite, fără a vă fi afectate drepturile",
+        "records": "Să aveți acces la documentele medicale proprii și să solicitați copii ale acestora",
+        "nondiscrimination": "Să primiți îngrijire medicală fără discriminare, indiferent de rasă, sex, vârstă, etnie, religie sau statut social"
+      },
+      "obligationsLabel": "Obligații",
+      "obligationsItems": {
+        "honesty": "Să oferiți informații complete și corecte despre starea dumneavoastră de sănătate, antecedente, tratamente în curs și alergii",
+        "compliance": "Să respectați planul de tratament stabilit de echipa medicală și să participați activ la programul terapeutic",
+        "rules": "Să respectați regulamentul intern al complexului, inclusiv programul de masă, odihnă și tratament",
+        "respect": "Să aveți un comportament respectuos față de personalul medical, ceilalți pacienți și bunurile complexului",
+        "presence": "Să fiți prezent în cameră la orele stabilite pentru vizita medicală zilnică",
+        "card": "Să prezentați cardul de sănătate la internare și externare — lipsa acestuia atrage suportarea integrală a costurilor",
+        "notify": "Să anunțați personalul medical despre orice modificare a stării dumneavoastră de sănătate pe parcursul sejurului",
+        "financial": "Să vă onorați obligațiile financiare conform contractului de servicii medicale semnat la internare"
+      },
+      "cta": "Vezi toate drepturile și obligațiile"
     },
     "contraindications": {
       "absoluteTitle": "Contraindicații absolute",

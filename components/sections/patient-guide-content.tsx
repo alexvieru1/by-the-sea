@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'motion/react';
-import { CheckCircle, ExternalLink } from 'lucide-react';
+import { CheckCircle, ExternalLink, Shield, ClipboardList } from 'lucide-react';
 import ParallaxImage from '@/components/ui/parallax-image';
 
 const fadeInUp = {
@@ -42,6 +42,8 @@ const relativeCategories = [
 
 const documentKeys = ['referral', 'healthCard', 'id', 'employment'] as const;
 
+const rightsKeys = ['informed', 'consent', 'confidentiality', 'privacy', 'secondOpinion', 'complain', 'records', 'nondiscrimination'] as const;
+const obligationsKeys = ['honesty', 'compliance', 'rules', 'respect', 'presence', 'card', 'notify', 'financial'] as const;
 
 export default function PatientGuideContent() {
   const t = useTranslations('patientGuide');
@@ -174,7 +176,64 @@ export default function PatientGuideContent() {
         </div>
       </motion.section>
 
-      {/* Section 6: Absolute Contraindications */}
+      {/* Section 6: Patient Rights & Obligations */}
+      <motion.section {...fadeInUp} className="bg-[#F2E4D1]">
+        <div className="mx-auto max-w-6xl px-6 py-20 lg:px-12 lg:py-28">
+          <h2 className="text-center font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900 sm:text-4xl">
+            {t('rights.title')}
+          </h2>
+          <div className="mt-12 grid gap-12 lg:grid-cols-2">
+            {/* Rights */}
+            <div>
+              <div className="mb-6 flex items-center gap-3">
+                <Shield size={20} className="text-[#002343]" />
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-[#002343]">
+                  {t('rights.rightsLabel')}
+                </h3>
+              </div>
+              <div className="space-y-4">
+                {rightsKeys.map((key) => (
+                  <div key={key} className="flex items-start gap-3">
+                    <CheckCircle size={18} className="mt-0.5 shrink-0 text-[#002343]" />
+                    <span className="text-sm leading-relaxed text-gray-700">{t(`rights.rightsItems.${key}`)}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Obligations */}
+            <div>
+              <div className="mb-6 flex items-center gap-3">
+                <ClipboardList size={20} className="text-[#CF9C7C]" />
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-[#CF9C7C]">
+                  {t('rights.obligationsLabel')}
+                </h3>
+              </div>
+              <div className="space-y-4">
+                {obligationsKeys.map((key) => (
+                  <div key={key} className="flex items-start gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 bg-[#CF9C7C]" />
+                    <span className="text-sm leading-relaxed text-gray-700">{t(`rights.obligationsItems.${key}`)}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="mt-10 text-center">
+            <a
+              href="https://cnas.ro/drepturi-obligatii-asigurati/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-[#002343] px-8 py-4 text-sm font-medium uppercase tracking-wider text-white transition-colors hover:bg-[#002343]/90"
+            >
+              {t('rights.cta')}
+              <ExternalLink size={16} />
+            </a>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Section 7: Absolute Contraindications */}
       {/* <motion.section {...fadeInUp}>
         <div className="mx-auto max-w-6xl px-6 py-20 lg:px-12 lg:py-28">
           <h2 className="font-[family-name:var(--font-quicksand)] text-3xl font-thin text-gray-900 sm:text-4xl">

@@ -8,7 +8,7 @@ export default function PostChemoSection() {
       imageAlt="Recuperare post intervenții majore"
       cardBg="bg-[#CF9C7C]"
       align="left"
-      ctaHref="/medical-programs/post-chemotherapy"
+      ctaHref="/medical-programs/post-intervention-recovery"
       orbs={[]}
     />
   );

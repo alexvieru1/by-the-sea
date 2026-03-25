@@ -7,8 +7,7 @@ const medicalProgramSlugs = [
   'endometriosis-infertility',
   'longevity',
   'rheumatology',
-  'wellness',
-  'post-chemotherapy',
+  'post-intervention-recovery',
 ];
 
 const staticPages = [

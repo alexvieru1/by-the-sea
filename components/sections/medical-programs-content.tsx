@@ -35,7 +35,7 @@ const programs = [
   },
   {
     key: 'postChemotherapy',
-    slug: 'post-chemotherapy',
+    slug: 'post-intervention-recovery',
     image: '/images/medical-programs/post-chemo.webp',
     gridClass: 'lg:col-span-3',
   },

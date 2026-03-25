@@ -49,15 +49,7 @@ const therapyMap: Record<string, ProgramConfig> = {
     image1: '/images/programs/rheumatology-1.webp',
     image2: '/images/programs/rheumatology-2.webp',
   },
-  wellness: {
-    translationNamespace: 'therapies',
-    translationKey: 'wellness',
-    bg: 'bg-[#CF9C7C]',
-    accentColor: '#CF9C7C',
-    image1: '/images/programs/wellness-1.webp',
-    image2: '/images/programs/wellness-2.webp',
-  },
-  'post-chemotherapy': {
+  'post-intervention-recovery': {
     translationNamespace: 'medicalPrograms',
     translationKey: 'postChemotherapy',
     bg: 'bg-[#CF9C7C]',
@@ -67,7 +59,7 @@ const therapyMap: Record<string, ProgramConfig> = {
   },
 };
 
-const darkTextSlugs = new Set(['wellness']);
+const darkTextSlugs = new Set<string>([]);
 
 export default function TherapyPageClient({ slug }: { slug: string }) {
   const therapy = therapyMap[slug];

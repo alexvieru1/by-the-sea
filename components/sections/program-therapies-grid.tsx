@@ -20,7 +20,7 @@ export default function ProgramTherapiesGrid({
   accentColor,
 }: ProgramTherapiesGridProps) {
   const ref = useRef<HTMLElement>(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const isInView = useInView(ref, { once: true, amount: 0.05 });
 
   return (
     <section ref={ref} className="bg-gray-50 px-6 py-20 lg:px-12 lg:py-32">

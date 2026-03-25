@@ -33,7 +33,7 @@ const therapies = [
   },
   {
     key: 'postChemotherapy',
-    slug: 'post-chemotherapy',
+    slug: 'post-intervention-recovery',
     image: '/images/therapies/post-chemotherapy.webp',
     bg: 'bg-[#F2E4D1]',
     textColor: 'text-gray-900',

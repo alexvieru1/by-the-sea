@@ -892,6 +892,32 @@
         "description": "Discharge mandatorily requires the use of your health card; failure to do so will result in the case not being reimbursed and the patient bearing the full costs."
       }
     },
+    "rights": {
+      "title": "Patient Rights & Obligations",
+      "rightsLabel": "Rights",
+      "rightsItems": {
+        "informed": "To be fully and accurately informed about your diagnosis, proposed treatment, alternatives, risks, and prognosis",
+        "consent": "To freely express your consent or refusal for any medical procedure, after being properly informed",
+        "confidentiality": "To benefit from the confidentiality of all your medical and personal data, in accordance with applicable legislation",
+        "privacy": "To have your privacy and dignity respected throughout your stay and treatments",
+        "secondOpinion": "To request a second medical opinion at any point during your treatment",
+        "complain": "To file complaints regarding the services received, without your rights being affected",
+        "records": "To access your own medical records and request copies",
+        "nondiscrimination": "To receive medical care without discrimination, regardless of race, gender, age, ethnicity, religion, or social status"
+      },
+      "obligationsLabel": "Obligations",
+      "obligationsItems": {
+        "honesty": "To provide complete and accurate information about your health condition, medical history, current treatments, and allergies",
+        "compliance": "To follow the treatment plan established by the medical team and actively participate in the therapeutic programme",
+        "rules": "To respect the internal regulations of the complex, including meal, rest, and treatment schedules",
+        "respect": "To behave respectfully towards medical staff, other patients, and the property of the complex",
+        "presence": "To be present in your room at the designated times for the daily medical visit",
+        "card": "To present your health card at admission and discharge — failure to do so will result in the patient bearing the full costs",
+        "notify": "To inform the medical staff of any changes in your health condition during your stay",
+        "financial": "To fulfill your financial obligations according to the medical services contract signed at admission"
+      },
+      "cta": "See all rights and obligations"
+    },
     "contraindications": {
       "absoluteTitle": "Absolute Contraindications",
       "absoluteWarning": "Patients who present at least one of the following contraindications are not recommended for inpatient treatment!",
