@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { Globe } from 'lucide-react';
 import TransitionLink from '@/components/layout/transition-link';
@@ -203,14 +204,36 @@ export default function FooterSection() {
               <p className="text-xs text-gray-400">
                 ASCLEPIOS S.R.L. — CUI: 1864633 — Reg. Com.: J1992000693137
               </p>
-              <a
-                href="https://anpc.ro/ce-este-sal/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-gray-400 underline decoration-gray-300 underline-offset-2 transition-colors hover:text-gray-600"
-              >
-                ANPC — SAL
-              </a>
+              <div className="flex items-center gap-3">
+                <a
+                  href="https://anpc.ro/ce-este-sal/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="opacity-60 transition-opacity hover:opacity-100"
+                >
+                  <Image
+                    src="/images/anpc-sal.webp"
+                    alt="ANPC — SAL"
+                    width={150}
+                    height={50}
+                    className="h-8 w-auto"
+                  />
+                </a>
+                <a
+                  href="https://ec.europa.eu/consumers/odr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="opacity-60 transition-opacity hover:opacity-100"
+                >
+                  <Image
+                    src="/images/anpc-sol.webp"
+                    alt="ANPC — SOL"
+                    width={150}
+                    height={50}
+                    className="h-8 w-auto"
+                  />
+                </a>
+              </div>
             </div>
           </div>
 
