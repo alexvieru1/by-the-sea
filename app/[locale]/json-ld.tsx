@@ -2,11 +2,11 @@ export default function JsonLd() {
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'MedicalBusiness',
-    '@id': 'https://vrajamariibythesea.ro/#organization',
+    '@id': 'https://www.vrajamariibythesea.ro/#organization',
     name: 'Vraja Mării by the Sea',
     alternateName: 'Complex Vraja Mării',
-    url: 'https://vrajamariibythesea.ro',
-    logo: 'https://vrajamariibythesea.ro/opengraph-image.jpg',
+    url: 'https://www.vrajamariibythesea.ro',
+    logo: 'https://www.vrajamariibythesea.ro/opengraph-image.jpg',
     description:
       'Complex de recuperare medicală și wellness dedicat optimizării sănătății și bunăstării tale. Recuperare medicală, endometrioză, longevitate, reumatologie.',
     telephone: '+40341520000',
@@ -67,7 +67,7 @@ export default function JsonLd() {
       },
     ],
     priceRange: '$$',
-    image: 'https://vrajamariibythesea.ro/opengraph-image.jpg',
+    image: 'https://www.vrajamariibythesea.ro/opengraph-image.jpg',
     areaServed: {
       '@type': 'Country',
       name: 'Romania',
@@ -77,10 +77,10 @@ export default function JsonLd() {
   const websiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    '@id': 'https://vrajamariibythesea.ro/#website',
-    url: 'https://vrajamariibythesea.ro',
+    '@id': 'https://www.vrajamariibythesea.ro/#website',
+    url: 'https://www.vrajamariibythesea.ro',
     name: 'Vraja Mării by the Sea',
-    publisher: { '@id': 'https://vrajamariibythesea.ro/#organization' },
+    publisher: { '@id': 'https://www.vrajamariibythesea.ro/#organization' },
     inLanguage: ['ro', 'en'],
   };
 

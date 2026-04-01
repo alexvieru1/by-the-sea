@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     default: 'Vraja Mării by the Sea',
   },
   description: 'Complex de recuperare medicală și wellness dedicat optimizării sănătății și bunăstării tale.',
-  metadataBase: new URL('https://vrajamariibythesea.ro'),
+  metadataBase: new URL('https://www.vrajamariibythesea.ro'),
   openGraph: {
     siteName: 'Vraja Mării by the Sea',
     type: 'website',

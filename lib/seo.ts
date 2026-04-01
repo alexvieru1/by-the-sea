@@ -1,4 +1,4 @@
-const BASE_URL = 'https://vrajamariibythesea.ro';
+const BASE_URL = 'https://www.vrajamariibythesea.ro';
 
 export function getAlternates(pathname: string) {
   const cleanPath = pathname === '/' ? '' : pathname;
