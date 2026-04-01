@@ -1,5 +1,6 @@
 import PlaceholderPage from '@/components/layout/placeholder-page';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { getAlternates } from '@/lib/seo';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -10,7 +11,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pages.press' });
-  return { title: t('title'), description: t('description') };
+  return { title: t('title'), description: t('description'), alternates: getAlternates('/press') };
 }
 
 export default async function PressPage({ params }: Props) {

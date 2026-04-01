@@ -6,6 +6,7 @@ import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/header';
+import JsonLd from './json-ld';
 import { AuthProvider } from '@/components/providers/auth-provider';
 import { TransitionProvider } from '@/components/layout/transition-provider';
 import '../globals.css';
@@ -70,6 +71,9 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
 
   return (
     <html lang={locale}>
+      <head>
+        <JsonLd />
+      </head>
       <body
         className={`${geistSans.variable} ${quicksand.variable} antialiased`}
       >

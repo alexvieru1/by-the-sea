@@ -1,4 +1,5 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { getAlternates } from '@/lib/seo';
 import PageHero from '@/components/layout/page-hero';
 import ContactPageContent from '@/components/sections/contact-page-content';
 
@@ -11,7 +12,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pages.contact' });
-  return { title: t('title'), description: t('description') };
+  return { title: t('title'), description: t('description'), alternates: getAlternates('/contact') };
 }
 
 export default async function ContactPage({ params }: Props) {

@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { getAlternates } from '@/lib/seo';
 import TherapyPageClient from './therapy-page-client';
 
 const validSlugs = [
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: Props) {
   const key = slugToKey[slug];
   if (!key) return {};
   const t = await getTranslations({ locale, namespace: `medicalPrograms.${key}` });
-  return { title: t('title'), description: t('subtitle') };
+  return { title: t('title'), description: t('subtitle'), alternates: getAlternates(`/medical-programs/${slug}`) };
 }
 
 export default async function MedicalProgramPage({ params }: Props) {

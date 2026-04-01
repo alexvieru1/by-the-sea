@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: ['/profile', '/evaluation', '/consultation', '/waitlist/'],
     },
-    sitemap: 'https://complexvrajamarii.ro/sitemap.xml',
+    sitemap: 'https://vrajamariibythesea.ro/sitemap.xml',
   };
 }

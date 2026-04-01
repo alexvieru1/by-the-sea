@@ -1,4 +1,5 @@
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { getAlternates } from '@/lib/seo';
 import PolicyPageLayout from '@/components/layout/policy-page-layout';
 import { getPolicyContent } from '@/lib/policies';
 
@@ -11,7 +12,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pages.terms' });
-  return { title: t('title'), description: t('description') };
+  return { title: t('title'), description: t('description'), alternates: getAlternates('/terms') };
 }
 
 export default async function TermsPage({ params }: Props) {

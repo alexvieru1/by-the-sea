@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { getAlternates } from '@/lib/seo';
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -13,6 +14,7 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: { absolute: 'Vraja Mării by the Sea — Recuperare Medicală & Wellness' },
     description: t('description'),
+    alternates: getAlternates('/'),
   };
 }
 

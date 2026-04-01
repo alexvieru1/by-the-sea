@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { getAlternates } from '@/lib/seo';
 import PageHero from '@/components/layout/page-hero';
 
 const AboutContent = dynamic(() => import('@/components/sections/about-content'));
@@ -13,7 +14,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'pages.about' });
-  return { title: t('title'), description: t('description') };
+  return { title: t('title'), description: t('description'), alternates: getAlternates('/about') };
 }
 
 export default async function AboutPage({ params }: Props) {

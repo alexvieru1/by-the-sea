@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-const BASE_URL = 'https://complexvrajamarii.ro';
+const BASE_URL = 'https://vrajamariibythesea.ro';
 
 const medicalProgramSlugs = [
   'medical-rehabilitation',
@@ -22,8 +22,6 @@ const staticPages = [
   '/patient-guide',
   '/press',
   '/other-info',
-  '/login',
-  '/signup',
   '/privacy',
   '/terms',
   '/cookies',
