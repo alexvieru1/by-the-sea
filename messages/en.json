@@ -19,6 +19,9 @@
     "description": "We apologize for the inconvenience. Please try again.",
     "retry": "Try again"
   },
+  "home": {
+    "description": "Medical recovery and wellness complex in Eforie Sud, Romania. Specialized programs: medical rehabilitation, endometriosis, longevity, rheumatology. Book your stay now!"
+  },
   "pages": {
     "medicalPrograms": {
       "title": "Medical Programs",

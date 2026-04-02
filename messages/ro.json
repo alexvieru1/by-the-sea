@@ -19,6 +19,9 @@
     "description": "Ne cerem scuze pentru inconveniență. Te rugăm să încerci din nou.",
     "retry": "Încearcă din nou"
   },
+  "home": {
+    "description": "Complex de recuperare medicală și wellness în Eforie Sud. Programe specializate: recuperare medicală, endometrioză, longevitate, reumatologie. Programează-te acum!"
+  },
   "pages": {
     "medicalPrograms": {
       "title": "Programe medicale",

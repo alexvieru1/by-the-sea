@@ -10,7 +10,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props) {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'pages.about' });
+  const t = await getTranslations({ locale, namespace: 'home' });
   return {
     title: { absolute: 'Vraja Mării by the Sea — Recuperare Medicală & Wellness' },
     description: t('description'),
