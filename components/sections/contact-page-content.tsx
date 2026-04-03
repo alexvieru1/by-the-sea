@@ -110,18 +110,13 @@ export default function ContactPageContent() {
             {/* Right: Map */}
             <div className="relative min-h-[400px] overflow-hidden bg-gray-200">
               <iframe
-                src="https://maps.google.com/maps?q=2MP2%2BH2+Eforie+Sud&t=&z=18&ie=UTF8&iwloc=&output=embed"
+                src={`https://www.google.com/maps/embed/v1/place?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&q=Vraja+Mării+by+the+Sea,Eforie+Sud,Romania&zoom=16`}
                 className="absolute inset-0 h-full w-full border-0"
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Vraja Marii location"
               />
-              {/* Overlay to cover Google's default pin info */}
-              <div className="pointer-events-none absolute bottom-0 left-0 right-0 bg-white px-4 py-3">
-                <p className="text-sm font-semibold text-gray-900">Vraja Marii by the Sea</p>
-                <p className="text-xs text-gray-500">Aleea Mercur 2, Eforie Sud, Romania</p>
-              </div>
             </div>
           </div>
         </div>
